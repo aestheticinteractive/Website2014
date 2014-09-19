@@ -1,0 +1,66 @@
+<html ng-app="Aei">
+
+	<head>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/foundation.css" />
+		<script src="js/lib/modernizr.js"></script>
+		<link rel="stylesheet" href="css/Aei.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+		<title>Aesthetic Interactive | Software Development and Design | Grand Rapids, MI</title>
+	</head>
+
+	<body>
+		
+		<div id="background">
+		</div>
+		
+		<div id="siteContainer">
+			<header ng-controller="Aei.Controllers.Menu as mc">
+				<a href="#/Portfolio" class="{{mc.isActiveLink('/Portfolio') ? 'active' : ''}}">
+					portfolio
+				</a>
+
+				<a href="#/Services" class="{{mc.isActiveLink('/Services') ? 'active' : ''}}">
+					services
+				</a>
+
+				<a id="logo" href="#/" style="height: 60px;" title="Aesthetic Interactive">
+					<img src="img/Logo.png" />
+				</a>
+
+				<a href="#/Background" class="{{mc.isActiveLink('/Background') ? 'active' : ''}}">
+					background
+				</a>
+
+				<a href="#/Contact" class="{{mc.isActiveLink('/Contact') ? 'active' : ''}}">
+					contact
+				</a>
+			</header>
+
+			<main ng-view>
+			</main>
+		</div>
+	</body>
+	
+	<script src="js/lib/jquery.js"></script>
+    <script src="js/lib/moment.min.js"></script>
+    <script src="js/lib/foundation.min.js"></script>
+    <script src="js/lib/kinetic-v5.1.0.min.js"></script>
+	<script src="js/lib/angular-1.3.0.js" ></script>
+	<script src="js/lib/angular-route-1.3.0.js" ></script>
+	<script src="js/Init.js" ></script>
+	<script src="js/Background.js" ></script>
+	<script src="js/data/Database.js" ></script>
+	<script src="js/data/Tables.js" ></script>
+	<script src="js/data/Queries.js" ></script>
+	<script src="js/services.js" ></script>
+	<script src="js/controllers.js" ></script>
+	
+	<script>
+		console.log(Aei);
+		$(document).foundation();
+
+		var bg = new Aei.Background('background', 'logo');
+	</script>
+
+</html>
