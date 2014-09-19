@@ -2,7 +2,7 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	background-color: #555;
+	background-color: #404040;
 	width: 100%;
 	height: 100%;
 }
@@ -14,10 +14,14 @@ body {
 	height: 100%;
 }
 
-p {
+p, a, ul, li {
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
+}
+
+p, a, h1, h2, h3, h4, h5, ul, li {
+	font-family: Tahoma, Helvetica, Arial, Verdana, sans-serif;
 }
 
 
@@ -28,19 +32,13 @@ p {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: gray;
-	z-index: 0;
 }
 
 #siteContainer {
 	position: relative;
 	margin: 0 auto;
-	padding: 40px;
-	font-family: Tahoma, Helvetica, Arial, Verdana, sans-serif;
-	max-width: 1200px;
 	width: 100%;
 	height: 100%;
-	z-index: 1;
 }
 
 .row {
@@ -52,17 +50,15 @@ p {
 
 
 header {
-	padding: 0 20px 40px 20px;
+	padding: 80px 0;
 	text-align: center;
-	border-bottom: 1px solid #333;	
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);	
 }
 
 header a {
-	font-size: 16px;
+	font-size: 20px;
 	color: #666;
-	color: rgba(0, 0, 0, 0.4);
-	margin: 0 40px 0 40px;
+	color: rgba(0, 0, 0, 0.3);
+	margin: 0 20px;
 	padding: 0;
 }
 
@@ -72,12 +68,13 @@ header a:hover {
 }
 
 header a.active {
-	color: #aaa;
-	color: rgba(255, 255, 255, 0.8);
+	color: #ddd;
+	color: rgba(255, 255, 255, 0.75);
 }
 
 header a.active:hover {
-	color: #fff;
+	color: #ddd;
+	color: rgba(255, 255, 255, 0.75);
 }
 
 
@@ -85,6 +82,65 @@ header a.active:hover {
 
 
 main {
-	padding: 40px 20px 20px 20px;
-	text-align: center;
+}
+
+main section.banner {
+	background-color: #555;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-top: 1px solid #222;
+	border-top: 1px solid rgba(0, 0, 0, 0.2);	
+	border-bottom: 1px solid #222;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);	
+	padding: 80px 0;
+}
+
+main section.banner .home .leftSide {
+	text-align: right;
+}
+
+main section.banner .home .rightSide {
+	text-align: left;
+}
+
+main section.banner .home h2 {
+	font-size: 36px;
+	color: #ddd;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+main section.banner .home h3 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+main section.banner .home .lineHold {
+	position: relative;
+	width: 100%;
+}
+
+main section.banner .home .lineHold .line {
+	background-color: #aaa;
+	background-color: rgba(0, 0, 0, 0.4);
+	width: 1px;
+	height: 110px;
+	margin: 0 auto;
+}
+
+main section.content {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 80px 0;
+}
+
+main section.content h4 {
+	font-size: 20px;
+	color: #333;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+main section.content p {
+	color: #ccc;
+	color: rgba(255, 255, 255, 0.6);
 }

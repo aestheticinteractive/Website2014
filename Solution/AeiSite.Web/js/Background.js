@@ -29,27 +29,18 @@ Aei.Background = function(containerId, logoContainerId) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Background.prototype._buildScene = function() {
-	var rgbOffwhite = 'rgba(255, 255, 238, ';
+	var whiteStops = [];
 
-	this._shadow = new Kinetic.Rect({
-        fillRadialGradientStartRadius: 0,
-        fillRadialGradientColorStops: [
-			0, 'rgba(0, 0, 0, 0)',
-			1, 'rgba(0, 0, 0, 1)'
-		]
-	});
-	this._layerShade.add(this._shadow);
+	for ( var i = 0 ; i <= 11 ; ++i ) {
+		var perc = i/11;
+		whiteStops.push(perc);
+		whiteStops.push('rgba(255, 255, 238, '+Math.pow(1-perc, 3));
+	}
 
 	this._highlight = new Kinetic.Rect({
-		opacity: 0.25,
+		opacity: 0.4,
         fillRadialGradientStartRadius: 0,
-        fillRadialGradientColorStops: [
-			0, rgbOffwhite+'1)',
-			0.25, rgbOffwhite+'0.5625)',
-			0.5, rgbOffwhite+'0.25)',
-			0.75, rgbOffwhite+'0.0625)',
-			1, rgbOffwhite+'0)'
-		]
+        fillRadialGradientColorStops: whiteStops
 	});
 	this._layerShade.add(this._highlight);
 
@@ -95,7 +86,7 @@ Aei.Background.prototype._handleResize = function() {
 		height: h
 	});
 
-	this._glowRadius = Math.max(w, h, 1000);
+	this._glowRadius = Math.max(w, h, 1000)*0.75;
 
 	var logoPos = this._logoContainer.offset();
 	logoPos.top -= 17;
@@ -104,20 +95,13 @@ Aei.Background.prototype._handleResize = function() {
 		x: logoPos.left+53/2,
 		y: logoPos.top+60/2
 	};
-
-	this._shadow
-		.width(w)
-		.height(h)
-        .fillRadialGradientStartPoint(center)
-        .fillRadialGradientEndPoint(center)
-        .fillRadialGradientEndRadius(this._glowRadius);
 	
 	this._highlight
 		.width(w)
 		.height(h)
         .fillRadialGradientStartPoint(center)
         .fillRadialGradientEndPoint(center)
-        .fillRadialGradientEndRadius(this._glowRadius/2);
+        .fillRadialGradientEndRadius(this._glowRadius);
 	
 	if ( this._logo ) {
 		this._logo
@@ -133,14 +117,13 @@ Aei.Background.prototype._handleTimeout = function() {
 	var val = Math.sin(this._anim);
 	var rad = this._glowRadius*(1+val*0.1);
 
-	this._shadow.fillRadialGradientEndRadius(rad);
-	this._highlight.fillRadialGradientEndRadius(rad/2);
+	this._highlight.fillRadialGradientEndRadius(rad);
 
 	if ( this._logo ) {
-		this._logo.opacity(0.25+val*0.05);
+		this._logo.opacity(0.2+val*0.05);
 	}
 
 	this._stage.draw();
-	this._anim += 0.1;
+	this._anim += 0.02;
 	this._timeout = setTimeout(this._timeoutCallback, 100);
 };
