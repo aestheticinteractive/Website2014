@@ -5,8 +5,10 @@
 		<h3>
 			Portfolio
 		</h3>
-		<p>
-			Coming soon.
+		<p ng-repeat="proj in model.projects">
+			<a href="#/Portfolio/{{proj.link}}">
+				{{proj.name}}
+			</a>
 		</p>
 
 	</div>

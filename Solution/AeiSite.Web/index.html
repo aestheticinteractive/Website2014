@@ -10,33 +10,7 @@
 	</head>
 
 	<body>
-		
-		<div id="background">
-		</div>
-		
 		<div id="siteContainer">
-			<header ng-controller="Aei.Controllers.Menu as mc">
-				<a href="#/Portfolio" class="{{mc.isActiveLink('/Portfolio') ? 'active' : ''}}">
-					portfolio
-				</a>
-
-				<a href="#/Services" class="{{mc.isActiveLink('/Services') ? 'active' : ''}}">
-					services
-				</a>
-
-				<a id="logo" href="#/" style="height: 60px;" title="Aesthetic Interactive">
-					<img src="img/Logo.png" />
-				</a>
-
-				<a href="#/Background" class="{{mc.isActiveLink('/Background') ? 'active' : ''}}">
-					background
-				</a>
-
-				<a href="#/Contact" class="{{mc.isActiveLink('/Contact') ? 'active' : ''}}">
-					contact
-				</a>
-			</header>
-
 			<main ng-view>
 			</main>
 		</div>
@@ -59,8 +33,6 @@
 	<script>
 		console.log(Aei);
 		$(document).foundation();
-
-		var bg = new Aei.Background('background', 'logo');
 	</script>
 
 </html>

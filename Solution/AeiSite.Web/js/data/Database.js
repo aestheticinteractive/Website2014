@@ -34,3 +34,38 @@ Aei.Database.selectList = function(table, rowFilter) {
 
 	return list;
 };
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Database.selectByUniqueProperty = function(table, propertyName, value) {
+	var i, row;
+
+	for ( i in table ) {
+		row = table[i];
+
+		if ( row[propertyName] == value ) {
+			return row;
+		}
+	}
+
+	return null;
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Database.selectListByProperty = function(table, propertyName, value) {
+	var filter = function(row) {
+		if ( value == null ) {
+			return (row[propertyName] != null);
+		}
+
+		return (row[propertyName] == value);
+	};
+
+	return Aei.Database.selectList(table, filter);
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Database.selectCountByProperty = function(table, propertyName, value) {
+	return Aei.Queries.getListByProperty(table, propertyName, value).length;
+};

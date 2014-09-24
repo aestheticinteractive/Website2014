@@ -12,6 +12,10 @@ Aei.RouteBuilder = function($routeProvider) {
 			templateUrl: 'views/Portfolio.html',
 			controller: Aei.Controllers.Portfolio
 		})
+		.when('/Portfolio/:link', {
+			templateUrl: 'views/PortfolioProject.html',
+			controller: Aei.Controllers.PortfolioProject
+		})
 		.when('/Services', {
 			templateUrl: 'views/Services.html',
 			controller: Aei.Controllers.Services

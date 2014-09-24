@@ -43,7 +43,16 @@ Aei.Controllers.Home = function($scope) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Portfolio = function($scope) {
-	$scope.model = {};
+	$scope.model = {
+		projects: Aei.Database.selectList(Aei.Tables.Projects)
+	};
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.PortfolioProject = function($scope, $routeParams) {
+	$scope.model = {
+		project: Aei.Database.selectByUniqueProperty(Aei.Tables.Projects, 'link', $routeParams.link)
+	};
 };
 
 
