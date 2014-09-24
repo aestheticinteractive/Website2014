@@ -13,8 +13,8 @@ Aei.Controllers.Menu = function(/*$route, $routeParams,*/ $location) {
 
 	this.items = [
 		{
-			name: 'portfolio',
-			link: '/Portfolio'
+			name: 'projects',
+			link: '/Projects'
 		},
 		{
 			name: 'services',
@@ -42,14 +42,14 @@ Aei.Controllers.Home = function($scope) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Portfolio = function($scope) {
+Aei.Controllers.Projects = function($scope) {
 	$scope.model = {
 		projects: Aei.Database.selectList(Aei.Tables.Projects)
 	};
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.PortfolioProject = function($scope, $routeParams) {
+Aei.Controllers.Project = function($scope, $routeParams) {
 	$scope.model = {
 		project: Aei.Database.selectByUniqueProperty(Aei.Tables.Projects, 'link', $routeParams.link)
 	};

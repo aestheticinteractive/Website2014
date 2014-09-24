@@ -8,13 +8,13 @@ Aei.RouteBuilder = function($routeProvider) {
 			templateUrl: 'views/Home.html',
 			controller: Aei.Controllers.Home
 		})
-		.when('/Portfolio', {
-			templateUrl: 'views/Portfolio.html',
-			controller: Aei.Controllers.Portfolio
+		.when('/Projects', {
+			templateUrl: 'views/Projects.html',
+			controller: Aei.Controllers.Projects
 		})
-		.when('/Portfolio/:link', {
-			templateUrl: 'views/PortfolioProject.html',
-			controller: Aei.Controllers.PortfolioProject
+		.when('/Projects/:link', {
+			templateUrl: 'views/Project.html',
+			controller: Aei.Controllers.Project
 		})
 		.when('/Services', {
 			templateUrl: 'views/Services.html',
