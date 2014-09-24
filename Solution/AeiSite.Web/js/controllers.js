@@ -50,8 +50,11 @@ Aei.Controllers.Projects = function($scope) {
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Project = function($scope, $routeParams) {
+	var proj = Aei.Database.selectByUniqueProperty(Aei.Tables.Projects, 'link', $routeParams.link);
+
 	$scope.model = {
-		project: Aei.Database.selectByUniqueProperty(Aei.Tables.Projects, 'link', $routeParams.link)
+		project: proj,
+		page: new Aei.Pages.Project(proj)
 	};
 };
 

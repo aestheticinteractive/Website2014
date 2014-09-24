@@ -72,3 +72,21 @@ Aei.Angular.directive('mainMenu', function() {
 		templateUrl: 'views/_MainMenu.html'
 	};
 });*/
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Angular.directive('initPageAfterRender', function() {
+	return {
+		scope: {
+			page: '=page'
+		},
+		link: function(scope, element, attrs) {
+			var page = scope.page;
+
+			var onTimeout = function() {
+				page.onRender();
+			};
+
+			setTimeout(onTimeout, 0);
+		}
+	};
+});

@@ -17,23 +17,32 @@
 		margin-top: 10px;
 	}
 	
-	.gallery .thumb {
-		width: 100%;
-		height: 40px;
-		margin: 0 0 2px 0;
-		display: none;
+	section.content {
+		background-color: #3a3a3a;
+		padding: 16px 0;
 	}
 	
-	.gallery .thumb .overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
+	section.content + section.content {
+		margin-top: 8px;
+	}
+	
+	.thumb {
+		float: left;
+		position: relative;
+		cursor: pointer;
+		width: 160px;
+		height: 160px;
+		margin: 0 2px 0 0;
+	}
+
+	.thumb .imageFill {
 		width: 100%;
 		height: 100%;
-		background-color: #555;
+		background-color: #ccc;
+		background-size: cover;
+		background-position: 50% 50%;
 	}
 </style>
-
 
 <header style="padding: 16px;">
 	<div style="float: left;">
@@ -58,126 +67,53 @@
 	</div>
 </header>
 
-<div class="row" style="background-color: #3a3a3a; padding-top: 16px; padding-bottom: 16px;">
+<section class="content">
+	<div class="row">
 	
-	<div class="large-4 columns">
-		<h3>
-			Description
-		</h3>
-		<p>
-			{{model.project.desc}}
-		</p>
-	</div>
+		<div class="large-6 columns">
+			<h3>
+				Description
+			</h3>
+			<p>
+				{{model.project.desc}}
+			</p>
+		</div>
 
-	<div class="large-4 columns">
-		<h3>
-			Client
-		</h3>
-		<p>
-			{{model.project.client}}
-		</p>
-		<h3>
-			Timeline
-		</h3>
-		<p>
-			{{model.project.start}} to {{model.project.end}}<br/>
-		</p>
-		<h3>
-			Link
-		</h3>
-		<p>
-			<a href="http://{{model.project.url}}">{{model.project.url}}</a>
-		</p>
-	</div>
-
-	<div class="large-4 columns">
-		<div class="gallery" style="font-size: 0;" ng-init="imgIds = [0,1,2,3,4,5,6,7]">
-			
-			<div id="thumb{{imgId}}" class="thumb" ng-repeat="imgId in imgIds">
-				
-				<div class="imageFill" 
-					ng-init="imgUrl = 'img/projects/'+model.project.id+'/'+imgId+'.jpg'" 
-					style="background-image: url({{imgUrl}});">
-				</div>
-				<img ng-src="{{imgUrl}}" data-index="{{imgId}}" style="display: none;"
-					onload="Aei.CurrPage.onThumbLoad(this);" 
-					onerror="Aei.CurrPage.onThumbFail(this);" />
-				<div class="overlay">
-				</div>
-			</div>
-
+		<div class="large-6 columns">
+			<h3>
+				Client
+			</h3>
+			<p>
+				{{model.project.client}}
+			</p>
+			<h3>
+				Timeline
+			</h3>
+			<p>
+				{{model.project.start}} to {{model.project.end}}<br/>
+			</p>
+			<h3>
+				Link
+			</h3>
+			<p>
+				<a href="http://{{model.project.url}}">{{model.project.url}}</a>
+			</p>
 		</div>
 	</div>
+</section>
 
-</div>
-
-
-<script>
-	Aei.CurrPage = {};
-	Aei.CurrPage.thumbs = [];
-	Aei.CurrPage.thumbEventCount = 0;
-	Aei.CurrPage.thumbActiveId = 0;
-
-	Aei.CurrPage.onThumbLoad = function(img) {
-		var index = $(img).attr('data-index');
-		var thumb = $('#thumb'+index);
-		var thumbOverlay = thumb.children('.overlay');
-
-		thumb
-			.show()
-			.attr('data-w', $(img).width())
-			.attr('data-h', $(img).height())
-			.click(function() {
-				Aei.CurrPage.setActiveThumb(index, false);
-			});
-
-		thumbOverlay.fadeTo(0, 0.8);
-
-		Aei.CurrPage.thumbs[index] = thumb;
-		++Aei.CurrPage.thumbEventCount;
-
-		if ( index == Aei.CurrPage.thumbActiveId ) {
-			Aei.CurrPage.updateActiveThumb();
-		}
-	};
-
-	Aei.CurrPage.onThumbFail = function(img) {
-		var index = $(img).attr('data-index');
-		var thumb = $('#thumb'+index);
-		thumb.hide();
-
-		++Aei.CurrPage.thumbEventCount;
-	};
-
-	Aei.CurrPage.setActiveThumb = function(index) {
-		if ( Aei.CurrPage.thumbActiveId != index ) {
-			var thumb = $('#thumb'+Aei.CurrPage.thumbActiveId);
-			thumb.animate({ height: '40px' }, 400);
-			thumb.children('.overlay').fadeTo(400, 0.8);
-		}
-
-		if ( Aei.CurrPage.thumbActiveId == index ) {
-			return;
-		}
-		
-		Aei.CurrPage.thumbActiveId = index;
-		Aei.CurrPage.updateActiveThumb(true);
-	};
+<section class="content">
+	<div class="row">
 	
-	Aei.CurrPage.updateActiveThumb = function(animate) {
-		var duration = (animate ? 400 : 0);
+		<div class="large-12 columns">
+			<div id="gallery" data-count="{{model.project.imageCount}}">
+				<img ng-repeat="index in model.project.imageIndexes" 
+					ng-src="img/projects/{{model.project.id}}/{{index}}.jpg" 
+					data-index="{{index}}" style="display: none;" />
+			</div>
+		</div>
 
-		var thumb = $('#thumb'+Aei.CurrPage.thumbActiveId);
-		var w = thumb.attr('data-w');
-		var h = thumb.attr('data-h');
-		h = thumb.width()/w*h;
+	</div>
+</section>
 
-		thumb.animate({ height: h+'px' }, duration);
-		thumb.children('.overlay').fadeTo(duration, 0.0);
-	};
-
-	window.onresize = function() {
-		Aei.CurrPage.updateActiveThumb(false);
-	};
-</script>
-
+<div init-page-after-render page="model.page"></div>

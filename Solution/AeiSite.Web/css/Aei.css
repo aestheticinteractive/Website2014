@@ -56,24 +56,3 @@ div.tag {
 .row {
 	min-width: 100%;
 }
-
-
-/*----------------------------------------------------------------------------------------------------*/
-
-
-.gallery .thumb {
-	float: left;
-	position: relative;
-	cursor: pointer;
-	width: 160px;
-	height: 160px;
-	margin: 0 1px 1px 0;
-}
-
-.gallery .thumb .imageFill {
-	width: 100%;
-	height: 100%;
-	background-color: #ccc;
-	background-size: cover;
-	background-position: 50% 50%;
-}
