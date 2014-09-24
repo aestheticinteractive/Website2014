@@ -17,25 +17,25 @@
 		margin-top: 10px;
 	}
 	
-	.thumbHold {
-		display: -moz-inline-stack;
-		display: inline-block;
-		zoom: 1;
-		*display: inline;
-		width: 100px;
-		height: 100px;
-		background-color: #222;
-		overflow: hidden;
-		margin: 4px 8px 4px 0;
-		visibility: hidden;
+	.gallery .thumb {
+		width: 100%;
+		height: 40px;
+		margin: 0 0 2px 0;
+		display: none;
 	}
 	
-	.thumbHold img {
+	.gallery .thumb .overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #555;
 	}
 </style>
 
 
-<div style="padding: 16px;">
+<header style="padding: 16px;">
 	<div style="float: left;">
 		<a href="#/" style="width: 42px; height: 46px;" title="Aesthetic Interactive">
 			<img src="img/Logo-Small-Dark.png" />
@@ -43,7 +43,8 @@
 	</div>
 
 	<div style="padding-left: 16px; float: left;">
-		<div class="tag" style="margin-top:  1px; background-color: #683; color: rgba(255, 255, 255, 0.75);">
+		<div class="tag" style="margin-top:  1px; background-color: #683; 
+				color: rgba(255, 255, 255, 0.75);">
 			Project
 		</div>
 		<div style="margin-top: 4px;">
@@ -55,12 +56,11 @@
 
 	<div style="clear: both;">
 	</div>
-</div>
-
+</header>
 
 <div class="row" style="background-color: #3a3a3a; padding-top: 16px; padding-bottom: 16px;">
 	
-	<div class="large-3 columns">
+	<div class="large-4 columns">
 		<h3>
 			Description
 		</h3>
@@ -69,47 +69,7 @@
 		</p>
 	</div>
 
-	<div class="large-6 columns">
-		<h3>
-			Gallery
-		</h3>
-		<div id="gallery" style="font-size: 0;">
-			<div id="gallery0" class="thumbHold">
-				<img src="img/portfolio/{{model.project.id}}/0.jpg"
-					onload="onThumbLoad(0);" onerror="onThumbFail(0);" />
-			</div>s
-			<div id="gallery1" class="thumbHold">
-				<img src="img/portfolio/{{model.project.id}}/1.jpg"
-					onload="onThumbLoad(1);" onerror="onThumbFail(1);" />
-			</div>
-			<div id="gallery2" class="thumbHold">
-				<img src="img/portfolio/{{model.project.id}}/2.jpg"
-					onload="onThumbLoad(2);" onerror="onThumbFail(2);" />
-			</div>
-			<div id="gallery3" class="thumbHold">
-				<img src="img/portfolio/{{model.project.id}}/3.jpg"
-					onload="onThumbLoad(3);" onerror="onThumbFail(3);" />
-			</div>
-			<div id="gallery4" class="thumbHold">
-				<img src="img/portfolio/{{model.project.id}}/4.jpg"
-					onload="onThumbLoad(4);" onerror="onThumbFail(4);" />
-			</div>
-			<div id="gallery5" class="thumbHold">
-				<img src="img/portfolio/{{model.project.id}}/5.jpg"
-					onload="onThumbLoad(5);" onerror="onThumbFail(5);" />
-			</div>
-			<div id="gallery6" class="thumbHold">
-				<img src="img/portfolio/{{model.project.id}}/6.jpg"
-					onload="onThumbLoad(6);"  onerror="onThumbFail(6);" />
-			</div>
-			<div id="gallery7" class="thumbHold">
-				<img src="img/portfolio/{{model.project.id}}/7.jpg"
-					onload="onThumbLoad(7);" onerror="onThumbFail(7);" />
-			</div>
-		</div>
-	</div>
-
-	<div class="large-3 columns">
+	<div class="large-4 columns">
 		<h3>
 			Client
 		</h3>
@@ -126,32 +86,98 @@
 			Link
 		</h3>
 		<p>
-			<a href="{{model.project.url}}">{{model.project.url}}</a>
+			<a href="http://{{model.project.url}}">{{model.project.url}}</a>
 		</p>
+	</div>
+
+	<div class="large-4 columns">
+		<div class="gallery" style="font-size: 0;" ng-init="imgIds = [0,1,2,3,4,5,6,7]">
+			
+			<div id="thumb{{imgId}}" class="thumb" ng-repeat="imgId in imgIds">
+				
+				<div class="imageFill" 
+					ng-init="imgUrl = 'img/portfolio/'+model.project.id+'/'+imgId+'.jpg'" 
+					style="background-image: url({{imgUrl}});">
+				</div>
+				<img ng-src="{{imgUrl}}" data-index="{{imgId}}" style="display: none;"
+					onload="Aei.CurrPage.onThumbLoad(this);" 
+					onerror="Aei.CurrPage.onThumbFail(this);" />
+				<div class="overlay">
+				</div>
+			</div>
+
+		</div>
 	</div>
 
 </div>
 
 
 <script>
-	/*var buildGallery = function() {
-		var gall = $('#gall');
-		console.log('{{model.project.id}}');
+	Aei.CurrPage = {};
+	Aei.CurrPage.thumbs = [];
+	Aei.CurrPage.thumbEventCount = 0;
+	Aei.CurrPage.thumbActiveId = 0;
 
-		for ( var i = 0 ; i < 7 ; ++i ) {
-			var hold = $('<div>');
-			var img = $('<img>');
-			hold.append(img);
-			gall.append(hold);
+	Aei.CurrPage.onThumbLoad = function(img) {
+		var index = $(img).attr('data-index');
+		var thumb = $('#thumb'+index);
+		var thumbOverlay = thumb.children('.overlay');
+
+		thumb
+			.show()
+			.attr('data-w', $(img).width())
+			.attr('data-h', $(img).height())
+			.click(function() {
+				Aei.CurrPage.setActiveThumb(index, false);
+			});
+
+		thumbOverlay.fadeTo(0, 0.8);
+
+		Aei.CurrPage.thumbs[index] = thumb;
+		++Aei.CurrPage.thumbEventCount;
+
+		if ( index == Aei.CurrPage.thumbActiveId ) {
+			Aei.CurrPage.updateActiveThumb();
 		}
-	};*/
-
-	var onThumbLoad = function(id) {
-		$('#gallery'+id).css('visibility', 'visible');
 	};
 
-	var onThumbFail = function(id) {
-		$('#gallery'+id).css('visibility', 'hidden');
+	Aei.CurrPage.onThumbFail = function(img) {
+		var index = $(img).attr('data-index');
+		var thumb = $('#thumb'+index);
+		thumb.hide();
+
+		++Aei.CurrPage.thumbEventCount;
+	};
+
+	Aei.CurrPage.setActiveThumb = function(index) {
+		if ( Aei.CurrPage.thumbActiveId != index ) {
+			var thumb = $('#thumb'+Aei.CurrPage.thumbActiveId);
+			thumb.animate({ height: '40px' }, 400);
+			thumb.children('.overlay').fadeTo(400, 0.8);
+		}
+
+		if ( Aei.CurrPage.thumbActiveId == index ) {
+			return;
+		}
+		
+		Aei.CurrPage.thumbActiveId = index;
+		Aei.CurrPage.updateActiveThumb(true);
+	};
+	
+	Aei.CurrPage.updateActiveThumb = function(animate) {
+		var duration = (animate ? 400 : 0);
+
+		var thumb = $('#thumb'+Aei.CurrPage.thumbActiveId);
+		var w = thumb.attr('data-w');
+		var h = thumb.attr('data-h');
+		h = thumb.width()/w*h;
+
+		thumb.animate({ height: h+'px' }, duration);
+		thumb.children('.overlay').fadeTo(duration, 0.0);
+	};
+
+	window.onresize = function() {
+		Aei.CurrPage.updateActiveThumb(false);
 	};
 </script>
 
