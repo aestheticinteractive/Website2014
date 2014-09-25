@@ -187,7 +187,7 @@ Aei.Tables.Projects = [
 	},
 	{
 		id: 'illandlev',
-		name: 'Illumination &amp; Levitation',
+		name: 'Illumination & Levitation',
 		client: 'Personal Project',
 		start: '05/01/2006',
 		end: '06/01/2006',

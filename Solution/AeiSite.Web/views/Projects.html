@@ -5,11 +5,15 @@
 		<h3>
 			Projects
 		</h3>
-		<p ng-repeat="proj in model.projects">
-			<a href="#/Projects/{{proj.link}}">
-				{{proj.name}}
-			</a>
-		</p>
+
+		<div ng-repeat="proj in model.projects" style="float: left; width: 166px; height: 200px;">
+			<p style="text-align: center; width: 150px;">
+				<a href="#/Projects/{{proj.link}}" style="font-size: 14px; line-height: 16px;">
+					<img ng-src="img/projects/{{proj.id}}/icon.jpg" /><br/>
+					{{proj.name}}
+				</a>
+			</p>
+		</div>
 
 	</div>
 
