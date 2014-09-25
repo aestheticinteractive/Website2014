@@ -46,7 +46,7 @@ Aei.Pages.Project.prototype._updateLayout = function() {
 	var items = [];
 	var i, item;
 
-	this._maxTotalScaledW = Math.max(0, Math.min(1, (availW-320)/(1200-320)))*2+2.5;
+	this._maxTotalScaledW = Math.max(0, Math.min(1, (availW-320)/(1200-320)))*5+2.5;
 
 	for ( i in images ) {
 		item = {};
@@ -58,9 +58,7 @@ Aei.Pages.Project.prototype._updateLayout = function() {
 		items.push(item);
 	}
 	
-	console.log("ITEMS: "+items.length);
 	var splits = this._splitItems(items, 0, 0, 99);
-	console.log(splits);
 
 	while ( true ) {
 		var count = -1;
@@ -70,7 +68,6 @@ Aei.Pages.Project.prototype._updateLayout = function() {
 		}
 
 		var nextSplits = splits.countMap[count];
-		console.log("COUNT: "+count+" / "+nextSplits);
 		var scaledTotalW = 0;
 		var row = [];
 
@@ -80,7 +77,6 @@ Aei.Pages.Project.prototype._updateLayout = function() {
 			scaledTotalW += item.scaledW;
 		}
 
-		console.log("ROW: "+row.length+" / "+availW+" / "+scaledTotalW+" / "+splits.isEndpoint);
 		this._updateRow(row, availW, scaledTotalW, splits.isEndpoint);
 
 		if ( splits.isEndpoint ) {
@@ -92,13 +88,8 @@ Aei.Pages.Project.prototype._updateLayout = function() {
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Project.prototype._updateRow = function(row, availW, scaledTotalW, isLastRow) {
+Aei.Pages.Project.prototype._updateRow = function(row, availW, scaledTotalW) {
 	var i, item, perc;
-
-	if ( isLastRow && scaledTotalW < this._maxTotalScaledW*0.5 ) {
-		scaledTotalW = this._maxTotalScaledW;
-	}
-
 	availW -= row.length; //1px margins
 
 	for ( i in row ) {
@@ -110,28 +101,11 @@ Aei.Pages.Project.prototype._updateRow = function(row, availW, scaledTotalW, isL
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*----------------------------------------------------------------------------------------------------* /
-Aei.Pages.Project.prototype._splitRows = function(fullRow, availW) {
-	var rowCount = 1;
-	var rowI, item, perc;
-
-	//availW -= row.length; //1px margins
-	
-	while ( true ) {
-		for ( rowI in fullRow ) {
-			item = fullRow[rowI];
-		}
-
-		++rowCount;
-	}
-};
-
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Project.prototype._splitItems = function(items, startIndex, depth, maxDepth) {
-	var spaces = '                                ';
-	var space = spaces.substr(0, depth*4);
 	var minCount = this._getItemCountForRow(items, startIndex, false);
 	var maxCount = this._getItemCountForRow(items, startIndex, true);
+	var child;
 
 	var obj = {
 		startIndex: startIndex,
@@ -140,40 +114,43 @@ Aei.Pages.Project.prototype._splitItems = function(items, startIndex, depth, max
 		countMap: null
 	};
 
-	var child;
+	//Try the full range of possible counts. Scanning from high-to-low typically finds a minimal 
+	//"maxDepth" value sooner (which avoids unnecessary recursion).
 
-	for ( var i = maxCount ; i >= minCount ; --i ) {
-		console.log(space+'i '+i+" / md="+obj.maxDepth);
+	for ( var count = maxCount ; count >= minCount ; --count ) {
 		
-		if ( startIndex+i == items.length ) {
+		//Create an endpoint if this "count" reaches the end of the list
+
+		if ( startIndex+count == items.length ) {
 			obj.maxDepth = depth;
 			obj.isEndpoint = true;
 			obj.countMap = (obj.countMap || {});
-			obj.countMap[i] = null;
-			console.log(space+'End done '+startIndex+"+"+i+"="+items.length+" / md="+obj.maxDepth);
+			obj.countMap[count] = null;
 			continue;
 		}
+
+		//Stop searching if depth is beyond an already-discovered maximum.
 
 		if ( depth+1 > obj.maxDepth ) {
-			console.log(space+'Skip MD '+depth+" / "+obj.maxDepth);
 			continue;
 		}
 
-		child = this._splitItems(items, startIndex+i, depth+1, obj.maxDepth);
+		//Recursively split the remaining list using this "count" value.
 
-		if ( !child ) {
-			console.log(space+'skip null child: '+i);
-			continue;
+		child = this._splitItems(items, startIndex+count, depth+1, obj.maxDepth);
+
+		//Capture the recursive results, if any.
+
+		if ( child ) {
+			obj.countMap = (obj.countMap || {});
+			obj.countMap[count] = child;
+			obj.maxDepth = Math.min(obj.maxDepth, child.maxDepth);
 		}
-
-		obj.countMap = (obj.countMap || {});
-		obj.countMap[i] = child;
-		console.log(space+'child: '+startIndex+" / "+i+" / o="+obj.maxDepth+" / c="+child.maxDepth);
-		obj.maxDepth = Math.min(obj.maxDepth, child.maxDepth);
 	}
 
+	//Only return nodes which contain complete paths to the end of the list.
+
 	if ( !obj.isEndpoint && !obj.countMap ) {
-		console.log(space+'skip empty node: '+startIndex);
 		return null;
 	}
 
@@ -185,12 +162,10 @@ Aei.Pages.Project.prototype._getItemCountForRow = function(items, startIndex, fi
 	var totalW = 0;
 	var threshold = (findMax ? this._maxTotalScaledW : this._maxTotalScaledW*0.8);
 	var i, item;
-	//console.log("ROW: "+items.length+" / "+startIndex);
 
 	for ( i = 0 ; i < items.length-startIndex ; ++i ) {
 		item = items[i+startIndex];
 		totalW += item.scaledW;
-		//console.log(" * "+i+" / "+item.scaledW+" / "+totalW+" / "+threshold);
 
 		if ( totalW > threshold ) {
 			return i;
@@ -198,24 +173,6 @@ Aei.Pages.Project.prototype._getItemCountForRow = function(items, startIndex, fi
 	}
 
 	return i;
-};
-
-/*----------------------------------------------------------------------------------------------------* /
-Aei.Pages.Project.prototype._doesRowFit = function(row, availW) {
-	var totalW = 0;
-	var maxTotalW = this._maxTotalScaledW;
-	var i, item;
-	
-	for ( i in row ) {
-		item = row[i];
-		totalW += item.scaledW;
-
-		if ( totalW > maxTotalW ) {
-			return false;
-		}
-	}
-
-	return (totalW > maxTotalW*0.666);
 };
 
 
