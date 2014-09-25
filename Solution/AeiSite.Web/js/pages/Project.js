@@ -59,31 +59,23 @@ Aei.Pages.Project.prototype._updateLayout = function() {
 	}
 	
 	var splits = this._splitItems(items, 0, 0, 99);
+	var rowCounts = this._chooseOptimalRowCounts(splits);
+	var index = 0;
+	var j, count, scaledTotalW, row;
 
-	while ( true ) {
-		var count = -1;
+	for ( i in rowCounts ) {
+		count = rowCounts[i];
+		scaledTotalW = 0;
+		row = [];
 
-		for ( count in splits.countMap ) {
-			break; //TODO: this simply takes the first "count" configuration
-		}
-
-		var nextSplits = splits.countMap[count];
-		var scaledTotalW = 0;
-		var row = [];
-
-		for ( i = 0 ; i < count ; ++i ) {
-			item = items[splits.startIndex+i];
+		for ( j = 0 ; j < count ; ++j ) {
+			item = items[index+j];
 			row.push(item);
 			scaledTotalW += item.scaledW;
 		}
 
 		this._updateRow(row, availW, scaledTotalW, splits.isEndpoint);
-
-		if ( splits.isEndpoint ) {
-			break;
-		}
-
-		splits = nextSplits;
+		index += count;
 	}
 };
 
@@ -173,6 +165,68 @@ Aei.Pages.Project.prototype._getItemCountForRow = function(items, startIndex, fi
 	}
 
 	return i;
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Pages.Project.prototype._chooseOptimalRowCounts = function(splits) {
+	var countLists = this._getSplitArrays(splits);
+	var countInfos = [];
+	var i, ci, info, count;
+
+	//Analyze the available "count" options.
+
+	for ( i in countLists ) {
+		info = {};
+		info.counts = countLists[i];
+		info.min = 999;
+		info.max = 0;
+
+		for ( ci in info.counts ) {
+			count = info.counts[ci];
+			info.min = Math.min(info.min, count);
+			info.max = Math.max(info.max, count);
+		}
+
+		info.range = info.max-info.min;
+		countInfos.push(info);
+	}
+
+	//Find the option with the least range. If necessary, choose lower counts for the first row, so
+	//that those images are larger than the rest.
+
+	countInfos.sort(function(a, b) {
+		if ( a.range == b.range ) {
+			return (a.counts[0] < b.counts[0] ? -1 : 1);
+		}
+
+		return (a.range < b.range ? -1 : 1);
+	});
+
+	return countInfos[0].counts;
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Pages.Project.prototype._getSplitArrays = function(splits) {
+	if ( !splits ) {
+		return [[]];
+	}
+	
+	var arrays = [];
+	var count, childArrays, i;
+
+	//Collapse the "splits" tree into an 2D array of available "count" options.
+
+	for ( count in splits.countMap ) {
+		childArrays = this._getSplitArrays(splits.countMap[count]);
+
+		for ( i in childArrays ) {
+			arrays.push([ Number(count) ].concat(childArrays[i]));
+		}
+	}
+
+	return arrays;
 };
 
 
