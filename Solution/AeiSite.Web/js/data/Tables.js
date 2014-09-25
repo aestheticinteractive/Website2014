@@ -85,6 +85,11 @@ Aei.Tables.Skill = [
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
 	},
 	{
+		id: 'objc',
+		name: 'Objective-C',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
+	},
+	{
 		id: 'as',
 		name: 'ActionScript',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
@@ -141,7 +146,7 @@ Aei.Tables.Skill = [
 	},
 	{
 		id: 'd3js',
-		name: 'D3JS',
+		name: 'd3.js',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
 	},
 	{
@@ -162,6 +167,11 @@ Aei.Tables.Skill = [
 	{
 		id: 'cocoa',
 		name: 'Cocoa',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
+	},
+	{
+		id: 'ogl',
+		name: 'OpenGL',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
 	},
 
@@ -271,7 +281,7 @@ Aei.Tables.Skill = [
 	},
 	{
 		id: 'web',
-		name: 'Website',
+		name: 'Web',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'sys')
 	},
 
@@ -311,7 +321,7 @@ Aei.Tables.Skill = [
 	},
 	{
 		id: 'algo',
-		name: 'Algorithms',
+		name: 'Algorithm',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
 	},
 	{
@@ -327,6 +337,11 @@ Aei.Tables.Skill = [
 	{
 		id: 'servSide',
 		name: 'Server-Side',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: 'webserv',
+		name: 'Web Service',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
 	},
 	{
@@ -357,7 +372,121 @@ Aei.Tables.Project = [
 		end: '12/15/2009',
 		desc: 'Fragmental 3D is a puzzle game of skill, strategy, and timing for iPhone and iPod Touch devices. Various pieces fall from the top of the playing grid. As a Fragment falls, you can move and rotate it to fit on the grid. The goal: create as many winning lines as you can before you run out of space in your grid.\n\nThis iPhone app was designed and developed in-house by Aesthetic Interactive. Fragmental\'s 3D gameplay and effects are implemented using the OpenGL framework, with powerful polygon-drawing optimizations to allow the app to perform well on all the various Apple devices. The app leverages the Cocoa framework for the menu systems, and integrates with an online service for the leaderboards. Paid and free versions are both available in the App Store.',
 		url: 'www.fragmental3d.com',
-		imageCount: 5
+		imageCount: 5,
+		services: [
+			{
+				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				desc: 'Built the entire app; game logic, effects, controls, menus, optimizations, etc.',
+				weight: 1
+			},
+			{
+				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				desc: 'Designed all game screens, controls, backgrounds, menus, etc.',
+				weight: 0.98
+			},
+			{
+				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				desc: 'Invented the game concept, control systems, game variations, etc.',
+				weight: 0.99
+			},
+			{
+				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: 'Planned, executed, released, and maintained the project.',
+				weight: 0.9
+			}
+		],
+		skills: [
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'html'),
+				desc: 'Built a simple marketing website.',
+				weight: 0.2
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'css'),
+				desc: 'Built a simple marketing website.',
+				weight: 0.2
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'js'),
+				desc: 'Built a simple marketing website.',
+				weight: 0.1
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'objc'),
+				desc: 'Wrote app in this language.',
+				weight: 0.985
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'cocoa'),
+				desc: 'Used in the app\'s menus.',
+				weight: 0.5
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ogl'),
+				desc: 'Used for the app\'s 3D graphics.',
+				weight: 0.98
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'xcode'),
+				desc: 'Used as the primary development environment.',
+				weight: 0.8
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'svn'),
+				desc: 'Used as the source-control system.',
+				weight: 0.5
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
+				desc: 'Used to design backgrounds and other game assets.',
+				weight: 0.75
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'mac'),
+				desc: 'Developed and tested using this OS.',
+				weight: 0.5
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ios'),
+				desc: 'Built app to target this OS.',
+				weight: 0.99
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'web'),
+				desc: 'Built a simple marketing website.',
+				weight: 0.25
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: 'Created all the screens, backgrounds, and menus.',
+				weight: 0.92
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: 'Invented the control system for moving/rotating pieces and orbiting the camera.',
+				weight: 1
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: 'Created interactive 3D graphics and textures.',
+				weight: 0.99
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: 'Created several movement and transition animations.',
+				weight: 0.9
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: 'Implemented several algorithms for game logic and optimization of 3D graphics performance.',
+				weight: 0.95
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'teamOne'),
+				desc: '',
+				weight: 0.995
+			}
+		]
 	},
 	{
 		id: 'journeyful',
@@ -649,4 +778,11 @@ for ( var i in Aei.Tables.Project ) {
 	for ( var c = 0 ; c < proj.imageCount ; ++c ) {
 		proj.imageIndexes[c] = c;
 	}
+	
+	var compareWeight = function(a, b) {
+		return (a.weight == b.weight ? 0 : (a.weight > b.weight ? -1 : 1));
+	};
+
+	proj.services.sort(compareWeight);
+	proj.skills.sort(compareWeight);
 }
