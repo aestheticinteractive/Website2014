@@ -44,13 +44,15 @@ Aei.Controllers.Home = function($scope) {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Projects = function($scope) {
 	$scope.model = {
-		projects: Aei.Database.selectList(Aei.Tables.Projects)
+		projects: Aei.Database.selectList(Aei.Tables.Project),
+		services: Aei.Database.selectList(Aei.Tables.Service),
+		skills: Aei.Database.selectList(Aei.Tables.Skill)
 	};
 };
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Project = function($scope, $routeParams) {
-	var proj = Aei.Database.selectByUniqueProperty(Aei.Tables.Projects, 'link', $routeParams.link);
+	var proj = Aei.Database.selectByUniqueProperty(Aei.Tables.Project, 'link', $routeParams.link);
 
 	$scope.model = {
 		project: proj,

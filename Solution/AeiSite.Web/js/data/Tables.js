@@ -4,7 +4,351 @@ Aei.Tables = {};
 
 
 /*====================================================================================================*/
-Aei.Tables.Projects = [
+Aei.Tables.Service = [
+	{
+		id: 'dev',
+		name: 'Development',
+		desc: 'Planning and building software.'
+	},
+	{
+		id: 'des',
+		name: 'Design',
+		desc: 'Creating new visual designs.'
+	},
+	{
+		id: 'cre',
+		name: 'Creative',
+		desc: 'Brainstorming new ideas for features, solutions, and business.'
+	},
+	{
+		id: 'mgt',
+		name: 'Project Management',
+		desc: 'Organizing teams, planning features, making decisions, etc.'
+	}
+];
+
+
+/*====================================================================================================*/
+Aei.Tables.SkillGroup = [
+	{
+		id: 'lang',
+		name: 'Language',
+		desc: 'Programming and markup languages.'
+	},
+	{
+		id: 'lib',
+		name: 'Library',
+		desc: 'Libraries, frameworks, and other useful tools.'
+	},
+	{
+		id: 'prod',
+		name: 'Product',
+		desc: 'Software systems and applications.'
+	},
+	{
+		id: 'sys',
+		name: 'System',
+		desc: 'Operating systems, devices, or other environments.'
+	},
+	{
+		id: 'cap',
+		name: 'Capability',
+		desc: 'General areas of knowledge, experience, and ability.'
+	}
+];
+
+
+/*====================================================================================================*/
+Aei.Tables.Skill = [
+	
+
+	/* Language */
+
+	{
+		id: 'c#',
+		name: 'C#',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
+	},
+	{
+		id: 'js',
+		name: 'Javascript',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
+	},
+	{
+		id: 'html',
+		name: 'HTML5',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
+	},
+	{
+		id: 'css',
+		name: 'CSS',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
+	},
+	{
+		id: 'as',
+		name: 'ActionScript',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
+	},
+	{
+		id: 'sql',
+		name: 'SQL',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
+	},
+	{
+		id: 'gremlin',
+		name: 'Gremlin',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
+	},
+	{
+		id: 'java',
+		name: 'Java',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
+	},
+	{
+		id: 'php',
+		name: 'PHP',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
+	},
+	{
+		id: 'c++',
+		name: 'C++',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
+	},
+
+
+	/* Library */
+
+	
+	{
+		id: 'jquery',
+		name: 'jQuery',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
+	},
+	{
+		id: 'angjs',
+		name: 'AngularJS',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
+	},
+	{
+		id: 'foundjs',
+		name: 'Foundation',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
+	},
+	{
+		id: 'kinjs',
+		name: 'KineticJS',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
+	},
+	{
+		id: 'd3js',
+		name: 'D3JS',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
+	},
+	{
+		id: 'flash',
+		name: 'Flash',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
+	},
+	{
+		id: 'flex',
+		name: 'Flex',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
+	},
+	{
+		id: 'net',
+		name: '.NET',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
+	},
+	{
+		id: 'cocoa',
+		name: 'Cocoa',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
+	},
+
+
+	/* Product */
+
+
+	{
+		id: 'unity',
+		name: 'Unity 3D',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'xcode',
+		name: 'XCode',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'vs',
+		name: 'Visual Studio',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'resharp',
+		name: 'Resharper',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'flashbuild',
+		name: 'Flash Builder',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'mssql',
+		name: 'SQL Server',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'mysql',
+		name: 'MySQL',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'mariadb',
+		name: 'MariaDB',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'titan',
+		name: 'Titan Graph Database',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'cass',
+		name: 'Cassandra',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'svn',
+		name: 'Subversion',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'git',
+		name: 'Git',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'merc',
+		name: 'Mercurial',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'eclipse',
+		name: 'Eclipse',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+	{
+		id: 'photo',
+		name: 'Photoshop',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
+	},
+
+
+	/* System */
+
+
+	{
+		id: 'win',
+		name: 'Windows',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'sys')
+	},
+	{
+		id: 'mac',
+		name: 'Mac',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'sys')
+	},
+	{
+		id: 'ios',
+		name: 'iOS',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'sys')
+	},
+	{
+		id: 'linux',
+		name: 'Linux',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'sys')
+	},
+	{
+		id: 'web',
+		name: 'Website',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'sys')
+	},
+
+
+	/* Capability */
+
+
+	{
+		id: 'mob',
+		name: 'Mobile',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: 'ui',
+		name: 'User Interface',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: 'ux',
+		name: 'User Experience',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: 'resp',
+		name: 'Responsive Layout',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: '3d',
+		name: '3D Graphics',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: 'anim',
+		name: 'Animation',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: 'algo',
+		name: 'Algorithms',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: 'pixperf',
+		name: 'Pixel-Perfect Matching',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: 'db',
+		name: 'Database',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: 'servSide',
+		name: 'Server-Side',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: 'teamOne',
+		name: 'One-Man Team',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: 'teamDes',
+		name: 'With Design Team',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	},
+	{
+		id: 'teamDev',
+		name: 'With Dev Team',
+		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+	}
+];
+
+
+/*====================================================================================================*/
+Aei.Tables.Project = [
 	{
 		id: 'fragmental',
 		name: 'Fragmental 3D',
@@ -297,8 +641,8 @@ Aei.Tables.Projects = [
 	}
 ];
 
-for ( var i in Aei.Tables.Projects ) {
-	var proj = Aei.Tables.Projects[i];
+for ( var i in Aei.Tables.Project ) {
+	var proj = Aei.Tables.Project[i];
 	proj.link = proj.name.replace(/ /g, '-');
 	proj.imageIndexes = [];
 
