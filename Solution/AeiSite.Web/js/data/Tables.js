@@ -403,13 +403,8 @@ Aei.Tables.Project = [
 			},
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'css'),
-				desc: 'Built a simple marketing website.',
+				desc: 'Styled the app\'s marketing website.',
 				weight: 0.2
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'js'),
-				desc: 'Built a simple marketing website.',
-				weight: 0.1
 			},
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'objc'),
@@ -440,11 +435,6 @@ Aei.Tables.Project = [
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
 				desc: 'Used to design backgrounds and other game assets.',
 				weight: 0.75
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'mac'),
-				desc: 'Developed and tested using this OS.',
-				weight: 0.5
 			},
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ios'),
@@ -783,6 +773,11 @@ for ( var i in Aei.Tables.Project ) {
 		return (a.weight == b.weight ? 0 : (a.weight > b.weight ? -1 : 1));
 	};
 
-	proj.services.sort(compareWeight);
-	proj.skills.sort(compareWeight);
+	if ( proj.services ) {
+		proj.services.sort(compareWeight);
+	}
+
+	if ( proj.skills ) {
+		proj.skills.sort(compareWeight);
+	}
 }

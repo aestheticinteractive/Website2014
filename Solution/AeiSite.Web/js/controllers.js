@@ -39,14 +39,11 @@ Aei.Controllers.Home = function($scope) {
 };
 
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Projects = function($scope) {
 	$scope.model = {
-		projects: Aei.Database.selectList(Aei.Tables.Project),
-		services: Aei.Database.selectList(Aei.Tables.Service),
-		skills: Aei.Database.selectList(Aei.Tables.Skill)
+		projects: Aei.Database.selectList(Aei.Tables.Project)
 	};
 };
 
@@ -61,13 +58,61 @@ Aei.Controllers.Project = function($scope, $routeParams) {
 };
 
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Services = function($scope) {
-	$scope.model = {};
+	$scope.model = {
+		services: Aei.Database.selectList(Aei.Tables.Service)
+	};
 };
 
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.Service = function($scope, $routeParams) {
+	var serv = Aei.Database.selectByUniqueProperty(Aei.Tables.Service, 'link', $routeParams.link);
+
+	$scope.model = {
+		service: serv,
+		page: null //new Aei.Pages.Service(serv)
+	};
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.Skills = function($scope) {
+	console.log('here');
+	var skills = Aei.Database.selectList(Aei.Tables.Skill);
+	var groupMap = {};
+	var i, skill, key;
+
+	for ( i in skills ) {
+		skill = skills[i];
+		key = skill.group.id;
+
+		if ( !groupMap[key] ) {
+			groupMap[key] = [];
+		}
+
+		groupMap[key].push(skill);
+	}
+
+	console.log(groupMap);
+
+	$scope.model = {
+		skills: skills,
+		groupMap: groupMap
+	};
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.Skill = function($scope, $routeParams) {
+	var skill = Aei.Database.selectByUniqueProperty(Aei.Tables.Skill, 'link', $routeParams.link);
+
+	$scope.model = {
+		skill: skill,
+		page: null //new Aei.Pages.Project(skill)
+	};
+};
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -75,7 +120,6 @@ Aei.Controllers.Services = function($scope) {
 Aei.Controllers.Background = function($scope) {
 	$scope.model = {};
 };
-
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

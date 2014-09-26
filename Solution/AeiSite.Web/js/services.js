@@ -4,10 +4,12 @@
 /*----------------------------------------------------------------------------------------------------*/
 Aei.RouteBuilder = function($routeProvider) {
 	$routeProvider
+		
 		.when('/', {
 			templateUrl: 'views/Home.html',
 			controller: Aei.Controllers.Home
 		})
+
 		.when('/Projects', {
 			templateUrl: 'views/Projects.html',
 			controller: Aei.Controllers.Projects
@@ -16,18 +18,35 @@ Aei.RouteBuilder = function($routeProvider) {
 			templateUrl: 'views/Project.html',
 			controller: Aei.Controllers.Project
 		})
+		
 		.when('/Services', {
 			templateUrl: 'views/Services.html',
 			controller: Aei.Controllers.Services
 		})
+		.when('/Services/:link', {
+			templateUrl: 'views/Service.html',
+			controller: Aei.Controllers.Service
+		})
+		
+		.when('/Skills', {
+			templateUrl: 'views/Skills.html',
+			controller: Aei.Controllers.Skills
+		})
+		.when('/Skills/:link', {
+			templateUrl: 'views/Skill.html',
+			controller: Aei.Controllers.Skill
+		})
+		
 		.when('/Background', {
 			templateUrl: 'views/Background.html',
 			controller: Aei.Controllers.Background
 		})
+		
 		.when('/Contact', {
 			templateUrl: 'views/Contact.html',
 			controller: Aei.Controllers.Contact
 		})
+		
 		.otherwise({
 			redirectTo: '/'
 		});
