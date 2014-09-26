@@ -14,26 +14,26 @@ Aei.Controllers.getPageTitle = function(list) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Menu = function(/*$route, $routeParams,*/ $location) {
-	this.isActiveLink = function(path) {
-		return ($location.path().substring(0, path.length) == path);
+	this.isActiveLink = function(url) {
+		return ($location.path().substring(0, url.length) == url);
 	};
 
 	this.items = [
 		{
-			name: 'projects',
-			link: '/Projects'
+			name: 'Projects',
+			url: '/Projects'
 		},
 		{
-			name: 'services',
-			link: '/Services'
+			name: 'Services',
+			url: '/Services'
 		},
 		{
-			name: 'background',
-			link: '/Background'
+			name: 'Skills',
+			url: '/Skills'
 		},
 		{
-			name: 'contact',
-			link: '/Contact'
+			name: 'Contact',
+			url: '/Contact'
 		}
 	];
 };
@@ -145,17 +145,6 @@ Aei.Controllers.Skill = function($rootScope, $scope, $routeParams) {
 	$rootScope.tag = 'Skill';
 	$rootScope.title = skill.name;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Skills']);
-};
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Background = function($rootScope, $scope) {
-	$scope.model = {};
-	
-	$rootScope.tag = 'Section';
-	$rootScope.title = 'Background';
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
 };
 
 

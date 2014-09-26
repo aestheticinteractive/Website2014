@@ -20,7 +20,7 @@ p, a, ul, li {
 	font-size: 16px;
 }
 
-p, a, h1, h2, h3, h4, h5, ul, li, div.tag {
+p, a, h1, h2, h3, h4, h5, ul, li, div {
 	font-family: Tahoma, Helvetica, Arial, Verdana, sans-serif;
 }
 
@@ -55,6 +55,97 @@ div.tag {
 
 .row {
 	min-width: 100%;
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+header {
+	margin-top: 16px;
+	padding-top: 16px;
+	padding-bottom: 8px;
+}
+
+header .logo {
+	float: left;
+}
+
+header .page {
+	padding-left: 16px;
+	float: left;
+}
+
+header .page .tag {
+	margin-top:  1px;
+	background-color: #683; 
+	color: rgba(255, 255, 255, 0.75);
+}
+
+header .page .title {
+	margin: 4px 0 0 0;
+	color: #fff;
+	font-size: 24px;
+	line-height: 20px;
+}
+
+header .items {
+	float: right;
+	background-color: #3a3a3a;
+	padding: 16px;
+	margin: 10px -16px 0 0;
+}
+
+header .item {
+	float: left;
+}
+
+header .item + .item {
+	margin-left: 16px;
+}
+
+header .item a {
+	font-size: 14px;
+	color: #777;
+	font-weight: bold;
+}
+
+header .item a:hover {
+	color: #999;
+}
+
+header .item a.active {
+	color: #ccc;
+}
+
+header .item a.active:hover {
+	color: #fff;
+}
+
+
+@media only screen and (max-width: 40.063em) { /* < medium */
+}
+
+@media only screen and (max-width: 64.063em) { /* < large */
+                                               
+	header {
+		margin-top: 0;
+		padding: 16px 0 8px 0;
+	}
+	
+	header .itemsCol {
+		margin-top: 16px;
+		background-color: #3a3a3a;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+	
+	header .items {
+		margin: 0;
+		padding: 0;
+		float: none;
+	}
+	
 }
 
 

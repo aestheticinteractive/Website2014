@@ -13,28 +13,11 @@
 
 	<body>
 		<div id="siteContainer">
-			<header style="padding: 16px;">
-				<div style="float: left;">
-					<a href="#/" style="width: 42px; height: 46px;" title="Aesthetic Interactive">
-						<img src="img/Logo-Small-Dark.png" />
-					</a>
-				</div>
-
-				<div style="padding-left: 16px; float: left;">
-					<div class="tag" style="margin-top:  1px; background-color: #683; 
-							color: rgba(255, 255, 255, 0.75);">
-						{{tag}}
-					</div>
-					<div style="margin-top: 4px;">
-						<p style="color: #fff; font-size: 24px; line-height: 20px; margin: 0;">
-							{{title}}
-						</p>
-					</div>
-				</div>
-
-				<div style="clear: both;">
+			<header ng-controller="Aei.Controllers.Menu as menu">
+				<div main-menu tag="tag" title="title" menu="menu">
 				</div>
 			</header>
+
 			<main ng-view>
 			</main>
 		</div>

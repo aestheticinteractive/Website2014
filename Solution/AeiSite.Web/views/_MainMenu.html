@@ -1,0 +1,29 @@
+<div class="row">
+	
+	<div class="large-6 columns">
+		<div class="logo">
+			<a href="#/" title="Aesthetic Interactive">
+				<img src="img/Logo-Small-Dark.png" />
+			</a>
+		</div>
+		<div class="page">
+			<div class="tag">
+				{{tag}}
+			</div>
+			<div class="title">
+				{{title}}
+			</div>
+		</div>
+	</div>
+
+	<div class="large-6 columns itemsCol">
+		<div class="items">
+			<div class="item" ng-repeat="item in menu.items">
+				<a href="#{{item.url}}" class="{{menu.isActiveLink(item.url) ? 'active' : ''}}">
+					{{item.name}}
+				</a>
+			</div>
+		</div>
+	</div>
+
+</div>

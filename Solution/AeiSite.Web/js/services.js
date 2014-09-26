@@ -37,11 +37,6 @@ Aei.RouteBuilder = function($routeProvider) {
 			controller: Aei.Controllers.Skill
 		})
 		
-		.when('/Background', {
-			templateUrl: 'views/Background.html',
-			controller: Aei.Controllers.Background
-		})
-		
 		.when('/Contact', {
 			templateUrl: 'views/Contact.html',
 			controller: Aei.Controllers.Contact
@@ -82,15 +77,18 @@ Aei.Angular.filter('formatDatetime', function() {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*----------------------------------------------------------------------------------------------------* /
+/*----------------------------------------------------------------------------------------------------*/
 Aei.Angular.directive('mainMenu', function() {
 	return {
 		scope: {
-			menuController: '=menuController'
+			mc: '=mc',
+			tag: '=tag',
+			title: '=title',
+			menu: '=menu'
 		},
 		templateUrl: 'views/_MainMenu.html'
 	};
-});*/
+});
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Angular.directive('initPageAfterRender', function() {
