@@ -6,11 +6,33 @@
 		<script src="js/lib/modernizr.js"></script>
 		<link rel="stylesheet" href="css/Aei.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-		<title>Aesthetic Interactive | Software Development and Design | Grand Rapids, MI</title>
+		<title>{{title}} | Aesthetic Interactive | Software Development and Design | Grand Rapids, MI</title>
 	</head>
 
 	<body>
 		<div id="siteContainer">
+			<header style="padding: 16px;">
+				<div style="float: left;">
+					<a href="#/" style="width: 42px; height: 46px;" title="Aesthetic Interactive">
+						<img src="img/Logo-Small-Dark.png" />
+					</a>
+				</div>
+
+				<div style="padding-left: 16px; float: left;">
+					<div class="tag" style="margin-top:  1px; background-color: #683; 
+							color: rgba(255, 255, 255, 0.75);">
+						{{tag}}
+					</div>
+					<div style="margin-top: 4px;">
+						<p style="color: #fff; font-size: 24px; line-height: 20px; margin: 0;">
+							{{title}}
+						</p>
+					</div>
+				</div>
+
+				<div style="clear: both;">
+				</div>
+			</header>
 			<main ng-view>
 			</main>
 		</div>

@@ -1,20 +1,18 @@
-<div class="row">
+<section class="content">
+	<div class="row">
 	
-	<div class="large-12 columns">
+		<div class="large-12 columns">
 		
-		<h3>
-			Projects
-		</h3>
+			<div ng-repeat="proj in model.projects" style="float: left; width: 166px; height: 200px;">
+				<p style="text-align: center; width: 150px;">
+					<a href="#/Projects/{{proj.link}}" style="font-size: 14px; line-height: 16px;">
+						<img ng-src="img/projects/{{proj.id}}/icon.jpg" /><br/>
+						{{proj.name}}
+					</a>
+				</p>
+			</div>
 
-		<div ng-repeat="proj in model.projects" style="float: left; width: 166px; height: 200px;">
-			<p style="text-align: center; width: 150px;">
-				<a href="#/Projects/{{proj.link}}" style="font-size: 14px; line-height: 16px;">
-					<img ng-src="img/projects/{{proj.id}}/icon.jpg" /><br/>
-					{{proj.name}}
-				</a>
-			</p>
 		</div>
 
 	</div>
-
-</div>
+</section>

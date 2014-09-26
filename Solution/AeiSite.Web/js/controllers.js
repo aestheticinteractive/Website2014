@@ -34,53 +34,68 @@ Aei.Controllers.Menu = function(/*$route, $routeParams,*/ $location) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Home = function($scope) {
-	$scope.model = {};
+Aei.Controllers.Home = function($rootScope, $scope) {
+	$rootScope.tag = 'Home';
+	$rootScope.title = 'Aesthetic Interactive';
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Projects = function($scope) {
+Aei.Controllers.Projects = function($rootScope, $scope) {
+	$rootScope.tag = 'Home';
+	$rootScope.title = 'Aesthetic Interactive';
+
 	$scope.model = {
 		projects: Aei.Database.selectList(Aei.Tables.Project)
 	};
+	
+	$rootScope.tag = 'Section';
+	$rootScope.title = 'Projects';
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Project = function($scope, $routeParams) {
+Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 	var proj = Aei.Database.selectByUniqueProperty(Aei.Tables.Project, 'link', $routeParams.link);
 
 	$scope.model = {
 		project: proj,
 		page: new Aei.Pages.Project(proj)
 	};
+	
+	$rootScope.tag = 'Project';
+	$rootScope.title = proj.name;
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Services = function($scope) {
+Aei.Controllers.Services = function($rootScope, $scope) {
 	$scope.model = {
 		services: Aei.Database.selectList(Aei.Tables.Service)
 	};
+	
+	$rootScope.tag = 'Section';
+	$rootScope.title = 'Services';
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Service = function($scope, $routeParams) {
+Aei.Controllers.Service = function($rootScope, $scope, $routeParams) {
 	var serv = Aei.Database.selectByUniqueProperty(Aei.Tables.Service, 'link', $routeParams.link);
 
 	$scope.model = {
 		service: serv,
 		page: null //new Aei.Pages.Service(serv)
 	};
+	
+	$rootScope.tag = 'Service';
+	$rootScope.title = serv.name;
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Skills = function($scope) {
-	console.log('here');
+Aei.Controllers.Skills = function($rootScope, $scope) {
 	var skills = Aei.Database.selectList(Aei.Tables.Skill);
 	var groupMap = {};
 	var i, skill, key;
@@ -96,34 +111,44 @@ Aei.Controllers.Skills = function($scope) {
 		groupMap[key].push(skill);
 	}
 
-	console.log(groupMap);
-
 	$scope.model = {
 		skills: skills,
 		groupMap: groupMap
 	};
+	
+	$rootScope.tag = 'Section';
+	$rootScope.title = 'Skills';
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Skill = function($scope, $routeParams) {
+Aei.Controllers.Skill = function($rootScope, $scope, $routeParams) {
 	var skill = Aei.Database.selectByUniqueProperty(Aei.Tables.Skill, 'link', $routeParams.link);
 
 	$scope.model = {
 		skill: skill,
 		page: null //new Aei.Pages.Project(skill)
 	};
+	
+	$rootScope.tag = 'Skill';
+	$rootScope.title = skill.name;
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Background = function($scope) {
+Aei.Controllers.Background = function($rootScope, $scope) {
 	$scope.model = {};
+	
+	$rootScope.tag = 'Section';
+	$rootScope.title = 'Background';
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Contact = function($scope) {
+Aei.Controllers.Contact = function($rootScope, $scope) {
 	$scope.model = {};
+	
+	$rootScope.tag = 'Section';
+	$rootScope.title = 'Contact Aesthetic Interactive';
 };

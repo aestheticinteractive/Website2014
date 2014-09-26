@@ -56,3 +56,37 @@ div.tag {
 .row {
 	min-width: 100%;
 }
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+section.content {
+	background-color: #3a3a3a;
+	padding: 16px 0;
+}
+	
+section.content + section.content {
+	margin-top: 8px;
+}
+
+section.content h3 {
+	color: #777;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin: 0;
+}
+	
+section.content p {
+	color: #bbb;
+	font-size: 14px;
+	line-height: 18px;
+}
+	
+section.content p + h3 {
+	margin-top: 10px;
+}
+	
+section.content div + h3 {
+	margin-top: 10px;
+}

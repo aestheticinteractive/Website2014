@@ -1,18 +1,16 @@
-<div class="row">
+<section class="content">
+	<div class="row">
 	
-	<div class="large-12 columns">
+		<div class="large-12 columns">
 		
-		<h3>
-			Services
-		</h3>
-		
-		<table>
-			<tr ng-repeat="serv in model.services" style="width: 100%;">
-				<td><b>{{serv.name}}</b></td>
-				<td>{{serv.desc}}</td>
-			</tr>
-		</table>
+			<table>
+				<tr ng-repeat="serv in model.services" style="width: 100%;">
+					<td><b>{{serv.name}}</b></td>
+					<td>{{serv.desc}}</td>
+				</tr>
+			</table>
+
+		</div>
 
 	</div>
-
-</div>
+</section>

@@ -1,23 +1,21 @@
-<div class="row">
+<section class="content">
+	<div class="row">
 	
-	<div class="large-12 columns">
+		<div class="large-12 columns">
 		
-		<h3>
-			Skills
-		</h3>
-		
-		<div ng-repeat="skills in model.groupMap">
-			<p style="font-weight: bold;">
-				{{skills[0].group.name}}
-			</p>
-			<table>
-				<tr ng-repeat="skill in skills" style="width: 100%;">
-					<td><b>{{skill.name}}</b></td>
-					<td>{{skill.desc}}</td>
-				</tr>
-			</table>
+			<div ng-repeat="skills in model.groupMap">
+				<p style="font-weight: bold;">
+					{{skills[0].group.name}}
+				</p>
+				<table>
+					<tr ng-repeat="skill in skills" style="width: 100%;">
+						<td><b>{{skill.name}}</b></td>
+						<td>{{skill.desc}}</td>
+					</tr>
+				</table>
+			</div>
+
 		</div>
 
 	</div>
-
-</div>
+</section>
