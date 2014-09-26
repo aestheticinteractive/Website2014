@@ -6,6 +6,13 @@ Aei.Controllers = {};
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.getPageTitle = function(list) {
+	return list.join(' | ')+' | Aesthetic Interactive';
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Menu = function(/*$route, $routeParams,*/ $location) {
 	this.isActiveLink = function(path) {
 		return ($location.path().substring(0, path.length) == path);
@@ -37,6 +44,7 @@ Aei.Controllers.Menu = function(/*$route, $routeParams,*/ $location) {
 Aei.Controllers.Home = function($rootScope, $scope) {
 	$rootScope.tag = 'Home';
 	$rootScope.title = 'Aesthetic Interactive';
+	$rootScope.pageTitle = 'Aesthetic Interactive | Software Development and Design | Grand Rapids, MI';
 };
 
 
@@ -52,6 +60,7 @@ Aei.Controllers.Projects = function($rootScope, $scope) {
 	
 	$rootScope.tag = 'Section';
 	$rootScope.title = 'Projects';
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -65,6 +74,7 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 	
 	$rootScope.tag = 'Project';
 	$rootScope.title = proj.name;
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Projects']);
 };
 
 
@@ -77,6 +87,7 @@ Aei.Controllers.Services = function($rootScope, $scope) {
 	
 	$rootScope.tag = 'Section';
 	$rootScope.title = 'Services';
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -90,6 +101,7 @@ Aei.Controllers.Service = function($rootScope, $scope, $routeParams) {
 	
 	$rootScope.tag = 'Service';
 	$rootScope.title = serv.name;
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Services']);
 };
 
 
@@ -118,6 +130,7 @@ Aei.Controllers.Skills = function($rootScope, $scope) {
 	
 	$rootScope.tag = 'Section';
 	$rootScope.title = 'Skills';
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -131,6 +144,7 @@ Aei.Controllers.Skill = function($rootScope, $scope, $routeParams) {
 	
 	$rootScope.tag = 'Skill';
 	$rootScope.title = skill.name;
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Skills']);
 };
 
 
@@ -141,6 +155,7 @@ Aei.Controllers.Background = function($rootScope, $scope) {
 	
 	$rootScope.tag = 'Section';
 	$rootScope.title = 'Background';
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
 };
 
 
@@ -150,5 +165,6 @@ Aei.Controllers.Contact = function($rootScope, $scope) {
 	$scope.model = {};
 	
 	$rootScope.tag = 'Section';
-	$rootScope.title = 'Contact Aesthetic Interactive';
+	$rootScope.title = 'Contact';
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
 };
