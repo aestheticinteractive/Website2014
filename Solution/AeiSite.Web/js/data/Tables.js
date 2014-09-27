@@ -412,7 +412,7 @@ Aei.Tables.Project = [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Planned, executed, released, and maintained the project.',
-				weight: 0.9
+				weight: 0.96
 			}
 		],
 		skills: [
@@ -645,6 +645,11 @@ Aei.Tables.Project = [
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided design specifications.',
 				weight: 0.1
+			},
+			{
+				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: 'Managed internal development process, worked with client to complete the project.',
+				weight: 0.1
 			}
 		]
 	},
@@ -655,7 +660,7 @@ Aei.Tables.Project = [
 		start: '12/21/2007',
 		end: '03/14/2008',
 		desc: 'This furniture-customization application provides users with a quick and easy way to configure perfect surface and color settings for their office. Aesthetic Interactive worked with a design firm and a 3D modeler to create this powerful Flash tool.\n\nThe simple swatch-selection interface masks a complex hierarchy of images, overlays, and rules that ensure each configuration looks just like the final product. To let the user get started right away, the images load dynamically as a background process. Despite the large quantity of images, users experience very little wait time.\n\nAdditional features include color themes, copying and resetting configurations across products, and printing.', 
-		url: 'www2.hermanmiller.com/teneoexperience/index_large.html',
+		//url: 'www2.hermanmiller.com/teneoexperience/index_large.html',
 		imageCount: 6,
 		services: [
 			{
@@ -666,11 +671,16 @@ Aei.Tables.Project = [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided design specifications.',
-				weight: 0.1
+				weight: 0.11
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Offered ideas for transitions and other functionality.',
+				weight: 0.1
+			},
+			{
+				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.1
 			}
 		]
@@ -682,28 +692,28 @@ Aei.Tables.Project = [
 		start: '11/24/2008',
 		end: '12/31/2008',
 		desc: 'This fun, upbeat Flash website provides users with a ton of information, images, and video content about the sport of Footvolley. Working from a design spec, Aesthetic Interactive implemented a variety of interesting features, transitions, and effects.\n\nThe small site is packed with content and interactivity. From a page-turning rules book to a 3D video carousel to draggable moves animations, there is plenty to keep users fully engaged.\n\nAll of the site\'s content is loaded dynamically via XML, which allows the client to easily update the site with new images, videos, and information.',
-		url: 'www.pepsifootball.com',
+		//url: 'www.pepsifootball.com',
 		imageCount: 7,
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the Flash-based website, full of interesting visual effects.',
+				weight: 0.62
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Followed the provided design specifications.',
+				weight: 0.12
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Provided ideas and solutions for a variety of visual effects.',
+				weight: 0.15
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Managed internal development process, worked with client to complete the project.',
+				weight: 0.1
 			}
 		]
 	},
@@ -714,28 +724,28 @@ Aei.Tables.Project = [
 		start: '11/09/2007',
 		end: '11/30/2007',
 		desc: 'This minimalist Flash website showcases a variety of beautiful, high-resolution photos. Selectable album titles listed across the top open a photo paging system in the main content area. Additional content pages are available from the menu across the bottom.\n\nBuilt from a design spec, this site features smooth, clean transitions and subtle effects. All of the content is loaded dynamically via XML, allowing the artist to add and rearrange albums, insert new photos, change contact information, and more.',
-		url: 'www.briankellyphoto.net',
+		//url: 'www.briankellyphoto.net',
 		imageCount: 5,
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the Flash-based website.',
+				weight: 0.61
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Followed the provided design specifications.',
+				weight: 0.115
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Provided solutions for image-loading, transitions, and editing data.',
+				weight: 0.125
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Managed internal development process, worked with client to complete the project.',
+				weight: 0.1
 			}
 		]
 	},
@@ -746,28 +756,28 @@ Aei.Tables.Project = [
 		start: '06/01/2009',
 		end: 'Present',
 		desc: 'HardLines is our first foray into the area of user-generated, educational gaming. The site is a collection of puzzles, each of which is an exercise in logic, strategy, and often patience.\n\nThe interesting aspect of HardLines is the ability for each user to become both a Player and a Builder. The HardLines Flash application offers a creation mode, which lets users drag, drop, and rotate pieces on the puzzle grid.\n\nBehind the scenes, the puzzle data and solving, building, and rating information is stored in a SQL Server database. The site itself is an ASP.NET web application that displays and updates this information as it changes.',
-		url: 'www.playhardlines.com',
+		//url: 'www.playhardlines.com',
 		imageCount: 9,
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the entire Flash-based website, back-end application, and database.',
+				weight: 0.98
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Designed all game elements, editor tools, web pages, etc.',
+				weight: 0.95
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Invented the game concept, rules, functionality, rating systems, etc.',
+				weight: 0.97
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Planned, executed, and released the project. ',
+				weight: 0.92
 			}
 		]
 	},
@@ -778,28 +788,28 @@ Aei.Tables.Project = [
 		start: '04/26/2007',
 		end: '02/17/2009',
 		desc: 'The DormTShirts.com website is a complex system of shirt-designing, voting, shopping, and social networking. Members vote for their favorite user-designed shirts, and the winning shirts go on sale.\n\nThe powerful T-shirt designer tool is the focal point of the site, allowing the user to place layers of text, clipart, and user-uploaded images on a shirt. Users can move and rotate each element, change the shirt color, cycle front to back, zoom, print, and more.\n\nAesthetic Interactive implemented the site using Flash for the designer and voting tools, a client-provided visual design template, and a combination of PHP and HTML to access and display content from the database. Unfortunately, business-related issues prevented the client from launching the site.',
-		url: 'www.dormtshirts.com/index.php?pageid=submit',
+		//url: 'www.dormtshirts.com/index.php?pageid=submit',
 		imageCount: 7,
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the entire Flash-based application, dynamic website, and database.',
+				weight: 0.87
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Followed initial guidelines to design the various tools and components.',
+				weight: 0.45
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Provided ideas for the shirt designer, user experience, and data visualization.',
+				weight: 0.55
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Managed internal development process, worked with client to complete the project.',
+				weight: 0.1
 			}
 		]
 	},
@@ -888,14 +898,9 @@ Aei.Tables.Project = [
 				weight: 0.0
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
-			},
-			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Managed internal development process, worked with client to complete the project.',
+				weight: 0.1
 			}
 		]
 	},
@@ -916,18 +921,13 @@ Aei.Tables.Project = [
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Followed the provided design specifications.',
+				weight: 0.1
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Managed internal development process, worked with client to complete the project.',
+				weight: 0.1
 			}
 		]
 	},
@@ -942,11 +942,6 @@ Aei.Tables.Project = [
 		imageCount: 5,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
-			},
-			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: '',
 				weight: 0.0
@@ -958,8 +953,8 @@ Aei.Tables.Project = [
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Managed discovery and design process, worked with client to complete the project.',
+				weight: 0.1
 			}
 		]
 	},
@@ -1012,18 +1007,13 @@ Aei.Tables.Project = [
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Followed the provided design specifications.',
+				weight: 0.1
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Managed internal development process, worked with client to complete the project.',
+				weight: 0.1
 			}
 		]
 	},
@@ -1049,11 +1039,6 @@ Aei.Tables.Project = [
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: '',
 				weight: 0.0
 			}
@@ -1115,11 +1100,6 @@ Aei.Tables.Project = [
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: '',
 				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
 			}
 		]
 	},
@@ -1134,22 +1114,12 @@ Aei.Tables.Project = [
 		imageCount: 8,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
-			},
-			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: '',
 				weight: 0.0
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: '',
 				weight: 0.0
 			}
@@ -1172,18 +1142,13 @@ Aei.Tables.Project = [
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Followed the provided design specifications.',
+				weight: 0.1
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Managed internal development process, worked with client to complete the project.',
+				weight: 0.1
 			}
 		]
 	},
@@ -1214,8 +1179,8 @@ Aei.Tables.Project = [
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Managed internal development process, worked with client to complete the project.',
+				weight: 0.1
 			}
 		]
 	},
@@ -1236,18 +1201,13 @@ Aei.Tables.Project = [
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Followed the provided design specifications.',
+				weight: 0.1
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Managed internal development process, worked with client to complete the project.',
+				weight: 0.1
 			}
 		]
 	},
@@ -1262,22 +1222,12 @@ Aei.Tables.Project = [
 		imageCount: 8,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
-			},
-			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: '',
 				weight: 0.0
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: '',
 				weight: 0.0
 			}
@@ -1305,11 +1255,6 @@ Aei.Tables.Project = [
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: '',
 				weight: 0.0
 			}
