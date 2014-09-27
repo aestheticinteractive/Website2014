@@ -122,8 +122,6 @@ Aei.Controllers.Skills = function($rootScope, $scope) {
 		}
 	}
 
-	console.log(groupMap);
-
 	$scope.model = {
 		skills: skills,
 		groupMap: groupMap

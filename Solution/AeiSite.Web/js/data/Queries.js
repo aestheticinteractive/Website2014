@@ -5,6 +5,17 @@ Aei.Queries = {};
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
+Aei.Queries.getPropertyCompareFunc = function(propertyFunc, dir) {
+	return function(a, b) {
+		var valA = propertyFunc(a);
+		var valB = propertyFunc(b);
+		return (valA == valB ? 0 : (valA < valB ? 1 : -1))*dir;
+	};
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
 Aei.Queries.selectProjectUsesOfService = function(service) {
 	var projects = Aei.Database.selectList(Aei.Tables.Project);
 	var uses = [];
@@ -27,6 +38,8 @@ Aei.Queries.selectProjectUsesOfService = function(service) {
 		}
 	}
 
+	var propFunc = function(x) { return x.serviceEntry.weight; };
+	uses.sort(Aei.Queries.getPropertyCompareFunc(propFunc, 1));
 	return uses;
 };
 
@@ -52,7 +65,9 @@ Aei.Queries.selectProjectUsesOfSkill = function(skill) {
 			});
 		}
 	}
-
+	
+	var propFunc = function(x) { return x.skillEntry.weight; };
+	uses.sort(Aei.Queries.getPropertyCompareFunc(propFunc, 1));
 	return uses;
 };
 
@@ -112,10 +127,8 @@ Aei.Queries.calculateSkillWeights = function(skillGroup) {
 		skillMap[key].weight /= maxWeight;
 		skillPairList.push(skillMap[key]);
 	}
-
-	skillPairList.sort(function(a,b) {
-		return (a.weight == b.weight ? 0 : (a.weight < b.weight ? 1 : -1));
-	});
-
+	
+	var propFunc = function(x) { return x.weight; };
+	skillPairList.sort(Aei.Queries.getPropertyCompareFunc(propFunc, 1));
 	return skillPairList;
 };
