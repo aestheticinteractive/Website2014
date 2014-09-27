@@ -96,6 +96,7 @@ Aei.Controllers.Service = function($rootScope, $scope, $routeParams) {
 
 	$scope.model = {
 		service: serv,
+		projectUses: Aei.Queries.selectProjectUsesOfService(serv),
 		page: null //new Aei.Pages.Service(serv)
 	};
 	

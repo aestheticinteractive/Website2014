@@ -3,6 +3,16 @@
 Aei.Tables = {};
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Tables.createLink = function(name) {
+	return name
+		.replace(/#/g, ' Sharp')
+		.replace(/\+/g, ' Plus')
+		.replace(/ /g, '-');
+};
+
+
 /*====================================================================================================*/
 Aei.Tables.Service = [
 	{
@@ -26,6 +36,11 @@ Aei.Tables.Service = [
 		desc: 'Organizing teams, planning features, making decisions, etc.'
 	}
 ];
+
+for ( var i in Aei.Tables.Service ) {
+	var serv = Aei.Tables.Service[i];
+	serv.link = Aei.Tables.createLink(serv.name);
+}
 
 
 /*====================================================================================================*/
@@ -360,6 +375,11 @@ Aei.Tables.Skill = [
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
 	}
 ];
+
+for ( var i in Aei.Tables.Skill ) {
+	var skill = Aei.Tables.Skill[i];
+	skill.link = Aei.Tables.createLink(skill.name);
+}
 
 
 /*====================================================================================================*/
@@ -762,7 +782,7 @@ Aei.Tables.Project = [
 
 for ( var i in Aei.Tables.Project ) {
 	var proj = Aei.Tables.Project[i];
-	proj.link = proj.name.replace(/ /g, '-');
+	proj.link = Aei.Tables.createLink(proj.name);
 	proj.imageIndexes = [];
 
 	for ( var c = 0 ; c < proj.imageCount ; ++c ) {

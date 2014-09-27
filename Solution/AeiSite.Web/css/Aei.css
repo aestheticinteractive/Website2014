@@ -14,14 +14,24 @@ body {
 	height: 100%;
 }
 
-p, a, ul, li {
+p, a, ul, li, td, th {
 	margin: 0;
 	padding: 0;
-	font-size: 16px;
+	color: #bbb;
+	font-size: 14px;
+	line-height: 18px;
 }
 
-p, a, h1, h2, h3, h4, h5, ul, li, div {
+p, a, h1, h2, h3, h4, h5, ul, li, div, td, th {
 	font-family: Tahoma, Helvetica, Arial, Verdana, sans-serif;
+}
+
+a {
+	color: #8fbc4c; 
+}
+
+a:hover {
+	color: #bbd693; 
 }
 
 div.tag {
@@ -168,16 +178,68 @@ section.content h3 {
 	margin: 0;
 }
 	
-section.content p {
-	color: #bbb;
-	font-size: 14px;
-	line-height: 18px;
-}
-	
 section.content p + h3 {
 	margin-top: 10px;
 }
 	
 section.content div + h3 {
 	margin-top: 10px;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
+table {
+	table-layout: fixed;
+	background: transparent;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+	margin-bottom: 20px;
+	border-spacing: 0;
+	width: 100%;
+	border: 0 solid #000;
+}
+
+table thead {
+	font-weight: bold;
+	background-color: inherit;
+}
+
+table thead tr th, table tbody tr td {
+	padding: 5px 8px 5px 8px;
+}
+
+table thead tr th {
+	text-align: left;
+	vertical-align: middle;
+	border-bottom: 1px solid #555;
+	color: #777;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+table tbody {
+	border: 0 solid #000;
+}
+
+table tbody tr:nth-child(even) {
+	background-color: #3d3d3d;
+	background-color: rgba(255, 255, 255, 0.015);
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: #383838;
+	background-color: rgba(0, 0, 0, 0.04);
+}
+
+table tbody tr td {
+	vertical-align: top;
+	vertical-align: middle;
+	color: #bbb;
 }

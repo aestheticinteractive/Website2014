@@ -1,0 +1,82 @@
+
+<style>
+	.barBg {
+		background-color: #303030;
+		height: 8px;
+		margin-top: 6px;
+		width: 100%;
+	}
+	
+	.barBg .barFill {
+		background-color: #683;
+		height: 100%;
+	}
+	
+	table {
+		margin: -6px 0 0 0;
+	}
+	
+	.imageCol {
+		padding: 8px;
+	}
+	
+	.projCol {
+		padding: 8px 8px 8px 0;
+	}
+</style>
+
+<section class="content">
+	<div class="row">
+	
+		<div class="large-12 columns">
+		
+			<h3>
+				Description
+			</h3>
+			<p>
+				{{model.service.desc}}
+			</p>
+
+		</div>
+
+	</div>
+</section>
+
+<section class="content">
+	<div class="row">
+		<div class="large-12 columns">
+			
+			<h3>
+				Top  "{{model.service.name}}" Projects
+			</h3>
+
+			<table>
+				<thead>
+					<th style="width: 86px;"></th>
+					<th></th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="use in model.projectUses">
+						<td class="imageCol">
+							<a href="#/Projects/{{use.project.link}}">
+								<img ng-src="img/projects/{{use.project.id}}/icon.jpg" 
+								     style="width: 70px;"/>
+							</a>
+						</td>
+						<td class="projCol">
+							<a href="#/Projects/{{use.project.link}}">{{use.project.name}}</a>:
+							{{use.serviceEntry.desc}}
+							<br/>
+							<div class="barBg">
+								<div class="barFill" style="width: {{use.serviceEntry.weight*100}}%;">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+	</div>
+</section>
