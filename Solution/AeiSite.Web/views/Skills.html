@@ -1,20 +1,58 @@
-<section class="content">
+
+<style>
+	table {
+		margin-top: -6px;
+	}
+	
+	.imageCol {
+		padding: 8px;
+	}
+	
+	.barCol {
+		padding-top: 0;
+	}
+</style>
+
+<section class="content" ng-repeat="skillPairs in model.groupMap">
 	<div class="row">
 	
-		<div class="large-12 columns">
+		<div class="large-4 columns">
+			<h3>{{skillPairs[0].skill.group.name}}</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend magna vitae elit 
+				ultricies lacinia. Integer at lacus in nulla tristique tristique. Maecenas in vehicula 
+				nisl. Maecenas cursus vestibulum volutpat. Vestibulum vehicula velit sit amet sem 
+				imperdiet, vel lobortis nisl venenatis. Sed imperdiet tempus diam et feugiat. Sed vel 
+				suscipit odio. Duis ut libero varius, elementum neque et, ultricies enim. 
+			</p>
+		</div>
 		
-			<div ng-repeat="skills in model.groupMap">
-				<p style="font-weight: bold;">
-					{{skills[0].group.name}}
-				</p>
+		<div class="large-8 columns">
+		
+			<div>
 				<table>
-					<tr ng-repeat="skill in skills" style="width: 100%;">
-						<td><b>{{skill.name}}</b></td>
-						<td>{{skill.desc}}</td>
-					</tr>
+					<thead>
+						<th style="width: 33%;">Skill</th>
+						<th>Project Power</th>
+					</thead>
+					<tbody>
+						<tr ng-repeat="skillPair in skillPairs" style="width: 100%;">
+							<td>
+								<a href="#/Skills/{{skillPair.skill.link}}">
+									{{skillPair.skill.name}}
+								</a>
+							</td>
+							<td class="barCol">
+								<div class="barBg">
+									<div class="barFill" style="width: {{skillPair.weight*100}}%;">
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
 				</table>
-			</div>
 
+			</div>
 		</div>
 
 	</div>

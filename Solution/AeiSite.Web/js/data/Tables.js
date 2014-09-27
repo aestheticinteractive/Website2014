@@ -336,7 +336,7 @@ Aei.Tables.Skill = [
 	},
 	{
 		id: 'algo',
-		name: 'Algorithm',
+		name: 'Algorithms',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
 	},
 	{

@@ -118,11 +118,11 @@ Aei.Controllers.Skills = function($rootScope, $scope) {
 		key = skill.group.id;
 
 		if ( !groupMap[key] ) {
-			groupMap[key] = [];
+			groupMap[key] = Aei.Queries.calculateSkillWeights(skill.group);
 		}
-
-		groupMap[key].push(skill);
 	}
+
+	console.log(groupMap);
 
 	$scope.model = {
 		skills: skills,
@@ -140,6 +140,7 @@ Aei.Controllers.Skill = function($rootScope, $scope, $routeParams) {
 
 	$scope.model = {
 		skill: skill,
+		projectUses: Aei.Queries.selectProjectUsesOfSkill(skill),
 		page: null //new Aei.Pages.Project(skill)
 	};
 	

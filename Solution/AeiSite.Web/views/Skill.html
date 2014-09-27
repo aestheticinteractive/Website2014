@@ -1,7 +1,19 @@
 
 <style>
+	.barBg {
+		background-color: #303030;
+		height: 8px;
+		margin-top: 6px;
+		width: 100%;
+	}
+	
+	.barBg .barFill {
+		background-color: #683;
+		height: 100%;
+	}
+	
 	table {
-		margin-top: -6px;
+		margin: -6px 0 0 0;
 	}
 	
 	.imageCol {
@@ -22,7 +34,7 @@
 				Description
 			</h3>
 			<p>
-				{{model.service.desc}}
+				{{model.skill.desc}}
 			</p>
 
 		</div>
@@ -35,7 +47,7 @@
 		<div class="large-12 columns">
 			
 			<h3>
-				Top  "{{model.service.name}}" Projects
+				Top  "{{model.skill.name}}" Projects
 			</h3>
 
 			<table>
@@ -53,10 +65,10 @@
 						</td>
 						<td class="projCol">
 							<a href="#/Projects/{{use.project.link}}">{{use.project.name}}</a>:
-							{{use.serviceEntry.desc}}
+							{{use.skillEntry.desc}}
 							<br/>
 							<div class="barBg">
-								<div class="barFill" style="width: {{use.serviceEntry.weight*100}}%;">
+								<div class="barFill" style="width: {{use.skillEntry.weight*100}}%;">
 								</div>
 							</div>
 						</td>
