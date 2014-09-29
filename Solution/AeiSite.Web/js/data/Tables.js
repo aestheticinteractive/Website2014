@@ -455,14 +455,14 @@ Aei.Tables.Project = [
 		client: 'Journeyful',
 		start: '11/2/2009',
 		end: 'Present',
-		desc: 'Journeyful is a travel-based social networking site, with a robust (and ever-growing) list of powerful features. Users can book hotel rooms, ferry tickets, share photos and videos, find travelers whose trips intersect their own, and much more. Each user can have multiple \'identities\' (such as a person, a hotel admin, a ferry staff member, etc.) which each get a separate user experience based on permissions.\n\nAesthetic Interactive built the website\'s Flash-based UI, and is closely involved with design, specification, and planning of the project. The Flash UI features full hotel/ferry booking pipelines, log-ins, photo uploads, a large set of custom input and display components, complex user sessions, complex forms and wizards for hotel/ferry administration and management, and communicates with the API using a SOAP interface.', 
+		desc: 'Journeyful is a travel-based social networking site, with a robust (and ever-growing) list of powerful features. Users can book hotel rooms, ferry tickets, share photos and videos, find travelers whose trips intersect their own, and much more. Each user can have multiple \'identities\' (such as a person, a hotel admin, a ferry staff member, etc.) which each get a separate user experience based on permissions.\n\nAesthetic Interactive built the website\'s Flash-based UI, and is closely involved with design, specification, and planning of the project. The Flash UI features full hotel/ferry booking pipelines, log-ins, photo uploads, a large set of custom input and display components, complex user sessions, complex forms and wizards for hotel/ferry administration and management, and communicates with the API using a SOAP interface.',
 		url: 'www.journeyful.com',
 		imageCount: 9,
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built a complex Flash-based website; built several smaller projects/prototypes using different technologies.',
-				weight: 1.0
+				weight: 1
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
@@ -554,7 +554,7 @@ Aei.Tables.Project = [
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'web'),
 				desc: 'Worked with all aspects of web development.',
-				weight: 1.0
+				weight: 1
 			},
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
@@ -604,13 +604,13 @@ Aei.Tables.Project = [
 		]
 	},
 	{
-		id: 'lessonvision', 
-		name: 'Golf Instruction App', 
-		client: 'LessonVision', 
-		start: '10/15/2009', 
-		end: '2/25/2010', 
-		desc: 'This LessonVision application allows sports instructors to send annotated videos directly to their students. Instructors record voice, drawings, and video controls into a lesson package, then assign each lesson to their students. Aesthetic Interactive was responsible for building the Flash UI and specifying the server\'s API requirements.\n\nUpon loading, the Flash UI is initialized for a particular sports club and is populated with database content related to the club and the current user. For the creation and playback of lesson packages, the UI generates complex XML structures to describe the lesson\'s events and to keep the various playback layers synchronized. The UI runs maximized within a browser window, can be resized dynamically, and has a draggable video tray which is always available.', 
-		url: null ,
+		id: 'lessonvision',
+		name: 'Golf Instruction App',
+		client: 'LessonVision',
+		start: '10/15/2009',
+		end: '2/25/2010',
+		desc: 'This LessonVision application allows sports instructors to send annotated videos directly to their students. Instructors record voice, drawings, and video controls into a lesson package, then assign each lesson to their students. Aesthetic Interactive was responsible for building the Flash UI and specifying the server\'s API requirements.\n\nUpon loading, the Flash UI is initialized for a particular sports club and is populated with database content related to the club and the current user. For the creation and playback of lesson packages, the UI generates complex XML structures to describe the lesson\'s events and to keep the various playback layers synchronized. The UI runs maximized within a browser window, can be resized dynamically, and has a draggable video tray which is always available.',
+		url: null,
 		imageCount: 7,
 		services: [
 			{
@@ -638,7 +638,7 @@ Aei.Tables.Project = [
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
 				desc: 'Used for building the Flash application.',
-				weight: 1.0
+				weight: 1
 			},
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'php'),
@@ -700,8 +700,8 @@ Aei.Tables.Project = [
 	{
 		id: 'idashboards',
 		name: 'Flash Graph Modules',
-		client: 'iDashboards', 
-		start: '01/28/2008', 
+		client: 'iDashboards',
+		start: '01/28/2008',
 		end: 'Present',
 		desc: 'This collection of interactive and highly-customizable graphs was built to operate within the latest version of iDashboards software. Each individual graph displays and animates any arbitrary set of data, offers the user a myriad of settings, and communicates with other graphs when a data point is selected.\n\nGraphs are constructed as custom Flex modules for Flash, using Actionscript 3. Functionality, accuracy, flexability, and performance were key during development. Aesthetic Interactive was also responsible for the design of each graph type, providing users with a dramatic improvement in appearance from previous versions.\n\nThe gallery displays a few of the many graph types available to an iDashboards user.',
 		url: 'www.idashboards.com',
@@ -732,7 +732,7 @@ Aei.Tables.Project = [
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
 				desc: 'Used to build Flash components.',
-				weight: 1.0
+				weight: 1
 			},
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
@@ -826,7 +826,7 @@ Aei.Tables.Project = [
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
 				desc: '',
-				weight: 1.0
+				weight: 1
 			},
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
@@ -900,7 +900,7 @@ Aei.Tables.Project = [
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'html'),
 				desc: '',
-				weight: 1.0
+				weight: 1
 			},
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'css'),
@@ -920,7 +920,7 @@ Aei.Tables.Project = [
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'web'),
 				desc: '',
-				weight: 1.0
+				weight: 1
 			},
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
@@ -945,8 +945,7 @@ Aei.Tables.Project = [
 		client: 'Herman Miller',
 		start: '12/21/2007',
 		end: '03/14/2008',
-		desc: 'This furniture-customization application provides users with a quick and easy way to configure perfect surface and color settings for their office. Aesthetic Interactive worked with a design firm and a 3D modeler to create this powerful Flash tool.\n\nThe simple swatch-selection interface masks a complex hierarchy of images, overlays, and rules that ensure each configuration looks just like the final product. To let the user get started right away, the images load dynamically as a background process. Despite the large quantity of images, users experience very little wait time.\n\nAdditional features include color themes, copying and resetting configurations across products, and printing.', 
-		//url: 'www2.hermanmiller.com/teneoexperience/index_large.html',
+		desc: 'This furniture-customization application provides users with a quick and easy way to configure perfect surface and color settings for their office. Aesthetic Interactive worked with a design firm and a 3D modeler to create this powerful Flash tool.\n\nThe simple swatch-selection interface masks a complex hierarchy of images, overlays, and rules that ensure each configuration looks just like the final product. To let the user get started right away, the images load dynamically as a background process. Despite the large quantity of images, users experience very little wait time.\n\nAdditional features include color themes, copying and resetting configurations across products, and printing.',
 		imageCount: 6,
 		services: [
 			{
@@ -974,7 +973,7 @@ Aei.Tables.Project = [
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
 				desc: '',
-				weight: 1.0
+				weight: 1
 			},
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
@@ -1048,7 +1047,7 @@ Aei.Tables.Project = [
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
 				desc: '',
-				weight: 1.0
+				weight: 1
 			},
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
@@ -1094,7 +1093,6 @@ Aei.Tables.Project = [
 		start: '11/09/2007',
 		end: '11/30/2007',
 		desc: 'This minimalist Flash website showcases a variety of beautiful, high-resolution photos. Selectable album titles listed across the top open a photo paging system in the main content area. Additional content pages are available from the menu across the bottom.\n\nBuilt from a design spec, this site features smooth, clean transitions and subtle effects. All of the content is loaded dynamically via XML, allowing the artist to add and rearrange albums, insert new photos, change contact information, and more.',
-		//url: 'www.briankellyphoto.net',
 		imageCount: 5,
 		services: [
 			{
@@ -1122,7 +1120,7 @@ Aei.Tables.Project = [
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
 				desc: '',
-				weight: 1.0
+				weight: 1
 			},
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
@@ -1168,7 +1166,6 @@ Aei.Tables.Project = [
 		start: '06/01/2009',
 		end: 'Present',
 		desc: 'HardLines is our first foray into the area of user-generated, educational gaming. The site is a collection of puzzles, each of which is an exercise in logic, strategy, and often patience.\n\nThe interesting aspect of HardLines is the ability for each user to become both a Player and a Builder. The HardLines Flash application offers a creation mode, which lets users drag, drop, and rotate pieces on the puzzle grid.\n\nBehind the scenes, the puzzle data and solving, building, and rating information is stored in a SQL Server database. The site itself is an ASP.NET web application that displays and updates this information as it changes.',
-		//url: 'www.playhardlines.com',
 		imageCount: 9,
 		services: [
 			{
@@ -1193,11 +1190,6 @@ Aei.Tables.Project = [
 			}
 		],
 		skills: [
-			/*{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
-				desc: '',
-				weight: 0.0
-			},*/
 		]
 	},
 	{
@@ -1207,7 +1199,6 @@ Aei.Tables.Project = [
 		start: '04/26/2007',
 		end: '02/17/2009',
 		desc: 'The DormTShirts.com website is a complex system of shirt-designing, voting, shopping, and social networking. Members vote for their favorite user-designed shirts, and the winning shirts go on sale.\n\nThe powerful T-shirt designer tool is the focal point of the site, allowing the user to place layers of text, clipart, and user-uploaded images on a shirt. Users can move and rotate each element, change the shirt color, cycle front to back, zoom, print, and more.\n\nAesthetic Interactive implemented the site using Flash for the designer and voting tools, a client-provided visual design template, and a combination of PHP and HTML to access and display content from the database. Unfortunately, business-related issues prevented the client from launching the site.',
-		//url: 'www.dormtshirts.com/index.php?pageid=submit',
 		imageCount: 7,
 		services: [
 			{
@@ -1726,6 +1717,7 @@ Aei.Tables.Project = [
 ];
 
 for ( var i in Aei.Tables.Project ) {
+	//continue; //skip this loop when rebuilding the project table
 	var proj = Aei.Tables.Project[i];
 	proj.link = Aei.Tables.createLink(proj.name);
 	proj.imageIndexes = [];
