@@ -189,7 +189,7 @@ Aei.Tables.Skill = [
 		name: 'OpenGL',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
 	},
-
+	
 
 	/* Product */
 
@@ -197,26 +197,6 @@ Aei.Tables.Skill = [
 	{
 		id: 'unity',
 		name: 'Unity 3D',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
-		id: 'xcode',
-		name: 'XCode',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
-		id: 'vs',
-		name: 'Visual Studio',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
-		id: 'resharp',
-		name: 'Resharper',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
-		id: 'flashbuild',
-		name: 'Flash Builder',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
 	},
 	{
@@ -230,11 +210,6 @@ Aei.Tables.Skill = [
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
 	},
 	{
-		id: 'mariadb',
-		name: 'MariaDB',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
 		id: 'titan',
 		name: 'Titan Graph Database',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
@@ -245,31 +220,11 @@ Aei.Tables.Skill = [
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
 	},
 	{
-		id: 'svn',
-		name: 'Subversion',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
-		id: 'git',
-		name: 'Git',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
-		id: 'merc',
-		name: 'Mercurial',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
-		id: 'eclipse',
-		name: 'Eclipse',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
 		id: 'photo',
 		name: 'Photoshop',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
 	},
-
+	
 
 	/* System */
 
@@ -299,7 +254,7 @@ Aei.Tables.Skill = [
 		name: 'Web',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'sys')
 	},
-
+	
 
 	/* Capability */
 
@@ -341,7 +296,7 @@ Aei.Tables.Skill = [
 	},
 	{
 		id: 'pixperf',
-		name: 'Pixel-Perfect Matching',
+		name: 'Pixel-Perfect',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
 	},
 	{
@@ -366,14 +321,15 @@ Aei.Tables.Skill = [
 	},
 	{
 		id: 'teamDes',
-		name: 'With Design Team',
+		name: 'Design Team',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
 	},
 	{
 		id: 'teamDev',
-		name: 'With Dev Team',
+		name: 'Dev Team',
 		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
 	}
+	
 ];
 
 for ( var i in Aei.Tables.Skill ) {
@@ -442,16 +398,6 @@ Aei.Tables.Project = [
 				weight: 0.98
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'xcode'),
-				desc: 'Used as the primary development environment.',
-				weight: 0.8
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'svn'),
-				desc: 'Used as the source-control system.',
-				weight: 0.5
-			},
-			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
 				desc: 'Used to design backgrounds and other game assets.',
 				weight: 0.75
@@ -459,6 +405,11 @@ Aei.Tables.Project = [
 			{
 				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ios'),
 				desc: 'Built app to target this OS.',
+				weight: 0.99
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'mob'),
+				desc: 'Built as a native iOS app.',
 				weight: 0.99
 			},
 			{
@@ -528,6 +479,128 @@ Aei.Tables.Project = [
 				desc: 'Established processes for team and project organization, determining project priorities, and tracking complex sets of requirements.',
 				weight: 0.97
 			}
+		],
+		skills: [
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'c#'),
+				desc: 'Used for building MVC websites and performing data analysis.',
+				weight: 0.35
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'js'),
+				desc: 'Used for building interactive pages.',
+				weight: 0.6
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'html'),
+				desc: 'Used for building non-Flash webpages.',
+				weight: 0.55
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'css'),
+				desc: 'Used for building non-Flash webpages.',
+				weight: 0.55
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
+				desc: 'Used to build the main Flash website.',
+				weight: 0.995
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'sql'),
+				desc: 'Used to collect and analyze datasets.',
+				weight: 0.5
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'jquery'),
+				desc: 'Used for building non-Flash webpages.',
+				weight: 0.6
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'angjs'),
+				desc: 'Used for building non-Flash webpages.',
+				weight: 0.6
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'foundjs'),
+				desc: 'Used for building non-Flash webpages.',
+				weight: 0.6
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'd3js'),
+				desc: 'Used for creating data visualizations.',
+				weight: 0.6
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
+				desc: 'Used to build the main Flash website.',
+				weight: 0.99
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'net'),
+				desc: 'Used for building various sites and tools.',
+				weight: 0.35
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'mysql'),
+				desc: 'Used for collecting data for analysis.',
+				weight: 0.25
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
+				desc: 'Used for design tasks, mockups, etc.',
+				weight: 0.8
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'web'),
+				desc: 'Worked with all aspects of web development.',
+				weight: 1.0
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: 'Built the entire Flash UI, and others.',
+				weight: 0.991
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: 'Focused on delivering the best experiences for all user types.',
+				weight: 0.99
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				desc: 'Created and helped design mobile-friendly pages.',
+				weight: 0.6
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: 'Created smooth transitions and visual effects.',
+				weight: 0.65
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: 'Wrote data analysis tools, asynchronous processes, etc.',
+				weight: 0.75
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: 'Matched initial design specifications.',
+				weight: 0.8
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
+				desc: 'Worked with various internal databases.',
+				weight: 0.25
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'teamDes'),
+				desc: 'Worked with UI/UX designers.',
+				weight: 0.8
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'teamDev'),
+				desc: 'Worked with back-end developers.',
+				weight: 0.81
+			}
 		]
 	},
 	{
@@ -560,11 +633,73 @@ Aei.Tables.Project = [
 				desc: 'Coordinated with clients, designers, and back-end developers to keep the project on track.',
 				weight: 0.2
 			}
+		],
+		skills: [
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
+				desc: 'Used for building the Flash application.',
+				weight: 1.0
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'php'),
+				desc: 'Used to review and assist with server-side code.',
+				weight: 0.2
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
+				desc: 'Built the Flash application.',
+				weight: 0.99
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
+				desc: 'Used for creating design mock-ups.',
+				weight: 0.6
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'web'),
+				desc: 'Built for web usage.',
+				weight: 0.9
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: 'Created the entire user interface.',
+				weight: 0.95
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: 'Provided intuitive video analysis, workflows, and navigation.',
+				weight: 0.92
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				desc: 'Built the application to all available screen space.',
+				weight: 0.8
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: 'Created transitions and other visual effects..',
+				weight: 0.6
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: 'Matched initial design specifications.',
+				weight: 0.85
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'teamDes'),
+				desc: 'Worked with design team.',
+				weight: 0.75
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'teamDev'),
+				desc: 'Worked with a back-end developer..',
+				weight: 0.65
+			}
 		]
 	},
 	{
 		id: 'idashboards',
-		name: 'Custom Graph Modules',
+		name: 'Flash Graph Modules',
 		client: 'iDashboards', 
 		start: '01/28/2008', 
 		end: 'Present',
@@ -591,6 +726,68 @@ Aei.Tables.Project = [
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development processes and coordinated with the application-level development team.',
 				weight: 0.25
+			}
+		],
+		skills: [
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
+				desc: 'Used to build Flash components.',
+				weight: 1.0
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
+				desc: 'Built for a Flash applicaiton',
+				weight: 0.99
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flex'),
+				desc: 'Used various Flex components.',
+				weight: 0.6
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
+				desc: 'Used to create new design ideas.',
+				weight: 0.4
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'web'),
+				desc: 'Built for web usage.',
+				weight: 0.5
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: 'Created layouts and menus for each graph type.',
+				weight: 0.65
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: 'Provided high-quality, precise, customizable visual experience.',
+				weight: 0.95
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				desc: 'Built graphs to display at any size or aspect ratio.',
+				weight: 0.94
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: 'Built several three-dimensional graph types.',
+				weight: 0.7
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: 'Created entry animations and other visual effects.',
+				weight: 0.85
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: 'Wrote code to prepare data for display, draw with 3D perspective, etc.',
+				weight: 0.65
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'teamDev'),
+				desc: 'Worked with the application-level development team.',
+				weight: 0.8
 			}
 		]
 	},
@@ -624,6 +821,48 @@ Aei.Tables.Project = [
 				desc: 'Coordinated closely with back-end development team to identify and resolve technical challenges.',
 				weight: 0.22
 			}
+		],
+		skills: [
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
+				desc: '',
+				weight: 1.0
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: '',
+				weight: 0.95
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.7
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.75
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'teamDes'),
+				desc: '',
+				weight: 0.8
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'teamDev'),
+				desc: '',
+				weight: 0.8
+			}
 		]
 	},
 	{
@@ -650,6 +889,53 @@ Aei.Tables.Project = [
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.1
+			}
+		],
+		skills: [
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'js'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'html'),
+				desc: '',
+				weight: 1.0
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'css'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
+				desc: '',
+				weight: 0.85
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
+				desc: '',
+				weight: 0.84
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'web'),
+				desc: '',
+				weight: 1.0
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: '',
+				weight: 0.8
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 0.95
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'teamDes'),
+				desc: '',
+				weight: 0.9
 			}
 		]
 	},
@@ -683,6 +969,48 @@ Aei.Tables.Project = [
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.1
 			}
+		],
+		skills: [
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
+				desc: '',
+				weight: 1.0
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: '',
+				weight: 0.8
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.7
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.75
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 0.95
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'teamDes'),
+				desc: '',
+				weight: 0.9
+			}
 		]
 	},
 	{
@@ -692,7 +1020,7 @@ Aei.Tables.Project = [
 		start: '11/24/2008',
 		end: '12/31/2008',
 		desc: 'This fun, upbeat Flash website provides users with a ton of information, images, and video content about the sport of Footvolley. Working from a design spec, Aesthetic Interactive implemented a variety of interesting features, transitions, and effects.\n\nThe small site is packed with content and interactivity. From a page-turning rules book to a 3D video carousel to draggable moves animations, there is plenty to keep users fully engaged.\n\nAll of the site\'s content is loaded dynamically via XML, which allows the client to easily update the site with new images, videos, and information.',
-		//url: 'www.pepsifootball.com',
+		url: 'www.footvolley.ro',
 		imageCount: 7,
 		services: [
 			{
@@ -714,6 +1042,48 @@ Aei.Tables.Project = [
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.1
+			}
+		],
+		skills: [
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
+				desc: '',
+				weight: 1.0
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: '',
+				weight: 0.8
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.95
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'teamDes'),
+				desc: '',
+				weight: 0.85
 			}
 		]
 	},
@@ -747,6 +1117,48 @@ Aei.Tables.Project = [
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.1
 			}
+		],
+		skills: [
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
+				desc: '',
+				weight: 1.0
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flash'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'web'),
+				desc: '',
+				weight: 0.95
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: '',
+				weight: 0.8
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.5
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'teamDes'),
+				desc: '',
+				weight: 0.85
+			}
 		]
 	},
 	{
@@ -779,6 +1191,13 @@ Aei.Tables.Project = [
 				desc: 'Planned, executed, and released the project. ',
 				weight: 0.92
 			}
+		],
+		skills: [
+			/*{
+				skill: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			},*/
 		]
 	},
 	{
