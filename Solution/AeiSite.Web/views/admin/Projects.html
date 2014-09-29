@@ -1,0 +1,67 @@
+<section class="content">
+	<div class="row">
+	
+		<div class="large-12 columns">
+		
+			<table>
+				<thead>
+					<th style="width: 40px;"></th>
+					<th>Name</th>
+					<th><a href="" ng-click="predicate = 'overall'; reverse=!reverse">overall</a></th>
+					<th><a href="" ng-click="predicate = 'dev'; reverse=!reverse">dev</a></th>
+					<th><a href="" ng-click="predicate = 'des'; reverse=!reverse">des</a></th>
+					<th><a href="" ng-click="predicate = 'cre'; reverse=!reverse">cre</a></th>
+					<th><a href="" ng-click="predicate = 'mgt'; reverse=!reverse">mgt</a></th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="edit in model.edits | orderBy:predicate:reverse">
+						<td class="imageCol">
+							<a href="#/Projects/{{edit.project.link}}">
+								<img ng-src="img/projects/{{edit.project.id}}/icon.jpg" 
+								     style="width: 24px;"/>
+							</a>
+						</td>
+						<td>
+							<a href="#/Projects/{{edit.project.link}}" style="font-size: 12px;">
+								{{edit.project.name}}
+							</a>
+						</td>
+						<td>
+							<div class="barBg">
+								<div class="barFill" style="width: {{edit.overall*100}}%;
+									background-color: #39c;">
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="barBg">
+								<div class="barFill" style="width: {{edit.dev*100}}%;">
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="barBg">
+								<div class="barFill" style="width: {{edit.des*100}}%;">
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="barBg">
+								<div class="barFill" style="width: {{edit.cre*100}}%;">
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="barBg">
+								<div class="barFill" style="width: {{edit.mgt*100}}%;">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+	</div>
+</section>

@@ -163,8 +163,39 @@ Aei.Controllers.Contact = function($rootScope, $scope) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.AdminProjects = function($rootScope, $scope) {
+	var edits = [];
+	var i, proj, edit;
+
+	var getServiceWeight = function(project, serviceId) {
+		for ( var si in project.services ) {
+			var servEntry = project.services[si];
+
+			if ( servEntry.service.id == serviceId ) {
+				return servEntry.weight;
+			}
+		}
+
+		return 0;
+	};
+
+	for ( i in Aei.Tables.Project ) {
+		proj = Aei.Tables.Project[i];
+
+		edit = {
+			project: proj,
+			overall: 0,
+			dev: getServiceWeight(proj, 'dev'),
+			des: getServiceWeight(proj, 'des'),
+			cre: getServiceWeight(proj, 'cre'),
+			mgt: getServiceWeight(proj, 'mgt')
+		};
+
+		edit.overall = (edit.dev+edit.des+edit.cre+edit.mgt)/4;
+		edits.push(edit);
+	}
+
 	$scope.model = {
-		projects: Aei.Tables.Project
+		edits: edits
 	};
 
 	$rootScope.tag = 'Admin';
