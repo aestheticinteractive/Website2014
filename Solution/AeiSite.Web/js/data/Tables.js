@@ -579,8 +579,8 @@ Aei.Tables.Project = [
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: 'Responsible for improving the look-and-feel from previous versions.',
-				weight: 0.8
+				desc: 'Improved the look-and-feel from previous versions, created several new visual effects.',
+				weight: 0.85
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
@@ -675,7 +675,7 @@ Aei.Tables.Project = [
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: 'Offered ideas for transitions and other functionality.',
+				desc: 'Provided ideas for transitions and other functionality.',
 				weight: 0.1
 			},
 			{
@@ -819,29 +819,29 @@ Aei.Tables.Project = [
 		client: 'Honors Senior Project',
 		start: '08/27/2006',
 		end: '12/15/2006',
-		desc: 'A non-deterministic simulation of neural-net brained animals living and evolving in 3D environment.',
+		desc: 'A non-deterministic simulation of neural-net brained animals living and evolving in a 3D environment.',
 		url: null,
 		imageCount: 8,
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the entire simulation.',
+				weight: 0.7
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Designed the entire simulation, with random terrain, 3D representations, and the "brain" visualizations..',
+				weight: 0.4
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Created the entire concept and parameters of the simulation.',
+				weight: 0.92
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Planned, executed, and released the project. ',
+				weight: 0.9
 			}
 		]
 	},
@@ -857,23 +857,23 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the Flash-based website.',
+				weight: 0.63
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Designed all the pages, buttons, animations, and other content.',
+				weight: 0.8
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Created on the content, transitions, layouts, etc.',
+				weight: 0.8
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Planned, executed, and released the project. ',
+				weight: 0.8
 			}
 		]
 	},
@@ -889,13 +889,13 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the Flash application.',
+				weight: 0.55
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Followed the provided design specifications.',
+				weight: 0.1
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
@@ -916,8 +916,8 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the Flash application',
+				weight: 0.5
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
@@ -943,13 +943,13 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Designed, modeled, and refined the icon set.',
+				weight: 0.88
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Proposed a variety of icon concepts.',
+				weight: 0.8
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
@@ -970,23 +970,23 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the entire website and database.',
+				weight: 0.68
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Designed all pages, icons, logo, tools, etc.',
+				weight: 0.7
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Provided all site ideas and concepts.',
+				weight: 0.6
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Worked the project from the discovery phase to release.',
+				weight: 0.75
 			}
 		]
 	},
@@ -1002,8 +1002,8 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the Flash application',
+				weight: 0.5
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
@@ -1029,18 +1029,18 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the experimental Flash application.',
+				weight: 0.4
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Created all design assets and visual effects.',
+				weight: 0.3
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Used existing tools in a new way to create an interactive visual effect.',
+				weight: 0.25
 			}
 		]
 	},
@@ -1056,23 +1056,23 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the Flash application.',
+				weight: 0.6
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Created all the visual effects, animations, layouts, etc.',
+				weight: 0.82
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Invented a graphical method for displaying projects.',
+				weight: 0.9
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Planned, executed, and released the project.',
+				weight: 0.7
 			}
 		]
 	},
@@ -1088,18 +1088,18 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the experimental Flash application.',
+				weight: 0.45
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Created all design assets and visual effects.',
+				weight: 0.25
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Invented a useful tool for creating stylized drawing animations.',
+				weight: 0.26
 			}
 		]
 	},
@@ -1115,13 +1115,13 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Created a variety of traditional artwork.',
+				weight: 0.78
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Composed and brainstormed a variety of artistic concepts.',
+				weight: 0.83
 			}
 		]
 	},
@@ -1137,8 +1137,8 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the Flash application.',
+				weight: 0.5
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
@@ -1164,18 +1164,13 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the website using the WordPress API.',
+				weight: 0.49
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: '	Followed the provided design specifications.',
+				weight: 0.1
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
@@ -1196,8 +1191,8 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Buitl the Flash application.',
+				weight: 0.54
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
@@ -1223,13 +1218,13 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Created interfaces with a wide variety of visual styles.',
+				weight: 0.79
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Provided new an interesting user-interface concepts.',
+				weight: 0.84
 			}
 		]
 	},
@@ -1245,18 +1240,18 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the experimental Flash application.',
+				weight: 0.44
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Created all design assets and visual effects.',
+				weight: 0.27
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
+				desc: 'Combined static content with dynamic interactions.',
+				weight: 0.26
 			}
 		]
 	},
@@ -1272,23 +1267,18 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the Flash application',
+				weight: 0.3
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
+				desc: 'Designed all the pages, layouts, and visual effects.',
+				weight: 0.48
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Created clever hover effects and transitions.',
+				weight: 0.13
 			}
 		]
 	},
@@ -1304,23 +1294,13 @@ Aei.Tables.Project = [
 		services: [
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0.0
+				desc: 'Built the Flash-based website.',
+				weight: 0.25
 			},
 			{
 				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
-				weight: 0.0
-			},
-			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
-				weight: 0.0
+				desc: 'Designed all pages, menus, and content.',
+				weight: 0.33
 			}
 		]
 	}
