@@ -7,39 +7,53 @@ Aei.RouteBuilder = function($routeProvider) {
 		
 		.when('/', {
 			templateUrl: 'views/Home.html',
-			controller: Aei.Controllers.Home
+			controller: Aei.Controllers.Home,
+			caseInsensitiveMatch: true
 		})
 
 		.when('/Projects', {
 			templateUrl: 'views/Projects.html',
-			controller: Aei.Controllers.Projects
+			controller: Aei.Controllers.Projects,
+			caseInsensitiveMatch: true
 		})
 		.when('/Projects/:link', {
 			templateUrl: 'views/Project.html',
-			controller: Aei.Controllers.Project
+			controller: Aei.Controllers.Project,
+			caseInsensitiveMatch: true
 		})
 		
 		.when('/Services', {
 			templateUrl: 'views/Services.html',
-			controller: Aei.Controllers.Services
+			controller: Aei.Controllers.Services,
+			caseInsensitiveMatch: true
 		})
 		.when('/Services/:link', {
 			templateUrl: 'views/Service.html',
-			controller: Aei.Controllers.Service
+			controller: Aei.Controllers.Service,
+			caseInsensitiveMatch: true
 		})
 		
 		.when('/Skills', {
 			templateUrl: 'views/Skills.html',
-			controller: Aei.Controllers.Skills
+			controller: Aei.Controllers.Skills,
+			caseInsensitiveMatch: true
 		})
 		.when('/Skills/:link', {
 			templateUrl: 'views/Skill.html',
-			controller: Aei.Controllers.Skill
+			controller: Aei.Controllers.Skill,
+			caseInsensitiveMatch: true
 		})
 		
 		.when('/Contact', {
 			templateUrl: 'views/Contact.html',
-			controller: Aei.Controllers.Contact
+			controller: Aei.Controllers.Contact,
+			caseInsensitiveMatch: true
+		})
+		
+		.when('/Admin/Projects', {
+			templateUrl: 'views/admin/Projects.html',
+			controller: Aei.Controllers.AdminProjects,
+			caseInsensitiveMatch: true
 		})
 		
 		.otherwise({

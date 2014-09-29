@@ -44,7 +44,7 @@ Aei.Database.selectByUniqueProperty = function(table, propertyName, value) {
 	for ( i in table ) {
 		row = table[i];
 
-		if ( row[propertyName] == value ) {
+		if ( row[propertyName].toLowerCase() == value.toLowerCase() ) {
 			return row;
 		}
 	}

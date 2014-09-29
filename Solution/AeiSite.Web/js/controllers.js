@@ -66,6 +66,7 @@ Aei.Controllers.Projects = function($rootScope, $scope) {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 	var proj = Aei.Database.selectByUniqueProperty(Aei.Tables.Project, 'link', $routeParams.link);
+	//TODO: redirect if project not found (also do this for other detail pages)
 
 	$scope.model = {
 		project: proj,
@@ -156,4 +157,17 @@ Aei.Controllers.Contact = function($rootScope, $scope) {
 	$rootScope.tag = 'Section';
 	$rootScope.title = 'Contact';
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.AdminProjects = function($rootScope, $scope) {
+	$scope.model = {
+		projects: Aei.Tables.Project
+	};
+
+	$rootScope.tag = 'Admin';
+	$rootScope.title = 'Projects';
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Admin']);
 };
