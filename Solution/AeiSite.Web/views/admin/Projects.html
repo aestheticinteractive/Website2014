@@ -1,9 +1,20 @@
+<style>
+	table tbody tr td {
+		padding: 1px 12px;
+	}
+	
+	section.content  .barBg {
+		height: 6px;
+		margin-top: 2px;
+	}
+</style>
+
 <section class="content">
 	<div class="row">
 	
 		<div class="large-12 columns">
 		
-			<table>
+			<table ng-init="predicate = 'overall'; reverse = true;">
 				<thead>
 					<th style="width: 40px;"></th>
 					<th>Name</th>
@@ -27,32 +38,32 @@
 							</a>
 						</td>
 						<td>
-							<div class="barBg">
+							<div class="barBg" title="{{edit.overall}}">
 								<div class="barFill" style="width: {{edit.overall*100}}%;
 									background-color: #39c;">
 								</div>
 							</div>
 						</td>
 						<td>
-							<div class="barBg">
+							<div class="barBg" title="{{edit.dev}}">
 								<div class="barFill" style="width: {{edit.dev*100}}%;">
 								</div>
 							</div>
 						</td>
 						<td>
-							<div class="barBg">
+							<div class="barBg" title="{{edit.des}}">
 								<div class="barFill" style="width: {{edit.des*100}}%;">
 								</div>
 							</div>
 						</td>
 						<td>
-							<div class="barBg">
+							<div class="barBg" title="{{edit.cre}}">
 								<div class="barFill" style="width: {{edit.cre*100}}%;">
 								</div>
 							</div>
 						</td>
 						<td>
-							<div class="barBg">
+							<div class="barBg" title="{{edit.mgt}}">
 								<div class="barFill" style="width: {{edit.mgt*100}}%;">
 								</div>
 							</div>

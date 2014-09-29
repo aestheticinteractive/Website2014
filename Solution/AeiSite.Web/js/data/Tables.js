@@ -448,7 +448,7 @@ Aei.Tables.Project = [
 				weight: 0.995
 			}
 		],
-		weight: 0.98
+		weight: 1
 	},
 	{
 		id: 'journeyful',
@@ -603,7 +603,7 @@ Aei.Tables.Project = [
 				weight: 0.81
 			}
 		],
-		weight: 0.96
+		weight: 0.99
 	},
 	{
 		id: 'lessonvision',
@@ -698,7 +698,7 @@ Aei.Tables.Project = [
 				weight: 0.65
 			}
 		],
-		weight: 0.5
+		weight: 0.95
 	},
 	{
 		id: 'idashboards',
@@ -793,7 +793,7 @@ Aei.Tables.Project = [
 				weight: 0.8
 			}
 		],
-		weight: 0.73
+		weight: 0.98
 	},
 	{
 		id: 'dtmkiosk',
@@ -868,7 +868,7 @@ Aei.Tables.Project = [
 				weight: 0.8
 			}
 		],
-		weight: 0.51
+		weight: 0.94
 	},
 	{
 		id: '1100rooms',
@@ -943,7 +943,7 @@ Aei.Tables.Project = [
 				weight: 0.9
 			}
 		],
-		weight: 0.27
+		weight: 0.66
 	},
 	{
 		id: 'teneo',
@@ -1017,7 +1017,7 @@ Aei.Tables.Project = [
 				weight: 0.9
 			}
 		],
-		weight: 0.24
+		weight: 0.67
 	},
 	{
 		id: 'footvolley',
@@ -1092,7 +1092,7 @@ Aei.Tables.Project = [
 				weight: 0.85
 			}
 		],
-		weight: 0.25
+		weight: 0.72
 	},
 	{
 		id: 'briankelly',
@@ -1166,7 +1166,7 @@ Aei.Tables.Project = [
 				weight: 0.85
 			}
 		],
-		weight: 0.24
+		weight: 0.68
 	},
 	{
 		id: 'hardlines',
@@ -1200,7 +1200,7 @@ Aei.Tables.Project = [
 		],
 		skills: [
 		],
-		weight: 0.96
+		weight: 0.8
 	},
 	{
 		id: 'dormtshirts',
@@ -1232,7 +1232,7 @@ Aei.Tables.Project = [
 				weight: 0.11
 			}
 		],
-		weight: 0.49
+		weight: 0.72
 	},
 	{
 		id: 'alifesim',
@@ -1265,7 +1265,7 @@ Aei.Tables.Project = [
 				weight: 0.98
 			}
 		],
-		weight: 0.73
+		weight: 0.75
 	},
 	{
 		id: 'aei2007',
@@ -1298,7 +1298,7 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
-		weight: 0.76
+		weight: 0.6
 	},
 	{
 		id: 'harriscalc',
@@ -1326,11 +1326,11 @@ Aei.Tables.Project = [
 				weight: 0.18
 			}
 		],
-		weight: 0.25
+		weight: 0.38
 	},
 	{
 		id: 'spechealth',
-		name: 'Medial Animation Player',
+		name: 'Medical Animation Player',
 		client: 'Spectrum Health',
 		start: '11/01/2005',
 		end: '12/01/2005',
@@ -1354,7 +1354,7 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
-		weight: 0.23
+		weight: 0.37
 	},
 	{
 		id: 'harrisicons',
@@ -1382,7 +1382,7 @@ Aei.Tables.Project = [
 				weight: 0.11
 			}
 		],
-		weight: 0.59
+		weight: 0.62
 	},
 	{
 		id: 'gvsuamasite',
@@ -1415,7 +1415,7 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
-		weight: 0.68
+		weight: 0.7
 	},
 	{
 		id: 'siennabakery',
@@ -1443,7 +1443,7 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
-		weight: 0.23
+		weight: 0.35
 	},
 	{
 		id: 'illandlev',
@@ -1471,7 +1471,7 @@ Aei.Tables.Project = [
 				weight: 0.63
 			}
 		],
-		weight: 0.32
+		weight: 0.3
 	},
 	{
 		id: 'portfolio',
@@ -1504,7 +1504,7 @@ Aei.Tables.Project = [
 				weight: 0.78
 			}
 		],
-		weight: 0.75
+		weight: 0.58
 	},
 	{
 		id: 'sketchtracer',
@@ -1532,7 +1532,7 @@ Aei.Tables.Project = [
 				weight: 0.58
 			}
 		],
-		weight: 0.32
+		weight: 0.3
 	},
 	{
 		id: 'art',
@@ -1555,7 +1555,7 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
-		weight: 0.81
+		weight: 0.5
 	},
 	{
 		id: 'sysmaintmap',
@@ -1583,7 +1583,7 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
-		weight: 0.23
+		weight: 0.15
 	},
 	{
 		id: 'elexiconblog',
@@ -1611,7 +1611,7 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
-		weight: 0.23
+		weight: 0.25
 	},
 	{
 		id: 'oakwoodmaps',
@@ -1639,7 +1639,7 @@ Aei.Tables.Project = [
 				weight: 0.19
 			}
 		],
-		weight: 0.25
+		weight: 0.3
 	},
 	{
 		id: 'skins',
@@ -1662,7 +1662,7 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
-		weight: 0.82
+		weight: 0.55
 	},
 	{
 		id: 'illumballs',
@@ -1690,7 +1690,7 @@ Aei.Tables.Project = [
 				weight: 0.59
 			}
 		],
-		weight: 0.32
+		weight: 0.2
 	},
 	{
 		id: 'oldportfolio',
@@ -1718,7 +1718,7 @@ Aei.Tables.Project = [
 				weight: 0.27
 			}
 		],
-		weight: 0.3
+		weight: 0.2
 	},
 	{
 		id: 'zkmusic',
@@ -1741,7 +1741,7 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
-		weight: 0.29
+		weight: 0.1
 	}
 ];
 
@@ -1767,3 +1767,7 @@ for ( var i in Aei.Tables.Project ) {
 		proj.skills.sort(compareWeight);
 	}
 }
+
+Aei.Tables.Project.sort(function(a, b) {
+	return (a.weight == b.weight ? 0 : (a.weight > b.weight ? -1 : 1));
+});
