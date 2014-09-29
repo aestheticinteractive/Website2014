@@ -70,3 +70,28 @@ Aei.Admin.getObjectText = function(object, tabCount) {
 		texts.join(',')+
 		'\n'+tab0+'}';
 };
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Admin.normalizeServiceWeights = function() {
+	for ( var i in Aei.Tables.Project ) {
+		var proj = Aei.Tables.Project[i];
+		var maxWeight = 0;
+
+		proj.weight = 0;
+
+		for ( var si in proj.services ) {
+			proj.weight += proj.services[si].weight;
+			maxWeight = Math.max(maxWeight, proj.services[si].weight);
+		}
+		
+		proj.weight /= proj.services.length;
+		proj.weight = Math.round(proj.weight*100)/100;
+		
+		for ( si in proj.services ) {
+			proj.services[si].weight /= maxWeight;
+			proj.services[si].weight = Math.round(proj.services[si].weight*100)/100;
+		}
+	}
+};

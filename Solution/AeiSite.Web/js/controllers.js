@@ -163,6 +163,9 @@ Aei.Controllers.Contact = function($rootScope, $scope) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.AdminProjects = function($rootScope, $scope) {
+	//Aei.Admin.normalizeServiceWeights();
+	//Aei.Admin.buildProjectTable();
+
 	var edits = [];
 	var i, proj, edit;
 
@@ -183,14 +186,13 @@ Aei.Controllers.AdminProjects = function($rootScope, $scope) {
 
 		edit = {
 			project: proj,
-			overall: 0,
+			overall: proj.weight,
 			dev: getServiceWeight(proj, 'dev'),
 			des: getServiceWeight(proj, 'des'),
 			cre: getServiceWeight(proj, 'cre'),
 			mgt: getServiceWeight(proj, 'mgt')
 		};
 
-		edit.overall = (edit.dev+edit.des+edit.cre+edit.mgt)/4;
 		edits.push(edit);
 	}
 
