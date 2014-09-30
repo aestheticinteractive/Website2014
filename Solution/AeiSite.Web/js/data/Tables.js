@@ -35,6 +35,7 @@ Aei.Tables.Service = [
 		name: 'Project Management',
 		desc: 'Organizing teams, planning features, making decisions, etc.'
 	}
+	//TODO: content/documentation/communication?
 ];
 
 for ( var i in Aei.Tables.Service ) {
@@ -195,10 +196,10 @@ Aei.Tables.Product = [
 		id: 'oal',
 		name: 'OpenAL'
 	},
-	{
+	/*{
 		id: 'gamecen',
 		name: 'Game Center'
-	},
+	},*/
 	{
 		id: 'flash',
 		name: 'Flash'
@@ -301,6 +302,8 @@ Aei.Tables.Skill = [
 		id: 'webserv',
 		name: 'Web Service'
 	}
+	//writing/documenation?
+	//autonomy/drive?
 ];
 
 for ( var i in Aei.Tables.Skill ) {
@@ -393,12 +396,12 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Product, 'oal'),
 				desc: 'Used for the app\'s sound effects.',
 				weight: 0.75
-			},
-			{
+			}
+			/*{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'gamecen'),
 				desc: 'Used for the leaderboards.',
 				weight: 0.8
-			}
+			}*/
 		],
 		skills: [
 			{
@@ -1825,41 +1828,51 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
-		/*systems: [
+		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 0.7
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				desc: '',
+				weight: 0.3
 			}
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		products: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
-				weight: 0.0
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 0.9
 			}
-		],*/
+		],
 		weight: 0.37
 	},
 	{
@@ -1888,41 +1901,31 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
-		/*systems: [
-			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
-				desc: '',
-				weight: 0.0
-			}
+		systems: [
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		languages: [
-			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
-				desc: '',
-				weight: 0.0
-			}
 		],
 		products: [
-			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
-				desc: '',
-				weight: 0.0
-			}
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
 				desc: '',
-				weight: 0.0
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.4
 			}
-		],*/
+		],
 		weight: 0.62
 	},
 	{
@@ -1956,41 +1959,96 @@ Aei.Tables.Project = [
 				weight: 0.97
 			}
 		],
-		/*systems: [
+		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
 				desc: '',
-				weight: 0.0
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
+				desc: '',
+				weight: 0.3
 			}
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: '',
-				weight: 0.0
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
+				desc: '',
+				weight: 0.3
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
+				desc: '',
+				weight: 0.4
 			}
 		],
 		products: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'mssql'),
 				desc: '',
-				weight: 0.0
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
+				desc: '',
+				weight: 0.5
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: '',
+				weight: 0.3
 			}
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
-				weight: 0.0
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: '',
+				weight: 0.3
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
+				desc: '',
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
+				desc: '',
+				weight: 0.9
 			}
-		],*/
+		],
 		weight: 0.7
 	},
 	{
@@ -2019,41 +2077,51 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
-		/*systems: [
+		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				desc: '',
+				weight: 0.6
 			}
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		products: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
-				weight: 0.0
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 1
 			}
-		],*/
+		],
 		weight: 0.35
 	},
 	{
@@ -2082,41 +2150,51 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
-		/*systems: [
+		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		products: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: '',
-				weight: 0.0
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.6
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: '',
+				weight: 0.4
 			}
-		],*/
+		],
 		weight: 0.3
 	},
 	{
@@ -2150,41 +2228,61 @@ Aei.Tables.Project = [
 				weight: 0.97
 			}
 		],
-		/*systems: [
+		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		products: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
-				weight: 0.0
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.3
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: '',
+				weight: 0.7
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				desc: '',
+				weight: 0.9
 			}
-		],*/
+		],
 		weight: 0.58
 	},
 	{
@@ -2213,41 +2311,51 @@ Aei.Tables.Project = [
 				weight: 0.99
 			}
 		],
-		/*systems: [
+		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		products: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
-				weight: 0.0
+				weight: 0.7
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 1
 			}
-		],*/
+		],
 		weight: 0.3
 	},
 	{
@@ -2269,6 +2377,31 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Composed and brainstormed a variety of artistic concepts.',
 				weight: 1
+			}
+		],
+		systems: [
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			}
+		],
+		languages: [
+		],
+		products: [
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: '',
+				weight: 0.4
 			}
 		],
 		weight: 0.5
@@ -2299,41 +2432,56 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
-		/*systems: [
+		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				desc: '',
+				weight: 0.6
 			}
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		products: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
-				weight: 0.0
+				weight: 0.6
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 1
 			}
-		],*/
+		],
 		weight: 0.15
 	},
 	{
@@ -2362,41 +2510,57 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
-		/*systems: [
+		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				desc: '',
+				weight: 0.6
 			}
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: '',
-				weight: 0.0
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'php'),
+				desc: '',
+				weight: 1
 			}
 		],
 		products: [
-			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
-				desc: '',
-				weight: 0.0
-			}
+			//WordPress API, Lightbox
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
-				weight: 0.0
+				weight: 0.3
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 1
 			}
-		],*/
+		],
 		weight: 0.25
 	},
 	{
@@ -2425,41 +2589,56 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
-		/*systems: [
+		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				desc: '',
+				weight: 0.6
 			}
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		products: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
-				weight: 0.0
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 1
 			}
-		],*/
+		],
 		weight: 0.3
 	},
 	{
@@ -2483,41 +2662,46 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
-		/*systems: [
+		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'win'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		languages: [
-			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
-				desc: '',
-				weight: 0.0
-			}
 		],
 		products: [
-			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
-				desc: '',
-				weight: 0.0
-			}
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: '',
-				weight: 0.0
+				weight: 0.7
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.5
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				desc: '',
+				weight: 0.4
 			}
-		],*/
+		],
 		weight: 0.55
 	},
 	{
@@ -2546,41 +2730,56 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
-		/*systems: [
+		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		products: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: '',
-				weight: 0.0
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: '',
+				weight: 0.5
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.7
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: '',
+				weight: 1
 			}
-		],*/
+		],
 		weight: 0.2
 	},
 	{
@@ -2609,6 +2808,56 @@ Aei.Tables.Project = [
 				weight: 0.95
 			}
 		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
+				desc: '',
+				weight: 1
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
+				desc: '',
+				weight: 1
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: '',
+				weight: 1
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.6
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: '',
+				weight: 0.2
+			}
+		],
 		weight: 0.2
 	},
 	{
@@ -2632,41 +2881,56 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
-		/*systems: [
+		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
 				desc: '',
-				weight: 0.0
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
+				desc: '',
+				weight: 0.99
 			}
 		],
 		teams: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		products: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: '',
-				weight: 0.0
+				weight: 1
 			}
 		],
 		skills: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
-				weight: 0.0
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.3
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.6
 			}
-		],*/
+		],
 		weight: 0.1
 	}
 ];

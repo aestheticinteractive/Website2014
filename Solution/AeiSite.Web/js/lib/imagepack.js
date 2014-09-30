@@ -143,7 +143,7 @@ ImagePack.prototype._splitItems = function(startIndex, depth, maxDepth) {
 ImagePack.prototype._getItemCountForRow = function(startIndex, findMax) {
 	var items = this._items;
 	var totalW = 0;
-	var threshold = (findMax ? this._maxTotalScaledW : this._maxTotalScaledW*0.8);
+	var threshold = (findMax ? this._maxTotalScaledW : this._maxTotalScaledW*0.6);
 	var remaining = items.length-startIndex;
 	var i, item;
 
