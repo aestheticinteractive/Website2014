@@ -29,6 +29,24 @@
 			</div>
 			
 			<h3>
+				System{{model.project.systems.length == 1 ? '' : 's'}}
+			</h3>
+			<div class="tag" style="background-color: rgba(102, 136, 51, {{item.weight}}); 
+						color: rgba(255, 255, 255, {{item.weight*0.5+0.25}});"
+					ng-repeat="item in model.project.systems" title="{{item.desc}}">
+				{{item.system.name}}
+			</div>
+		
+			<h3>
+				Team Type{{model.project.systems.length == 1 ? '' : 's'}}
+			</h3>
+			<div class="tag" style="background-color: rgba(102, 136, 51, {{item.weight}}); 
+						color: rgba(255, 255, 255, {{item.weight*0.5+0.25}});"
+					ng-repeat="item in model.project.teams" title="{{item.desc}}">
+				{{item.team.name}}
+			</div>
+		
+			<h3>
 				Skills
 			</h3>
 			<div class="tag" style="background-color: rgba(102, 136, 51, {{item.weight}}); 
