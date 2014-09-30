@@ -187,10 +187,10 @@ Aei.Controllers.AdminProjects = function($rootScope, $scope) {
 		edit = {
 			project: proj,
 			overall: proj.weight,
-			dev: getServiceWeight(proj, 'dev'),
-			des: getServiceWeight(proj, 'des'),
-			cre: getServiceWeight(proj, 'cre'),
-			mgt: getServiceWeight(proj, 'mgt')
+			dev: getServiceWeight(proj, 'dev')*proj.weight,
+			des: getServiceWeight(proj, 'des')*proj.weight,
+			cre: getServiceWeight(proj, 'cre')*proj.weight,
+			mgt: getServiceWeight(proj, 'mgt')*proj.weight
 		};
 
 		edits.push(edit);

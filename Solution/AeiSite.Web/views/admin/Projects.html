@@ -18,11 +18,11 @@
 				<thead>
 					<th style="width: 40px;"></th>
 					<th>Name</th>
-					<th><a href="" ng-click="predicate = 'overall'; reverse=!reverse">overall</a></th>
-					<th><a href="" ng-click="predicate = 'dev'; reverse=!reverse">dev</a></th>
-					<th><a href="" ng-click="predicate = 'des'; reverse=!reverse">des</a></th>
-					<th><a href="" ng-click="predicate = 'cre'; reverse=!reverse">cre</a></th>
-					<th><a href="" ng-click="predicate = 'mgt'; reverse=!reverse">mgt</a></th>
+					<th><a href="" ng-click="predicate = 'overall'; reverse = !reverse">overall</a></th>
+					<th><a href="" ng-click="predicate = 'dev'; reverse = !reverse">dev</a></th>
+					<th><a href="" ng-click="predicate = 'des'; reverse = !reverse">des</a></th>
+					<th><a href="" ng-click="predicate = 'cre'; reverse = !reverse">cre</a></th>
+					<th><a href="" ng-click="predicate = 'mgt'; reverse = !reverse">mgt</a></th>
 				</thead>
 				<tbody>
 					<tr ng-repeat="edit in model.edits | orderBy:predicate:reverse">
