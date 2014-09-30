@@ -16,121 +16,72 @@ Aei.Queries.getPropertyCompareFunc = function(propertyFunc, dir) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Queries.selectProjectUsesOfService = function(service) {
+Aei.Queries.selectProjectTagUsesByItem = function(propName, item) {
 	var projects = Aei.Database.selectList(Aei.Tables.Project);
-	var uses = [];
-	var i, j, proj, servEntry;
+	var tagUses = [];
+	var pi, ti, proj, projTags, tag;
 
-	for ( i in projects ) {
-		proj = projects[i];
+	for ( pi in projects ) {
+		proj = projects[pi];
+		projTags = proj[propName];
 		
-		for ( j in proj.services ) {
-			servEntry = proj.services[j];
-			
-			if ( servEntry.service != service ) {
+		for ( ti in projTags ) {
+			tag = projTags[ti];
+
+			if ( tag.item != item ) {
 				continue;
 			}
 
-			uses.push({
+			tagUses.push({
 				project: proj,
-				serviceEntry: servEntry,
-				weight: servEntry.weight*proj.weight
-			});
-		}
-	}
-
-	var propFunc = function(x) { return x.weight; };
-	uses.sort(Aei.Queries.getPropertyCompareFunc(propFunc, 1));
-	return uses;
-};
-
-/*----------------------------------------------------------------------------------------------------*/
-Aei.Queries.selectProjectUsesOfSkill = function(skill) {
-	var projects = Aei.Database.selectList(Aei.Tables.Project);
-	var uses = [];
-	var i, j, proj, skillEntry;
-
-	for ( i in projects ) {
-		proj = projects[i];
-		
-		for ( j in proj.skills ) {
-			skillEntry = proj.skills[j];
-			
-			if ( skillEntry.skill != skill ) {
-				continue;
-			}
-
-			uses.push({
-				project: proj,
-				skillEntry: skillEntry,
-				weight: skillEntry.weight*proj.weight
+				tag: tag,
+				weight: tag.weight*proj.weight
 			});
 		}
 	}
 	
 	var propFunc = function(x) { return x.weight; };
-	uses.sort(Aei.Queries.getPropertyCompareFunc(propFunc, 1));
-	return uses;
+	tagUses.sort(Aei.Queries.getPropertyCompareFunc(propFunc, 1));
+	return tagUses;
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Queries.calculateSkillWeights = function(skillGroup) {
+Aei.Queries.calculateTagWeights = function(propName, itemList) {
 	var projects = Aei.Database.selectList(Aei.Tables.Project);
-	var skills = Aei.Database.selectList(Aei.Tables.Skill);
-	var skillMap = {};
-	var skillPairList = [];
+	var itemMap = {};
+	var pairs = [];
 	var maxWeight = 0;
-	var i, j, proj, skillEntry, key, skill;
+	var ii, pi, ti, item, proj, projTags, tag, key;
 
-	for ( i in projects ) {
-		proj = projects[i];
-		
-		for ( j in proj.skills ) {
-			skillEntry = proj.skills[j];
-			
-			if ( skillEntry.skill.group != skillGroup ) {
-				continue;
-			}
+	for ( ii in itemList ) {
+		item = itemList[ii];
 
-			key = skillEntry.skill.id;
+		itemMap[item.id] = {
+			item: item,
+			weight: 0
+		};
+	}
+	
+	for ( pi in projects ) {
+		proj = projects[pi];
+		projTags = proj[propName];
 
-			if ( !skillMap[key] ) {
-				skillMap[key] = {
-					skill: skillEntry.skill,
-					weight: 0
-				};
-			}
-
-			skillMap[key].weight += skillEntry.weight*proj.weight;
-			maxWeight = Math.max(maxWeight, skillMap[key].weight);
+		for ( ti in projTags ) {
+			tag = projTags[ti];
+			key = tag.item.id;
+			itemMap[key].weight += tag.weight*proj.weight;
+			maxWeight = Math.max(maxWeight, itemMap[key].weight);
 		}
 	}
 
-	for ( i in skills ) {
-		skill = skills[i];
-			
-		if ( skill.group != skillGroup ) {
-			continue;
-		}
-
-		key = skill.id;
-
-		if ( !skillMap[key] ) {
-			skillMap[key] = {
-				skill: skill,
-				weight: 0
-			};
-		}
-	}
-
-	for ( key in skillMap ) {
-		skillMap[key].weight /= maxWeight;
-		skillPairList.push(skillMap[key]);
+	for ( key in itemMap ) {
+		itemMap[key].weight /= maxWeight;
+		pairs.push(itemMap[key]);
 	}
 	
 	var propFunc = function(x) { return x.weight; };
-	skillPairList.sort(Aei.Queries.getPropertyCompareFunc(propFunc, 1));
-	return skillPairList;
+	pairs.sort(Aei.Queries.getPropertyCompareFunc(propFunc, 1));
+	return pairs;
 };

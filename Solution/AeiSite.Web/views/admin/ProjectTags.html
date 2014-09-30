@@ -1,0 +1,147 @@
+<style>
+	table thead tr th, table tbody tr td {
+		padding: 2px;
+	}
+	
+	section.content  .barBg {
+		height: 6px;
+		margin-top: 0;
+	}
+</style>
+
+<section class="content" ng-repeat="proj in model.projects">
+	<div class="row">
+		<div class="large-1 columns">
+			<p style="margin-bottom: 10px;">
+				<a href="#/Projects/{{proj.link}}">
+					<img ng-src="img/projects/{{proj.id}}/icon.jpg" 
+							style="width: 100%;"/>
+				</a>
+				<a href="#/Projects/{{proj.link}}" style="font-size: 12px;">
+					{{proj.name}}
+				</a>
+			</p>
+		</div>
+		<div class="large-11 columns">
+
+			<div class="row">
+	
+				<div class="large-2 columns">
+					<table>
+						<thead>
+							<th>Services</th>
+						</thead>
+						<tbody>
+							<tr ng-repeat="tag in proj.services">
+								<td style="font-size: 12px;">
+									{{tag.item.name}}
+									<div class="barBg" title="{{tag.weight.dev}}">
+										<div class="barFill" style="width: {{tag.weight*100}}%;">
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+		
+				<div class="large-2 columns">
+					<table>
+						<thead>
+							<th>Skills</th>
+						</thead>
+						<tbody>
+							<tr ng-repeat="tag in proj.skills">
+								<td style="font-size: 12px;">
+									{{tag.item.name}}
+									<div class="barBg" title="{{tag.weight.dev}}">
+										<div class="barFill" style="width: {{tag.weight*100}}%;">
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+	
+				<div class="large-2 columns">
+					<table>
+						<thead>
+							<th>Languages</th>
+						</thead>
+						<tbody>
+							<tr ng-repeat="tag in proj.languages">
+								<td style="font-size: 12px;">
+									{{tag.item.name}}
+									<div class="barBg" title="{{tag.weight.dev}}">
+										<div class="barFill" style="width: {{tag.weight*100}}%;">
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+	
+				<div class="large-2 columns">
+					<table>
+						<thead>
+							<th>Products</th>
+						</thead>
+						<tbody>
+							<tr ng-repeat="tag in proj.products">
+								<td style="font-size: 12px;">
+									{{tag.item.name}}
+									<div class="barBg" title="{{tag.weight.dev}}">
+										<div class="barFill" style="width: {{tag.weight*100}}%;">
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+	
+				<div class="large-2 columns">
+					<table>
+						<thead>
+							<th>Systems</th>
+						</thead>
+						<tbody>
+							<tr ng-repeat="tag in proj.systems">
+								<td style="font-size: 12px;">
+									{{tag.item.name}}
+									<div class="barBg" title="{{tag.weight.dev}}">
+										<div class="barFill" style="width: {{tag.weight*100}}%;">
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+	
+				<div class="large-2 columns">
+					<table>
+						<thead>
+							<th>Team Types</th>
+						</thead>
+						<tbody>
+							<tr ng-repeat="tag in proj.teams">
+								<td style="font-size: 12px;">
+									{{tag.item.name}}
+									<div class="barBg" title="{{tag.weight.dev}}">
+										<div class="barFill" style="width: {{tag.weight*100}}%;">
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+	
+			</div>
+	
+		</div>
+	</div>
+</section>

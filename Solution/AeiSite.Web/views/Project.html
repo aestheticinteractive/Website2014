@@ -1,7 +1,11 @@
-
 <style>
 	#gallery img {
 		margin: 0 1px 1px 0;
+	}
+	
+	section.content  .barBg {
+		height: 4px;
+		margin-top: 0;
 	}
 </style>
 
@@ -19,41 +23,58 @@
 
 		<div class="large-3 columns">
 			
-			<h3>
+			<h3 ng-if="model.project.services.length">
 				Services
 			</h3>
-			<div class="tag" style="background-color: rgba(102, 136, 51, {{item.weight}}); 
-						color: rgba(255, 255, 255, {{item.weight*0.5+0.25}});"
-					ng-repeat="item in model.project.services" title="{{item.desc}}">
-				{{item.service.name}}
-			</div>
-			
-			<h3>
-				System{{model.project.systems.length == 1 ? '' : 's'}}
-			</h3>
-			<div class="tag" style="background-color: rgba(102, 136, 51, {{item.weight}}); 
-						color: rgba(255, 255, 255, {{item.weight*0.5+0.25}});"
-					ng-repeat="item in model.project.systems" title="{{item.desc}}">
-				{{item.system.name}}
+			<div class="tag" style="background-color: rgba(102, 136, 51, {{tag.weight}}); 
+						color: rgba(255, 255, 255, {{tag.weight*0.5+0.25}});"
+					ng-repeat="tag in model.project.services" title="{{tag.desc}}">
+				{{tag.item.name}}
 			</div>
 		
-			<h3>
-				Team Type{{model.project.systems.length == 1 ? '' : 's'}}
-			</h3>
-			<div class="tag" style="background-color: rgba(102, 136, 51, {{item.weight}}); 
-						color: rgba(255, 255, 255, {{item.weight*0.5+0.25}});"
-					ng-repeat="item in model.project.teams" title="{{item.desc}}">
-				{{item.team.name}}
-			</div>
-		
-			<h3>
+			<h3 ng-if="model.project.skills.length">
 				Skills
 			</h3>
-			<div class="tag" style="background-color: rgba(102, 136, 51, {{item.weight}}); 
-						color: rgba(255, 255, 255, {{item.weight*0.5+0.25}});"
-					ng-repeat="item in model.project.skills"
-					title="[{{item.skill.group.name}}] {{item.desc}}">
-				{{item.skill.name}}
+			<div class="tag" style="background-color: rgba(102, 136, 51, {{tag.weight}}); 
+						color: rgba(255, 255, 255, {{tag.weight*0.5+0.25}});"
+					ng-repeat="tag in model.project.skills" title="{{tag.desc}}">
+				{{tag.item.name}}
+			</div>
+		
+			<h3 ng-if="model.project.languages.length">
+				Languages
+			</h3>
+			<div class="tag" style="background-color: rgba(102, 136, 51, {{tag.weight}}); 
+						color: rgba(255, 255, 255, {{tag.weight*0.5+0.25}});"
+					ng-repeat="tag in model.project.languages" title="{{tag.desc}}">
+				{{tag.item.name}}
+			</div>
+		
+			<h3 ng-if="model.project.products.length">
+				Products
+			</h3>
+			<div class="tag" style="background-color: rgba(102, 136, 51, {{tag.weight}}); 
+						color: rgba(255, 255, 255, {{tag.weight*0.5+0.25}});"
+					ng-repeat="tag in model.project.products" title="{{tag.desc}}">
+				{{tag.item.name}}
+			</div>
+			
+			<h3 ng-if="model.project.systems.length">
+				Systems
+			</h3>
+			<div class="tag" style="background-color: rgba(102, 136, 51, {{tag.weight}}); 
+						color: rgba(255, 255, 255, {{tag.weight*0.5+0.25}});"
+					ng-repeat="tag in model.project.systems" title="{{tag.desc}}">
+				{{tag.item.name}}
+			</div>
+		
+			<h3 ng-if="model.project.teams.length">
+				Team Types
+			</h3>
+			<div class="tag" style="background-color: rgba(102, 136, 51, {{tag.weight}}); 
+						color: rgba(255, 255, 255, {{tag.weight*0.5+0.25}});"
+					ng-repeat="tag in model.project.teams" title="{{tag.desc}}">
+				{{tag.item.name}}
 			</div>
 		
 		</div>
@@ -78,6 +99,127 @@
 				<a href="http://{{model.project.url}}">{{model.project.url}}</a>
 			</p>
 		</div>
+	</div>
+</section>
+
+
+<section class="content">
+	<div class="row">
+	
+		<div class="large-2 columns">
+			<table>
+				<thead>
+					<th>Services</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="tag in model.project.services">
+						<td style="font-size: 12px;">
+							{{tag.item.name}}
+							<div class="barBg" title="{{tag.weight.dev}}">
+								<div class="barFill" style="width: {{tag.weight*100}}%;">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="large-2 columns">
+			<table>
+				<thead>
+					<th>Skills</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="tag in model.project.skills">
+						<td style="font-size: 12px;">
+							{{tag.item.name}}
+							<div class="barBg" title="{{tag.weight.dev}}">
+								<div class="barFill" style="width: {{tag.weight*100}}%;">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	
+		<div class="large-2 columns">
+			<table>
+				<thead>
+					<th>Languages</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="tag in model.project.languages">
+						<td style="font-size: 12px;">
+							{{tag.item.name}}
+							<div class="barBg" title="{{tag.weight.dev}}">
+								<div class="barFill" style="width: {{tag.weight*100}}%;">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	
+		<div class="large-2 columns">
+			<table>
+				<thead>
+					<th>Products</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="tag in model.project.products">
+						<td style="font-size: 12px;">
+							{{tag.item.name}}
+							<div class="barBg" title="{{tag.weight.dev}}">
+								<div class="barFill" style="width: {{tag.weight*100}}%;">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	
+		<div class="large-2 columns">
+			<table>
+				<thead>
+					<th>Systems</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="tag in model.project.systems">
+						<td style="font-size: 12px;">
+							{{tag.item.name}}
+							<div class="barBg" title="{{tag.weight.dev}}">
+								<div class="barFill" style="width: {{tag.weight*100}}%;">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	
+		<div class="large-2 columns">
+			<table>
+				<thead>
+					<th>Team Types</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="tag in model.project.teams">
+						<td style="font-size: 12px;">
+							{{tag.item.name}}
+							<div class="barBg" title="{{tag.weight.dev}}">
+								<div class="barFill" style="width: {{tag.weight*100}}%;">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	
 	</div>
 </section>
 

@@ -33,14 +33,14 @@ Aei.RouteBuilder = function($routeProvider) {
 			caseInsensitiveMatch: true
 		})
 		
-		.when('/Skills', {
-			templateUrl: 'views/Skills.html',
-			controller: Aei.Controllers.Skills,
+		.when('/Tags', {
+			templateUrl: 'views/Tags.html',
+			controller: Aei.Controllers.Tags,
 			caseInsensitiveMatch: true
 		})
-		.when('/Skills/:link', {
-			templateUrl: 'views/Skill.html',
-			controller: Aei.Controllers.Skill,
+		.when('/Tags/:tagType/:link', {
+			templateUrl: 'views/Tag.html',
+			controller: Aei.Controllers.Tag,
 			caseInsensitiveMatch: true
 		})
 		
@@ -53,6 +53,12 @@ Aei.RouteBuilder = function($routeProvider) {
 		.when('/Admin/Projects', {
 			templateUrl: 'views/admin/Projects.html',
 			controller: Aei.Controllers.AdminProjects,
+			caseInsensitiveMatch: true
+		})
+		
+		.when('/Admin/ProjectTags', {
+			templateUrl: 'views/admin/ProjectTags.html',
+			controller: Aei.Controllers.AdminProjectTags,
 			caseInsensitiveMatch: true
 		})
 		

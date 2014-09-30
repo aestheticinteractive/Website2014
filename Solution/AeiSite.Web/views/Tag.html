@@ -34,7 +34,7 @@
 				Description
 			</h3>
 			<p>
-				{{model.skill.desc}}
+				{{model.item.desc}}
 			</p>
 
 		</div>
@@ -47,7 +47,7 @@
 		<div class="large-12 columns">
 			
 			<h3>
-				Top  "{{model.skill.name}}" Projects
+				Top Projects
 			</h3>
 
 			<table>
@@ -56,7 +56,7 @@
 					<th></th>
 				</thead>
 				<tbody>
-					<tr ng-repeat="use in model.projectUses">
+					<tr ng-repeat="use in model.tagUses">
 						<td class="imageCol">
 							<a href="#/Projects/{{use.project.link}}">
 								<img ng-src="img/projects/{{use.project.id}}/icon.jpg" 
@@ -65,7 +65,7 @@
 						</td>
 						<td class="projCol">
 							<a href="#/Projects/{{use.project.link}}">{{use.project.name}}</a>:
-							{{use.skillEntry.desc}}
+							{{use.tag.desc}}
 							<br/>
 							<div class="barBg" title="{{use.serviceEntry.weight}} * {{use.project.weight}}">
 								<div class="barFill" style="width: {{use.weight*100}}%;">

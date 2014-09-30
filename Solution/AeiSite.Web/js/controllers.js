@@ -24,12 +24,8 @@ Aei.Controllers.Menu = function(/*$route, $routeParams,*/ $location) {
 			url: '/Projects'
 		},
 		{
-			name: 'Services',
-			url: '/Services'
-		},
-		{
-			name: 'Skills',
-			url: '/Skills'
+			name: 'Tags',
+			url: '/Tags'
 		},
 		{
 			name: 'Contact',
@@ -81,71 +77,104 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Services = function($rootScope, $scope) {
-	$scope.model = {
-		services: Aei.Database.selectList(Aei.Tables.Service)
-	};
-	
-	$rootScope.tag = 'Section';
-	$rootScope.title = 'Services';
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
-};
-
-/*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Service = function($rootScope, $scope, $routeParams) {
-	var serv = Aei.Database.selectByUniqueProperty(Aei.Tables.Service, 'link', $routeParams.link);
-
-	$scope.model = {
-		service: serv,
-		projectUses: Aei.Queries.selectProjectUsesOfService(serv),
-		page: null //new Aei.Pages.Service(serv)
-	};
-	
-	$rootScope.tag = 'Service';
-	$rootScope.title = serv.name;
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Services']);
-};
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Skills = function($rootScope, $scope) {
-	var skills = Aei.Database.selectList(Aei.Tables.Skill);
-	var groupMap = {};
-	var i, skill, key;
-
-	for ( i in skills ) {
-		skill = skills[i];
-		key = skill.group.id;
-
-		if ( !groupMap[key] ) {
-			groupMap[key] = Aei.Queries.calculateSkillWeights(skill.group);
+Aei.Controllers.Tags = function($rootScope, $scope) {
+	var groups = [
+		{
+			id: 'services',
+			link: 'Services',
+			list: Aei.Database.selectList(Aei.Tables.Service)
+		},
+		{
+			id: 'skills',
+			link: 'Skills',
+			list: Aei.Database.selectList(Aei.Tables.Skill)
+		},
+		{
+			id: 'languages',
+			link: 'Languages',
+			list: Aei.Database.selectList(Aei.Tables.Language)
+		},
+		{
+			id: 'products',
+			link: 'Products',
+			list: Aei.Database.selectList(Aei.Tables.Product)
+		},
+		{
+			id: 'systems',
+			link: 'Systems',
+			list: Aei.Database.selectList(Aei.Tables.System)
+		},
+		{
+			id: 'teams',
+			link: 'Teams',
+			list: Aei.Database.selectList(Aei.Tables.Team)
 		}
+	];
+
+	var i, group;
+
+	for ( i in groups ) {
+		group = groups[i];
+		group.tagWeights = Aei.Queries.calculateTagWeights(group.id, group.list);
 	}
 
 	$scope.model = {
-		skills: skills,
-		groupMap: groupMap
+		groups: groups
 	};
 	
 	$rootScope.tag = 'Section';
-	$rootScope.title = 'Skills';
+	$rootScope.title = 'Tags';
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Skill = function($rootScope, $scope, $routeParams) {
-	var skill = Aei.Database.selectByUniqueProperty(Aei.Tables.Skill, 'link', $routeParams.link);
+Aei.Controllers.Tag = function($rootScope, $scope, $routeParams) {
+	var table = null;
+	var tagType = $routeParams.tagType.toLowerCase();
+	var pageTag = '';
+
+	switch ( tagType ) {
+		case 'services':
+			table = Aei.Database.selectList(Aei.Tables.Service);
+			pageTag = 'Service Tag';
+			break;
+			
+		case 'skills':
+			table = Aei.Database.selectList(Aei.Tables.Skill);
+			pageTag = 'Skill Tag';
+			break;
+			
+		case 'languages':
+			table = Aei.Database.selectList(Aei.Tables.Language);
+			pageTag = 'Language Tag';
+			break;
+			
+		case 'products':
+			table = Aei.Database.selectList(Aei.Tables.Product);
+			pageTag = 'Product Tag';
+			break;
+			
+		case 'systems':
+			table = Aei.Database.selectList(Aei.Tables.System);
+			pageTag = 'System Tag';
+			break;
+			
+		case 'teams':
+			table = Aei.Database.selectList(Aei.Tables.Team);
+			pageTag = 'Team Tag';
+			break;
+	};
+
+	var item = Aei.Database.selectByUniqueProperty(table, 'link', $routeParams.link);
 
 	$scope.model = {
-		skill: skill,
-		projectUses: Aei.Queries.selectProjectUsesOfSkill(skill),
-		page: null //new Aei.Pages.Project(skill)
+		item: item,
+		tagUses: Aei.Queries.selectProjectTagUsesByItem(tagType, item)
 	};
 	
-	$rootScope.tag = 'Skill';
-	$rootScope.title = skill.name;
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Skills']);
+	$rootScope.tag = pageTag;
+	$rootScope.title = item.name;
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Tags']);
 };
 
 
@@ -171,10 +200,10 @@ Aei.Controllers.AdminProjects = function($rootScope, $scope) {
 
 	var getServiceWeight = function(project, serviceId) {
 		for ( var si in project.services ) {
-			var servEntry = project.services[si];
+			var tag = project.services[si];
 
-			if ( servEntry.service.id == serviceId ) {
-				return servEntry.weight;
+			if ( tag.item.id == serviceId ) {
+				return tag.weight;
 			}
 		}
 
@@ -202,5 +231,16 @@ Aei.Controllers.AdminProjects = function($rootScope, $scope) {
 
 	$rootScope.tag = 'Admin';
 	$rootScope.title = 'Projects';
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Admin']);
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.AdminProjectTags = function($rootScope, $scope) {
+	$scope.model = {
+		projects: Aei.Tables.Project
+	};
+
+	$rootScope.tag = 'Admin';
+	$rootScope.title = 'Project Tags';
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Admin']);
 };

@@ -66,14 +66,14 @@ Aei.Tables.System = [
 		name: 'Web'
 	},
 	{
-		id: 'flash',
+		id: 'flashplay',
 		name: 'Flash Player'
 	}
 ];
 
 for ( var i in Aei.Tables.System ) {
-	var serv = Aei.Tables.System[i];
-	serv.link = Aei.Tables.createLink(serv.name);
+	var sys = Aei.Tables.System[i];
+	sys.link = Aei.Tables.createLink(sys.name);
 }
 
 
@@ -93,244 +93,210 @@ Aei.Tables.Team = [
 	}
 ];
 
-for ( var i in Aei.Tables.System ) {
-	var serv = Aei.Tables.System[i];
-	serv.link = Aei.Tables.createLink(serv.name);
+for ( var i in Aei.Tables.Team ) {
+	var team = Aei.Tables.Team[i];
+	team.link = Aei.Tables.createLink(team.name);
 }
 
 
 /*====================================================================================================*/
-Aei.Tables.SkillGroup = [
+Aei.Tables.Language = [
 	{
-		id: 'lang',
-		name: 'Language',
-		desc: 'Programming and markup languages.'
+		id: 'c#',
+		name: 'C#'
 	},
 	{
-		id: 'lib',
-		name: 'Library',
-		desc: 'Libraries, frameworks, and other useful tools.'
+		id: 'js',
+		name: 'Javascript'
 	},
 	{
-		id: 'prod',
-		name: 'Product',
-		desc: 'Software systems and applications.'
+		id: 'html',
+		name: 'HTML5'
 	},
 	{
-		id: 'cap',
-		name: 'Capability',
-		desc: 'General areas of knowledge, experience, and ability.'
+		id: 'css',
+		name: 'CSS'
+	},
+	{
+		id: 'objc',
+		name: 'Objective-C'
+	},
+	{
+		id: 'as',
+		name: 'ActionScript'
+	},
+	{
+		id: 'sql',
+		name: 'SQL'
+	},
+	{
+		id: 'gremlin',
+		name: 'Gremlin'
+	},
+	{
+		id: 'java',
+		name: 'Java'
+	},
+	{
+		id: 'php',
+		name: 'PHP'
+	},
+	{
+		id: 'c++',
+		name: 'C++'
 	}
 ];
+
+for ( var i in Aei.Tables.Language ) {
+	var lang = Aei.Tables.Language[i];
+	lang.link = Aei.Tables.createLink(lang.name);
+}
+
+
+/*====================================================================================================*/
+Aei.Tables.Product = [
+	{
+		id: 'jquery',
+		name: 'jQuery'
+	},
+	{
+		id: 'angjs',
+		name: 'AngularJS'
+	},
+	{
+		id: 'foundjs',
+		name: 'Foundation'
+	},
+	{
+		id: 'kinjs',
+		name: 'KineticJS'
+	},
+	{
+		id: 'd3js',
+		name: 'd3.js'
+	},
+	{
+		id: 'flex',
+		name: 'Flex'
+	},
+	{
+		id: 'net',
+		name: '.NET'
+	},
+	{
+		id: 'cocoa',
+		name: 'Cocoa'
+	},
+	{
+		id: 'ogl',
+		name: 'OpenGL'
+	},
+	{
+		id: 'oal',
+		name: 'OpenAL'
+	},
+	{
+		id: 'gamecen',
+		name: 'Game Center'
+	},
+	{
+		id: 'flash',
+		name: 'Flash'
+	},
+	{
+		id: 'unity',
+		name: 'Unity 3D'
+	},
+	{
+		id: 'mssql',
+		name: 'SQL Server'
+	},
+	{
+		id: 'mysql',
+		name: 'MySQL'
+	},
+	{
+		id: 'titan',
+		name: 'Titan Graph Database'
+	},
+	{
+		id: 'cass',
+		name: 'Cassandra'
+	}
+	/*{ //omit "authoring tools" for now
+		id: 'fbuild',
+		name: 'Flash Builder'
+	},
+	{
+		id: 'vs',
+		name: 'Visual Studio'
+	},
+	{
+		id: 'resharper',
+		name: 'Resharper'
+	},
+	{
+		id: 'xcode',
+		name: 'XCode'
+	},
+	{
+		id: 'photo',
+		name: 'Photoshop'
+	},*/
+];
+
+for ( var i in Aei.Tables.Product ) {
+	var prod = Aei.Tables.Product[i];
+	prod.link = Aei.Tables.createLink(prod.name);
+}
 
 
 /*====================================================================================================*/
 Aei.Tables.Skill = [
-	
-
-	/* Language */
-
-	{
-		id: 'c#',
-		name: 'C#',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
-	},
-	{
-		id: 'js',
-		name: 'Javascript',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
-	},
-	{
-		id: 'html',
-		name: 'HTML5',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
-	},
-	{
-		id: 'css',
-		name: 'CSS',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
-	},
-	{
-		id: 'objc',
-		name: 'Objective-C',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
-	},
-	{
-		id: 'as',
-		name: 'ActionScript',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
-	},
-	{
-		id: 'sql',
-		name: 'SQL',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
-	},
-	{
-		id: 'gremlin',
-		name: 'Gremlin',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
-	},
-	{
-		id: 'java',
-		name: 'Java',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
-	},
-	{
-		id: 'php',
-		name: 'PHP',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
-	},
-	{
-		id: 'c++',
-		name: 'C++',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lang')
-	},
-
-
-	/* Library */
-
-	
-	{
-		id: 'jquery',
-		name: 'jQuery',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
-	},
-	{
-		id: 'angjs',
-		name: 'AngularJS',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
-	},
-	{
-		id: 'foundjs',
-		name: 'Foundation',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
-	},
-	{
-		id: 'kinjs',
-		name: 'KineticJS',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
-	},
-	{
-		id: 'd3js',
-		name: 'd3.js',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
-	},
-	{
-		id: 'flex',
-		name: 'Flex',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
-	},
-	{
-		id: 'net',
-		name: '.NET',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
-	},
-	{
-		id: 'cocoa',
-		name: 'Cocoa',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
-	},
-	{
-		id: 'ogl',
-		name: 'OpenGL',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'lib')
-	},
-	
-
-	/* Product */
-
-
-	{
-		id: 'unity',
-		name: 'Unity 3D',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
-		id: 'mssql',
-		name: 'SQL Server',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
-		id: 'mysql',
-		name: 'MySQL',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
-		id: 'titan',
-		name: 'Titan Graph Database',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
-		id: 'cass',
-		name: 'Cassandra',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	{
-		id: 'photo',
-		name: 'Photoshop',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'prod')
-	},
-	
-
-	/* Capability */
-
-
 	{
 		id: 'mob',
-		name: 'Mobile',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+		name: 'Mobile'
 	},
 	{
 		id: 'ui',
-		name: 'User Interface',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+		name: 'User Interface'
 	},
 	{
 		id: 'ux',
-		name: 'User Experience',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+		name: 'User Experience'
 	},
 	{
 		id: 'resp',
-		name: 'Responsive Layout',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+		name: 'Responsive Layout'
 	},
 	{
 		id: '3d',
-		name: '3D Graphics',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+		name: '3D Graphics'
 	},
 	{
 		id: 'anim',
-		name: 'Animation',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+		name: 'Animation'
 	},
 	{
 		id: 'algo',
-		name: 'Algorithms',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+		name: 'Algorithms'
 	},
 	{
 		id: 'pixperf',
-		name: 'Pixel-Perfect',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+		name: 'Pixel-Perfect'
 	},
 	{
 		id: 'db',
-		name: 'Database',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+		name: 'Database'
 	},
 	{
 		id: 'servSide',
-		name: 'Server-Side',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+		name: 'Server-Side'
 	},
 	{
 		id: 'webserv',
-		name: 'Web Service',
-		group: Aei.Database.selectById(Aei.Tables.SkillGroup, 'cap')
+		name: 'Web Service'
 	}
-	
 ];
 
 for ( var i in Aei.Tables.Skill ) {
@@ -352,103 +318,112 @@ Aei.Tables.Project = [
 		imageCount: 5,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the entire app; game logic, effects, controls, menus, optimizations, etc.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Designed all game screens, controls, backgrounds, menus, etc.',
 				weight: 0.98
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Invented the game concept, control systems, game variations, etc.',
 				weight: 0.99
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Planned, executed, released, and maintained the project.',
 				weight: 0.97
 			}
 		],
 		systems: [
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'ios'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'ios'),
 				desc: 'Native app for all iPhone/iPod/iPad devices.',
 				weight: 1
 			},
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
 				desc: 'Simple marketing website.',
 				weight: 0.25
 			}
 		],
 		teams: [
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: 'Created entirely by Zach.',
 				weight: 1
 			}
 		],
-		skills: [
+		languages: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'html'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: 'Built a simple marketing website.',
 				weight: 0.2
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'css'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
 				desc: 'Styled the app\'s marketing website.',
 				weight: 0.2
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'objc'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'objc'),
 				desc: 'Wrote app in this language.',
 				weight: 0.985
-			},
+			}
+		],
+		products: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'cocoa'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'cocoa'),
 				desc: 'Used in the app\'s menus.',
 				weight: 0.5
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ogl'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'ogl'),
 				desc: 'Used for the app\'s 3D graphics.',
-				weight: 0.98
+				weight: 1
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
-				desc: 'Used to design backgrounds and other game assets.',
+				item: Aei.Database.selectById(Aei.Tables.Product, 'oal'),
+				desc: 'Used for the app\'s sound effects.',
 				weight: 0.75
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'mob'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'gamecen'),
+				desc: 'Used for the leaderboards.',
+				weight: 0.8
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'mob'),
 				desc: 'Built as a native iOS app.',
 				weight: 0.99
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: 'Created all the screens, backgrounds, and menus.',
 				weight: 0.92
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: 'Invented the control system for moving/rotating pieces and orbiting the camera.',
 				weight: 1
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
 				desc: 'Created interactive 3D graphics and textures.',
 				weight: 0.99
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
 				desc: 'Created several movement and transition animations.',
 				weight: 0.9
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
 				desc: 'Implemented several algorithms for game logic and optimization of 3D graphics performance.',
 				weight: 0.95
 			}
@@ -466,153 +441,157 @@ Aei.Tables.Project = [
 		imageCount: 9,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built a complex Flash-based website; built several smaller projects/prototypes using different technologies.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Participated closely in the design process for the website, branding, and other areas.',
 				weight: 0.9
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Played a key role in brainstorming prouduct/feature ideas, constructing wireframe/workflow documents, developing business concepts, and assessing user experiences.',
 				weight: 0.99
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Established processes for team and project organization, determining project priorities, and tracking complex sets of requirements.',
 				weight: 0.98
 			}
 		],
 		systems: [
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'flash'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
 				desc: 'Main UI uses Flash Player.',
 				weight: 0.99
 			},
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
 				desc: 'Various sub-projects are all built for the web.',
 				weight: 1
 			}
 		],
 		teams: [
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
 				desc: 'Worked with designers.',
 				weight: 0.7
 			},
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
 				desc: 'Worked with back-end developers.',
 				weight: 0.8
 			},
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: 'Worked alone on the main UI and on various other sub-projects.',
 				weight: 0.9
 			}
 		],
-		skills: [
+		languages: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'c#'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
 				desc: 'Used for building MVC websites and performing data analysis.',
 				weight: 0.35
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'js'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
 				desc: 'Used for building interactive pages.',
 				weight: 0.6
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'html'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: 'Used for building non-Flash webpages.',
 				weight: 0.55
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'css'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
 				desc: 'Used for building non-Flash webpages.',
 				weight: 0.55
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: 'Used to build the main Flash website.',
 				weight: 0.995
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'sql'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
 				desc: 'Used to collect and analyze datasets.',
 				weight: 0.5
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: 'Used for building main application.',
+				weight: 1
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'jquery'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'jquery'),
 				desc: 'Used for building non-Flash webpages.',
 				weight: 0.6
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'angjs'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'angjs'),
 				desc: 'Used for building non-Flash webpages.',
 				weight: 0.6
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'foundjs'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'foundjs'),
 				desc: 'Used for building non-Flash webpages.',
 				weight: 0.6
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'd3js'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'd3js'),
 				desc: 'Used for creating data visualizations.',
 				weight: 0.6
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'net'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
 				desc: 'Used for building various sites and tools.',
 				weight: 0.35
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'mysql'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'mysql'),
 				desc: 'Used for collecting data for analysis.',
 				weight: 0.25
-			},
+			}
+		],
+		skills: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
-				desc: 'Used for design tasks, mockups, etc.',
-				weight: 0.8
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: 'Built the entire Flash UI, and others.',
 				weight: 0.991
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: 'Focused on delivering the best experiences for all user types.',
 				weight: 0.99
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
 				desc: 'Created and helped design mobile-friendly pages.',
 				weight: 0.6
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
 				desc: 'Created smooth transitions and visual effects.',
 				weight: 0.65
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
 				desc: 'Wrote data analysis tools, asynchronous processes, etc.',
 				weight: 0.75
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
 				desc: 'Matched initial design specifications.',
 				weight: 0.8
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
 				desc: 'Worked with various internal databases.',
 				weight: 0.25
 			}
@@ -630,93 +609,97 @@ Aei.Tables.Project = [
 		imageCount: 7,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the Flash-based website and wrote the specification for the data API.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided design documents, and designed new features to match.',
 				weight: 0.6
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Provided ideas and insights for improving workflows and user experience.',
 				weight: 0.5
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Coordinated with clients, designers, and back-end developers to keep the project on track.',
 				weight: 0.25
 			}
 		],
 		systems: [
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
 				desc: 'Built for web usage.',
 				weight: 1
 			},
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'flash'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
 				desc: 'Built for Flash Player.',
 				weight: 0.99
 			}
 		],
 		teams: [
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
 				desc: 'Worked with design team.',
 				weight: 0.6
 			},
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
 				desc: 'Worked with a back-end developer.',
 				weight: 0.7
 			},
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: 'Worked alone on the Flash UI.',
 				weight: 0.9
 			}
 		],
-		skills: [
+		languages: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: 'Used for building the Flash application.',
 				weight: 1
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'php'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'php'),
 				desc: 'Used to review and assist with server-side code.',
 				weight: 0.2
-			},
+			}
+		],
+		products: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
-				desc: 'Used for creating design mock-ups.',
-				weight: 0.6
-			},
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: 'Used for building main application.',
+				weight: 1
+			}
+		],
+		skills: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: 'Created the entire user interface.',
 				weight: 0.95
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: 'Provided intuitive video analysis, workflows, and navigation.',
 				weight: 0.92
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
 				desc: 'Built the application to all available screen space.',
 				weight: 0.8
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
 				desc: 'Created transitions and other visual effects.',
 				weight: 0.6
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
 				desc: 'Matched initial design specifications.',
 				weight: 0.85
 			}
@@ -734,88 +717,92 @@ Aei.Tables.Project = [
 		imageCount: 9,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built a wide variety of customizable, precision graph modules.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Improved the look-and-feel from previous versions, created several new visual effects.',
 				weight: 0.95
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Provided ideas for new graph types, visual effects, and customization options.',
 				weight: 0.85
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development processes and coordinated with the application-level development team.',
 				weight: 0.2
 			}
 		],
 		systems: [
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'flash'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
 				desc: 'Built for a Flash applicaiton',
 				weight: 1
 			}
 		],
 		teams: [
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
 				desc: 'Worked with the application-level development team.',
 				weight: 0.9
 			},
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: 'Worked alone on the graph modules.',
 				weight: 0.95
 			}
 		],
-		skills: [
+		languages: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: 'Used to build Flash components.',
+				weight: 1
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: 'Used for building main application.',
 				weight: 1
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'flex'),
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flex'),
 				desc: 'Used various Flex components.',
 				weight: 0.6
-			},
+			}
+		],
+		skills: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
-				desc: 'Used to create new design ideas.',
-				weight: 0.4
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: 'Created layouts and menus for each graph type.',
 				weight: 0.65
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: 'Provided high-quality, precise, customizable visual experience.',
 				weight: 0.95
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
 				desc: 'Built graphs to display at any size or aspect ratio.',
 				weight: 0.94
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
 				desc: 'Built several three-dimensional graph types.',
 				weight: 0.7
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
 				desc: 'Created entry animations and other visual effects.',
 				weight: 0.85
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
 				desc: 'Wrote code to prepare data for display, draw with 3D perspective, etc.',
 				weight: 0.65
 			}
@@ -833,73 +820,82 @@ Aei.Tables.Project = [
 		imageCount: 8,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built complex Flash application with data and hardware integration.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided designs, and designed new features to match.',
 				weight: 0.5
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Provided concepts for workflow, transitions, and general user experience.',
 				weight: 0.3
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Coordinated closely with back-end development team to identify and resolve technical challenges.',
 				weight: 0.2
 			}
 		],
 		systems: [
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'flash'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
 				desc: 'Uses Flash Player to run on a kiosk computer.',
 				weight: 1
 			}
 		],
 		teams: [
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
 				desc: '',
 				weight: 0.8
 			},
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
 				desc: '',
 				weight: 0.85
 			},
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
+				desc: '',
+				weight: 1
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: 'Used for building main application.',
 				weight: 1
 			}
 		],
 		skills: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
-				desc: '',
-				weight: 1
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
 				weight: 0.95
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: '',
 				weight: 0.7
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
 				desc: '',
 				weight: 0.75
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
 				desc: '',
 				weight: 0.9
 			}
@@ -917,73 +913,82 @@ Aei.Tables.Project = [
 		imageCount: 9,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built website with interactive map and photo components.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided design specifications.',
 				weight: 0.2
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			}
 		],
 		systems: [
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'flash'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
 				desc: '',
 				weight: 0.75
 			},
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
 				desc: '',
 				weight: 1
 			}
 		],
 		teams: [
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
 				desc: '',
 				weight: 0.9
 			},
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
+				desc: '',
+				weight: 0.85
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: 'Used for building main application.',
 				weight: 1
 			}
 		],
 		skills: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'js'),
-				desc: '',
-				weight: 0.4
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'html'),
-				desc: '',
-				weight: 1
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'css'),
-				desc: '',
-				weight: 0.99
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
-				desc: '',
-				weight: 0.85
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
 				weight: 0.8
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
 				desc: '',
 				weight: 0.95
 			}
@@ -1000,73 +1005,77 @@ Aei.Tables.Project = [
 		imageCount: 6,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built Flash application.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided design specifications.',
 				weight: 0.2
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Provided ideas for transitions and other functionality.',
 				weight: 0.3
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			}
 		],
 		systems: [
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'flash'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
 				desc: '',
 				weight: 1
 			}
 		],
 		teams: [
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
 				desc: '',
 				weight: 0.9
 			},
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
+				desc: '',
+				weight: 1
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: 'Used for building main application.',
 				weight: 1
 			}
 		],
 		skills: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
-				desc: '',
-				weight: 1
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
-				desc: '',
-				weight: 0.4
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
 				weight: 0.8
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: '',
 				weight: 0.7
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
 				desc: '',
 				weight: 0.75
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
 				desc: '',
 				weight: 0.95
 			}
@@ -1084,78 +1093,82 @@ Aei.Tables.Project = [
 		imageCount: 7,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the Flash-based website, full of interesting visual effects.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided design specifications.',
 				weight: 0.2
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Provided ideas and solutions for a variety of visual effects.',
 				weight: 0.4
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			}
 		],
 		systems: [
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
 				desc: '',
 				weight: 1
 			},
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'flash'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
 				desc: '',
 				weight: 0.99
 			}
 		],
 		teams: [
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
 				desc: '',
 				weight: 0.9
 			},
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
+				desc: '',
+				weight: 1
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: 'Used for building main application.',
 				weight: 1
 			}
 		],
 		skills: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
-				desc: '',
-				weight: 1
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'photo'),
-				desc: '',
-				weight: 0.4
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
 				weight: 0.8
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: '',
 				weight: 0.95
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
 				desc: '',
 				weight: 0.9
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
 				desc: '',
 				weight: 0.9
 			}
@@ -1172,73 +1185,82 @@ Aei.Tables.Project = [
 		imageCount: 5,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the Flash-based website.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided design specifications.',
 				weight: 0.2
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Provided solutions for image-loading, transitions, and editing data.',
 				weight: 0.3
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			}
 		],
 		systems: [
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'flash'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
 				desc: '',
 				weight: 0.99
 			},
 			{
-				system: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
 				desc: '',
 				weight: 1
 			}
 		],
 		teams: [
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
 				desc: '',
 				weight: 0.9
 			},
 			{
-				team: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
+				desc: '',
+				weight: 1
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: 'Used for building main application.',
 				weight: 1
 			}
 		],
 		skills: [
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'as'),
-				desc: '',
-				weight: 1
-			},
-			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
 				weight: 0.8
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: '',
 				weight: 0.5
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
 				desc: '',
 				weight: 0.4
 			},
 			{
-				skill: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
 				desc: '',
 				weight: 0.9
 			}
@@ -1255,22 +1277,22 @@ Aei.Tables.Project = [
 		imageCount: 9,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the entire Flash-based website, back-end application, and database.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Designed all game elements, editor tools, web pages, etc.',
 				weight: 0.98
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Invented the game concept, rules, functionality, rating systems, etc.',
 				weight: 0.99
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Planned, executed, and released the project. ',
 				weight: 0.97
 			}
@@ -1287,22 +1309,22 @@ Aei.Tables.Project = [
 		imageCount: 7,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the entire Flash-based application, dynamic website, and database.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed initial guidelines to design the various tools and components.',
 				weight: 0.6
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Provided ideas for the shirt designer, user experience, and data visualization.',
 				weight: 0.75
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			}
@@ -1320,22 +1342,22 @@ Aei.Tables.Project = [
 		imageCount: 8,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the entire simulation.',
 				weight: 0.99
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Designed the entire simulation, with random terrain, 3D representations, and the "brain" visualizations..',
 				weight: 0.97
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Created the entire concept and parameters of the simulation.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Planned, executed, and released the project. ',
 				weight: 0.98
 			}
@@ -1353,22 +1375,22 @@ Aei.Tables.Project = [
 		imageCount: 6,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the Flash-based website.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Designed all the pages, buttons, animations, and other content.',
 				weight: 0.99
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Created on the content, transitions, layouts, etc.',
 				weight: 0.98
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Planned, executed, and released the project. ',
 				weight: 0.97
 			}
@@ -1386,17 +1408,17 @@ Aei.Tables.Project = [
 		imageCount: 3,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the Flash application.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided design specifications.',
 				weight: 0.2
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			}
@@ -1414,17 +1436,17 @@ Aei.Tables.Project = [
 		imageCount: 4,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the Flash application',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided design specifications.',
 				weight: 0.2
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			}
@@ -1442,17 +1464,17 @@ Aei.Tables.Project = [
 		imageCount: 5,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Designed, modeled, and refined the icon set.',
 				weight: 0.99
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Proposed a variety of icon concepts.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed discovery and design process, worked with client to complete the project.',
 				weight: 0.2
 			}
@@ -1470,22 +1492,22 @@ Aei.Tables.Project = [
 		imageCount: 5,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the entire website and database.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Designed all pages, icons, logo, tools, etc.',
 				weight: 0.99
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Provided all site ideas and concepts.',
 				weight: 0.98
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Worked the project from the discovery phase to release.',
 				weight: 0.97
 			}
@@ -1503,17 +1525,17 @@ Aei.Tables.Project = [
 		imageCount: 4,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the Flash application',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided design specifications.',
 				weight: 0.2
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			}
@@ -1531,17 +1553,17 @@ Aei.Tables.Project = [
 		imageCount: 3,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the experimental Flash application.',
 				weight: 0.9
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Created all design assets and visual effects.',
 				weight: 0.99
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Used existing tools in a new way to create an interactive visual effect.',
 				weight: 1
 			}
@@ -1559,22 +1581,22 @@ Aei.Tables.Project = [
 		imageCount: 6,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the Flash application.',
 				weight: 0.98
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Created all the visual effects, animations, layouts, etc.',
 				weight: 0.99
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Invented a graphical method for displaying projects.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Planned, executed, and released the project.',
 				weight: 0.97
 			}
@@ -1592,17 +1614,17 @@ Aei.Tables.Project = [
 		imageCount: 5,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the experimental Flash application.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Created all design assets and visual effects.',
 				weight: 0.98
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Invented a useful tool for creating stylized drawing animations.',
 				weight: 0.99
 			}
@@ -1620,12 +1642,12 @@ Aei.Tables.Project = [
 		imageCount: 8,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Created a variety of traditional artwork.',
 				weight: 0.99
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Composed and brainstormed a variety of artistic concepts.',
 				weight: 1
 			}
@@ -1643,17 +1665,17 @@ Aei.Tables.Project = [
 		imageCount: 3,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the Flash application.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided design specifications.',
 				weight: 0.2
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			}
@@ -1671,17 +1693,17 @@ Aei.Tables.Project = [
 		imageCount: 2,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the website using the WordPress API.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: '	Followed the provided design specifications.',
 				weight: 0.2
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			}
@@ -1699,17 +1721,17 @@ Aei.Tables.Project = [
 		imageCount: 2,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the Flash application.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Followed the provided design specifications.',
 				weight: 0.2
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			}
@@ -1727,12 +1749,12 @@ Aei.Tables.Project = [
 		imageCount: 8,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Created interfaces with a wide variety of visual styles.',
 				weight: 0.99
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Provided new an interesting user-interface concepts.',
 				weight: 1
 			}
@@ -1750,17 +1772,17 @@ Aei.Tables.Project = [
 		imageCount: 3,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the experimental Flash application.',
 				weight: 0.95
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Created all design assets and visual effects.',
 				weight: 0.99
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Combined static content with dynamic interactions.',
 				weight: 1
 			}
@@ -1778,17 +1800,17 @@ Aei.Tables.Project = [
 		imageCount: 4,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the Flash application',
 				weight: 0.9
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Designed all the pages, layouts, and visual effects.',
 				weight: 1
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Created clever hover effects and transitions.',
 				weight: 0.95
 			}
@@ -1806,12 +1828,12 @@ Aei.Tables.Project = [
 		imageCount: 3,
 		services: [
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: 'Built the Flash-based website.',
 				weight: 0.5
 			},
 			{
-				service: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Designed all pages, menus, and content.',
 				weight: 1
 			}
@@ -1844,6 +1866,14 @@ for ( var i in Aei.Tables.Project ) {
 
 	if ( proj.teams ) {
 		proj.teams.sort(compareWeight);
+	}
+
+	if ( proj.languages ) {
+		proj.languages.sort(compareWeight);
+	}
+
+	if ( proj.products ) {
+		proj.products.sort(compareWeight);
 	}
 
 	if ( proj.skills ) {
