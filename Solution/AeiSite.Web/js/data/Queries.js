@@ -33,12 +33,13 @@ Aei.Queries.selectProjectUsesOfService = function(service) {
 
 			uses.push({
 				project: proj,
-				serviceEntry: servEntry
+				serviceEntry: servEntry,
+				weight: servEntry.weight*proj.weight
 			});
 		}
 	}
 
-	var propFunc = function(x) { return x.serviceEntry.weight; };
+	var propFunc = function(x) { return x.weight; };
 	uses.sort(Aei.Queries.getPropertyCompareFunc(propFunc, 1));
 	return uses;
 };
@@ -61,12 +62,13 @@ Aei.Queries.selectProjectUsesOfSkill = function(skill) {
 
 			uses.push({
 				project: proj,
-				skillEntry: skillEntry
+				skillEntry: skillEntry,
+				weight: skillEntry.weight*proj.weight
 			});
 		}
 	}
 	
-	var propFunc = function(x) { return x.skillEntry.weight; };
+	var propFunc = function(x) { return x.weight; };
 	uses.sort(Aei.Queries.getPropertyCompareFunc(propFunc, 1));
 	return uses;
 };
@@ -101,7 +103,7 @@ Aei.Queries.calculateSkillWeights = function(skillGroup) {
 				};
 			}
 
-			skillMap[key].weight += skillEntry.weight;
+			skillMap[key].weight += skillEntry.weight*proj.weight;
 			maxWeight = Math.max(maxWeight, skillMap[key].weight);
 		}
 	}
