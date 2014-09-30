@@ -66,7 +66,7 @@ Aei.Tables.System = [
 		name: 'Web'
 	},
 	{
-		id: 'flashplay',
+		id: 'fplay',
 		name: 'Flash Player'
 	}
 ];
@@ -81,7 +81,7 @@ for ( var i in Aei.Tables.System ) {
 Aei.Tables.Team = [
 	{
 		id: 'one',
-		name: 'One-Man'
+		name: 'One-Man Team'
 	},
 	{
 		id: 'des',
@@ -111,7 +111,7 @@ Aei.Tables.Language = [
 	},
 	{
 		id: 'html',
-		name: 'HTML5'
+		name: 'HTML'
 	},
 	{
 		id: 'css',
@@ -278,6 +278,10 @@ Aei.Tables.Skill = [
 		name: 'Animation'
 	},
 	{
+		id: 'dataviz',
+		name: 'Data Visualization'
+	},
+	{
 		id: 'algo',
 		name: 'Algorithms'
 	},
@@ -290,7 +294,7 @@ Aei.Tables.Skill = [
 		name: 'Database'
 	},
 	{
-		id: 'servSide',
+		id: 'servside',
 		name: 'Server-Side'
 	},
 	{
@@ -463,7 +467,7 @@ Aei.Tables.Project = [
 		],
 		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: 'Main UI uses Flash Player.',
 				weight: 0.99
 			},
@@ -594,6 +598,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
 				desc: 'Worked with various internal databases.',
 				weight: 0.25
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				desc: 'Created graphs to visualize complex hotel-related data.',
+				weight: 0.6
 			}
 		],
 		weight: 0.99
@@ -636,7 +645,7 @@ Aei.Tables.Project = [
 				weight: 1
 			},
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: 'Built for Flash Player.',
 				weight: 0.99
 			}
@@ -739,7 +748,7 @@ Aei.Tables.Project = [
 		],
 		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: 'Built for a Flash applicaiton',
 				weight: 1
 			}
@@ -805,6 +814,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
 				desc: 'Wrote code to prepare data for display, draw with 3D perspective, etc.',
 				weight: 0.65
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				desc: 'Converted raw data into dozens of different graph types.',
+				weight: 0.85
 			}
 		],
 		weight: 0.98
@@ -842,7 +856,7 @@ Aei.Tables.Project = [
 		],
 		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: 'Uses Flash Player to run on a kiosk computer.',
 				weight: 1
 			}
@@ -930,9 +944,9 @@ Aei.Tables.Project = [
 		],
 		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
-				weight: 0.75
+				weight: 0.4
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
@@ -978,7 +992,7 @@ Aei.Tables.Project = [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: 'Used for building main application.',
-				weight: 1
+				weight: 0.4
 			}
 		],
 		skills: [
@@ -1027,7 +1041,7 @@ Aei.Tables.Project = [
 		],
 		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
 				weight: 1
 			}
@@ -1120,7 +1134,7 @@ Aei.Tables.Project = [
 				weight: 1
 			},
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
 				weight: 0.99
 			}
@@ -1207,7 +1221,7 @@ Aei.Tables.Project = [
 		],
 		systems: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.System, 'flashplay'),
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
 				weight: 0.99
 			},
@@ -1297,6 +1311,101 @@ Aei.Tables.Project = [
 				weight: 0.97
 			}
 		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				desc: '',
+				weight: 1
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
+				desc: '',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
+				desc: '',
+				weight: 0.97
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
+				desc: '',
+				weight: 0.5
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'mssql'),
+				desc: '',
+				weight: 0.99
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: '',
+				weight: 0.7
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
+				desc: '',
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				desc: '',
+				weight: 0.85
+			}
+		],
 		weight: 0.8
 	},
 	{
@@ -1327,6 +1436,106 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			}
+		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				desc: '',
+				weight: 1
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				desc: '',
+				weight: 0.4
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
+				desc: '',
+				weight: 0.91
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
+				desc: '',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'php'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
+				desc: '',
+				weight: 0.25
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'mysql'),
+				desc: '',
+				weight: 0.99
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.7
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 0.5
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: '',
+				weight: 0.6
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
+				desc: '',
+				weight: 0.99
 			}
 		],
 		weight: 0.72
@@ -1362,6 +1571,51 @@ Aei.Tables.Project = [
 				weight: 0.98
 			}
 		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'win'),
+				desc: '',
+				weight: 1
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'c++'),
+				desc: '',
+				weight: 1
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'ogl'),
+				desc: '',
+				weight: 1
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: '',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				desc: '',
+				weight: 0.99
+			}
+		],
 		weight: 0.75
 	},
 	{
@@ -1395,6 +1649,76 @@ Aei.Tables.Project = [
 				weight: 0.97
 			}
 		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				desc: '',
+				weight: 1
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
+				desc: '',
+				weight: 0.5
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'mssql'),
+				desc: '',
+				weight: 0.5
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
+				desc: '',
+				weight: 0.55
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
+				desc: '',
+				weight: 0.5
+			}
+		],
 		weight: 0.6
 	},
 	{
@@ -1404,7 +1728,7 @@ Aei.Tables.Project = [
 		start: '9/01/2006',
 		end: '11/01/2006',
 		desc: 'Reverse-engineered from Excel, this Flash app features dynamic inputs and smooth, realtime output graphing.',
-		url: 'www.broadcast.harris.com/products/radiotransmission/calculator2/',
+		url: null,
 		imageCount: 3,
 		services: [
 			{
@@ -1421,6 +1745,56 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			}
+		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
+				desc: '',
+				weight: 1
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				desc: '',
+				weight: 0.5
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
+				desc: '',
+				weight: 1
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
+				desc: '',
+				weight: 1
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				desc: '',
+				weight: 0.95
 			}
 		],
 		weight: 0.38
@@ -1451,6 +1825,41 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.37
 	},
 	{
@@ -1479,6 +1888,41 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.62
 	},
 	{
@@ -1512,6 +1956,41 @@ Aei.Tables.Project = [
 				weight: 0.97
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.7
 	},
 	{
@@ -1540,6 +2019,41 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.35
 	},
 	{
@@ -1568,6 +2082,41 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.3
 	},
 	{
@@ -1601,6 +2150,41 @@ Aei.Tables.Project = [
 				weight: 0.97
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.58
 	},
 	{
@@ -1629,6 +2213,41 @@ Aei.Tables.Project = [
 				weight: 0.99
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.3
 	},
 	{
@@ -1680,6 +2299,41 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.15
 	},
 	{
@@ -1708,6 +2362,41 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.25
 	},
 	{
@@ -1736,6 +2425,41 @@ Aei.Tables.Project = [
 				weight: 0.2
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.3
 	},
 	{
@@ -1759,6 +2483,41 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.55
 	},
 	{
@@ -1787,6 +2546,41 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.2
 	},
 	{
@@ -1838,6 +2632,41 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
+		/*systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}
+		],*/
 		weight: 0.1
 	}
 ];
