@@ -34,8 +34,12 @@ Aei.Tables.Service = [
 		id: 'mgt',
 		name: 'Project Management',
 		desc: 'Organizing teams, planning features, making decisions, etc.'
+	},
+	{
+		id: 'com',
+		name: 'Communication',
+		desc: 'Creating content (text, graphics, audio, etc.) for presenting ideas, goals, requirements, and documentation.'
 	}
-	//TODO: content/documentation/communication?
 ];
 
 for ( var i in Aei.Tables.Service ) {
@@ -301,8 +305,15 @@ Aei.Tables.Skill = [
 	{
 		id: 'webserv',
 		name: 'Web Service'
+	},
+	{
+		id: 'techw',
+		name: 'Technical Writing'
+	},
+	{
+		id: 'cont',
+		name: 'Content Creation'
 	}
-	//writing/documenation?
 	//autonomy/drive?
 ];
 
@@ -343,6 +354,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Planned, executed, released, and maintained the project.',
 				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Developed web and graphical content for marketing the game.',
+				weight: 0.9
 			}
 		],
 		systems: [
@@ -433,6 +449,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
 				desc: 'Implemented several algorithms for game logic and optimization of 3D graphics performance.',
 				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
+				desc: 'Created marketing content, instructions, videos, game sounds, and other assets.',
+				weight: 0.98
 			}
 		],
 		weight: 1
@@ -466,6 +487,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Established processes for team and project organization, determining project priorities, and tracking complex sets of requirements.',
 				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Communicated complex project plans, feature details, brainstorming topics, technical diagrams, etc.',
+				weight: 0.97
 			}
 		],
 		systems: [
@@ -606,6 +632,16 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
 				desc: 'Created graphs to visualize complex hotel-related data.',
 				weight: 0.6
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				desc: 'Described and diagrammed complex requirements, project plans, feature details.',
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
+				desc: 'Participated in content creation for user, business, and investor audiences.',
+				weight: 0.4
 			}
 		],
 		weight: 0.99
@@ -639,6 +675,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Coordinated with clients, designers, and back-end developers to keep the project on track.',
 				weight: 0.25
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Created API specification and described complex features and issues to the team.',
+				weight: 0.55
 			}
 		],
 		systems: [
@@ -714,6 +755,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
 				desc: 'Matched initial design specifications.',
 				weight: 0.85
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				desc: 'Wrote API specification, documented complex features and solution ideas.',
+				weight: 0.7
 			}
 		],
 		weight: 0.95
@@ -747,6 +793,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development processes and coordinated with the application-level development team.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided quality communication to the client about features and issues.',
+				weight: 0.75
 			}
 		],
 		systems: [
@@ -821,7 +872,12 @@ Aei.Tables.Project = [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
 				desc: 'Converted raw data into dozens of different graph types.',
-				weight: 0.85
+				weight: 0.86
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				desc: 'Documented daily development progress, the functionality of each graph, issues and workaround details, etc.',
+				weight: 0.8
 			}
 		],
 		weight: 0.98
@@ -855,6 +911,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Coordinated closely with back-end development team to identify and resolve technical challenges.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the team.',
+				weight: 0.4
 			}
 		],
 		systems: [
@@ -915,6 +976,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
 				desc: '',
 				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				desc: 'Created highly-detailed issues for the back-end development team.',
+				weight: 0.75
 			}
 		],
 		weight: 0.94
@@ -943,6 +1009,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the client.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -1034,12 +1105,17 @@ Aei.Tables.Project = [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Provided ideas for transitions and other functionality.',
-				weight: 0.3
+				weight: 0.25
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the client.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -1128,6 +1204,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the client.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -1214,12 +1295,17 @@ Aei.Tables.Project = [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Provided solutions for image-loading, transitions, and editing data.',
-				weight: 0.3
+				weight: 0.35
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the client.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -1312,6 +1398,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Planned, executed, and released the project. ',
 				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Created all technical and marketing assets for the product.',
+				weight: 0.96
 			}
 		],
 		systems: [
@@ -1407,6 +1498,16 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
 				desc: '',
 				weight: 0.85
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				desc: '',
+				weight: 0.65
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
+				desc: '',
+				weight: 0.75
 			}
 		],
 		weight: 0.8
@@ -1439,6 +1540,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the client.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -1572,6 +1678,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Planned, executed, and released the project. ',
 				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Documented the project goals, progress, and results..',
+				weight: 0.5
 			}
 		],
 		systems: [
@@ -1617,6 +1728,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
 				desc: '',
 				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				desc: '',
+				weight: 0.75
 			}
 		],
 		weight: 0.75
@@ -1650,6 +1766,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Planned, executed, and released the project. ',
 				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Created all of the site\'s written content.',
+				weight: 0.96
 			}
 		],
 		systems: [
@@ -1720,6 +1841,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
 				desc: '',
 				weight: 0.5
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
+				desc: '',
+				weight: 0.98
 			}
 		],
 		weight: 0.6
@@ -1748,6 +1874,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the client.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -1826,6 +1957,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the client.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -1899,6 +2035,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed discovery and design process, worked with client to complete the project.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Worked with the client to refine the final product.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -1957,6 +2098,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Worked the project from the discovery phase to release.',
 				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the client.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -2075,6 +2221,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the client.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -2226,6 +2377,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Planned, executed, and released the project.',
 				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Created and organized all written and visual content.',
+				weight: 0.96
 			}
 		],
 		systems: [
@@ -2281,6 +2437,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
 				desc: '',
 				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
+				desc: '',
+				weight: 0.85
 			}
 		],
 		weight: 0.58
@@ -2430,6 +2591,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the client.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -2508,6 +2674,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the client.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -2587,6 +2758,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided clear, detailed communication to the client.',
+				weight: 0.3
 			}
 		],
 		systems: [
@@ -2806,6 +2982,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: 'Created clever hover effects and transitions.',
 				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Created all content for the project.',
+				weight: 0.75
 			}
 		],
 		systems: [
@@ -2856,6 +3037,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
 				desc: '',
 				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
+				desc: '',
+				weight: 0.5
 			}
 		],
 		weight: 0.2
@@ -2879,6 +3065,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: 'Designed all pages, menus, and content.',
 				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Created all written content and music for the project.',
+				weight: 0.99
 			}
 		],
 		systems: [
@@ -2929,6 +3120,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
 				desc: '',
 				weight: 0.6
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
+				desc: '',
+				weight: 0.8
 			}
 		],
 		weight: 0.1

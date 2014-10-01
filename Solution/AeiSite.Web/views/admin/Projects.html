@@ -23,6 +23,7 @@
 					<th><a href="" ng-click="predicate = 'des'; reverse = !reverse">des</a></th>
 					<th><a href="" ng-click="predicate = 'cre'; reverse = !reverse">cre</a></th>
 					<th><a href="" ng-click="predicate = 'mgt'; reverse = !reverse">mgt</a></th>
+					<th><a href="" ng-click="predicate = 'com'; reverse = !reverse">com</a></th>
 				</thead>
 				<tbody>
 					<tr ng-repeat="edit in model.edits | orderBy:predicate:reverse">
@@ -65,6 +66,12 @@
 						<td>
 							<div class="barBg" title="{{edit.mgt}}">
 								<div class="barFill" style="width: {{edit.mgt*100}}%;">
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="barBg" title="{{edit.com}}">
+								<div class="barFill" style="width: {{edit.com*100}}%;">
 								</div>
 							</div>
 						</td>
