@@ -4,6 +4,7 @@
 
 1.000 fragmental
 0.990 journeyful
+0.980 kinstnerphoto
 0.980 idashboards
 0.950 lessonvision
 0.940 dtmkiosk
@@ -39,6 +40,7 @@
 
 1.000 fragmental
 0.990 journeyful
+0.980 kinstnerphoto
 0.980 idashboards
 0.950 lessonvision
 0.940 dtmkiosk
@@ -70,6 +72,7 @@
 ### services: Design
 
 0.980 fragmental
+0.960 kinstnerphoto
 0.931 idashboards
 0.891 journeyful
 0.784 hardlines
@@ -106,6 +109,7 @@
 
 0.990 fragmental
 0.980 journeyful
+0.970 kinstnerphoto
 0.833 idashboards
 0.802 trellovision
 0.792 hardlines
@@ -133,6 +137,7 @@
 
 0.970 journeyful
 0.970 fragmental
+0.951 kinstnerphoto
 0.786 trellovision
 0.776 hardlines
 0.735 alifesim
@@ -160,6 +165,7 @@
 ### services: Communication
 
 0.960 journeyful
+0.941 kinstnerphoto
 0.900 fragmental
 0.768 hardlines
 0.735 idashboards
@@ -190,12 +196,14 @@
 ### skills: Mobile
 
 0.990 fragmental
+0.637 kinstnerphoto
 
 
 ---
 ### skills: User Interface
 
 0.981 journeyful
+0.931 kinstnerphoto
 0.920 fragmental
 0.902 lessonvision
 0.893 dtmkiosk
@@ -226,6 +234,7 @@
 
 1.000 fragmental
 0.980 journeyful
+0.980 kinstnerphoto
 0.931 idashboards
 0.874 lessonvision
 0.689 trellovision
@@ -251,6 +260,7 @@
 ---
 ### skills: Responsive Layout
 
+0.970 kinstnerphoto
 0.921 idashboards
 0.760 lessonvision
 0.594 journeyful
@@ -303,6 +313,7 @@
 ---
 ### skills: Data Visualization
 
+0.882 kinstnerphoto
 0.843 idashboards
 0.810 trellovision
 0.742 alifesim
@@ -346,6 +357,7 @@
 ---
 ### skills: Database
 
+0.941 kinstnerphoto
 0.760 hardlines
 0.630 gvsuamasite
 0.330 aei2007
@@ -355,6 +367,7 @@
 ---
 ### skills: Server-Side
 
+0.951 kinstnerphoto
 0.720 hardlines
 0.713 dormtshirts
 0.665 gvsuamasite
@@ -381,6 +394,7 @@
 ### skills: Content Creation
 
 0.980 fragmental
+0.960 kinstnerphoto
 0.600 hardlines
 0.588 aei2007
 0.493 portfolio
@@ -392,12 +406,14 @@
 ---
 ### languages: C#
 
+0.980 kinstnerphoto
 0.346 journeyful
 
 
 ---
 ### languages: Javascript
 
+0.970 kinstnerphoto
 0.810 trellovision
 0.594 journeyful
 0.264 1100rooms
@@ -407,6 +423,7 @@
 ---
 ### languages: HTML
 
+0.960 kinstnerphoto
 0.784 hardlines
 0.729 trellovision
 0.700 gvsuamasite
@@ -420,6 +437,7 @@
 ---
 ### languages: CSS
 
+0.951 kinstnerphoto
 0.776 hardlines
 0.693 gvsuamasite
 0.653 1100rooms
@@ -467,6 +485,7 @@
 ---
 ### languages: SQL
 
+0.882 kinstnerphoto
 0.792 hardlines
 0.706 dormtshirts
 0.495 journeyful
@@ -501,6 +520,7 @@
 ---
 ### products: jQuery
 
+0.970 kinstnerphoto
 0.802 trellovision
 0.594 journeyful
 
@@ -515,6 +535,7 @@
 ---
 ### products: Foundation
 
+0.980 kinstnerphoto
 0.648 trellovision
 0.594 journeyful
 
@@ -539,6 +560,7 @@
 ---
 ### products: .NET
 
+0.931 kinstnerphoto
 0.400 hardlines
 0.350 gvsuamasite
 0.346 journeyful
@@ -548,6 +570,13 @@
 ### products: Cocoa
 
 0.500 fragmental
+
+
+---
+### products: NHibernate
+
+0.960 kinstnerphoto
+0.238 journeyful
 
 
 ---
@@ -592,6 +621,12 @@
 
 
 ---
+### products: Mono
+
+0.941 kinstnerphoto
+
+
+---
 ### products: Unity 3D
 
 
@@ -607,6 +642,7 @@
 ---
 ### products: MySQL
 
+0.951 kinstnerphoto
 0.713 dormtshirts
 0.247 journeyful
 
@@ -642,12 +678,14 @@
 ---
 ### systems: Linux
 
+0.970 kinstnerphoto
 
 
 ---
 ### systems: Web
 
 0.990 journeyful
+0.980 kinstnerphoto
 0.950 lessonvision
 0.810 trellovision
 0.800 hardlines
@@ -694,6 +732,7 @@
 ### teams: One-Man Team
 
 1.000 fragmental
+0.980 kinstnerphoto
 0.940 dtmkiosk
 0.931 idashboards
 0.891 journeyful

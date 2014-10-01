@@ -193,6 +193,10 @@ Aei.Tables.Product = [
 		name: 'Cocoa'
 	},
 	{
+		id: 'nhib',
+		name: 'NHibernate'
+	},
+	{
 		id: 'ogl',
 		name: 'OpenGL'
 	},
@@ -207,6 +211,10 @@ Aei.Tables.Product = [
 	{
 		id: 'flash',
 		name: 'Flash'
+	},
+	{
+		id: 'mono',
+		name: 'Mono'
 	},
 	{
 		id: 'unity',
@@ -326,6 +334,165 @@ for ( var i in Aei.Tables.Skill ) {
 /*====================================================================================================*/
 Aei.Tables.Project = [
 	{
+		id: 'kinstnerphoto',
+		name: 'Kinstner Photo Gallery',
+		client: 'Aesthetic Interactive',
+		start: '9/6/2013',
+		end: '10/30/2013',
+		desc: 'This web application is built to display photos and to visualize their metadata. It features a full-screen photo viewer, user-tagging functionality, and responsive layouts. This website uses Fabric to collect and organize information about every photo, and (in future versions) will use this information to highlight and visualize interesting relationships between them.',
+		url: 'ZachKinstner.com',
+		github: 'github.com/aestheticinteractive/PhotoGallery',
+		imageCount: 10,
+		services: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				desc: 'Built the entire site, database, and communication with the Fabric API.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				desc: 'Designed all aspects of the website.',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				desc: 'Created all concepts and ideas for the project.',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: 'Planned, executed, and released the project.',
+				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Created (almost) all of the photographic content.',
+				weight: 0.96
+			}
+		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				desc: 'Website.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'linux'),
+				desc: 'Database and web application.',
+				weight: 0.99
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: 'Created the initial product and documentation.',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
+				desc: 'Used to build the website.',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
+				desc: 'Used to style the website.',
+				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
+				desc: 'Used to implement the website functionality.',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
+				desc: 'Used to implement the web application.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
+				desc: 'Used to perform database queries.',
+				weight: 0.9
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'jquery'),
+				desc: 'Used throughout the website.',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'foundjs'),
+				desc: 'Used to provide responsive layouts.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
+				desc: 'Used by the web application.',
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'mysql'),
+				desc: 'Used as the application database.',
+				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'nhib'),
+				desc: 'Used to access the database.',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'mono'),
+				desc: 'Used to run the web application on Linux.',
+				weight: 0.96
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: 'Created the site pages, structures, and tools.',
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: 'Created interesting and pleasant ways to view photos and their information.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				desc: 'Displayed photo data in various ways.',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				desc: 'All pages fill up the entire browser, regardless of size.',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
+				desc: 'Created written and photographic content for the site.',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
+				desc: 'Built the web application that powers the site and communicates with Fabric.',
+				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
+				desc: 'Built the application database.',
+				weight: 0.96
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'mob'),
+				desc: 'Built all pages to have be mobile-friendly.',
+				weight: 0.65
+			}
+		],
+		weight: 0.98
+	},
+	{
 		id: 'trellovision',
 		name: 'TrelloVision',
 		client: 'Aesthetic Interactive',
@@ -333,6 +500,7 @@ Aei.Tables.Project = [
 		end: '6/2/2013',
 		desc: 'An experimental app for organizing and visualizing Trello data in new ways. Built to be modular and easily-extendable by the open-source community.',
 		url: 'TrelloVision.com',
+		github: 'github.com/aestheticinteractive/TrelloVision',
 		imageCount: 4,
 		services: [
 			{
@@ -698,6 +866,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Product, 'mysql'),
 				desc: 'Used for collecting data for analysis.',
 				weight: 0.25
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'nhib'),
+				desc: 'Used to access the database.',
+				weight: 0.24
 			}
 		],
 		skills: [
