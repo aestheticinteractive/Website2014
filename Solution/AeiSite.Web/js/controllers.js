@@ -245,3 +245,102 @@ Aei.Controllers.AdminProjectTags = function($rootScope, $scope) {
 	$rootScope.title = 'Project Tags';
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Admin']);
 };
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.AdminWeights = function($rootScope, $scope) {
+	var groups = [
+		{
+			id: 'overall',
+			list: [ null ],
+			itemWeights: []
+		},
+		{
+			id: 'services',
+			list: Aei.Database.selectList(Aei.Tables.Service),
+			itemWeights: []
+		},
+		{
+			id: 'skills',
+			list: Aei.Database.selectList(Aei.Tables.Skill),
+			itemWeights: []
+		},
+		{
+			id: 'languages',
+			list: Aei.Database.selectList(Aei.Tables.Language),
+			itemWeights: []
+		},
+		{
+			id: 'products',
+			list: Aei.Database.selectList(Aei.Tables.Product),
+			itemWeights: []
+		},
+		{
+			id: 'systems',
+			list: Aei.Database.selectList(Aei.Tables.System),
+			itemWeights: []
+		},
+		{
+			id: 'teams',
+			list: Aei.Database.selectList(Aei.Tables.Team),
+			itemWeights: []
+		}
+	];
+
+	var gi, ii, pi, group, item, proj, currItemWeights, rank;
+
+	var getWeight = function(project, propName, currItem) {
+		var items = project[propName];
+
+		for ( var i in items ) {
+			var tag = items[i];
+
+			if ( tag.item == currItem ) {
+				return tag.weight*proj.weight;
+			}
+		}
+
+		return 0;
+	};
+
+	var propFunc = function(x) { return x.weight; };
+
+	for ( gi in groups ) {
+		group = groups[gi];
+
+		for ( ii in group.list ) {
+			item = group.list[ii];
+
+			currItemWeights = {
+				item: item,
+				ranks: []
+			};
+
+			group.itemWeights.push(currItemWeights);
+
+			for ( pi in Aei.Tables.Project ) {
+				proj = Aei.Tables.Project[pi];
+
+				rank = {
+					project: proj,
+					weight: (gi == 0 ? proj.weight : getWeight(proj, group.id, item))
+				};
+
+				if ( rank.weight != 0 ) {
+					currItemWeights.ranks.push(rank);
+				}
+			}
+			
+			currItemWeights.ranks.sort(Aei.Queries.getPropertyCompareFunc(propFunc, 1));
+		}
+	}
+
+	console.log(groups);
+
+	$scope.model = {
+		groups: groups
+	};
+
+	$rootScope.tag = 'Admin';
+	$rootScope.title = 'Weights';
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Admin']);
+};

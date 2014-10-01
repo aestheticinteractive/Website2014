@@ -1,0 +1,736 @@
+
+---
+### overall
+
+1.000 fragmental
+0.990 journeyful
+0.980 idashboards
+0.950 lessonvision
+0.940 dtmkiosk
+0.800 hardlines
+0.750 alifesim
+0.720 footvolley
+0.720 dormtshirts
+0.700 gvsuamasite
+0.680 briankelly
+0.670 teneo
+0.660 1100rooms
+0.620 harrisicons
+0.600 aei2007
+0.580 portfolio
+0.550 skins
+0.500 art
+0.380 harriscalc
+0.370 spechealth
+0.350 siennabakery
+0.300 illandlev
+0.300 sketchtracer
+0.300 oakwoodmaps
+0.250 elexiconblog
+0.200 illumballs
+0.200 oldportfolio
+0.150 sysmaintmap
+0.100 zkmusic
+
+
+---
+### services: Development
+
+1.000 fragmental
+0.990 journeyful
+0.980 idashboards
+0.950 lessonvision
+0.940 dtmkiosk
+0.800 hardlines
+0.742 alifesim
+0.720 footvolley
+0.720 dormtshirts
+0.700 gvsuamasite
+0.680 briankelly
+0.670 teneo
+0.660 1100rooms
+0.600 aei2007
+0.568 portfolio
+0.380 harriscalc
+0.370 spechealth
+0.350 siennabakery
+0.300 sketchtracer
+0.300 oakwoodmaps
+0.270 illandlev
+0.250 elexiconblog
+0.190 illumballs
+0.180 oldportfolio
+0.150 sysmaintmap
+0.050 zkmusic
+
+
+---
+### services: Design
+
+0.980 fragmental
+0.931 idashboards
+0.891 journeyful
+0.784 hardlines
+0.728 alifesim
+0.693 gvsuamasite
+0.614 harrisicons
+0.594 aei2007
+0.574 portfolio
+0.570 lessonvision
+0.544 skins
+0.495 art
+0.470 dtmkiosk
+0.432 dormtshirts
+0.297 illandlev
+0.294 sketchtracer
+0.200 oldportfolio
+0.198 illumballs
+0.144 footvolley
+0.136 briankelly
+0.134 teneo
+0.132 1100rooms
+0.100 zkmusic
+0.076 harriscalc
+0.074 spechealth
+0.070 siennabakery
+0.060 oakwoodmaps
+0.050 elexiconblog
+0.030 sysmaintmap
+
+
+---
+### services: Creative
+
+0.990 fragmental
+0.980 journeyful
+0.833 idashboards
+0.792 hardlines
+0.750 alifesim
+0.686 gvsuamasite
+0.620 harrisicons
+0.588 aei2007
+0.580 portfolio
+0.550 skins
+0.540 dormtshirts
+0.500 art
+0.475 lessonvision
+0.300 illandlev
+0.297 sketchtracer
+0.288 footvolley
+0.282 dtmkiosk
+0.238 briankelly
+0.200 illumballs
+0.190 oldportfolio
+0.168 teneo
+
+
+---
+### services: Project Management
+
+0.970 journeyful
+0.970 fragmental
+0.776 hardlines
+0.735 alifesim
+0.679 gvsuamasite
+0.582 aei2007
+0.563 portfolio
+0.237 lessonvision
+0.196 idashboards
+0.188 dtmkiosk
+0.144 footvolley
+0.144 dormtshirts
+0.136 briankelly
+0.134 teneo
+0.132 1100rooms
+0.124 harrisicons
+0.076 harriscalc
+0.074 spechealth
+0.070 siennabakery
+0.060 oakwoodmaps
+0.050 elexiconblog
+0.030 sysmaintmap
+
+
+---
+### services: Communication
+
+0.960 journeyful
+0.900 fragmental
+0.768 hardlines
+0.735 idashboards
+0.576 aei2007
+0.557 portfolio
+0.522 lessonvision
+0.376 dtmkiosk
+0.375 alifesim
+0.216 footvolley
+0.216 dormtshirts
+0.210 gvsuamasite
+0.204 briankelly
+0.201 teneo
+0.198 1100rooms
+0.186 harrisicons
+0.150 oldportfolio
+0.114 harriscalc
+0.111 spechealth
+0.105 siennabakery
+0.099 zkmusic
+0.090 oakwoodmaps
+0.075 elexiconblog
+0.045 sysmaintmap
+
+
+---
+### skills: Mobile
+
+0.990 fragmental
+
+
+---
+### skills: User Interface
+
+0.981 journeyful
+0.920 fragmental
+0.902 lessonvision
+0.893 dtmkiosk
+0.800 hardlines
+0.720 dormtshirts
+0.700 gvsuamasite
+0.637 idashboards
+0.600 aei2007
+0.580 portfolio
+0.576 footvolley
+0.544 briankelly
+0.536 teneo
+0.528 1100rooms
+0.370 spechealth
+0.342 harriscalc
+0.280 siennabakery
+0.270 oakwoodmaps
+0.210 sketchtracer
+0.200 oldportfolio
+0.100 zkmusic
+0.090 sysmaintmap
+0.075 elexiconblog
+
+
+---
+### skills: User Experience
+
+1.000 fragmental
+0.980 journeyful
+0.931 idashboards
+0.874 lessonvision
+0.684 footvolley
+0.658 dtmkiosk
+0.640 hardlines
+0.594 aei2007
+0.560 gvsuamasite
+0.504 dormtshirts
+0.469 teneo
+0.385 skins
+0.340 briankelly
+0.248 harrisicons
+0.240 illandlev
+0.174 portfolio
+0.120 sketchtracer
+0.100 art
+0.080 illumballs
+0.080 oldportfolio
+0.030 zkmusic
+
+
+---
+### skills: Responsive Layout
+
+0.921 idashboards
+0.760 lessonvision
+0.594 journeyful
+0.220 skins
+
+
+---
+### skills: 3D Graphics
+
+0.990 fragmental
+0.735 alifesim
+0.686 idashboards
+0.620 harrisicons
+0.550 skins
+0.406 portfolio
+0.210 gvsuamasite
+0.200 art
+0.200 illumballs
+0.120 illandlev
+0.040 oldportfolio
+
+
+---
+### skills: Animation
+
+0.900 fragmental
+0.833 idashboards
+0.705 dtmkiosk
+0.648 footvolley
+0.643 journeyful
+0.570 lessonvision
+0.503 teneo
+0.480 aei2007
+0.464 portfolio
+0.320 hardlines
+0.300 sketchtracer
+0.288 dormtshirts
+0.280 gvsuamasite
+0.275 skins
+0.272 briankelly
+0.180 illandlev
+0.140 illumballs
+0.120 oakwoodmaps
+0.120 oldportfolio
+0.120 sysmaintmap
+0.060 zkmusic
+
+
+---
+### skills: Data Visualization
+
+0.843 idashboards
+0.742 alifesim
+0.680 hardlines
+0.594 journeyful
+0.522 portfolio
+0.361 harriscalc
+
+
+---
+### skills: Algorithms
+
+0.950 fragmental
+0.750 alifesim
+0.742 journeyful
+0.637 idashboards
+0.560 hardlines
+0.432 dormtshirts
+0.380 harriscalc
+0.100 illumballs
+
+
+---
+### skills: Pixel-Perfect
+
+0.846 dtmkiosk
+0.807 lessonvision
+0.792 journeyful
+0.648 footvolley
+0.636 teneo
+0.627 1100rooms
+0.612 briankelly
+0.360 dormtshirts
+0.350 siennabakery
+0.333 spechealth
+0.300 oakwoodmaps
+0.250 elexiconblog
+0.150 sysmaintmap
+
+
+---
+### skills: Database
+
+0.760 hardlines
+0.630 gvsuamasite
+0.330 aei2007
+0.247 journeyful
+
+
+---
+### skills: Server-Side
+
+0.720 hardlines
+0.713 dormtshirts
+0.665 gvsuamasite
+0.300 aei2007
+
+
+---
+### skills: Web Service
+
+
+
+---
+### skills: Technical Writing
+
+0.941 journeyful
+0.784 idashboards
+0.705 dtmkiosk
+0.665 lessonvision
+0.563 alifesim
+0.520 hardlines
+
+
+---
+### skills: Content Creation
+
+0.980 fragmental
+0.600 hardlines
+0.588 aei2007
+0.493 portfolio
+0.396 journeyful
+0.100 oldportfolio
+0.080 zkmusic
+
+
+---
+### languages: C#
+
+0.346 journeyful
+
+
+---
+### languages: Javascript
+
+0.594 journeyful
+0.264 1100rooms
+0.180 dormtshirts
+
+
+---
+### languages: HTML
+
+0.784 hardlines
+0.700 gvsuamasite
+0.660 1100rooms
+0.655 dormtshirts
+0.544 journeyful
+0.237 elexiconblog
+0.200 fragmental
+
+
+---
+### languages: CSS
+
+0.776 hardlines
+0.693 gvsuamasite
+0.653 1100rooms
+0.648 dormtshirts
+0.544 journeyful
+0.225 elexiconblog
+0.200 fragmental
+
+
+---
+### languages: Objective-C
+
+0.985 fragmental
+
+
+---
+### languages: ActionScript
+
+0.985 journeyful
+0.980 idashboards
+0.950 lessonvision
+0.940 dtmkiosk
+0.800 hardlines
+0.720 footvolley
+0.720 dormtshirts
+0.680 briankelly
+0.670 teneo
+0.600 aei2007
+0.580 portfolio
+0.561 1100rooms
+0.380 harriscalc
+0.370 spechealth
+0.350 siennabakery
+0.300 illandlev
+0.300 sketchtracer
+0.300 oakwoodmaps
+0.210 gvsuamasite
+0.200 illumballs
+0.200 oldportfolio
+0.150 sysmaintmap
+0.100 zkmusic
+
+
+---
+### languages: SQL
+
+0.792 hardlines
+0.706 dormtshirts
+0.495 journeyful
+0.300 aei2007
+0.280 gvsuamasite
+
+
+---
+### languages: Gremlin
+
+
+
+---
+### languages: Java
+
+
+
+---
+### languages: PHP
+
+0.713 dormtshirts
+0.250 elexiconblog
+0.190 lessonvision
+
+
+---
+### languages: C++
+
+0.750 alifesim
+
+
+---
+### products: jQuery
+
+0.594 journeyful
+
+
+---
+### products: AngularJS
+
+0.594 journeyful
+
+
+---
+### products: Foundation
+
+0.594 journeyful
+
+
+---
+### products: KineticJS
+
+
+
+---
+### products: d3.js
+
+0.594 journeyful
+
+
+---
+### products: Flex
+
+0.588 idashboards
+
+
+---
+### products: .NET
+
+0.400 hardlines
+0.350 gvsuamasite
+0.346 journeyful
+
+
+---
+### products: Cocoa
+
+0.500 fragmental
+
+
+---
+### products: OpenGL
+
+1.000 fragmental
+0.750 alifesim
+
+
+---
+### products: OpenAL
+
+0.750 fragmental
+
+
+---
+### products: Flash
+
+0.990 journeyful
+0.980 idashboards
+0.950 lessonvision
+0.940 dtmkiosk
+0.800 hardlines
+0.720 footvolley
+0.720 dormtshirts
+0.680 briankelly
+0.670 teneo
+0.600 aei2007
+0.580 portfolio
+0.380 harriscalc
+0.370 spechealth
+0.350 siennabakery
+0.300 illandlev
+0.300 sketchtracer
+0.300 oakwoodmaps
+0.264 1100rooms
+0.210 gvsuamasite
+0.200 illumballs
+0.200 oldportfolio
+0.150 sysmaintmap
+0.100 zkmusic
+
+
+---
+### products: Unity 3D
+
+
+
+---
+### products: SQL Server
+
+0.792 hardlines
+0.560 gvsuamasite
+0.300 aei2007
+
+
+---
+### products: MySQL
+
+0.713 dormtshirts
+0.247 journeyful
+
+
+---
+### products: Titan Graph Database
+
+
+
+---
+### products: Cassandra
+
+
+
+---
+### systems: Windows
+
+0.750 alifesim
+0.550 skins
+
+
+---
+### systems: Mac
+
+
+
+---
+### systems: iOS
+
+1.000 fragmental
+
+
+---
+### systems: Linux
+
+
+
+---
+### systems: Web
+
+0.990 journeyful
+0.950 lessonvision
+0.800 hardlines
+0.720 footvolley
+0.720 dormtshirts
+0.700 gvsuamasite
+0.680 briankelly
+0.660 1100rooms
+0.600 aei2007
+0.250 fragmental
+0.250 elexiconblog
+0.100 zkmusic
+
+
+---
+### systems: Flash Player
+
+0.980 journeyful
+0.980 idashboards
+0.941 lessonvision
+0.940 dtmkiosk
+0.792 hardlines
+0.713 footvolley
+0.673 briankelly
+0.670 teneo
+0.648 dormtshirts
+0.594 aei2007
+0.580 portfolio
+0.380 harriscalc
+0.370 spechealth
+0.350 siennabakery
+0.300 illandlev
+0.300 sketchtracer
+0.300 oakwoodmaps
+0.264 1100rooms
+0.210 gvsuamasite
+0.200 illumballs
+0.200 oldportfolio
+0.150 sysmaintmap
+0.099 zkmusic
+
+
+---
+### teams: One-Man Team
+
+1.000 fragmental
+0.940 dtmkiosk
+0.931 idashboards
+0.891 journeyful
+0.855 lessonvision
+0.800 hardlines
+0.750 alifesim
+0.720 footvolley
+0.720 dormtshirts
+0.700 gvsuamasite
+0.680 briankelly
+0.670 teneo
+0.660 1100rooms
+0.620 harrisicons
+0.600 aei2007
+0.580 portfolio
+0.550 skins
+0.500 art
+0.380 harriscalc
+0.300 illandlev
+0.300 sketchtracer
+0.259 spechealth
+0.200 illumballs
+0.200 oldportfolio
+0.140 siennabakery
+0.120 oakwoodmaps
+0.100 elexiconblog
+0.100 zkmusic
+0.060 sysmaintmap
+
+
+---
+### teams: Design Team
+
+0.752 dtmkiosk
+0.693 journeyful
+0.648 footvolley
+0.612 briankelly
+0.603 teneo
+0.594 1100rooms
+0.570 lessonvision
+0.288 dormtshirts
+0.210 siennabakery
+0.190 harriscalc
+0.180 oakwoodmaps
+0.150 elexiconblog
+0.111 spechealth
+0.090 sysmaintmap
+
+
+---
+### teams: Dev Team
+
+0.882 idashboards
+0.799 dtmkiosk
+0.792 journeyful
+0.665 lessonvision
+

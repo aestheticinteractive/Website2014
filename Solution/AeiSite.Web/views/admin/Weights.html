@@ -1,0 +1,13 @@
+<p ng-repeat="group in model.groups">
+	<span ng-repeat="itemWeight in group.itemWeights">
+		<br/>
+		---<br/>
+		### {{group.id}}{{itemWeight.item ? ': '+itemWeight.item.name : ''}}<br/>
+		<br/>
+		<span ng-repeat="rank in itemWeight.ranks">
+			{{rank.weight.toFixed(3)}} {{rank.project.id}}<br/>
+		</span>
+		<br/>
+	</span>
+
+</p>
