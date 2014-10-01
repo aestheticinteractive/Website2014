@@ -7,6 +7,7 @@
 0.980 idashboards
 0.950 lessonvision
 0.940 dtmkiosk
+0.810 trellovision
 0.800 hardlines
 0.750 alifesim
 0.720 footvolley
@@ -41,6 +42,7 @@
 0.980 idashboards
 0.950 lessonvision
 0.940 dtmkiosk
+0.810 trellovision
 0.800 hardlines
 0.742 alifesim
 0.720 footvolley
@@ -71,6 +73,7 @@
 0.931 idashboards
 0.891 journeyful
 0.784 hardlines
+0.729 trellovision
 0.728 alifesim
 0.693 gvsuamasite
 0.614 harrisicons
@@ -104,6 +107,7 @@
 0.990 fragmental
 0.980 journeyful
 0.833 idashboards
+0.802 trellovision
 0.792 hardlines
 0.750 alifesim
 0.686 gvsuamasite
@@ -129,6 +133,7 @@
 
 0.970 journeyful
 0.970 fragmental
+0.786 trellovision
 0.776 hardlines
 0.735 alifesim
 0.679 gvsuamasite
@@ -163,6 +168,7 @@
 0.522 lessonvision
 0.376 dtmkiosk
 0.375 alifesim
+0.243 trellovision
 0.216 footvolley
 0.216 dormtshirts
 0.210 gvsuamasite
@@ -197,6 +203,7 @@
 0.720 dormtshirts
 0.700 gvsuamasite
 0.637 idashboards
+0.608 trellovision
 0.600 aei2007
 0.580 portfolio
 0.576 footvolley
@@ -221,6 +228,7 @@
 0.980 journeyful
 0.931 idashboards
 0.874 lessonvision
+0.689 trellovision
 0.684 footvolley
 0.658 dtmkiosk
 0.640 hardlines
@@ -246,6 +254,7 @@
 0.921 idashboards
 0.760 lessonvision
 0.594 journeyful
+0.527 trellovision
 0.220 skins
 
 
@@ -295,6 +304,7 @@
 ### skills: Data Visualization
 
 0.843 idashboards
+0.810 trellovision
 0.742 alifesim
 0.680 hardlines
 0.594 journeyful
@@ -388,6 +398,7 @@
 ---
 ### languages: Javascript
 
+0.810 trellovision
 0.594 journeyful
 0.264 1100rooms
 0.180 dormtshirts
@@ -397,6 +408,7 @@
 ### languages: HTML
 
 0.784 hardlines
+0.729 trellovision
 0.700 gvsuamasite
 0.660 1100rooms
 0.655 dormtshirts
@@ -411,6 +423,7 @@
 0.776 hardlines
 0.693 gvsuamasite
 0.653 1100rooms
+0.648 trellovision
 0.648 dormtshirts
 0.544 journeyful
 0.225 elexiconblog
@@ -488,18 +501,21 @@
 ---
 ### products: jQuery
 
+0.802 trellovision
 0.594 journeyful
 
 
 ---
 ### products: AngularJS
 
+0.810 trellovision
 0.594 journeyful
 
 
 ---
 ### products: Foundation
 
+0.648 trellovision
 0.594 journeyful
 
 
@@ -633,6 +649,7 @@
 
 0.990 journeyful
 0.950 lessonvision
+0.810 trellovision
 0.800 hardlines
 0.720 footvolley
 0.720 dormtshirts
@@ -681,6 +698,7 @@
 0.931 idashboards
 0.891 journeyful
 0.855 lessonvision
+0.810 trellovision
 0.800 hardlines
 0.750 alifesim
 0.720 footvolley

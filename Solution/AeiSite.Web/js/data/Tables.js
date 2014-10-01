@@ -326,6 +326,114 @@ for ( var i in Aei.Tables.Skill ) {
 /*====================================================================================================*/
 Aei.Tables.Project = [
 	{
+		id: 'trellovision',
+		name: 'TrelloVision',
+		client: 'Aesthetic Interactive',
+		start: '5/26/2013',
+		end: '6/2/2013',
+		desc: 'An experimental app for organizing and visualizing Trello data in new ways. Built to be modular and easily-extendable by the open-source community.',
+		url: 'TrelloVision.com',
+		imageCount: 4,
+		services: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				desc: 'Built the entire site, including communication with the Trello API.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				desc: 'Created a minimal design while focusing on the functionality.',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				desc: 'Created all the initial app concepts and feature ideas.',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: 'Planned, executed, and released the project.',
+				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Wrote some simple instructions for the site.',
+				weight: 0.3
+			}
+		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				desc: 'Built as a website; can run locally in a browser.',
+				weight: 1
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: 'Created the initial product and documentation.',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
+				desc: 'Used to build the website.',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
+				desc: 'Used to style the website.',
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
+				desc: 'Used to implement the website functionality.',
+				weight: 1
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'jquery'),
+				desc: 'Used throughout the website.',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'angjs'),
+				desc: 'Used to structure the site.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'foundjs'),
+				desc: 'Used to provide responsive layouts.',
+				weight: 0.8
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: 'Created the pages, tools, simple navigation, etc.',
+				weight: 0.75
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: 'Provided an alternative experience for viewing and interacting with Trello data.',
+				weight: 0.85
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				desc: 'Created new ways to display Trello data.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				desc: 'Created several movement and transition animations.',
+				weight: 0.65
+			}
+		],
+		weight: 0.81
+	},
+	{
 		id: 'fragmental',
 		name: 'Fragmental 3D',
 		client: 'Aesthetic Interactive',
