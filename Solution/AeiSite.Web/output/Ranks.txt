@@ -2,6 +2,7 @@
 ---
 ### overall
 
+1.000 idashhtml
 1.000 fragmentalleap
 1.000 fragmental
 0.990 journeyful
@@ -40,6 +41,7 @@
 ---
 ### services: Development
 
+1.000 idashhtml
 1.000 fragmentalleap
 1.000 fragmental
 0.990 journeyful
@@ -78,6 +80,7 @@
 0.980 fragmentalleap
 0.980 fragmental
 0.960 kinstnerphoto
+0.950 idashhtml
 0.931 idashboards
 0.891 journeyful
 0.784 hardlines
@@ -117,6 +120,7 @@
 0.990 fragmental
 0.980 journeyful
 0.970 kinstnerphoto
+0.850 idashhtml
 0.833 idashboards
 0.802 trellovision
 0.792 hardlines
@@ -154,6 +158,7 @@
 0.679 gvsuamasite
 0.582 aei2007
 0.563 portfolio
+0.400 idashhtml
 0.237 lessonvision
 0.196 idashboards
 0.188 dtmkiosk
@@ -180,6 +185,7 @@
 0.900 fragmental
 0.768 hardlines
 0.758 aei2009
+0.750 idashhtml
 0.735 idashboards
 0.576 aei2007
 0.557 portfolio
@@ -224,6 +230,7 @@
 0.790 aei2009
 0.720 dormtshirts
 0.700 gvsuamasite
+0.650 idashhtml
 0.637 idashboards
 0.608 trellovision
 0.600 aei2007
@@ -250,6 +257,7 @@
 1.000 fragmental
 0.980 journeyful
 0.980 kinstnerphoto
+0.950 idashhtml
 0.931 idashboards
 0.874 lessonvision
 0.782 aei2009
@@ -277,6 +285,7 @@
 ### skills: Responsive Layout
 
 0.970 kinstnerphoto
+0.940 idashhtml
 0.921 idashboards
 0.850 fragmentalleap
 0.800 fragmental
@@ -335,6 +344,7 @@
 ### skills: Data Visualization
 
 0.882 kinstnerphoto
+0.860 idashhtml
 0.843 idashboards
 0.810 trellovision
 0.742 alifesim
@@ -354,6 +364,7 @@
 0.637 idashboards
 0.560 hardlines
 0.432 dormtshirts
+0.400 idashhtml
 0.380 harriscalc
 0.100 illumballs
 
@@ -406,6 +417,7 @@
 
 0.960 fragmentalleap
 0.941 journeyful
+0.800 idashhtml
 0.784 idashboards
 0.705 dtmkiosk
 0.665 lessonvision
@@ -439,6 +451,7 @@
 ---
 ### languages: Javascript
 
+1.000 idashhtml
 0.970 kinstnerphoto
 0.810 trellovision
 0.594 journeyful
@@ -570,6 +583,7 @@
 ---
 ### products: KineticJS
 
+1.000 idashhtml
 
 
 ---
@@ -716,6 +730,7 @@
 ---
 ### systems: Web
 
+1.000 idashhtml
 0.990 journeyful
 0.980 kinstnerphoto
 0.950 lessonvision
@@ -768,6 +783,7 @@
 1.000 fragmentalleap
 1.000 fragmental
 0.980 kinstnerphoto
+0.950 idashhtml
 0.940 dtmkiosk
 0.931 idashboards
 0.891 journeyful
@@ -822,6 +838,7 @@
 ---
 ### teams: Dev Team
 
+0.900 idashhtml
 0.882 idashboards
 0.799 dtmkiosk
 0.792 journeyful

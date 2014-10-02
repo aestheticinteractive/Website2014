@@ -333,13 +333,134 @@ for ( var i in Aei.Tables.Skill ) {
 
 /*====================================================================================================*/
 Aei.Tables.Project = [
-	//TODO: iDashboards (HTML5)
+	//TODO: iDashboards (iOS) 
 	//TODO: Fabric API
 	//TODO: Fabric Client
 	//TODO: Fabric Web
 	//TODO: RexConnect
 	//TODO: Weaver
 	//TODO: WordNet
+	//TODO: JCI homelink
+	//TODO: DW floorplanner
+	//TODO: DW rotator
+	//TODO: HM office anims?
+	{
+		id: 'idashhtml',
+		name: 'Graph Modules (HTML5)',
+		client: 'iDashboards',
+		timeline: [
+			{
+				type: 'start',
+				name: 'HTML5 Graphs',
+				y: 2013,
+				m: 12,
+				d: 4
+			},
+			{
+				type: 'end',
+				name: 'HTML5 Graphs',
+				y: 2014,
+				m: 8,
+				d: 15
+			}
+		],
+		desc: 'TODO.',
+		url: 'iDashboards.com',
+		imageCount: 9,
+		services: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				desc: 'Built a wide variety of customizable, precision graph modules.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				desc: 'Improved the look-and-feel from previous versions, created several new visual effects.',
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				desc: 'Provided ideas for new graph types, visual effects, and customization options.',
+				weight: 0.85
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: 'Managed internal development processes, assisted with high-level development decisions, and coordinated with the application-level development team.',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided quality communication to the client about features and issues.',
+				weight: 0.75
+			}
+		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				desc: 'Built for web viewing.',
+				weight: 1
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
+				desc: 'Worked with the application-level development team.',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: 'Worked alone on the graph modules.',
+				weight: 0.95
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
+				desc: 'Used to build Flash components.',
+				weight: 1
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'kinjs'),
+				desc: 'Used for HTML5 canvas drawing.',
+				weight: 1
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: 'Created layouts and menus for each graph type.',
+				weight: 0.65
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: 'Provided high-quality, precise, customizable visual experience.',
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				desc: 'Built graphs to display at any size or aspect ratio.',
+				weight: 0.94
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: 'Wrote code to prepare data for display, improve performance, etc.',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				desc: 'Converted raw data into dozens of different graph types.',
+				weight: 0.86
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				desc: 'Documented daily development progress, the functionality of each graph, issues and workaround details, etc.',
+				weight: 0.8
+			}
+		],
+		weight: 1
+	},
 	{
 		id: 'fragmentalleap',
 		name: 'Fragmental 3D (Leap Motion)',
@@ -1270,10 +1391,57 @@ Aei.Tables.Project = [
 	},
 	{
 		id: 'idashboards',
-		name: 'Flash Graph Modules',
+		name: 'Graph Modules (Flash)',
 		client: 'iDashboards',
-		start: '01/28/2008',
-		end: 'Present',
+		//iOS: 
+		// release: 1.0.13 april 16, 2011
+		// release 1.1.28 May 16, 2011
+		// release 1.2.60 Aug 8, 2011
+		// release 1.3.93 jan 11, 2012
+		timeline: [
+			{
+				type: 'start',
+				name: 'Flash Graphs',
+				y: 2008,
+				m: 1,
+				d: 28
+			},
+			{
+				type: 'end',
+				name: 'Flash Graphs',
+				y: 2009,
+				m: 10,
+				d: 27
+			},
+			{
+				type: 'start',
+				name: 'Flash Graphs',
+				y: 2010,
+				m: 3,
+				d: 22
+			},
+			{
+				type: 'end',
+				name: 'Flash Graphs',
+				y: 2010,
+				m: 4,
+				d: 25
+			},
+			{
+				type: 'start',
+				name: 'iOS App',
+				y: 2010,
+				m: 4,
+				d: 26
+			},
+			{
+				type: 'end',
+				name: 'iOS App',
+				y: 2012,
+				m: 1,
+				d: 11
+			}
+		],
 		desc: 'This collection of interactive and highly-customizable graphs was built to operate within the latest version of iDashboards software. Each individual graph displays and animates any arbitrary set of data, offers the user a myriad of settings, and communicates with other graphs when a data point is selected.\n\nGraphs are constructed as custom Flex modules for Flash, using Actionscript 3. Functionality, accuracy, flexability, and performance were key during development. Aesthetic Interactive was also responsible for the design of each graph type, providing users with a dramatic improvement in appearance from previous versions.\n\nThe gallery displays a few of the many graph types available to an iDashboards user.',
 		url: 'www.idashboards.com',
 		imageCount: 9,
@@ -1878,8 +2046,22 @@ Aei.Tables.Project = [
 		id: 'hardlines',
 		name: 'HardLines Puzzle Website',
 		client: 'Aesthetic Interactive',
-		start: '06/01/2009',
-		end: 'Present',
+		timeline: [
+			{
+				type: 'start',
+				name: '',
+				y: 2009,
+				m: 6,
+				d: 1
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2009,
+				m: 8,
+				d: 22
+			}
+		],
 		desc: 'HardLines is our first foray into the area of user-generated, educational gaming. The site is a collection of puzzles, each of which is an exercise in logic, strategy, and often patience.\n\nThe interesting aspect of HardLines is the ability for each user to become both a Player and a Builder. The HardLines Flash application offers a creation mode, which lets users drag, drop, and rotate pieces on the puzzle grid.\n\nBehind the scenes, the puzzle data and solving, building, and rating information is stored in a SQL Server database. The site itself is an ASP.NET web application that displays and updates this information as it changes.',
 		imageCount: 9,
 		services: [
@@ -2020,8 +2202,50 @@ Aei.Tables.Project = [
 		id: 'dormtshirts',
 		name: 'T-Shirt Designer Website',
 		client: 'DormTShirts.com',
-		start: '04/26/2007',
-		end: '02/17/2009',
+		timeline: [
+			{
+				type: 'start',
+				name: 'Version 1',
+				y: 2007,
+				m: 4,
+				d: 26
+			},
+			{
+				type: 'end',
+				name: 'Version 1',
+				y: 2007,
+				m: 8,
+				d: 7
+			},
+			{
+				type: 'start',
+				name: 'Version 2',
+				y: 2008,
+				m: 3,
+				d: 24
+			},
+			{
+				type: 'end',
+				name: 'Version 2',
+				y: 2008,
+				m: 6,
+				d: 11
+			},
+			{
+				type: 'start',
+				name: 'Final Changes',
+				y: 2009,
+				m: 1,
+				d: 10
+			},
+			{
+				type: 'end',
+				name: 'Final Changes',
+				y: 2009,
+				m: 1,
+				d: 22
+			}
+		],
 		desc: 'The DormTShirts.com website is a complex system of shirt-designing, voting, shopping, and social networking. Members vote for their favorite user-designed shirts, and the winning shirts go on sale.\n\nThe powerful T-shirt designer tool is the focal point of the site, allowing the user to place layers of text, clipart, and user-uploaded images on a shirt. Users can move and rotate each element, change the shirt color, cycle front to back, zoom, print, and more.\n\nAesthetic Interactive implemented the site using Flash for the designer and voting tools, a client-provided visual design template, and a combination of PHP and HTML to access and display content from the database. Unfortunately, business-related issues prevented the client from launching the site.',
 		imageCount: 7,
 		services: [

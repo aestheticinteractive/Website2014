@@ -344,3 +344,71 @@ Aei.Controllers.AdminWeights = function($rootScope, $scope) {
 	$rootScope.title = 'Weights';
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Admin']);
 };
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
+	var pi, proj, projTime;
+	var projTimes = [];
+	var firstDate = new Date(2005, 0, 1);
+	var firstDateTime = firstDate.getTime();
+	var msPerDay = 24*3600*1000;
+	var totalDays = Math.round((new Date().getTime()-firstDateTime)/msPerDay);
+
+	for ( pi in Aei.Tables.Project ) {
+		proj = Aei.Tables.Project[pi];
+
+		projTime = {
+			project: proj,
+			spans: []
+		};
+
+		projTimes.push(projTime);
+
+		if ( proj.start ) {
+			var span = {
+				start: new Date(proj.start),
+				end: (proj.end == 'Present' ? new Date() : new Date(proj.end))
+			};
+
+			span.startDay = Math.round((span.start.getTime()-firstDateTime)/msPerDay);
+			span.endDay = Math.round((span.end.getTime()-firstDateTime)/msPerDay);
+			span.startRel = span.startDay/totalDays;
+			span.endRel = span.endDay/totalDays;
+			projTime.spans.push(span);
+			continue;
+		}
+
+		span = {};
+
+		for ( var ti in proj.timeline ) {
+			var item = proj.timeline[ti];
+			var d = new Date(item.y, item.m-1, item.d);
+			var name = item.type+' '+item.name+' ('+d.toDateString()+')';
+
+			if ( item.type == 'start' ) {
+				span = {};
+				span.name = name;
+				span.start = d;
+				span.startDay = Math.round((d.getTime()-firstDateTime)/msPerDay);
+				span.startRel = span.startDay/totalDays;
+			}
+			else if ( item.type == 'end' ) {
+				span.name += ' to '+name;
+				span.end = d;
+				span.endDay = Math.round((d.getTime()-firstDateTime)/msPerDay);
+				span.endRel = span.endDay/totalDays;
+				projTime.spans.push(span);
+			}
+		}
+	}
+
+	console.log(projTimes);
+
+	$scope.model = {
+		projTimes: projTimes
+	};
+
+	$rootScope.tag = 'Admin';
+	$rootScope.title = 'Timeline';
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Admin']);
+};
