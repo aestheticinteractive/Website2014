@@ -347,12 +347,12 @@ Aei.Controllers.AdminWeights = function($rootScope, $scope) {
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
-	var pi, proj, projTime;
 	var projTimes = [];
 	var firstDate = new Date(2005, 0, 1);
 	var firstDateTime = firstDate.getTime();
 	var msPerDay = 24*3600*1000;
 	var totalDays = Math.round((new Date().getTime()-firstDateTime)/msPerDay);
+	var pi, proj, projTime, span, item, d, name;
 
 	for ( pi in Aei.Tables.Project ) {
 		proj = Aei.Tables.Project[pi];
@@ -363,27 +363,16 @@ Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
 		};
 
 		projTimes.push(projTime);
-
-		if ( proj.start ) {
-			var span = {
-				start: new Date(proj.start),
-				end: (proj.end == 'Present' ? new Date() : new Date(proj.end))
-			};
-
-			span.startDay = Math.round((span.start.getTime()-firstDateTime)/msPerDay);
-			span.endDay = Math.round((span.end.getTime()-firstDateTime)/msPerDay);
-			span.startRel = span.startDay/totalDays;
-			span.endRel = span.endDay/totalDays;
-			projTime.spans.push(span);
-			continue;
-		}
-
 		span = {};
 
 		for ( var ti in proj.timeline ) {
-			var item = proj.timeline[ti];
-			var d = new Date(item.y, item.m-1, item.d);
-			var name = item.type+' '+item.name+' ('+d.toDateString()+')';
+			item = proj.timeline[ti];
+			d = new Date(item.y, item.m-1, (item.d || 1));
+			name = item.type+' '+item.name+' ('+d.toDateString()+')';
+			
+			if ( item.type == 'continue' ) {
+				d = new Date();
+			}
 
 			if ( item.type == 'start' ) {
 				span = {};
@@ -392,7 +381,7 @@ Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
 				span.startDay = Math.round((d.getTime()-firstDateTime)/msPerDay);
 				span.startRel = span.startDay/totalDays;
 			}
-			else if ( item.type == 'end' ) {
+			else if ( item.type == 'end' || item.type == 'continue' ) {
 				span.name += ' to '+name;
 				span.end = d;
 				span.endDay = Math.round((d.getTime()-firstDateTime)/msPerDay);
@@ -401,8 +390,6 @@ Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
 			}
 		}
 	}
-
-	console.log(projTimes);
 
 	$scope.model = {
 		projTimes: projTimes
