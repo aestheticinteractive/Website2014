@@ -2,6 +2,7 @@
 ---
 ### overall
 
+1.000 fragmentalleap
 1.000 fragmental
 0.990 journeyful
 0.980 kinstnerphoto
@@ -39,6 +40,7 @@
 ---
 ### services: Development
 
+1.000 fragmentalleap
 1.000 fragmental
 0.990 journeyful
 0.980 kinstnerphoto
@@ -73,6 +75,7 @@
 ---
 ### services: Design
 
+0.980 fragmentalleap
 0.980 fragmental
 0.960 kinstnerphoto
 0.931 idashboards
@@ -110,6 +113,7 @@
 ---
 ### services: Creative
 
+0.990 fragmentalleap
 0.990 fragmental
 0.980 journeyful
 0.970 kinstnerphoto
@@ -140,6 +144,7 @@
 ### services: Project Management
 
 0.970 journeyful
+0.970 fragmentalleap
 0.970 fragmental
 0.951 kinstnerphoto
 0.786 trellovision
@@ -170,6 +175,7 @@
 ### services: Communication
 
 0.960 journeyful
+0.960 fragmentalleap
 0.941 kinstnerphoto
 0.900 fragmental
 0.768 hardlines
@@ -209,6 +215,7 @@
 ### skills: User Interface
 
 0.981 journeyful
+0.980 fragmentalleap
 0.931 kinstnerphoto
 0.920 fragmental
 0.902 lessonvision
@@ -239,6 +246,7 @@
 ---
 ### skills: User Experience
 
+1.000 fragmentalleap
 1.000 fragmental
 0.980 journeyful
 0.980 kinstnerphoto
@@ -270,6 +278,8 @@
 
 0.970 kinstnerphoto
 0.921 idashboards
+0.850 fragmentalleap
+0.800 fragmental
 0.760 lessonvision
 0.594 journeyful
 0.527 trellovision
@@ -279,6 +289,7 @@
 ---
 ### skills: 3D Graphics
 
+0.990 fragmentalleap
 0.990 fragmental
 0.735 alifesim
 0.686 idashboards
@@ -295,6 +306,7 @@
 ---
 ### skills: Animation
 
+0.900 fragmentalleap
 0.900 fragmental
 0.833 idashboards
 0.705 dtmkiosk
@@ -335,6 +347,7 @@
 ---
 ### skills: Algorithms
 
+0.950 fragmentalleap
 0.950 fragmental
 0.750 alifesim
 0.742 journeyful
@@ -391,6 +404,7 @@
 ---
 ### skills: Technical Writing
 
+0.960 fragmentalleap
 0.941 journeyful
 0.784 idashboards
 0.705 dtmkiosk
@@ -403,6 +417,7 @@
 ### skills: Content Creation
 
 0.980 fragmental
+0.970 fragmentalleap
 0.960 kinstnerphoto
 0.774 aei2009
 0.600 hardlines
@@ -416,6 +431,7 @@
 ---
 ### languages: C#
 
+1.000 fragmentalleap
 0.980 kinstnerphoto
 0.346 journeyful
 
@@ -572,6 +588,7 @@
 ### products: .NET
 
 0.931 kinstnerphoto
+0.900 fragmentalleap
 0.400 hardlines
 0.350 gvsuamasite
 0.346 journeyful
@@ -641,6 +658,7 @@
 ---
 ### products: Unity 3D
 
+1.000 fragmentalleap
 
 
 ---
@@ -672,6 +690,7 @@
 ---
 ### systems: Windows
 
+1.000 fragmentalleap
 0.750 alifesim
 0.550 skins
 
@@ -679,6 +698,7 @@
 ---
 ### systems: Mac
 
+1.000 fragmentalleap
 
 
 ---
@@ -745,6 +765,7 @@
 ---
 ### teams: One-Man Team
 
+1.000 fragmentalleap
 1.000 fragmental
 0.980 kinstnerphoto
 0.940 dtmkiosk

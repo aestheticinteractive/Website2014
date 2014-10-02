@@ -333,6 +333,131 @@ for ( var i in Aei.Tables.Skill ) {
 
 /*====================================================================================================*/
 Aei.Tables.Project = [
+	//TODO: iDashboards (HTML5)
+	//TODO: Fabric API
+	//TODO: Fabric Client
+	//TODO: Fabric Web
+	//TODO: RexConnect
+	//TODO: Weaver
+	//TODO: WordNet
+	{
+		id: 'fragmentalleap',
+		name: 'Fragmental 3D (Leap Motion)',
+		client: 'Aesthetic Interactive',
+		start: '5/16/2014',
+		end: '9/17/2014',
+		desc: 'Based on the original iOS version of the game, this version of Fragmental 3D was built to use the Leap Motion controller. This new input hardware makes it possible to control the game using only the motion of your hands in the air.',
+		url: 'Fragmental3D.com',
+		imageCount: 8,
+		services: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				desc: 'Built the entire app; game logic, effects, controls, menus, optimizations, etc.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				desc: 'Designed all game screens, controls, backgrounds, menus, etc.',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				desc: 'Invented the game concept, control systems, game variations, etc.',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: 'Planned, executed, released, and maintained the project.',
+				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Developed web and graphical content for marketing the game.',
+				weight: 0.96
+			}
+		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'win'),
+				desc: 'Native application using Unity 3D.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'mac'),
+				desc: 'Native application using Unity 3D.',
+				weight: 1
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: 'App designed and built in-house.',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
+				desc: 'Used to build the application.',
+				weight: 1
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'unity'),
+				desc: 'Used to build the application.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
+				desc: 'Used for building the application.',
+				weight: 0.9
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: 'Created all the screens, controls, indicators, menus, etc.',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: 'Created brand-new experience for gameplay, interactions, and indicators.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: 'Created interactive 3D graphics and textures.',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: 'Created several movement, transition, and indicator animations.',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: 'Implemented several algorithms for game logic and optimization of 3D graphics.',
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
+				desc: 'Created marketing content, instructions, videos, game sounds, and other assets.',
+				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				desc: 'Created application to run at various resolutions and aspect ratios.',
+				weight: 0.85
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				desc: 'Documented complex issues and concerns for the Leap Motion team.',
+				weight: 0.96
+			}
+		],
+		weight: 1
+	},
 	{
 		id: 'aei2009',
 		name: 'Aesthetic Interactive 2009',
@@ -696,13 +821,13 @@ Aei.Tables.Project = [
 	},
 	{
 		id: 'fragmental',
-		name: 'Fragmental 3D',
+		name: 'Fragmental 3D (iOS)',
 		client: 'Aesthetic Interactive',
 		start: '9/26/2009',
 		end: '12/15/2009',
 		desc: 'Fragmental 3D is a puzzle game of skill, strategy, and timing for iPhone and iPod Touch devices. Various pieces fall from the top of the playing grid. As a Fragment falls, you can move and rotate it to fit on the grid. The goal: create as many winning lines as you can before you run out of space in your grid.\n\nThis iPhone app was designed and developed in-house by Aesthetic Interactive. Fragmental\'s 3D gameplay and effects are implemented using the OpenGL framework, with powerful polygon-drawing optimizations to allow the app to perform well on all the various Apple devices. The app leverages the Cocoa framework for the menu systems, and integrates with an online service for the leaderboards. Paid and free versions are both available in the App Store.',
-		url: 'www.fragmental3d.com',
-		imageCount: 5,
+		url: 'Fragmental3D.com',
+		imageCount: 18,
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
@@ -823,6 +948,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
 				desc: 'Created marketing content, instructions, videos, game sounds, and other assets.',
 				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				desc: 'Created application to run at various resolutions and aspect ratios.',
+				weight: 0.8
 			}
 		],
 		weight: 1
