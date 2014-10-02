@@ -132,7 +132,7 @@ Aei.Angular.directive('initPageAfterRender', function() {
 				page.onRender();
 			};
 
-			setTimeout(onTimeout, 0);
+			setTimeout(onTimeout, 1);
 		}
 	};
 });

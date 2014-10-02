@@ -347,6 +347,8 @@ Aei.Controllers.AdminWeights = function($rootScope, $scope) {
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
+	var projects = Aei.Database.selectList(Aei.Tables.Project);
+	var events = Aei.Database.selectList(Aei.Tables.ZachTimeline);
 	var projTimes = [];
 	var firstDate = new Date(2005, 0, 1);
 	var firstDateTime = firstDate.getTime();
@@ -367,11 +369,15 @@ Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
 
 		for ( var ti in proj.timeline ) {
 			item = proj.timeline[ti];
-			d = new Date(item.y, item.m-1, (item.d || 1));
-			name = item.type+' '+item.name+' ('+d.toDateString()+')';
-			
+			name = item.type+' '+item.name;
+
 			if ( item.type == 'continue' ) {
 				d = new Date();
+				name += ' ('+d.toDateString()+')';
+			}
+			else {
+				d = new Date(item.y, item.m-1, (item.d || 1));
+				name += ' (Present)';
 			}
 
 			if ( item.type == 'start' ) {
@@ -392,7 +398,10 @@ Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
 	}
 
 	$scope.model = {
-		projTimes: projTimes
+		projects: projects,
+		events: events,
+		projTimes: projTimes,
+		page: new Aei.Pages.Timeline(projects, events)
 	};
 
 	$rootScope.tag = 'Admin';
