@@ -25,6 +25,7 @@
 0.600 aei2007
 0.580 portfolio
 0.550 skins
+0.500 homelink
 0.500 rotator
 0.500 art
 0.380 harriscalc

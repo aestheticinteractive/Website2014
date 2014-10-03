@@ -339,9 +339,11 @@ Aei.Tables.Project = [
 	//TODO: RexConnect
 	//TODO: Weaver
 	//TODO: WordNet
-	//TODO: JCI homelink
-	//TODO: DW rotator
 	//TODO: HM office anims
+	//TODO: inthemix?
+	//TODO: chandra anim?
+	//TODO: wixplorer?
+	//TODO: flash frameworks: volume, core?
 	{
 		id: 'idashhtml',
 		name: 'Graph Modules (HTML5)',
@@ -2784,6 +2786,93 @@ Aei.Tables.Project = [
 			}
 		],
 		weight: 0.8
+	},
+	{
+		id: 'homelink',
+		name: 'HomeLink Presentation',
+		client: 'Johnson Controls, Inc.',
+		timeline: [
+			{
+				type: 'start',
+				name: '',
+				y: 2009,
+				m: 4,
+				d: 2
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2009,
+				m: 5,
+				d: 5
+			}
+		],
+		desc: 'TODO.',
+		url: null,
+		imageCount: 5,
+		services: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				desc: '', //designed the entire UI
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		systems: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		teams: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			}*/
+		],
+		languages: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		products: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		skills: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}*/
+		],
+		weight: 0.5
 	},
 	{
 		id: 'dormtshirts',
