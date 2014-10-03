@@ -2,6 +2,10 @@
 ---
 ### overall
 
+1.000 fabricapi
+1.000 fabricweb
+1.000 weaver
+1.000 rexconnect
 1.000 idashhtml
 1.000 fragmentalleap
 1.000 fragmental
@@ -26,6 +30,7 @@
 0.580 portfolio
 0.550 skins
 0.500 homelink
+0.500 actionoffice
 0.500 rotator
 0.500 art
 0.380 harriscalc

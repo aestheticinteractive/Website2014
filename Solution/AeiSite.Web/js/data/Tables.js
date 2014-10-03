@@ -343,6 +343,761 @@ Aei.Tables.Project = [
 	//TODO: chandra anim?
 	//TODO: wixplorer?
 	//TODO: flash frameworks: volume, core?
+	
+	{
+		id: 'fabricapi',
+		name: 'Fabric',
+		client: 'Aesthetic Interactive',
+		timeline: [
+			{
+				type: 'start',
+				name: 'Prototype (Relational DB)',
+				y: 2011,
+				m: 6,
+				d: 27
+			},
+			{
+				type: 'end',
+				name: 'Prototype (Relational DB)',
+				y: 2012,
+				m: 10,
+				d: 24
+			},
+			{
+				type: 'event',
+				name: 'Prototype v1.0.3 Release',
+				y: 2012,
+				m: 5,
+				d: 16
+			},
+			{
+				type: 'event',
+				name: 'Prototype v1.1.4 Release',
+				y: 2012,
+				m: 10,
+				d: 10
+			},
+			{
+				type: 'event',
+				name: 'Prototype v1.1.7 Release',
+				y: 2012,
+				m: 10,
+				d: 24
+			},
+			{
+				type: 'start',
+				name: 'Current (Graph DB)',
+				y: 2012,
+				m: 11,
+				d: 1
+			},
+			{
+				type: 'end',
+				name: 'Current (Graph DB)',
+				y: 2013,
+				m: 5,
+				d: 22
+			},
+			{
+				type: 'start',
+				name: 'Current (Graph DB)',
+				y: 2013,
+				m: 6,
+				d: 4
+			},
+			{
+				type: 'end',
+				name: 'Current (Graph DB)',
+				y: 2013,
+				m: 9,
+				d: 23
+			},
+			{
+				type: 'start',
+				name: 'Current (Graph DB)',
+				y: 2013,
+				m: 10,
+				d: 20
+			},
+			{
+				type: 'end',
+				name: 'Current (Graph DB)',
+				y: 2014,
+				m: 5,
+				d: 15
+			},
+			{
+				type: 'event',
+				name: 'Initial FabricSharpClient functionality completed',
+				y: 2013,
+				m: 2,
+				d: 16
+			},
+			{
+				type: 'event',
+				name: 'v0.1.30 Release',
+				y: 2013,
+				m: 5,
+				d: 19
+			},
+			{
+				type: 'event',
+				name: 'v0.2.0 Release',
+				y: 2013,
+				m: 8,
+				d: 5
+			},
+			/*{
+				type: 'event',
+				name: 'v0.2.1 Release',
+				y: 2013,
+				m: 8,
+				d: 22
+			},
+			{
+				type: 'event',
+				name: 'v0.2.2 Release',
+				y: 2013,
+				m: 9,
+				d: 4
+			},
+			{
+				type: 'event',
+				name: 'v0.2.3 Release',
+				y: 2013,
+				m: 9,
+				d: 13
+			},
+			{
+				type: 'event',
+				name: 'v0.2.4 Release',
+				y: 2013,
+				m: 9,
+				d: 18
+			},*/
+			{
+				type: 'event',
+				name: 'v0.3.0 Release',
+				y: 2014,
+				m: 3,
+				d: 24
+			}
+		],
+		desc: 'TODO.',
+		url: null,
+		imageCount: 0,
+		services: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				desc: '', //designed the entire UI
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		systems: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		teams: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			}*/
+		],
+		languages: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		products: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		skills: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}*/
+		],
+		weight: 1
+	},
+	{
+		id: 'fabricweb',
+		name: 'Fabric Website',
+		client: 'Aesthetic Interactive',
+		timeline: [
+			/*{
+				type: 'start',
+				name: 'Prototype',
+				y: 2011,
+				m: 7,
+				d: 12
+			},
+			{
+				type: 'end',
+				name: 'Prototype',
+				y: 2011,
+				m: 7,
+				d: 27
+			},*/
+			{
+				type: 'start',
+				name: 'Rebuild',
+				y: 2011,
+				m: 11,
+				d: 29
+			},
+			{
+				type: 'end',
+				name: 'Rebuild',
+				y: 2012,
+				m: 2,
+				d: 27
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2012,
+				m: 4,
+				d: 9
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2012,
+				m: 4,
+				d: 25
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2012,
+				m: 5,
+				d: 30
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2012,
+				m: 6,
+				d: 14
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2012,
+				m: 10,
+				d: 5
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2012,
+				m: 10,
+				d: 19
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 1,
+				d: 22
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 2,
+				d: 8
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 2,
+				d: 19
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 3,
+				d: 2
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 4,
+				d: 14
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 4,
+				d: 17
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 8,
+				d: 13
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 9,
+				d: 18
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2014,
+				m: 4,
+				d: 11
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2014,
+				m: 5,
+				d: 6
+			},
+			{
+				type: 'event',
+				name: 'Started New Design',
+				y: 2014,
+				m: 4,
+				d: 25
+			}
+		],
+		desc: 'TODO.',
+		url: null,
+		imageCount: 0,
+		services: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				desc: '', //designed the entire UI
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		systems: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		teams: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			}*/
+		],
+		languages: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		products: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		skills: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}*/
+		],
+		weight: 1
+	},
+	{
+		id: 'weaver',
+		name: 'Weaver',
+		client: 'Aesthetic Interactive',
+		timeline: [
+			{
+				type: 'start',
+				name: '',
+				y: 2012,
+				m: 11,
+				d: 10
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 1,
+				d: 16
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 3,
+				d: 21
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 7,
+				d: 8
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 7,
+				d: 27
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 8,
+				d: 13
+			},
+			{
+				type: 'event',
+				name: 'v0.3 Release',
+				y: 2013,
+				m: 6,
+				d: 13
+			},
+			{
+				type: 'event',
+				name: 'v0.4 Release',
+				y: 2013,
+				m: 6,
+				d: 21
+			},
+			{
+				type: 'event',
+				name: 'v0.5 Release',
+				y: 2013,
+				m: 6,
+				d: 26
+			},
+			{
+				type: 'event',
+				name: 'v0.5.4 Release',
+				y: 2013,
+				m: 8,
+				d: 13
+			}
+		],
+		desc: 'TODO.',
+		url: null,
+		imageCount: 0,
+		services: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				desc: '', //designed the entire UI
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		systems: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		teams: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			}*/
+		],
+		languages: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		products: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		skills: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}*/
+		],
+		weight: 1
+	},
+	{
+		id: 'rexconnect',
+		name: 'RexConnect',
+		client: 'Aesthetic Interactive',
+		timeline: [
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 3,
+				d: 18
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 3,
+				d: 28
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 4,
+				d: 16
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 5,
+				d: 4
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 5,
+				d: 29
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 6,
+				d: 14
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 6,
+				d: 29
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 7,
+				d: 2
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 7,
+				d: 15
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 7,
+				d: 29
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 8,
+				d: 30
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 9,
+				d: 3
+			},
+			{
+				type: 'event',
+				name: 'v0.2 Release',
+				y: 2013,
+				m: 4,
+				d: 18
+			},
+			{
+				type: 'event',
+				name: 'v0.3 Release',
+				y: 2013,
+				m: 4,
+				d: 30
+			},
+			{
+				type: 'event',
+				name: 'v0.4 Release',
+				y: 2013,
+				m: 6,
+				d: 29
+			},
+			{
+				type: 'event',
+				name: 'v0.5 Release',
+				y: 2013,
+				m: 9,
+				d: 3
+			}
+		],
+		desc: 'TODO.',
+		url: null,
+		imageCount: 0,
+		services: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				desc: '', //designed the entire UI
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		systems: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		teams: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			}*/
+		],
+		languages: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		products: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		skills: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}*/
+		],
+		weight: 1
+	},
 	{
 		id: 'idashhtml',
 		name: 'Graph Modules (HTML5)',

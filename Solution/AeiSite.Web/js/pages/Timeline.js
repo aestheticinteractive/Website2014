@@ -125,7 +125,7 @@ Aei.Pages.Timeline.prototype.onRender = function() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Timeline.prototype._getDatePos = function(date) {
-	return Math.round((date.getTime()-this._firstDateTime)/Aei.Pages.Timeline.MsPerDay*0.5);
+	return Math.round((date.getTime()-this._firstDateTime)/Aei.Pages.Timeline.MsPerDay*1);
 };
 
 /*----------------------------------------------------------------------------------------------------*/

@@ -373,11 +373,11 @@ Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
 
 			if ( item.type == 'continue' ) {
 				d = new Date();
-				name += ' ('+d.toDateString()+')';
+				name += ' (Present)';
 			}
 			else {
 				d = new Date(item.y, item.m-1, (item.d || 1));
-				name += ' (Present)';
+				name += ' ('+d.toDateString()+')';
 			}
 
 			if ( item.type == 'start' ) {
