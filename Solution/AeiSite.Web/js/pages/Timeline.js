@@ -221,7 +221,7 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 	var linesData = this._linesData;
 	var laneMaxDates = [];
 	var li, lineData, ii, item, lineI, lineMinDatePlus, laneMaxDate, 
-		px, py, projLbl, rangeLine, rangeBox;
+		px, py, projLbl, rangeLine, rangeBox, eventDot;
 
 	for ( li in linesData ) {
 		lineData = linesData[li];
@@ -268,6 +268,11 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 
 		for ( ii in lineData.items ) {
 			item = lineData.items[ii];
+			
+			if ( !item.start ) {
+				continue;
+			}
+
 			px = this._getDatePos(item.start);
 
 			rangeBox = new Kinetic.Rect({
@@ -280,6 +285,22 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 				strokeWidth: 1
 			});
 			this._layerProj.add(rangeBox);
+		}
+		
+		for ( ii in lineData.items ) {
+			item = lineData.items[ii];
+			
+			if ( !item.occur ) {
+				continue;
+			}
+
+			eventDot = new Kinetic.Circle({
+				x: this._getDatePos(item.occur),
+				y: py+10,
+				radius: 4,
+				fill: 'rgba(255, 255, 255, 0.5)'
+			});
+			this._layerProj.add(eventDot);
 		}
 	}
 };

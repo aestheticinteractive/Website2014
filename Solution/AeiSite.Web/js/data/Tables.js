@@ -333,7 +333,6 @@ for ( var i in Aei.Tables.Skill ) {
 
 /*====================================================================================================*/
 Aei.Tables.Project = [
-	//TODO: iDashboards (iOS) 
 	//TODO: Fabric API
 	//TODO: Fabric Client
 	//TODO: Fabric Web
@@ -341,9 +340,8 @@ Aei.Tables.Project = [
 	//TODO: Weaver
 	//TODO: WordNet
 	//TODO: JCI homelink
-	//TODO: DW floorplanner
 	//TODO: DW rotator
-	//TODO: HM office anims?
+	//TODO: HM office anims
 	{
 		id: 'idashhtml',
 		name: 'Graph Modules (HTML5)',
@@ -479,6 +477,13 @@ Aei.Tables.Project = [
 				y: 2014,
 				m: 9,
 				d: 17
+			},
+			{
+				type: 'event',
+				name: 'v1.0 Release',
+				y: 2014,
+				m: 9,
+				d: 24
 			}
 		],
 		desc: 'Based on the original iOS version of the game, this version of Fragmental 3D was built to use the Leap Motion controller. This new input hardware makes it possible to control the game using only the motion of your hands in the air.',
@@ -707,19 +712,46 @@ Aei.Tables.Project = [
 		timeline: [
 			{
 				type: 'start',
-				name: '',
+				name: 'v1.0',
+				y: 2012, //TODO: find the correct (earlier) date
+				m: 1,
+				d: 4
+			},
+			{
+				type: 'end',
+				name: 'v1.0',
+				y: 2012,
+				m: 1,
+				d: 31
+			},
+			{
+				type: 'start',
+				name: 'v1.1',
+				y: 2012, //TODO: find the correct (earlier) date
+				m: 10,
+				d: 24
+			},
+			{
+				type: 'end',
+				name: 'v1.1',
+				y: 2012,
+				m: 11,
+				d: 3
+			},
+			{
+				type: 'start',
+				name: 'v2.0',
 				y: 2013,
 				m: 9,
 				d: 6
 			},
 			{
 				type: 'end',
-				name: '',
+				name: 'v2.0',
 				y: 2013,
 				m: 10,
 				d: 30
 			}
-			//TODO: add earlier versions
 		],
 		desc: 'This web application is built to display photos and to visualize their metadata. It features a full-screen photo viewer, user-tagging functionality, and responsive layouts. This website uses Fabric to collect and organize information about every photo, and (in future versions) will use this information to highlight and visualize interesting relationships between them.',
 		url: 'ZachKinstner.com',
@@ -1004,17 +1036,164 @@ Aei.Tables.Project = [
 		timeline: [
 			{
 				type: 'start',
-				name: '',
+				name: 'Initial Versions',
 				y: 2009,
 				m: 9,
 				d: 26
 			},
 			{
 				type: 'end',
-				name: '',
+				name: 'Initial Versions',
 				y: 2009,
 				m: 12,
+				d: 28
+			},
+			{
+				type: 'start',
+				name: 'v1.3 Work',
+				y: 2010,
+				m: 4,
+				d: 19
+			},
+			{
+				type: 'end',
+				name: 'v1.3 Work',
+				y: 2010,
+				m: 5,
+				d: 4
+			},
+			{
+				type: 'start',
+				name: 'v1.5 Work',
+				y: 2010,
+				m: 10,
+				d: 19
+			},
+			{
+				type: 'end',
+				name: 'v1.5 Work',
+				y: 2010,
+				m: 10,
+				d: 27
+			},
+			{
+				type: 'start',
+				name: 'v1.5 Work',
+				y: 2010,
+				m: 11,
+				d: 7
+			},
+			{
+				type: 'end',
+				name: 'v1.5 Work',
+				y: 2010,
+				m: 11,
+				d: 13
+			},
+			{
+				type: 'start',
+				name: 'v2.0 Work',
+				y: 2011,
+				m: 5,
+				d: 5
+			},
+			{
+				type: 'end',
+				name: 'v2.0 Work',
+				y: 2011,
+				m: 6,
+				d: 26
+			},
+			{
+				type: 'start',
+				name: 'v2.2.40 Work',
+				y: 2012,
+				m: 11,
+				d: 26
+			},
+			{
+				type: 'end',
+				name: 'v2.2.40 Work',
+				y: 2012,
+				m: 12,
+				d: 11
+			},
+			{
+				type: 'start',
+				name: 'v2.2.44 Work',
+				y: 2014,
+				m: 3,
+				d: 7
+			},
+			{
+				type: 'end',
+				name: 'v2.2.44 Work',
+				y: 2014,
+				m: 3,
+				d: 13
+			},
+			{
+				type: 'event',
+				name: 'v1.0 Release',
+				y: 2009,
+				m: 12,
+				d: 4
+			},
+			{
+				type: 'event',
+				name: 'v1.1 Release',
+				y: 2009,
+				m: 12,
+				d: 18
+			},
+			{
+				type: 'event',
+				name: 'v1.2 Release',
+				y: 2009,
+				m: 12,
+				d:28
+			},
+			{
+				type: 'event',
+				name: 'v1.3 Release',
+				y: 2010,
+				m: 5,
+				d: 3
+			},
+			{
+				type: 'event',
+				name: 'v1.4 Release',
+				y: 2010,
+				m: 11,
+				d: 5
+			},
+			{
+				type: 'event',
+				name: 'v1.5 Release',
+				y: 2010,
+				m: 11,
+				d: 20
+			},
+			{
+				type: 'event',
+				name: 'v2.0 Release',
+				y: 2011,
+				m: 6,
+				d: 24
+			},
+			{
+				type: 'event',
+				name: 'v2.2.40 Release',
+				y: 2012,
+				m: 12,
 				d: 15
+			},
+			{
+				type: 'event',
+				name: 'v2.2.44 Release',
+				y: 2014,
+				m: 3,
+				d: 20
 			}
 			//TODO: add updates and releases
 		],
@@ -1165,6 +1344,125 @@ Aei.Tables.Project = [
 			{
 				type: 'continue',
 				name: ''
+			},
+			{
+				type: 'event',
+				name: 'v1.0/Beta Release',
+				y: 2010,
+				m: 4,
+				d: 19
+			},
+			{
+				type: 'event',
+				name: 'v1.1 Release',
+				y: 2010,
+				m: 9,
+				d: 2
+			},
+			{
+				type: 'event',
+				name: 'v1.2 "Ferryful" Release',
+				y: 2010,
+				m: 11,
+				d: 22
+			},
+			{
+				type: 'event',
+				name: 'v1.3 Release',
+				y: 2011,
+				m: 2,
+				d: 3
+			},
+			{
+				type: 'event',
+				name: 'v1.4 Release',
+				y: 2011,
+				m: 3,
+				d: 25
+			},
+			{
+				type: 'event',
+				name: 'v1.5 Release',
+				y: 2011,
+				m: 9,
+				d: 20
+			},
+			{
+				type: 'event',
+				name: 'v1.6 Release',
+				y: 2011,
+				m: 11,
+				d: 22
+			},
+			{
+				type: 'event',
+				name: 'v1.7a Release',
+				y: 2012,
+				m: 2,
+				d: 27
+			},
+			{
+				type: 'event',
+				name: 'v1.7b Release',
+				y: 2012,
+				m: 3,
+				d: 27
+			},
+			{
+				type: 'event',
+				name: 'v1.7c Release',
+				y: 2012,
+				m: 7,
+				d: 18
+			},
+			{
+				type: 'event',
+				name: 'v1.8 Release',
+				y: 2012,
+				m: 9,
+				d: 11
+			},
+			{
+				type: 'event',
+				name: 'v1.9 Release',
+				y: 2012,
+				m: 11,
+				d: 15
+			},
+			{
+				type: 'event',
+				name: 'v1.10 Release',
+				y: 2012,
+				m: 12,
+				d: 12
+			},
+			{
+				type: 'event',
+				name: 'v1.11 Release',
+				y: 2013,
+				m: 2,
+				d: 27
+			},
+			{
+				type: 'event',
+				name: 'v1.12 Release',
+				y: 2013,
+				m: 5,
+				d: 22
+			},
+			{
+				type: 'event',
+				name: 'v1.13 Release',
+				y: 2013,
+				m: 10,
+				d: 1
+			},
+			{
+				type: 'event',
+				name: 'v1.14 Release',
+				y: 2014,
+				m: 2,
+				d: 14
 			}
 		],
 		desc: 'Journeyful is a travel-based social networking site, with a robust (and ever-growing) list of powerful features. Users can book hotel rooms, ferry tickets, share photos and videos, find travelers whose trips intersect their own, and much more. Each user can have multiple \'identities\' (such as a person, a hotel admin, a ferry staff member, etc.) which each get a separate user experience based on permissions.\n\nAesthetic Interactive built the website\'s Flash-based UI, and is closely involved with design, specification, and planning of the project. The Flash UI features full hotel/ferry booking pipelines, log-ins, photo uploads, a large set of custom input and display components, complex user sessions, complex forms and wizards for hotel/ferry administration and management, and communicates with the API using a SOAP interface.',
@@ -1486,57 +1784,179 @@ Aei.Tables.Project = [
 		],
 		weight: 0.95
 	},
+	
 	{
-		id: 'idashboards',
-		name: 'Graph Modules (Flash)',
+		id: 'idashapp',
+		name: 'iDashboards App',
 		client: 'iDashboards',
-		//iOS: 
-		// release: 1.0.13 april 16, 2011
-		// release 1.1.28 May 16, 2011
-		// release 1.2.60 Aug 8, 2011
-		// release 1.3.93 jan 11, 2012
 		timeline: [
 			{
 				type: 'start',
-				name: 'Flash Graphs',
-				y: 2008,
-				m: 1,
-				d: 28
-			},
-			{
-				type: 'end',
-				name: 'Flash Graphs',
-				y: 2009,
-				m: 10,
-				d: 27
-			},
-			{
-				type: 'start',
-				name: 'Flash Graphs',
-				y: 2010,
-				m: 3,
-				d: 22
-			},
-			{
-				type: 'end',
-				name: 'Flash Graphs',
-				y: 2010,
-				m: 4,
-				d: 25
-			},
-			{
-				type: 'start',
-				name: 'iOS App',
+				name: '',
 				y: 2010,
 				m: 4,
 				d: 26
 			},
 			{
 				type: 'end',
-				name: 'iOS App',
+				name: '',
 				y: 2012,
 				m: 1,
 				d: 11
+			},
+			{
+				type: 'event',
+				name: 'v1.0 Release',
+				y: 2011,
+				m: 4,
+				d: 16
+			},
+			{
+				type: 'event',
+				name: 'v1.1 Release',
+				y: 2011,
+				m: 5,
+				d: 16
+			},
+			{
+				type: 'event',
+				name: 'v1.2 Release',
+				y: 2011,
+				m: 8,
+				d: 8
+			},
+			{
+				type: 'event',
+				name: 'v1.3 Release',
+				y: 2012,
+				m: 1,
+				d: 11
+			}
+		],
+		desc: 'TODO.',
+		url: 'iDashboards.com',
+		imageCount: 0,
+		services: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				desc: 'Built a wide variety of customizable, precision graph modules.',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				desc: 'Retained the look-and-feel of the Flash-based graphs.',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				desc: 'Provided ideas for new graph types, visual effects, and customization options.',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: 'Managed internal development processes.',
+				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: 'Provided quality communication to the client about features and issues.',
+				weight: 0.75
+			}
+		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'ios'),
+				desc: 'Built for iOS devices.',
+				weight: 1
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: 'Worked alone on the app.',
+				weight: 1
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'objc'),
+				desc: 'Used to build the app.',
+				weight: 1
+			}
+		],
+		products: [
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: 'Created layouts and menus for each graph type.',
+				weight: 0.65
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: 'Provided high-quality, precise, customizable visual experience.',
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				desc: 'Built graphs to display at any size or aspect ratio.',
+				weight: 0.94
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: 'Created and optimized some scrolling animations.',
+				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: 'Wrote code to prepare data for display, render the display list, optimize drawing performance, etc.',
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				desc: 'Converted raw data into dozens of different graph types.',
+				weight: 0.86
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				desc: 'Documented daily development progress, the functionality of each graph, issues and workaround details, etc.',
+				weight: 0.75
+			}
+		],
+		weight: 0.98
+	},
+	{
+		id: 'idashboards',
+		name: 'Graph Modules (Flash)',
+		client: 'iDashboards',
+		timeline: [
+			{
+				type: 'start',
+				name: '',
+				y: 2008,
+				m: 1,
+				d: 28
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2009,
+				m: 10,
+				d: 27
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2010,
+				m: 3,
+				d: 22
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2010,
+				m: 4,
+				d: 25
 			}
 		],
 		desc: 'This collection of interactive and highly-customizable graphs was built to operate within the latest version of iDashboards software. Each individual graph displays and animates any arbitrary set of data, offers the user a myriad of settings, and communicates with other graphs when a data point is selected.\n\nGraphs are constructed as custom Flex modules for Flash, using Actionscript 3. Functionality, accuracy, flexability, and performance were key during development. Aesthetic Interactive was also responsible for the design of each graph type, providing users with a dramatic improvement in appearance from previous versions.\n\nThe gallery displays a few of the many graph types available to an iDashboards user.',
@@ -2386,6 +2806,20 @@ Aei.Tables.Project = [
 			},
 			{
 				type: 'start',
+				name: 'Design Lab',
+				y: 2007,
+				m: 10,
+				d: 2
+			},
+			{
+				type: 'end',
+				name: 'Design Lab',
+				y: 2008,
+				m: 1,
+				d: 2
+			},
+			{
+				type: 'start',
 				name: 'Version 2',
 				y: 2008,
 				m: 3,
@@ -2645,6 +3079,93 @@ Aei.Tables.Project = [
 			}
 		],
 		weight: 0.75
+	},
+	{
+		id: 'rotator',
+		name: 'Floorplan Rotator',
+		client: 'Digital Wingman',
+		timeline: [
+			{
+				type: 'start',
+				name: '',
+				y: 2008,
+				m: 1,
+				d: 1
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2008,
+				m: 2,
+				d: 21
+			}
+		],
+		desc: 'TODO.',
+		url: null,
+		imageCount: 3,
+		services: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				desc: '', //designed the entire UI
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				desc: '',
+				weight: 0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		systems: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		teams: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 1
+			}*/
+		],
+		languages: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		products: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+				desc: '',
+				weight: 0
+			}*/
+		],
+		skills: [
+			/*{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+				desc: '',
+				weight: 0.0
+			}*/
+		],
+		weight: 0.5
 	},
 	{
 		id: 'aei2007',
