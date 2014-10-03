@@ -135,7 +135,7 @@ Aei.Tables.Language = [
 		name: 'SQL'
 	},
 	{
-		id: 'gremlin',
+		id: 'grem',
 		name: 'Gremlin'
 	},
 	{
@@ -235,6 +235,10 @@ Aei.Tables.Product = [
 	{
 		id: 'cass',
 		name: 'Cassandra'
+	},
+	{
+		id: 'rex',
+		name: 'Rexster'
 	}
 	/*{ //omit "authoring tools" for now
 		id: 'fbuild',
@@ -494,7 +498,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '', //designed the entire UI
+				desc: '',
 				weight: 0
 			},
 			{
@@ -555,20 +559,6 @@ Aei.Tables.Project = [
 		name: 'Fabric Website',
 		client: 'Aesthetic Interactive',
 		timeline: [
-			/*{
-				type: 'start',
-				name: 'Prototype',
-				y: 2011,
-				m: 7,
-				d: 12
-			},
-			{
-				type: 'end',
-				name: 'Prototype',
-				y: 2011,
-				m: 7,
-				d: 27
-			},*/
 			{
 				type: 'start',
 				name: 'Rebuild',
@@ -705,68 +695,168 @@ Aei.Tables.Project = [
 		],
 		desc: 'TODO.',
 		url: null,
-		imageCount: 0,
+		imageCount: 16,
 		services: [
-			/*{
+			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: '',
-				weight: 0
+				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '', //designed the entire UI
-				weight: 0
+				desc: '',
+				weight: 0.97
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: '',
-				weight: 0
+				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: '',
-				weight: 0
+				weight: 0.96
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 0.99
+			}
 		],
 		systems: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			}
 		],
 		teams: [
-			/*{
+			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
 				weight: 1
-			}*/
+			}
 		],
 		languages: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
+				desc: '',
+				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
+				desc: '',
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'grem'),
+				desc: '',
+				weight: 0.99
+			}
 		],
 		products: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'jquery'),
+				desc: '',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'foundjs'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'nhib'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'kinjs'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'titan'),
+				desc: '',
+				weight: 0.7
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'rex'),
+				desc: '',
+				weight: 0.8
+			}
 		],
 		skills: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
-				weight: 0.0
-			}*/
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.3
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				desc: '',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: '',
+				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
+				desc: '',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
+				desc: '',
+				weight: 0.92
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'mob'),
+				desc: '',
+				weight: 0.8
+			}
 		],
 		weight: 1
 	},
@@ -857,7 +947,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '', //designed the entire UI
+				desc: '',
 				weight: 0
 			},
 			{
@@ -1042,7 +1132,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '', //designed the entire UI
+				desc: '',
 				weight: 0
 			},
 			{
@@ -3572,7 +3662,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '', //designed the entire UI
+				desc: '',
 				weight: 0
 			},
 			{
@@ -3954,7 +4044,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '', //designed the entire UI
+				desc: '',
 				weight: 0
 			},
 			{

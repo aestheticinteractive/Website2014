@@ -49,6 +49,7 @@
 ---
 ### services: Development
 
+1.000 fabricweb
 1.000 idashhtml
 1.000 fragmentalleap
 1.000 fragmental
@@ -88,6 +89,7 @@
 
 0.980 fragmentalleap
 0.980 fragmental
+0.970 fabricweb
 0.960 kinstnerphoto
 0.950 idashhtml
 0.931 idashboards
@@ -129,6 +131,7 @@
 0.990 fragmentalleap
 0.990 fragmental
 0.980 journeyful
+0.980 fabricweb
 0.970 kinstnerphoto
 0.970 idashapp
 0.850 idashhtml
@@ -161,6 +164,7 @@
 0.970 journeyful
 0.970 fragmentalleap
 0.970 fragmental
+0.960 fabricweb
 0.951 kinstnerphoto
 0.786 trellovision
 0.776 hardlines
@@ -191,6 +195,7 @@
 ---
 ### services: Communication
 
+0.990 fabricweb
 0.960 journeyful
 0.960 fragmentalleap
 0.941 kinstnerphoto
@@ -227,6 +232,7 @@
 ### skills: Mobile
 
 0.990 fragmental
+0.800 fabricweb
 0.637 kinstnerphoto
 
 
@@ -235,6 +241,7 @@
 
 0.981 journeyful
 0.980 fragmentalleap
+0.950 fabricweb
 0.931 kinstnerphoto
 0.920 fragmental
 0.902 lessonvision
@@ -274,6 +281,7 @@
 0.950 idashhtml
 0.931 idashapp
 0.931 idashboards
+0.900 fabricweb
 0.874 lessonvision
 0.782 aei2009
 0.689 trellovision
@@ -303,6 +311,7 @@
 0.940 idashhtml
 0.921 idashapp
 0.921 idashboards
+0.900 fabricweb
 0.850 fragmentalleap
 0.800 fragmental
 0.760 lessonvision
@@ -322,6 +331,7 @@
 0.550 skins
 0.406 portfolio
 0.210 gvsuamasite
+0.200 fabricweb
 0.200 art
 0.200 illumballs
 0.120 illandlev
@@ -343,6 +353,7 @@
 0.480 aei2007
 0.464 portfolio
 0.320 hardlines
+0.300 fabricweb
 0.300 sketchtracer
 0.288 dormtshirts
 0.280 gvsuamasite
@@ -369,6 +380,7 @@
 0.680 hardlines
 0.594 journeyful
 0.522 portfolio
+0.400 fabricweb
 0.361 harriscalc
 
 
@@ -410,6 +422,7 @@
 ### skills: Database
 
 0.941 kinstnerphoto
+0.920 fabricweb
 0.760 hardlines
 0.630 gvsuamasite
 0.330 aei2007
@@ -419,6 +432,7 @@
 ---
 ### skills: Server-Side
 
+0.980 fabricweb
 0.951 kinstnerphoto
 0.720 hardlines
 0.713 dormtshirts
@@ -434,6 +448,7 @@
 ---
 ### skills: Technical Writing
 
+0.980 fabricweb
 0.960 fragmentalleap
 0.941 journeyful
 0.800 idashhtml
@@ -448,6 +463,7 @@
 ---
 ### skills: Content Creation
 
+1.000 fabricweb
 0.980 fragmental
 0.970 fragmentalleap
 0.960 kinstnerphoto
@@ -463,6 +479,7 @@
 ---
 ### languages: C#
 
+1.000 fabricweb
 1.000 fragmentalleap
 0.980 kinstnerphoto
 0.346 journeyful
@@ -474,6 +491,7 @@
 1.000 idashhtml
 0.970 kinstnerphoto
 0.810 trellovision
+0.800 fabricweb
 0.594 journeyful
 0.264 1100rooms
 0.180 dormtshirts
@@ -482,6 +500,7 @@
 ---
 ### languages: HTML
 
+0.980 fabricweb
 0.960 kinstnerphoto
 0.784 hardlines
 0.729 trellovision
@@ -496,6 +515,7 @@
 ---
 ### languages: CSS
 
+0.970 fabricweb
 0.951 kinstnerphoto
 0.776 hardlines
 0.693 gvsuamasite
@@ -557,6 +577,7 @@
 ---
 ### languages: Gremlin
 
+0.990 fabricweb
 
 
 ---
@@ -581,6 +602,7 @@
 ---
 ### products: jQuery
 
+0.980 fabricweb
 0.970 kinstnerphoto
 0.802 trellovision
 0.594 journeyful
@@ -596,6 +618,7 @@
 ---
 ### products: Foundation
 
+0.990 fabricweb
 0.980 kinstnerphoto
 0.648 trellovision
 0.594 journeyful
@@ -605,6 +628,7 @@
 ### products: KineticJS
 
 1.000 idashhtml
+0.900 fabricweb
 
 
 ---
@@ -622,6 +646,7 @@
 ---
 ### products: .NET
 
+1.000 fabricweb
 0.931 kinstnerphoto
 0.900 fragmentalleap
 0.400 hardlines
@@ -639,6 +664,7 @@
 ### products: NHibernate
 
 0.960 kinstnerphoto
+0.400 fabricweb
 0.238 journeyful
 
 
@@ -715,11 +741,18 @@
 ---
 ### products: Titan Graph Database
 
+0.700 fabricweb
 
 
 ---
 ### products: Cassandra
 
+
+
+---
+### products: Rexster
+
+0.800 fabricweb
 
 
 ---
@@ -752,6 +785,7 @@
 ---
 ### systems: Web
 
+1.000 fabricweb
 1.000 idashhtml
 0.990 journeyful
 0.980 kinstnerphoto
@@ -802,6 +836,7 @@
 ---
 ### teams: One-Man Team
 
+1.000 fabricweb
 1.000 fragmentalleap
 1.000 fragmental
 0.980 kinstnerphoto
