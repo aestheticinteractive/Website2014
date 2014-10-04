@@ -102,10 +102,10 @@
 					{{model.project.client}}
 				</span>
 				<br/>
-				<a ng-if="model.project.url" href="http://{{model.project.url}}">
-					{{model.project.url}}
-				</a>
-				<br/>
+				<span ng-if="model.project.url">
+					<a href="http://{{model.project.url}}">{{model.project.url}}</a>
+					<br/>
+				</span>
 				<a ng-if="model.project.github" href="http://github.com/{{model.project.github}}">
 					View at GitHub
 				</a>

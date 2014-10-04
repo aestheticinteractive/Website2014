@@ -1012,7 +1012,7 @@ Aei.Tables.Project = [
 		desc: 'TODO.',
 		url: null,
 		github: 'inthefabric/Weaver',
-		imageCount: 0,
+		imageCount: 6,
 		services: [
 			/*{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
@@ -1198,7 +1198,7 @@ Aei.Tables.Project = [
 		desc: 'TODO.',
 		url: null,
 		github: 'inthefabric/RexConnect',
-		imageCount: 0,
+		imageCount: 6,
 		services: [
 			/*{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
