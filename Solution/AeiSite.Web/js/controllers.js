@@ -64,8 +64,28 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 	var proj = Aei.Database.selectByUniqueProperty(Aei.Tables.Project, 'link', $routeParams.link);
 	//TODO: redirect if project not found (also do this for other detail pages)
 
+	var minDate = new Date(3000, 0, 1);
+	var maxDate = new Date(1000, 0, 1);
+
+	var i, item, d, name;
+	
+	for ( i in proj.timeline ) {
+		item = proj.timeline[i];
+		d = (item.type == 'continue' ? new Date() : new Date(item.y, item.m-1, (item.d || 1)));
+
+		if ( d < minDate ) {
+			minDate = d;
+		}
+		
+		if ( d > maxDate ) {
+			maxDate = d;
+		}
+	}
+
 	$scope.model = {
 		project: proj,
+		minDate: minDate,
+		maxDate: maxDate,
 		page: new Aei.Pages.Project(proj)
 	};
 	

@@ -337,17 +337,11 @@ for ( var i in Aei.Tables.Skill ) {
 
 /*====================================================================================================*/
 Aei.Tables.Project = [
-	//TODO: Fabric API
-	//TODO: Fabric Client
-	//TODO: Fabric Web
-	//TODO: RexConnect
-	//TODO: Weaver
-	//TODO: WordNet
+	//TODO: WordNet?
 	//TODO: inthemix?
 	//TODO: chandra anim?
 	//TODO: wixplorer?
 	//TODO: flash frameworks: volume, core?
-	
 	{
 		id: 'fabricapi',
 		name: 'Fabric',
@@ -488,7 +482,8 @@ Aei.Tables.Project = [
 			}
 		],
 		desc: 'TODO.',
-		url: null,
+		url: 'InTheFabric.com',
+		github: 'inthefabric/Fabric',
 		imageCount: 0,
 		services: [
 			/*{
@@ -694,7 +689,7 @@ Aei.Tables.Project = [
 			}
 		],
 		desc: 'TODO.',
-		url: null,
+		url: 'InTheFabric.com',
 		imageCount: 16,
 		services: [
 			{
@@ -938,6 +933,7 @@ Aei.Tables.Project = [
 		],
 		desc: 'TODO.',
 		url: null,
+		github: 'inthefabric/Weaver',
 		imageCount: 0,
 		services: [
 			/*{
@@ -1123,6 +1119,7 @@ Aei.Tables.Project = [
 		],
 		desc: 'TODO.',
 		url: null,
+		github: 'inthefabric/RexConnect',
 		imageCount: 0,
 		services: [
 			/*{
@@ -1601,7 +1598,7 @@ Aei.Tables.Project = [
 		],
 		desc: 'This web application is built to display photos and to visualize their metadata. It features a full-screen photo viewer, user-tagging functionality, and responsive layouts. This website uses Fabric to collect and organize information about every photo, and (in future versions) will use this information to highlight and visualize interesting relationships between them.',
 		url: 'ZachKinstner.com',
-		github: 'github.com/aestheticinteractive/PhotoGallery',
+		github: 'aestheticinteractive/PhotoGallery',
 		imageCount: 10,
 		services: [
 			{
@@ -1774,7 +1771,7 @@ Aei.Tables.Project = [
 		],
 		desc: 'An experimental app for organizing and visualizing Trello data in new ways. Built to be modular and easily-extendable by the open-source community.',
 		url: 'TrelloVision.com',
-		github: 'github.com/aestheticinteractive/TrelloVision',
+		github: 'aestheticinteractive/TrelloVision',
 		imageCount: 4,
 		services: [
 			{
@@ -2312,7 +2309,7 @@ Aei.Tables.Project = [
 			}
 		],
 		desc: 'Journeyful is a travel-based social networking site, with a robust (and ever-growing) list of powerful features. Users can book hotel rooms, ferry tickets, share photos and videos, find travelers whose trips intersect their own, and much more. Each user can have multiple \'identities\' (such as a person, a hotel admin, a ferry staff member, etc.) which each get a separate user experience based on permissions.\n\nAesthetic Interactive built the website\'s Flash-based UI, and is closely involved with design, specification, and planning of the project. The Flash UI features full hotel/ferry booking pipelines, log-ins, photo uploads, a large set of custom input and display components, complex user sessions, complex forms and wizards for hotel/ferry administration and management, and communicates with the API using a SOAP interface.',
-		url: 'www.journeyful.com',
+		url: 'Journeyful.com',
 		imageCount: 9,
 		services: [
 			{
@@ -2806,7 +2803,7 @@ Aei.Tables.Project = [
 			}
 		],
 		desc: 'This collection of interactive and highly-customizable graphs was built to operate within the latest version of iDashboards software. Each individual graph displays and animates any arbitrary set of data, offers the user a myriad of settings, and communicates with other graphs when a data point is selected.\n\nGraphs are constructed as custom Flex modules for Flash, using Actionscript 3. Functionality, accuracy, flexability, and performance were key during development. Aesthetic Interactive was also responsible for the design of each graph type, providing users with a dramatic improvement in appearance from previous versions.\n\nThe gallery displays a few of the many graph types available to an iDashboards user.',
-		url: 'www.idashboards.com',
+		url: 'iDashboards.com',
 		imageCount: 9,
 		services: [
 			{
@@ -3055,7 +3052,7 @@ Aei.Tables.Project = [
 			}
 		],
 		desc: 'Aesthetic Interactive worked with a local design firm to create this site, which promotes Amway\'s collection of hotels located in downtown Grand Rapids, MI.\n\nThe site features some impressive visuals. The homepage presents a full-screen background image, chosen at random with each visit. In the \'Get To Know\' section, a Flash application displays hundreds of user-submitted images and quotes which demonstrate all that Grand Rapids has to offer. An interactive map of the downtown area shows users how to get around the hotel campus.\n\nFrom a technical perspective, the site uses ASP.NET to validate and submit various forms to the client, and to send email confirmations to the user.',
-		url: 'www.1100rooms.com',
+		url: '1100rooms.com',
 		imageCount: 9,
 		services: [
 			{
@@ -3273,7 +3270,7 @@ Aei.Tables.Project = [
 			}
 		],
 		desc: 'This fun, upbeat Flash website provides users with a ton of information, images, and video content about the sport of Footvolley. Working from a design spec, Aesthetic Interactive implemented a variety of interesting features, transitions, and effects.\n\nThe small site is packed with content and interactivity. From a page-turning rules book to a 3D video carousel to draggable moves animations, there is plenty to keep users fully engaged.\n\nAll of the site\'s content is loaded dynamically via XML, which allows the client to easily update the site with new images, videos, and information.',
-		url: 'www.footvolley.ro',
+		url: 'Footvolley.ro',
 		imageCount: 7,
 		services: [
 			{
@@ -4902,7 +4899,7 @@ Aei.Tables.Project = [
 			}
 		],
 		desc: 'A former portfolio, this Flash app features innovative \'project web\' navigation and static 3D overlay.',
-		url: 'www.aestheticinteractive.com/portfolio',
+		url: 'AestheticInteractive.com/portfolio',
 		imageCount: 6,
 		services: [
 			{
@@ -5157,7 +5154,7 @@ Aei.Tables.Project = [
 			}
 		],
 		desc: 'A dynamic Flash mapping tool with locations and labels placed and animated based on local XML content.',
-		url: 'www.sysmaint.com/locations/default.aspx',
+		url: null,
 		imageCount: 3,
 		services: [
 			{
@@ -5722,7 +5719,7 @@ Aei.Tables.Project = [
 			}
 		],
 		desc: 'A basic Flash-based site providing listeners with music, lyrics, show dates, and other related content.',
-		url: 'www.freewebs.com/zachkinstner',
+		url: null, //'freewebs.com/zachkinstner',
 		imageCount: 3,
 		services: [
 			{

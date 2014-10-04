@@ -7,6 +7,10 @@
 		height: 4px;
 		margin-top: 0;
 	}
+	
+	span.year {
+		font-size: 28px;
+	}
 </style>
 
 <section class="content">
@@ -80,23 +84,31 @@
 		</div>
 
 		<div class="large-3 columns">
-			<h3>
-				Client
-			</h3>
+			<img ng-src="img/projects/{{model.project.id}}/icon.jpg"
+			    style="width: 150px; height: 150px; margin-bottom: 10px;" />
 			<p>
-				{{model.project.client}}
+				<span class="year" title="{{model.minDate.toDateString()}}">
+					{{model.minDate.getFullYear()}}
+				</span>
+				<span ng-if="model.minDate.getFullYear() != model.maxDate.getFullYear()" class="year">
+					to
+					<span title="{{model.maxDate.toDateString()}}">
+						{{model.maxDate.getFullYear()}}
+					</span>
+				</span>
 			</p>
-			<h3>
-				Timeline
-			</h3>
-			<p>
-				{{model.project.start}} to {{model.project.end}}<br/>
-			</p>
-			<h3>
-				Link
-			</h3>
-			<p>
-				<a href="http://{{model.project.url}}">{{model.project.url}}</a>
+			<p style="margin-top: 10px;">
+				<span style="font-weight: bold;">
+					{{model.project.client}}
+				</span>
+				<br/>
+				<a ng-if="model.project.url" href="http://{{model.project.url}}">
+					{{model.project.url}}
+				</a>
+				<br/>
+				<a ng-if="model.project.github" href="http://github.com/{{model.project.github}}">
+					View at GitHub
+				</a>
 			</p>
 		</div>
 	</div>
