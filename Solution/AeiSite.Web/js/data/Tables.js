@@ -260,6 +260,8 @@ Aei.Tables.Product = [
 		id: 'photo',
 		name: 'Photoshop'
 	},*/
+	//NancyFX
+	//NUnit / Moq
 ];
 
 for ( var i in Aei.Tables.Product ) {
@@ -327,6 +329,7 @@ Aei.Tables.Skill = [
 		name: 'Content Creation'
 	}
 	//autonomy/drive?
+	//unit testing
 ];
 
 for ( var i in Aei.Tables.Skill ) {
@@ -484,68 +487,133 @@ Aei.Tables.Project = [
 		desc: 'TODO.',
 		url: 'InTheFabric.com',
 		github: 'inthefabric/Fabric',
-		imageCount: 0,
+		imageCount: 5,
 		services: [
-			/*{
+			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: '',
-				weight: 0
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0
+				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: '',
-				weight: 0
+				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: '',
-				weight: 0
+				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 0.97
+			}
 		],
 		systems: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'linux'),
+				desc: '',
+				weight: 0.99
+			}
 		],
 		teams: [
-			/*{
+			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
 				weight: 1
-			}*/
+			}
 		],
 		languages: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'grem'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
+				desc: '',
+				weight: 0.4
+			}
 		],
 		products: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'mono'),
+				desc: '',
+				weight: 0.91
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'mysql'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'nhib'),
+				desc: '',
+				weight: 0.41
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'rex'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'titan'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'cass'),
+				desc: '',
+				weight: 0.9
+			}
 		],
 		skills: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: '',
-				weight: 0.0
-			}*/
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				desc: '',
+				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: '',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
+				desc: '',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'webserv'),
+				desc: '',
+				weight: 1
+			}
 		],
 		weight: 1
 	},
@@ -723,6 +791,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
 				desc: '',
 				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'linux'),
+				desc: '',
+				weight: 0.99
 			}
 		],
 		teams: [
@@ -766,14 +839,19 @@ Aei.Tables.Project = [
 				weight: 1
 			},
 			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'mono'),
+				desc: '',
+				weight: 0.99
+			},
+			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'jquery'),
 				desc: '',
-				weight: 0.98
+				weight: 0.97
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'foundjs'),
 				desc: '',
-				weight: 0.99
+				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'nhib'),
