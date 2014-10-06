@@ -485,6 +485,16 @@ Aei.Tables.Project = [
 				y: 2014,
 				m: 3,
 				d: 24
+			},
+			{
+				type: 'start',
+				name: 'Future',
+				y: (new Date()).getFullYear()+1,
+				m: 0
+			},
+			{
+				type: 'continue',
+				name: 'Future'
 			}
 		],
 		desc: 'TODO.',
@@ -757,6 +767,16 @@ Aei.Tables.Project = [
 				y: 2014,
 				m: 4,
 				d: 25
+			},
+			{
+				type: 'start',
+				name: 'Future',
+				y: (new Date()).getFullYear()+1,
+				m: 0
+			},
+			{
+				type: 'continue',
+				name: 'Future'
 			}
 		],
 		desc: 'TODO.',
@@ -1693,6 +1713,16 @@ Aei.Tables.Project = [
 				y: 2013,
 				m: 10,
 				d: 30
+			},
+			{
+				type: 'start',
+				name: 'Future',
+				y: (new Date()).getFullYear()+1,
+				m: 0
+			},
+			{
+				type: 'continue',
+				name: 'Future'
 			}
 		],
 		desc: 'This web application is built to display photos and to visualize their metadata. It features a full-screen photo viewer, user-tagging functionality, and responsive layouts. This website uses Fabric to collect and organize information about every photo, and (in future versions) will use this information to highlight and visualize interesting relationships between them.',

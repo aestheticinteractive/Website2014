@@ -8,7 +8,7 @@ Aei.Pages.Timeline = function(projects, events) {
 	this._firstDate = new Date(1999, 11, 2);
 	this._firstDateTime = this._firstDate.getTime();
 	this._today = new Date();
-	this._height = 300;
+	this._height = 400;
 };
 
 Aei.Pages.Timeline.MsPerDay = 24*3600*1000;
@@ -212,7 +212,7 @@ Aei.Pages.Timeline.prototype._buildEvents = function() {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Timeline.prototype._buildProjects = function() {
 	var	lblConfig = {
-		fill: 'rgba(255, 255, 255, 0.5)',
+		fill: 'rgba(255, 255, 255, 0.666)',
 		font: 'Tahoma',
 		fontSize: 10,
 		align: 'left'
@@ -220,6 +220,8 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 
 	var linesData = this._linesData;
 	var laneMaxDates = [];
+	var laneH = 20;
+	var centerY = Math.round(this._height*0.35);
 	var li, lineData, ii, item, lineI, lineMinDatePlus, laneMaxDate, 
 		px, py, projLbl, rangeLine, rangeBox, eventDot;
 
@@ -230,7 +232,7 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 			continue;
 		}
 
-		lineI = 0;
+		lineI = 1;
 		lineMinDatePlus = new Date(lineData.minDate);
 		lineMinDatePlus.setDate(lineMinDatePlus.getDate()-30);
 
@@ -245,17 +247,16 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 			++lineI;
 		}
 		
+		lineI = Math.floor(lineI/2)*(lineI % 2 ? -1 : 1);
 		px = this._getDatePos(lineData.minDate);
-		py = 40+0.5+lineI*30;
+		py = centerY+lineI*(laneH+10);
 
-		rangeLine = new Kinetic.Line({
-			y: py+10+0.5,
-			points: [
-				px, 0,
-				this._getDatePos(lineData.maxDate), 0
-			],
-			stroke: 'rgba(255, 255, 255, 0.1)',
-			strokeWidth: 4
+		rangeLine = new Kinetic.Rect({
+			x: px,
+			y: py,
+			width: this._getDatePos(lineData.maxDate)-px,
+			height: laneH,
+			fill: 'rgba(255, 255, 255, 0.075)'
 		});
 		this._layerProj.add(rangeLine);
 
@@ -263,7 +264,7 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 		projLbl
 			.text(lineData.project.id)
 			.x(px+3)
-			.y(py+(20-projLbl.height())/2+1);
+			.y(py+(laneH-projLbl.height())/2+1);
 		this._layerProj.add(projLbl);
 
 		for ( ii in lineData.items ) {
@@ -276,13 +277,11 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 			px = this._getDatePos(item.start);
 
 			rangeBox = new Kinetic.Rect({
-				x: px+0.5,
-				y: py+0.5,
+				x: px,
+				y: py,
 				width: this._getDatePos(item.end)-px,
-				height: 20,
-				fill: 'rgba(255, 255, 255, 0.2)',
-				stroke: 'rgba(255, 255, 255, 0.5)',
-				strokeWidth: 1
+				height: laneH,
+				fill: 'rgba(255, 255, 255, 0.3)'
 			});
 			this._layerProj.add(rangeBox);
 		}
@@ -296,7 +295,7 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 
 			eventDot = new Kinetic.Circle({
 				x: this._getDatePos(item.occur),
-				y: py+10,
+				y: py+laneH/2,
 				radius: 4,
 				fill: 'rgba(255, 255, 255, 0.5)'
 			});
