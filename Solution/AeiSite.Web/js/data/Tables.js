@@ -616,7 +616,7 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
-		weight: 1
+		weight: 0.97
 	},
 	{
 		id: 'fabricweb',
@@ -932,7 +932,7 @@ Aei.Tables.Project = [
 				weight: 0.8
 			}
 		],
-		weight: 1
+		weight: 0.96
 	},
 	{
 		id: 'weaver',
@@ -1076,7 +1076,7 @@ Aei.Tables.Project = [
 				weight: 0.0
 			}*/
 		],
-		weight: 1
+		weight: 0.93
 	},
 	{
 		id: 'rexconnect',
@@ -1262,7 +1262,7 @@ Aei.Tables.Project = [
 				weight: 0.0
 			}*/
 		],
-		weight: 1
+		weight: 0.92
 	},
 	{
 		id: 'idashhtml',
@@ -1379,7 +1379,7 @@ Aei.Tables.Project = [
 				weight: 0.8
 			}
 		],
-		weight: 1
+		weight: 0.99
 	},
 	{
 		id: 'fragmentalleap',
@@ -1826,7 +1826,7 @@ Aei.Tables.Project = [
 				weight: 0.65
 			}
 		],
-		weight: 0.98
+		weight: 0.95
 	},
 	{
 		id: 'trellovision',
@@ -2249,7 +2249,7 @@ Aei.Tables.Project = [
 				weight: 0.8
 			}
 		],
-		weight: 1
+		weight: 0.94
 	},
 	{
 		id: 'journeyful',
@@ -2572,7 +2572,7 @@ Aei.Tables.Project = [
 				weight: 0.4
 			}
 		],
-		weight: 0.99
+		weight: 0.98
 	},
 	{
 		id: 'lessonvision',
@@ -2704,7 +2704,7 @@ Aei.Tables.Project = [
 				weight: 0.7
 			}
 		],
-		weight: 0.95
+		weight: 0.85
 	},
 	
 	{
@@ -2845,7 +2845,7 @@ Aei.Tables.Project = [
 				weight: 0.75
 			}
 		],
-		weight: 0.98
+		weight: 0.91
 	},
 	{
 		id: 'idashboards',
@@ -2991,7 +2991,7 @@ Aei.Tables.Project = [
 				weight: 0.8
 			}
 		],
-		weight: 0.98
+		weight: 0.84
 	},
 	{
 		id: 'dtmkiosk',
@@ -3108,7 +3108,7 @@ Aei.Tables.Project = [
 				weight: 0.75
 			}
 		],
-		weight: 0.94
+		weight: 0.86
 	},
 	{
 		id: '1100rooms',
@@ -3792,7 +3792,7 @@ Aei.Tables.Project = [
 				weight: 0.0
 			}*/
 		],
-		weight: 0.5
+		weight: 0.42
 	},
 	{
 		id: 'dormtshirts',
@@ -4174,7 +4174,7 @@ Aei.Tables.Project = [
 				weight: 0.0
 			}*/
 		],
-		weight: 0.5
+		weight: 0.6
 	},
 	{
 		id: 'rotator',
@@ -4261,7 +4261,7 @@ Aei.Tables.Project = [
 				weight: 0.0
 			}*/
 		],
-		weight: 0.5
+		weight: 0.61
 	},
 	{
 		id: 'aei2007',
@@ -4387,7 +4387,7 @@ Aei.Tables.Project = [
 				weight: 0.98
 			}
 		],
-		weight: 0.6
+		weight: 0.59
 	},
 	{
 		id: 'harriscalc',
