@@ -345,6 +345,7 @@ Aei.Tables.Project = [
 	//TODO: chandra anim?
 	//TODO: wixplorer?
 	//TODO: flash frameworks: volume, core?
+	//TODO: multiplayer flash (school project)?
 	{
 		id: 'fabricapi',
 		name: 'Fabric',
@@ -2756,7 +2757,7 @@ Aei.Tables.Project = [
 		],
 		desc: 'TODO.',
 		url: 'iDashboards.com',
-		imageCount: 0,
+		imageCount: 9,
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
@@ -5173,7 +5174,7 @@ Aei.Tables.Project = [
 		],
 		desc: 'Featuring a massive 11\'x11\' mural, this assortment of styles and mediums reveals a solid artistic foundation.',
 		url: null,
-		imageCount: 8,
+		imageCount: 9,
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
