@@ -330,6 +330,8 @@ Aei.Tables.Skill = [
 	}
 	//autonomy/drive?
 	//unit testing
+	//architecture
+	//fluent API
 ];
 
 for ( var i in Aei.Tables.Skill ) {
@@ -1015,33 +1017,29 @@ Aei.Tables.Project = [
 		github: 'inthefabric/Weaver',
 		imageCount: 6,
 		services: [
-			/*{
+			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: '',
-				weight: 0
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0
+				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: '',
-				weight: 0
+				weight: 0.95
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: '',
-				weight: 0
+				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 0.99
+			}
 		],
 		systems: [
+			//TODO: none/library/.net?
 			/*{
 				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
 				desc: '',
@@ -1049,32 +1047,42 @@ Aei.Tables.Project = [
 			}*/
 		],
 		teams: [
-			/*{
+			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
 				weight: 1
-			}*/
+			}
 		],
 		languages: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'grem'),
+				desc: '',
+				weight: 0.99
+			}
 		],
 		products: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			}
 		],
 		skills: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
 				desc: '',
-				weight: 0.0
-			}*/
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				desc: '',
+				weight: 0.4
+			}
 		],
 		weight: 0.93
 	},
@@ -1201,33 +1209,29 @@ Aei.Tables.Project = [
 		github: 'inthefabric/RexConnect',
 		imageCount: 6,
 		services: [
-			/*{
+			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: '',
-				weight: 0
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0
+				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: '',
-				weight: 0
+				weight: 0.95
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: '',
-				weight: 0
+				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 0.99
+			}
 		],
 		systems: [
+			//TODO: none/library/.net?
 			/*{
 				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
 				desc: '',
@@ -1235,32 +1239,48 @@ Aei.Tables.Project = [
 			}*/
 		],
 		teams: [
-			/*{
+			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
 				weight: 1
-			}*/
+			}
 		],
 		languages: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'java'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'grem'),
+				desc: '',
+				weight: 0.4
+			}
 		],
 		products: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'rex'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			}
 		],
 		skills: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+			//TCP/networking
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
 				desc: '',
-				weight: 0.0
-			}*/
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				desc: '',
+				weight: 0.4
+			}
 		],
 		weight: 0.92
 	},
@@ -3731,66 +3751,77 @@ Aei.Tables.Project = [
 		url: null,
 		imageCount: 5,
 		services: [
-			/*{
+			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: '',
-				weight: 0
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0
+				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: '',
-				weight: 0
+				weight: 0.4
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: '',
-				weight: 0
+				weight: 0.2
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 0.2
+			}
 		],
 		systems: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
-				desc: '',
-				weight: 0
-			}*/
-		],
-		teams: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
 				weight: 1
-			}*/
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 0.6
+			}
 		],
 		languages: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
 				weight: 0
-			}*/
+			}
 		],
 		products: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			}
+			//Adobe AIR
 		],
 		skills: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
-				weight: 0.0
-			}*/
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 1
+			}
 		],
 		weight: 0.42
 	},
@@ -4113,66 +4144,76 @@ Aei.Tables.Project = [
 		url: null,
 		imageCount: 9,
 		services: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
-				weight: 0
-			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: '',
-				weight: 0
+				weight: 0.5
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: '',
-				weight: 0
+				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: '',
-				weight: 0
+				weight: 0.2
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 0.2
+			}
 		],
 		systems: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
-				desc: '',
-				weight: 0
-			}*/
-		],
-		teams: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
 				weight: 1
-			}*/
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: '',
+				weight: 0.3
+			}
 		],
 		languages: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 0.3
+			}
 		],
 		products: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			}
 		],
 		skills: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: '',
-				weight: 0.0
-			}*/
+				weight: 0.75
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
+				desc: '',
+				weight: 0.99
+			}
 		],
 		weight: 0.6
 	},
@@ -4200,66 +4241,106 @@ Aei.Tables.Project = [
 		url: null,
 		imageCount: 3,
 		services: [
-			/*{
+			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
 				desc: '',
-				weight: 0
+				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
 				desc: '', //designed the entire UI
-				weight: 0
+				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
 				desc: '',
-				weight: 0
+				weight: 0.85
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: '',
-				weight: 0
+				weight: 0.75
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 0.2
+			}
 		],
 		systems: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			}
 		],
 		teams: [
-			/*{
+			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
 				desc: '',
 				weight: 1
-			}*/
+			}
 		],
 		languages: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'php'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
+				desc: '',
+				weight: 0.98
+			}
 		],
 		products: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: '',
-				weight: 0
-			}*/
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'mysql'),
+				desc: '',
+				weight: 0.99
+			}
 		],
 		skills: [
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'xxx'),
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
-				weight: 0.0
-			}*/
+				weight: 1
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: '',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				desc: '',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
+				desc: '',
+				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: '',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
+				desc: '',
+				weight: 0.95
+			}
 		],
 		weight: 0.61
 	},

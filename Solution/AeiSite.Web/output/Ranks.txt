@@ -56,6 +56,8 @@
 0.960 fabricweb
 0.950 kinstnerphoto
 0.940 fragmental
+0.930 weaver
+0.920 rexconnect
 0.910 idashapp
 0.860 dtmkiosk
 0.850 lessonvision
@@ -70,8 +72,10 @@
 0.680 briankelly
 0.670 teneo
 0.660 1100rooms
+0.610 rotator
 0.590 aei2007
 0.568 portfolio
+0.420 homelink
 0.380 harriscalc
 0.370 spechealth
 0.350 siennabakery
@@ -102,6 +106,7 @@
 0.728 alifesim
 0.693 gvsuamasite
 0.614 harrisicons
+0.604 rotator
 0.584 aei2007
 0.574 portfolio
 0.544 skins
@@ -109,6 +114,7 @@
 0.495 art
 0.432 dormtshirts
 0.430 dtmkiosk
+0.300 actionoffice
 0.297 illandlev
 0.294 sketchtracer
 0.200 oldportfolio
@@ -136,6 +142,8 @@
 0.941 kinstnerphoto
 0.931 fragmental
 0.901 idashapp
+0.883 weaver
+0.874 rexconnect
 0.842 idashhtml
 0.802 trellovision
 0.792 hardlines
@@ -144,10 +152,12 @@
 0.714 idashboards
 0.686 gvsuamasite
 0.620 harrisicons
+0.600 actionoffice
 0.580 portfolio
 0.578 aei2007
 0.550 skins
 0.540 dormtshirts
+0.518 rotator
 0.500 art
 0.425 lessonvision
 0.300 illandlev
@@ -157,6 +167,7 @@
 0.238 briankelly
 0.200 illumballs
 0.190 oldportfolio
+0.168 homelink
 0.168 teneo
 
 
@@ -169,6 +180,8 @@
 0.922 fabricweb
 0.921 kinstnerphoto
 0.912 fragmental
+0.837 weaver
+0.828 rexconnect
 0.786 trellovision
 0.776 hardlines
 0.766 aei2009
@@ -176,6 +189,7 @@
 0.679 gvsuamasite
 0.572 aei2007
 0.563 portfolio
+0.458 rotator
 0.396 idashhtml
 0.212 lessonvision
 0.182 idashapp
@@ -187,6 +201,8 @@
 0.134 teneo
 0.132 1100rooms
 0.124 harrisicons
+0.120 actionoffice
+0.084 homelink
 0.076 harriscalc
 0.074 spechealth
 0.070 siennabakery
@@ -202,7 +218,9 @@
 0.951 journeyful
 0.950 fabricweb
 0.941 fabricapi
+0.921 weaver
 0.912 kinstnerphoto
+0.911 rexconnect
 0.846 fragmental
 0.768 hardlines
 0.758 aei2009
@@ -223,11 +241,14 @@
 0.198 1100rooms
 0.186 harrisicons
 0.150 oldportfolio
+0.122 rotator
+0.120 actionoffice
 0.114 harriscalc
 0.111 spechealth
 0.105 siennabakery
 0.099 zkmusic
 0.090 oakwoodmaps
+0.084 homelink
 0.075 elexiconblog
 0.045 sysmaintmap
 
@@ -255,6 +276,7 @@
 0.720 dormtshirts
 0.700 gvsuamasite
 0.643 idashhtml
+0.610 rotator
 0.608 trellovision
 0.592 idashapp
 0.590 aei2007
@@ -264,7 +286,9 @@
 0.544 briankelly
 0.536 teneo
 0.528 1100rooms
+0.378 homelink
 0.370 spechealth
+0.368 rexconnect
 0.342 harriscalc
 0.280 siennabakery
 0.270 oakwoodmaps
@@ -293,10 +317,12 @@
 0.684 footvolley
 0.640 hardlines
 0.602 dtmkiosk
+0.598 rotator
 0.584 aei2007
 0.560 gvsuamasite
 0.504 dormtshirts
 0.469 teneo
+0.450 actionoffice
 0.385 skins
 0.340 briankelly
 0.248 harrisicons
@@ -335,6 +361,7 @@
 0.588 idashboards
 0.550 skins
 0.406 portfolio
+0.244 rotator
 0.210 gvsuamasite
 0.200 art
 0.200 illumballs
@@ -353,6 +380,8 @@
 0.645 dtmkiosk
 0.637 journeyful
 0.632 aei2009
+0.604 rotator
+0.600 actionoffice
 0.510 lessonvision
 0.503 teneo
 0.472 aei2007
@@ -366,6 +395,7 @@
 0.272 briankelly
 0.182 idashapp
 0.180 illandlev
+0.168 homelink
 0.140 illumballs
 0.120 oakwoodmaps
 0.120 oldportfolio
@@ -403,6 +433,7 @@
 0.432 dormtshirts
 0.396 idashhtml
 0.380 harriscalc
+0.372 weaver
 0.100 illumballs
 
 
@@ -416,6 +447,8 @@
 0.636 teneo
 0.627 1100rooms
 0.612 briankelly
+0.594 actionoffice
+0.420 homelink
 0.360 dormtshirts
 0.350 siennabakery
 0.333 spechealth
@@ -432,6 +465,7 @@
 0.883 fabricweb
 0.760 hardlines
 0.630 gvsuamasite
+0.580 rotator
 0.325 aei2007
 0.245 journeyful
 
@@ -442,9 +476,11 @@
 0.960 fabricapi
 0.941 fabricweb
 0.921 kinstnerphoto
+0.920 rexconnect
 0.720 hardlines
 0.713 dormtshirts
 0.665 gvsuamasite
+0.592 rotator
 0.295 aei2007
 
 
@@ -461,6 +497,8 @@
 0.941 fabricapi
 0.941 fabricweb
 0.931 journeyful
+0.930 weaver
+0.911 rexconnect
 0.792 idashhtml
 0.682 idashapp
 0.672 idashboards
@@ -493,6 +531,7 @@
 0.970 fabricapi
 0.960 fabricweb
 0.950 kinstnerphoto
+0.930 weaver
 0.343 journeyful
 
 
@@ -558,6 +597,7 @@
 0.720 dormtshirts
 0.680 briankelly
 0.670 teneo
+0.610 rotator
 0.590 aei2007
 0.580 portfolio
 0.561 1100rooms
@@ -570,6 +610,7 @@
 0.210 gvsuamasite
 0.200 illumballs
 0.200 oldportfolio
+0.180 actionoffice
 0.150 sysmaintmap
 0.100 zkmusic
 
@@ -580,6 +621,7 @@
 0.855 kinstnerphoto
 0.792 hardlines
 0.706 dormtshirts
+0.598 rotator
 0.490 journeyful
 0.388 fabricapi
 0.295 aei2007
@@ -591,17 +633,21 @@
 
 0.960 fabricapi
 0.950 fabricweb
+0.921 weaver
+0.368 rexconnect
 
 
 ---
 ### languages: Java
 
+0.920 rexconnect
 
 
 ---
 ### languages: PHP
 
 0.713 dormtshirts
+0.604 rotator
 0.250 elexiconblog
 0.170 lessonvision
 
@@ -661,6 +707,7 @@
 
 0.960 fabricweb
 0.951 fabricapi
+0.930 weaver
 0.902 kinstnerphoto
 0.900 fragmentalleap
 0.400 hardlines
@@ -709,8 +756,11 @@
 0.720 dormtshirts
 0.680 briankelly
 0.670 teneo
+0.610 rotator
+0.600 actionoffice
 0.590 aei2007
 0.580 portfolio
+0.420 homelink
 0.380 harriscalc
 0.370 spechealth
 0.350 siennabakery
@@ -752,6 +802,7 @@
 
 0.921 kinstnerphoto
 0.713 dormtshirts
+0.604 rotator
 0.388 fabricapi
 0.245 journeyful
 
@@ -773,6 +824,7 @@
 ### products: Rexster
 
 0.960 fabricapi
+0.920 rexconnect
 0.768 fabricweb
 
 
@@ -841,8 +893,11 @@
 0.673 briankelly
 0.670 teneo
 0.648 dormtshirts
+0.610 rotator
+0.600 actionoffice
 0.584 aei2007
 0.580 portfolio
+0.420 homelink
 0.380 harriscalc
 0.370 spechealth
 0.350 siennabakery
@@ -866,6 +921,8 @@
 0.950 kinstnerphoto
 0.941 idashhtml
 0.940 fragmental
+0.930 weaver
+0.920 rexconnect
 0.910 idashapp
 0.882 journeyful
 0.860 dtmkiosk
@@ -882,6 +939,7 @@
 0.670 teneo
 0.660 1100rooms
 0.620 harrisicons
+0.610 rotator
 0.590 aei2007
 0.580 portfolio
 0.550 skins
@@ -890,8 +948,10 @@
 0.300 illandlev
 0.300 sketchtracer
 0.259 spechealth
+0.252 homelink
 0.200 illumballs
 0.200 oldportfolio
+0.180 actionoffice
 0.140 siennabakery
 0.120 oakwoodmaps
 0.100 elexiconblog
@@ -907,8 +967,10 @@
 0.648 footvolley
 0.612 briankelly
 0.603 teneo
+0.600 actionoffice
 0.594 1100rooms
 0.510 lessonvision
+0.420 homelink
 0.288 dormtshirts
 0.210 siennabakery
 0.190 harriscalc
