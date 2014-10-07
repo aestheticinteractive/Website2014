@@ -24,6 +24,10 @@ Aei.Controllers.Menu = function(/*$route, $routeParams,*/ $location) {
 			url: '/Projects'
 		},
 		{
+			name: 'Services',
+			url: '/Services'
+		},
+		{
 			name: 'Tags',
 			url: '/Tags'
 		},
@@ -47,9 +51,6 @@ Aei.Controllers.Home = function($rootScope, $scope) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Projects = function($rootScope, $scope) {
-	$rootScope.tag = 'Home';
-	$rootScope.title = 'Aesthetic Interactive';
-
 	$scope.model = {
 		projects: Aei.Database.selectList(Aei.Tables.Project)
 	};
@@ -67,7 +68,7 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 	var minDate = new Date(3000, 0, 1);
 	var maxDate = new Date(1000, 0, 1);
 
-	var i, item, d, name;
+	var i, item, d;
 	
 	for ( i in proj.timeline ) {
 		item = proj.timeline[i];
@@ -92,6 +93,34 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 	$rootScope.tag = 'Project';
 	$rootScope.title = proj.name;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Projects']);
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.Services = function($rootScope, $scope) {
+	$scope.model = {
+		services: Aei.Database.selectList(Aei.Tables.Service)
+	};
+	
+	$rootScope.tag = 'Section';
+	$rootScope.title = 'Services';
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.Service = function($rootScope, $scope, $routeParams) {
+	var serv = Aei.Database.selectByUniqueProperty(Aei.Tables.Service, 'link', $routeParams.link);
+	//TODO: redirect if project not found (also do this for other detail pages)
+
+	$scope.model = {
+		service: serv,
+		page: null //new Aei.Pages.Project(proj)
+	};
+	
+	$rootScope.tag = 'Service';
+	$rootScope.title = serv.name;
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Services']);
 };
 
 

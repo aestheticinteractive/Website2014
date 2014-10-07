@@ -2,42 +2,39 @@
 	<div class="row">
 	
 		<div class="large-4 columns">
-			<h3>The whole package</h3>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend magna vitae elit 
-				ultricies lacinia. Integer at lacus in nulla tristique tristique. Maecenas in vehicula 
-				nisl. Maecenas cursus vestibulum volutpat. Vestibulum vehicula velit sit amet sem 
-				imperdiet, vel lobortis nisl venenatis. Sed imperdiet tempus diam et feugiat. Sed vel 
-				suscipit odio. Duis ut libero varius, elementum neque et, ultricies enim. 
-			</p>
+		</div>
 
-			<h3>Getting it done</h3>
+		<div class="large-8 columns">
 			<p>
-				Vivamus ac nunc tempor, tempor enim sit amet, fermentum metus. Donec pretium eget ante 
-				ut aliquet. Cras sodales tortor vehicula nunc dictum iaculis. Integer suscipit tempus 
-				magna quis mattis.
+				Aesthetic Interactive combines a wide range of services to create high-quality, 
+				great-looking software products. 
+			</p>
+			<p>
+				On an Aesthetic Interactive project, development and design operate in unison, 
+				creativity flows at full-force, communication is clear and constant, and effective 
+				project management keeps it all on track.
 			</p>
 		</div>
-		
-		<div class="large-8 columns">
-		
-			<table>
-				<thead>
-					<th style="width: 33%;">Service</th>
-					<th>Description</th>
-				</thead>
-				<tbody>
-					<tr ng-repeat="serv in model.services" style="width: 100%;">
-						<td>
-							<a href="#/Services/{{serv.link}}">{{serv.name}}</a>
-						</td>
-						<td>
-							{{serv.desc}}
-						</td>
-					</tr>
-				</tbody>
-			</table>
 
+	</div>
+</section>
+
+<section class="content" ng-repeat="serv in model.services">
+	<div class="row">
+	
+		<div class="large-4 columns">
+		</div>
+
+		<div class="large-8 columns">
+			<h2>
+				{{serv.name}}
+			</h2>
+			<div tag-markdown paragraphs="serv.desc"></div>
+			<p style="margin-top: 15px;">
+				<a href="#/Tags/Services/{{serv.link}}">
+					See top projects with the '{{serv.name}}' tag&gt;
+				</a>
+			</p>
 		</div>
 
 	</div>

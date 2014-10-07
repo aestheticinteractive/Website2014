@@ -78,7 +78,7 @@ Aei.RouteBuilder = function($routeProvider) {
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Angular = angular
-	.module('Aei', ['ngRoute'])
+	.module('Aei', ['ngRoute', 'ngSanitize'])
 	.config(['$routeProvider', Aei.RouteBuilder]);
 
 
@@ -136,3 +136,26 @@ Aei.Angular.directive('initPageAfterRender', function() {
 		}
 	};
 });
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Angular.directive('tagMarkdown', ['$sanitize', function($sanitize) {
+	return {
+		scope: {
+			paragraphs: '=paragraphs'
+		},
+		link: function compile(scope, element, attrs, controller) {
+            scope.$watch('ngModel', function(value) {
+				scope.markdowns = [];
+				var i, html;
+
+				for ( i in scope.paragraphs ) {
+					html = scope.paragraphs[i]
+						.replace(/\n-/g, "<br/>&bullet;");
+
+					scope.markdowns[i] = $sanitize(html);
+				}
+            });
+        },
+		templateUrl: 'views/_TagMarkdown.html'
+	};
+}]);

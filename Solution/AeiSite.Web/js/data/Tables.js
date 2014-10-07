@@ -18,27 +18,61 @@ Aei.Tables.Service = [
 	{
 		id: 'dev',
 		name: 'Development',
-		desc: 'Planning and building software.'
-	},
-	{
-		id: 'des',
-		name: 'Design',
-		desc: 'Creating new visual designs.'
+		desc: [
+			'If you look beyond the beautiful exterior of any Aesthetic Interactive project, you\'ll discover the serious software development that makes it all happen. Around here, fantastic interfaces and wonderful user experiences always begin with elegant, high-caliber code.',
+
+			'When Aesthetic Interactive builds your next project, you can expect:'+
+			'\n- Code that is clean, readable, consistent, and well-organized.'+
+			'\n- Architecture that forms solid project foundations, provides modularity, and promotes extensibility.'+
+			'\n- Features that are constantly confirmed via automated unit testing.'+
+			'\n- Final products that are polished, complete, stable, and optimized.',
+
+			'Alone, these development traits are often enough to complete a project successfully. Aesthetic Interactive\'s combination of technical and creative services, however, creates the opportunity for world-class results.'
+		]
 	},
 	{
 		id: 'cre',
 		name: 'Creative',
-		desc: 'Brainstorming new ideas for features, solutions, and business.'
+		desc: [
+			'For Aesthetic Interactive projects, a "brainstorm" is not some one-time event. Instead, brainstorming is a continuous cycle that begins before the first lines of code are written, and often extends beyond the delivery of a finished product.',
+
+			'This non-stop creativity generates new ideas for projects, solutions for challenging issues, interesting features, exciting visual effects, and unique user experiences.',
+
+			'With knowledge and experience ranging from extreme technical details to big picture business goals, Aesthetic Interactive\'s creative services are insightful, relevant, and valuable to any project.'
+		]
+	},
+	{
+		id: 'des',
+		name: 'Design',
+		desc: [
+			'The artistic, visual, right-brained world of design is often completely foreign to software developers. For Aesthetic Interactive, however, visual design is a core focus of every software project. You can be sure your project will be beautiful, inside and out.',
+
+			'This focus on design can take various forms. Aesthetic Interactive can implement your existing designs with pixel-perfect precision, generate brand new designs, or expand upon basic design guidelines whenever a project requires something new.',
+
+			'From interacting in immersive 3D space to navigating a simple web form, Aesthetic Interactive is committed to the design of beautiful, usable, and engaging user experiences.'
+		]
 	},
 	{
 		id: 'mgt',
 		name: 'Project Management',
-		desc: 'Organizing teams, planning features, making decisions, etc.'
+		desc: [
+			'Effective planning and organization is a crucial part of a project\'s success. That\'s why project management services are a built-in part of every Aesthetic Interactive project.',
+
+			'Simple projects often have limited management needs. Aesthetic Interactive will work to discover project requirements, provide estimates, plan schedules, and self-manage all tasks until the project is complete.',
+			
+			'As project complexities grow, so do its management needs. Aesthetic Interactive assists by organizing and structuring requirements, reviewing and prioritizing efforts, identifying and ordering dependencies within the project, coordinating schedules and discussions between teams, and so on.'
+		]
 	},
 	{
 		id: 'com',
 		name: 'Communication',
-		desc: 'Creating content (text, graphics, audio, etc.) for presenting ideas, goals, requirements, and documentation.'
+		desc: [
+			'Building software is a complex process, filled with complex challenges, ideas, decisions, and technical concepts. Aesthetic Interactive excels at communicating these details clearly, so that all stakeholders can stay informed and involved as a project progresses.',
+			
+			'On an Aesthetic Interactive project, communication could be written, visual, spoken, internal to the project, or presented externally for the user. It might include development notes, detailed feature diagrams, solution descriptions, discussions about important project decisions, technical documentation, user instructions, and more.',
+			
+			'Aesthetic Interactive strives to tailor communication styles to the target audience. This often includes "translating" concepts between developers, designers, managers, and business stakeholders. Such efforts improve awareness among all participants, promotes collaboration, and helps produce the best possible results.'
+		]
 	}
 ];
 
