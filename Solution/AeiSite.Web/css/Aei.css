@@ -175,6 +175,12 @@ section.content + section.content {
 	margin-top: 8px;
 }
 
+section.content article + article {
+	margin-top: 20px;
+	padding-top: 15px;
+	border-top: 2px solid #444;
+}
+
 section.content h2 {
 	color: #ddd;
 	font-size: 20px;
@@ -187,7 +193,21 @@ section.content h3 {
 	text-transform: uppercase;
 	margin: 0;
 }
+
+section.content p.intro {
+	font-size: 16px;
+	color: #aaa;
+}
+
+@media only screen and (max-width: 40.063em) { /* < medium */
 	
+	section.content p.intro {
+		font-size: 14px;
+		color: #bbb;
+	}
+
+}
+
 section.content p + h3 {
 	margin-top: 10px;
 }

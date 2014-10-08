@@ -98,9 +98,15 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Services = function($rootScope, $scope) {
+Aei.Controllers.Services = function($rootScope, $scope, $location, $anchorScroll) {
+	console.log($anchorScroll);
+
 	$scope.model = {
-		services: Aei.Database.selectList(Aei.Tables.Service)
+		services: Aei.Database.selectList(Aei.Tables.Service),
+		scrollToAnchor: function(anchor) {
+			$location.hash(anchor);
+			$anchorScroll();
+		}
 	};
 	
 	$rootScope.tag = 'Section';
@@ -108,7 +114,7 @@ Aei.Controllers.Services = function($rootScope, $scope) {
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
 };
 
-/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------* /
 Aei.Controllers.Service = function($rootScope, $scope, $routeParams) {
 	var serv = Aei.Database.selectByUniqueProperty(Aei.Tables.Service, 'link', $routeParams.link);
 	//TODO: redirect if project not found (also do this for other detail pages)
