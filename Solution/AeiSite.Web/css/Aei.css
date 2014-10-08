@@ -19,7 +19,7 @@ p, a, ul, li, td, th {
 	padding: 0;
 	color: #bbb;
 	font-size: 14px;
-	line-height: 18px;
+	line-height: 20px;
 }
 
 p, a, h1, h2, h3, h4, h5, ul, li, div, td, th {
@@ -210,8 +210,9 @@ section.intro + section.content {
 
 section.content h2 {
 	color: #ddd;
-	font-size: 20px;
-	margin: 0 0 10px 0;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0 0 5px 0;
 }
 
 section.content h3 {
