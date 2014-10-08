@@ -1,67 +1,98 @@
 
 <style>
 	
-	section.content div.buttonList {
-		margin: 20px 0 10px 0;
+	section.service {
+		padding: 0;
 	}
 	
-	section.content div.buttonList a {
-		display: -moz-inline-stack;
-		display: inline-block;
-		zoom: 1;
-		*display: inline;
-		
-		background-color: #333;
-		margin: 0 5px 5px 0;
-		padding: 4px 8px 6px 8px;
+	section.service .columns {
+		padding: 0;
+	}
+	
+	section.service table tbody tr {
+		background-color: transparent;
+	}
+	
+	section.service td.summary {
+		width: 33%;
+		background-color: #303030;
+		text-align: center;
+	}
+	
+	section.service td.text {
+		padding: 16px;
 	}
 
 	@media only screen and (max-width: 40.063em) { /* < medium */
 	
-		section.content div.buttonList {
-			margin-bottom: 20px;
-			padding-bottom: 15px;
-			border-bottom: 2px solid #444;
+		section.service {
+			overflow-x: scroll;
+		}
+		
+		section.service td.summary {
+			width: 50%;
+		}
+		
+		section.service table {
+			width: 200%;
 		}
 
 	}
 </style>
 
-<section class="content" ng-init="model.tab = model.services[0].id">
+
+<section class="intro">
+	<section class="content">
+		<div class="row">
+	
+			<div class="large-8 large-push-2 columns">
+				<p>
+					Aesthetic Interactive brings together a <em>complete range</em> of services to 
+					build <em>exceptional software</em> and <em>beautiful experiences</em>. 
+					<a href="" ng-click="model.scrollToAnchor('dev')">Development</a> and 
+					<a href="" ng-click="model.scrollToAnchor('des')">design</a> are <em>synchronized</em>, 
+					<a href="" ng-click="model.scrollToAnchor('cre')">creativity</a> <em>flows</em>,
+					<a href="" ng-click="model.scrollToAnchor('com')">communication</a> is 
+					<em>constant</em>, and <a href="" ng-click="model.scrollToAnchor('mgt')">management</a> 
+					keeps everything <em>on track</em>.
+				</p>
+			</div>
+
+		</div>
+	</section>
+</section>
+
+
+<section class="content service" ng-repeat="serv in model.services">
 	<div class="row">
 	
-		<div class="medium-4 columns">
-			<p class="intro">
-				Aesthetic Interactive combines a wide range of services to create high quality, 
-				great looking software products. 
-			</p>
-			<p class="intro">
-				On an Aesthetic Interactive project, development and design operate in unison, 
-				creativity flows at full-force, communication is clear and constant, and effective 
-				project management keeps it all on track.
-			</p>
-
-			<div class="buttonList">
-				<a href="" ng-repeat="serv in model.services" ng-click="model.scrollToAnchor(serv.id)">
-					{{serv.name}}
-				</a>
-			</div>
+		<div class="medium-12 columns">
+			<table>
+				<tr>
+					<td class="summary">
+						<h2>
+							{{serv.name}}
+						</h2>
+					</td>
+					<td class="text">
+						<a name="{{serv.id}}"></a>
+						<div tag-markdown paragraphs="serv.desc"></div>
+						<p style="margin-top: 15px;">
+							<a href="#/Tags/Services/{{serv.link}}">
+								Projects with the '{{serv.name}}' tag&gt;
+							</a>
+						</p>
+					</td>
+				</tr>
+			</table>
 		</div>
 
 		<div class="medium-8 columns">
-			<article ng-repeat="serv in model.services">
-				<a name="{{serv.id}}"></a>
-				<h2>
-					{{serv.name}}
-				</h2>
-				<div tag-markdown paragraphs="serv.desc"></div>
-				<p style="margin-top: 15px;">
-					<a href="#/Tags/Services/{{serv.link}}">
-						Projects with the '{{serv.name}}' tag&gt;
-					</a>
-				</p>
-			</article>
+			
 		</div>
 
 	</div>
 </section>
+
+
+<div init-page-after-render page="model.page"></div>

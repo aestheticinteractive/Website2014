@@ -20,12 +20,12 @@ Aei.Controllers.Menu = function(/*$route, $routeParams,*/ $location) {
 
 	this.items = [
 		{
-			name: 'Projects',
-			url: '/Projects'
-		},
-		{
 			name: 'Services',
 			url: '/Services'
+		},
+		{
+			name: 'Projects',
+			url: '/Projects'
 		},
 		{
 			name: 'Tags',
@@ -99,10 +99,9 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Services = function($rootScope, $scope, $location, $anchorScroll) {
-	console.log($anchorScroll);
-
 	$scope.model = {
 		services: Aei.Database.selectList(Aei.Tables.Service),
+		page: new Aei.Pages.Services(),
 		scrollToAnchor: function(anchor) {
 			$location.hash(anchor);
 			$anchorScroll();
@@ -112,21 +111,6 @@ Aei.Controllers.Services = function($rootScope, $scope, $location, $anchorScroll
 	$rootScope.tag = 'Section';
 	$rootScope.title = 'Services';
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
-};
-
-/*----------------------------------------------------------------------------------------------------* /
-Aei.Controllers.Service = function($rootScope, $scope, $routeParams) {
-	var serv = Aei.Database.selectByUniqueProperty(Aei.Tables.Service, 'link', $routeParams.link);
-	//TODO: redirect if project not found (also do this for other detail pages)
-
-	$scope.model = {
-		service: serv,
-		page: null //new Aei.Pages.Project(proj)
-	};
-	
-	$rootScope.tag = 'Service';
-	$rootScope.title = serv.name;
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Services']);
 };
 
 
