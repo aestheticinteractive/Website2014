@@ -21,25 +21,25 @@ Aei.Tables.Service = [
 		desc: 'High-caliber software development is the core of every project. Solid architectures, elegant code, well-tested features, and refined details produce fantastic results.'
 	},
 	{
+		id: 'des',
+		name: 'Design',
+		desc: 'Design is synchronized with development from the start. A committment to style, usability, precision, and engagement generates beautiful software experiences.'
+	},
+	{
 		id: 'cre',
 		name: 'Creative',
 		desc: 'Brainstorming is a non-stop, collaborative process. Knowledge ranging from technical details to big-picture concepts is the key to valuable, insightful solutions.'
 	},
 	{
-		id: 'des',
-		name: 'Design',
-		desc: 'Design is synchronized with development from the start. A committment to style, usability, precision, and engagement generates beautiful software experiences.'
+		id: 'com',
+		name: 'Communication',
+		desc: 'Clear, consistent communication reduces a project\'s complexity. Notes, summaries, diagrams, instructions, and documentation keep stakeholders informed and involved.'
 	},
 	{
 		id: 'mgt',
 		name: 'Project Management',
 		desc: 'Effective project management is essential. This includes organizing specs, estimating impacts, planning tasks, prioritizing goals, making decisions, and coordinating efforts.'
 	},
-	{
-		id: 'com',
-		name: 'Communication',
-		desc: 'Clear, consistent communication reduces a project\'s complexity. Notes, summaries, diagrams, instructions, and documentation keep stakeholders informed and involved.'
-	}
 ];
 
 for ( var i in Aei.Tables.Service ) {
