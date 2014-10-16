@@ -27,11 +27,6 @@ Aei.RouteBuilder = function($routeProvider) {
 			controller: Aei.Controllers.Services,
 			caseInsensitiveMatch: true
 		})
-		.when('/Services/:link', {
-			templateUrl: 'views/Service.html',
-			controller: Aei.Controllers.Service,
-			caseInsensitiveMatch: true
-		})
 		
 		.when('/Tags', {
 			templateUrl: 'views/Tags.html',

@@ -1,18 +1,211 @@
-<section class="content">
+
+<style>
+	header {
+		display: none;
+	}
+	
+	section.logo {
+		text-align: center;
+		padding: 80px 0 40px 0;
+	}
+	
+	section.intro {
+		padding: 40px 0;
+	}
+	
+	section.intro p {
+		line-height: 0px;
+	}
+	
+	section.intro .side {
+		width: 50%;
+		color: #ddd;
+		color: rgba(255, 255, 255, 0.75);
+		font-size: 36px;
+		line-height: 36px;
+		padding-top: 4px;
+		padding-bottom: 10px;
+	}
+	
+	section.intro .left {
+		text-align: right;
+		border-right: 1px solid #303030;
+		border-right: 1px solid rgba(255, 255, 255, 0.1);
+		padding-right: 15px;
+	}
+	
+	section.intro .right {
+		text-align: left;
+		border-left: 1px solid #303030;
+		border-left: 1px solid rgba(255, 255, 255, 0.1);
+		padding-left: 15px;
+	}
+	
+	section.intro .name {
+		color: #683;
+		font-size: 24px;
+		font-weight: bold;
+		margin-top: 8px;
+	}
+	
+	section.content p {
+		line-height: 24px;
+	}
+	
+	@media only screen and (max-width: 900px) {
+		section.logo {
+			padding: 60px 0 40px 0;
+		}
+		
+		section.logo img {
+			width: 150px;
+		}
+		
+		section.intro .side {
+			font-size: 28px;
+			line-height: 28px;
+		}
+		
+		section.intro .left {
+			padding-right: 10px;
+		}
+		
+		section.intro .right {
+			padding-left: 10px;
+		}
+		
+		section.intro .name {
+			font-size: 20px;
+			line-height: 20px;
+		}
+	}
+	
+	@media only screen and (max-width: 40.0em) { /* < medium */
+		section.logo {
+			padding: 40px 0 20px 0;
+		}
+		
+		section.logo img {
+			width: 100px;
+		}
+		
+		section.intro {
+			padding: 20px 0 25px 0;
+		}
+		
+		section.intro .side {
+			width: 100%;
+			padding: 0;
+			margin-bottom: 10px;
+			font-size: 24px;
+			line-height: 24px;
+		}
+		
+		section.intro .left {
+			text-align: center;
+			border: 0px solid #000;
+			padding: 0;
+		}
+		
+		section.intro .right {
+			text-align: center;
+			border: 0px solid #000;
+			padding: 0;
+		}
+		
+		section.intro .name {
+			font-size: 16px;
+			line-height: 16px;
+			margin-top: 4px;
+		}
+	}
+</style>
+
+
+<section class="logo">
+	<img src="img/Logo-Large-Dark.png" />
+</section>
+
+
+<section class="intro">
+	<p>
+		<span class="side left">
+			<span class="show-for-medium-up">
+				stunning experiences
+			</span>
+			<span class="hide-for-medium-up">
+				Stunning experiences.
+			</span>
+			<span class="name show-for-medium-up">
+				aesthetic
+			</span>
+		</span>
+		<span class="side right">
+			<span class="show-for-medium-up">
+				exceptional software
+			</span>
+			<span class="hide-for-medium-up">
+				Exceptional software.
+			</span>
+			<span class="name show-for-medium-up">
+				interactive
+			</span>
+		</span>
+	</p>
+	<div style="clear: both;"></div>
+	<div class="horizBar hide-for-medium-up">
+	</div>
+	<p class="name hide-for-medium-up">
+		aesthetic interactive
+	</p>
+</section>
+
+
+<section class="content service">
 	<div class="row">
 	
-		<div class="large-12 columns">
-		
-			<h3>
-				Home
-			</h3>
+		<div class="large-3 medium-6 columns">
+			<h2>
+				Services
+			</h2>
 			<p>
-				<a href="#/Projects">Projects</a><br/>
-				<a href="#/Services">Services</a><br/>
-				<a href="#/Skills">Skills</a><br/>
+				A range of <a href="#/Services">development and design services</a> fuse to create 
+				stunning experiences via exceptional software.
 			</p>
+		</div>
+		
+		<div class="large-3 medium-6 columns">
+			<h2>
+				Projects
+			</h2>
+			<p>
+				A large <a href="#/Projects">portfolio of projects</a> demonstrate proficiency and 
+				experience across a spectrum of domains and technologies.
+			</p>
+		</div>
+		
+		<div class="large-3 medium-6 columns">
+			<h2>
+				Tags
+			</h2>
+			<p>
+				Dive into specific <a href="#/Tags">service and skill tags</a> to find portfolio
+				projects that are most relevant to your next big idea.
+			</p>
+		</div>
 
+		<div class="large-3 medium-6 columns">
+			<h2>
+				Contact
+			</h2>
+			<p>
+				<a href="#/Contact">Get in touch</a> with Aesthetic Interactive to discuss your next
+				project.
+			</p>
 		</div>
 
 	</div>
 </section>
+
+
+<div init-page-after-render page="model.page"></div>
