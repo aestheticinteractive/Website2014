@@ -11,6 +11,9 @@
 	</head>
 
 	<body>
+		<div id="background">
+		</div>
+
 		<header ng-controller="Aei.Controllers.Menu as menu">
 			<div main-menu tag="tag" title="title" menu="menu">
 			</div>
@@ -34,14 +37,17 @@
 	<script src="js/data/Tables.js" ></script>
 	<script src="js/data/Queries.js" ></script>
 	<script src="js/pages/Project.js"></script>
-	<script src="js/pages/Timeline.js"></script>
 	<script src="js/pages/Services.js"></script>
+	<script src="js/viz/Background.js" ></script>
+	<script src="js/viz/Timeline.js"></script>
 	<script src="js/services.js" ></script>
 	<script src="js/controllers.js" ></script>
 	
 	<script>
 		console.log(Aei);
 		$(document).foundation();
+
+		var bg = new Aei.Background('background');
 	</script>
 
 </html>
