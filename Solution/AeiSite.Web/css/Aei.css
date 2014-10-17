@@ -224,13 +224,13 @@ section.intro section.content h2 {
 	border-bottom: 1px solid #404040;
 }
 	
-section.content + section.content {
+/*section.content + section.content {
 	margin-top: 2px;
 }
 	
 section.intro + section.content {
 	margin-top: 16px;
-}
+}*/
 
 section.content h2 {
 	color: #ddd;

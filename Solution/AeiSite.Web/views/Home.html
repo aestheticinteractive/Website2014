@@ -52,11 +52,13 @@
 		line-height: 24px;
 	}
 	
-	@media only screen and (max-width: 900px) {
-		section.logo {
-			padding: 60px 0 40px 0;
+	@media only screen and (max-width: 64.0em) { /* < large */
+	    section.logo {
+			padding: 40px 0 40px 0;
 		}
-		
+	}
+	
+	@media only screen and (max-width: 900px) {
 		section.logo img {
 			width: 150px;
 		}
@@ -82,7 +84,7 @@
 	
 	@media only screen and (max-width: 40.0em) { /* < medium */
 		section.logo {
-			padding: 40px 0 20px 0;
+			padding: 30px 0 30px 0;
 		}
 		
 		section.logo img {
