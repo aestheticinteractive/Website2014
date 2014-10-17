@@ -15,7 +15,13 @@ Aei.Background = function(containerId) {
 		me._handleResize();
 	});
 
+	
+	$(window).scroll(function() {
+		me._isScrolling = true;
+	});
+
 	this._handleResize();
+	this._redrawAnimFrame();
 };
 
 
@@ -28,22 +34,22 @@ Aei.Background.prototype._buildLineData = function() {
 		groups: [
 			{
 				slope: -0.125,
-				opacity: 1
+				color: '#bff'
 			},
 			{
 				slope: -5,
-				opacity: 0.666
+				color: '#ffb'
 			},
 			{
 				slope: 15,
-				opacity: 0.333
+				color: '#bfb'
 			}
 		]
 	};
 	
 	var stage = this._stage;
 	var gapSize = 50;
-	var layerOpacity = 0.04;
+	var layerOpacity = 0.05;
 	var i, g;
 
 	for ( i = 0 ; i < data.groups.length ; ++i ) {
@@ -68,12 +74,11 @@ Aei.Background.prototype._addLineData = function(width, height) {
 		return;
 	}
 
-	var i, g, offset, opac, px, lineI, lines, linesLen, line, isWithin;
+	var i, g, offset, px, lineI, lines, linesLen, line, isWithin;
 
 	for ( i = 0 ; i < data.groups.length ; ++i ) {
 		g = data.groups[i];
 		offset = height*g.slope;
-		opac = g.opacity;
 		px = (g.slopePos ? width : 0);
 		lineI = 0;
 		lines = g.lines;
@@ -98,9 +103,11 @@ Aei.Background.prototype._addLineData = function(width, height) {
 			}
 			else {
 				line = new Kinetic.Line({
-					stroke: 'rgba(255, 255, 255, '+opac+')',
+					opacity: this._getRandomOpacity(),
+					stroke: g.color, //'#fff',
 					strokeWidth: 1
 				});
+				line.animStep = -1;
 				g.layer.add(line);
 				lines[lineI] = line;
 			}
@@ -117,17 +124,20 @@ Aei.Background.prototype._addLineData = function(width, height) {
 	}
 };
 
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Background.prototype._getRandomOpacity = function() {
+	return Math.random()*0.9+0.1;
+};
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Background.prototype._handleResize = function() {
-	//var t0 = performance.now();
 	var stage = this._stage;
 	var sw = stage.width();
 	var sh = stage.height();
 	var w = window.innerWidth;
 	var h = window.innerHeight;
-	//var type = 'Resize';
 	this._addLineData(w, h);
 
 	if ( sw < w || sh < h ) {
@@ -137,9 +147,50 @@ Aei.Background.prototype._handleResize = function() {
 	}
 	else {
 		stage.draw();
-		//type = 'Draw';
+	}
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Background.prototype._redrawAnimFrame = function() {
+	var me = this;
+	
+	var handleTimeout = function() {
+		me._redrawAnimFrame();
+	};
+
+	setTimeout(handleTimeout, 250);
+
+	if ( this._isScrolling ) {
+		this._isScrolling = false;
+		return;
 	}
 
-	//var t1 = performance.now();
-	//$('#perform').html(type+': '+(t1-t0).toFixed(2)+' ms');
+	////
+
+	var data = this._lineData;
+	var i, g, lineI, lines, linesLen, line, prog, range;
+
+
+	for ( i = 0 ; i < data.groups.length ; ++i ) {
+		g = data.groups[i];
+		lines = g.lines;
+		linesLen = lines.length;
+
+		for ( lineI = 0 ; lineI < linesLen ; ++lineI ) {
+			line = lines[lineI];
+
+			if ( --line.animStep < 0 ) {
+				line.startOpac = line.opacity();
+				line.endOpac = this._getRandomOpacity();
+				line.animSteps = Math.round(Math.random()*8)+8; //2s to 4s @ 250ms FPS
+				line.animStep = line.animSteps;
+			}
+
+			prog = (1-line.animStep/line.animSteps);
+			range = line.endOpac-line.startOpac;
+			line.opacity(prog*range+line.startOpac);
+		}
+	}
+
+	this._stage.draw();
 };
