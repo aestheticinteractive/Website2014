@@ -8,7 +8,7 @@ Aei.Background = function(containerId) {
 	});
 
 	this._layerLinesA = new Kinetic.Layer();
-	this._layerLinesA.opacity(0.025);
+	this._layerLinesA.opacity(0.02);
 	this._stage.add(this._layerLinesA);
 
 	var me = this;
@@ -16,6 +16,10 @@ Aei.Background = function(containerId) {
 	$(window).resize(function() {
 		me._handleResize();
 	});
+
+	/*$(window).scroll(function(a, b, c) {
+		me._handleResize();
+	});*/
 
 	this._handleResize();
 };
@@ -26,13 +30,15 @@ Aei.Background = function(containerId) {
 Aei.Background.prototype._handleResize = function() {
 	var w = window.innerWidth;
 	var h = window.innerHeight;
+	//var scroll = $(window).scrollTop();
 
-	if ( this._width == w && this._height == h ) {
+	if ( this._width == w && this._height == h /*&& this._scroll == scroll*/ ) {
 		return;
 	}
 
 	this._width = w;
 	this._height = h;
+	//this._scroll = scroll;
 
 	this._layerLinesA.destroyChildren();
 
@@ -51,27 +57,28 @@ Aei.Background.prototype._handleResize = function() {
 		}
 	];
 
-	var i, style, offset, opac, px, slopePos;
+	var i, style, offset, opac, px, slopePos, gap;
 
 	for ( i = 0 ; i < styles.length ; ++i ) {
 		style = styles[i];
 		offset = h*style.slope;
 		opac = style.opacity;
 		slopePos = (style.slope > 0);
-		px = (slopePos  ? w : 0);
+		gap = 30*(1+Math.abs(style.slope))*(slopePos ? -1 : 1);
+		px = (slopePos ? w : 0);
 
 		while ( slopePos ? px+offset > 0 : px+offset < w ) {
 			var line = new Kinetic.Line({
 				points: [
-					px, 0,
-					px+offset, h
+					px, /*-scroll*opac*opac*/0,
+					px+offset, /*-scroll*opac*opac*/+h
 				],
 				stroke: 'rgba(255, 255, 255, '+opac+')',
-				strokeWidth: 1
+				strokeWidth: 1 //4*(opac*0.75+0.25)
 			});
 			this._layerLinesA.add(line);
 
-			px += 20*(1+Math.abs(style.slope))*(slopePos ? -1 : 1);
+			px += gap;
 		}
 	}
 
