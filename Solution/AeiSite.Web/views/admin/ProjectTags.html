@@ -13,11 +13,11 @@
 	<div class="row">
 		<div class="large-1 columns">
 			<p style="margin-bottom: 10px;">
-				<a href="#/Projects/{{proj.link}}">
+				<a ng-href="#/Projects/{{proj.link}}">
 					<img ng-src="img/projects/{{proj.id}}/icon.jpg" 
 							style="width: 100%;"/>
 				</a>
-				<a href="#/Projects/{{proj.link}}" style="font-size: 12px;">
+				<a ng-href="#/Projects/{{proj.link}}" style="font-size: 12px;">
 					{{proj.name}}
 				</a>
 			</p>
@@ -36,7 +36,7 @@
 								<td style="font-size: 12px;">
 									{{tag.item.name}}
 									<div class="barBg" title="{{tag.weight.dev}}">
-										<div class="barFill" style="width: {{tag.weight*100}}%;">
+										<div class="barFill" ng-style="{'width': tag.weight*100+'%'}">
 										</div>
 									</div>
 								</td>
@@ -55,7 +55,7 @@
 								<td style="font-size: 12px;">
 									{{tag.item.name}}
 									<div class="barBg" title="{{tag.weight.dev}}">
-										<div class="barFill" style="width: {{tag.weight*100}}%;">
+										<div class="barFill" ng-style="{'width': tag.weight*100+'%'}">
 										</div>
 									</div>
 								</td>
@@ -74,7 +74,7 @@
 								<td style="font-size: 12px;">
 									{{tag.item.name}}
 									<div class="barBg" title="{{tag.weight.dev}}">
-										<div class="barFill" style="width: {{tag.weight*100}}%;">
+										<div class="barFill" ng-style="{'width': tag.weight*100+'%'}">
 										</div>
 									</div>
 								</td>
@@ -93,7 +93,7 @@
 								<td style="font-size: 12px;">
 									{{tag.item.name}}
 									<div class="barBg" title="{{tag.weight.dev}}">
-										<div class="barFill" style="width: {{tag.weight*100}}%;">
+										<div class="barFill" ng-style="{'width': tag.weight*100+'%'}">
 										</div>
 									</div>
 								</td>
@@ -112,7 +112,7 @@
 								<td style="font-size: 12px;">
 									{{tag.item.name}}
 									<div class="barBg" title="{{tag.weight.dev}}">
-										<div class="barFill" style="width: {{tag.weight*100}}%;">
+										<div class="barFill" ng-style="{'width': tag.weight*100+'%'}">
 										</div>
 									</div>
 								</td>
@@ -131,7 +131,7 @@
 								<td style="font-size: 12px;">
 									{{tag.item.name}}
 									<div class="barBg" title="{{tag.weight.dev}}">
-										<div class="barFill" style="width: {{tag.weight*100}}%;">
+										<div class="barFill" ng-style="{'width': tag.weight*100+'%'}">
 										</div>
 									</div>
 								</td>

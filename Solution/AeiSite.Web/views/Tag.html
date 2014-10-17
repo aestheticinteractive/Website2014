@@ -78,17 +78,17 @@
 				<tbody>
 					<tr ng-repeat="use in model.tagUses">
 						<td class="imageCol">
-							<a href="#/Projects/{{use.project.link}}">
+							<a ng-href="#/Projects/{{use.project.link}}">
 								<img ng-src="img/projects/{{use.project.id}}/icon.jpg" 
 								     style="width: 70px;"/>
 							</a>
 						</td>
 						<td class="projCol">
-							<a href="#/Projects/{{use.project.link}}">{{use.project.name}}</a>:
+							<a ng-href="#/Projects/{{use.project.link}}">{{use.project.name}}</a>:
 							{{use.tag.desc}}
 							<br/>
 							<div class="barBg" title="{{use.serviceEntry.weight}} * {{use.project.weight}}">
-								<div class="barFill" style="width: {{use.weight*100}}%;">
+								<div class="barFill" ng-style="{'width': use.weight*100+'%'}">
 								</div>
 							</div>
 						</td>

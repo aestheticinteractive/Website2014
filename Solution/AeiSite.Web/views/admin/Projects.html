@@ -28,50 +28,50 @@
 				<tbody>
 					<tr ng-repeat="edit in model.edits | orderBy:predicate:reverse">
 						<td class="imageCol">
-							<a href="#/Projects/{{edit.project.link}}">
+							<a ng-href="#/Projects/{{edit.project.link}}">
 								<img ng-src="img/projects/{{edit.project.id}}/icon.jpg" 
 								     style="width: 24px;"/>
 							</a>
 						</td>
 						<td>
-							<a href="#/Projects/{{edit.project.link}}" style="font-size: 12px;">
+							<a ng-href="#/Projects/{{edit.project.link}}" style="font-size: 12px;">
 								{{edit.project.name}}
 							</a>
 						</td>
 						<td>
 							<div class="barBg" title="{{edit.overall}}">
-								<div class="barFill" style="width: {{edit.overall*100}}%;
+								<div class="barFill" ng-style="{'width': edit.overall*100+'%'}
 									background-color: #39c;">
 								</div>
 							</div>
 						</td>
 						<td>
 							<div class="barBg" title="{{edit.dev}}">
-								<div class="barFill" style="width: {{edit.dev*100}}%;">
+								<div class="barFill" ng-style="{'width': edit.dev*100+'%'}">
 								</div>
 							</div>
 						</td>
 						<td>
 							<div class="barBg" title="{{edit.des}}">
-								<div class="barFill" style="width: {{edit.des*100}}%;">
+								<div class="barFill" ng-style="{'width': edit.des*100+'%'}">
 								</div>
 							</div>
 						</td>
 						<td>
 							<div class="barBg" title="{{edit.cre}}">
-								<div class="barFill" style="width: {{edit.cre*100}}%;">
+								<div class="barFill" ng-style="{'width': edit.cre*100+'%'}">
 								</div>
 							</div>
 						</td>
 						<td>
 							<div class="barBg" title="{{edit.mgt}}">
-								<div class="barFill" style="width: {{edit.mgt*100}}%;">
+								<div class="barFill" ng-style="{'width': edit.mgt*100+'%'}">
 								</div>
 							</div>
 						</td>
 						<td>
 							<div class="barBg" title="{{edit.com}}">
-								<div class="barFill" style="width: {{edit.com*100}}%;">
+								<div class="barFill" ng-style="{'width': edit.com*100+'%'}">
 								</div>
 							</div>
 						</td>

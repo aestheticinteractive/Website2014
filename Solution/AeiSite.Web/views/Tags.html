@@ -57,13 +57,13 @@
 					<tbody>
 						<tr ng-repeat="tw in group.tagWeights" style="width: 100%;">
 							<td>
-								<a href="#/Tags/{{group.link}}/{{tw.item.link}}">
+								<a ng-href="#/Tags/{{group.link}}/{{tw.item.link}}">
 									{{tw.item.name}}
 								</a> ({{tw.item.id}})
 							</td>
 							<td class="barCol">
 								<div class="barBg">
-									<div class="barFill" style="width: {{tw.weight*100}}%;">
+									<div class="barFill" ng-style="{'width': tw.weight*100+'%'}">
 									</div>
 								</div>
 							</td>

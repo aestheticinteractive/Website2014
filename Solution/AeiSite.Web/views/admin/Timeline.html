@@ -38,21 +38,21 @@
 				<tbody>
 					<tr ng-repeat="pt in model.projTimes">
 						<td class="imageCol">
-							<a href="#/Projects/{{pt.project.link}}">
+							<a ng-href="#/Projects/{{pt.project.link}}">
 								<img ng-src="img/projects/{{pt.project.id}}/icon.jpg" 
 								     style="width: 24px;"/>
 							</a>
 						</td>
 						<td>
-							<a href="#/Projects/{{pt.project.link}}" style="font-size: 12px;">
+							<a ng-href="#/Projects/{{pt.project.link}}" style="font-size: 12px;">
 								{{pt.project.name}}
 							</a>
 						</td>
 						<td>
 							<div style="width: 100%;" ng-repeat="span in pt.spans" title="{{span.name}}">
-								<div class="bar" style="left: {{span.startRel*100}}%; 
-									background-image: url(img/projects/{{pt.project.id}}/icon.jpg);
-									width: {{(span.endRel-span.startRel)*100}}%;">
+								<div class="bar" ng-style="{'left': span.startRel*100+'%', 
+									'background-image': 'url(img/projects/'+pt.project.id+'/icon.jpg)',
+									'width': (span.endRel-span.startRel)*100+'%'}">
 								</div>
 							</div>
 						</td>

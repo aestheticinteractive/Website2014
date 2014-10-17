@@ -24,7 +24,7 @@
 		
 			<div ng-repeat="proj in model.projects" style="float: left; width: 166px; height: 200px;">
 				<p style="text-align: center; width: 150px;">
-					<a href="#/Projects/{{proj.link}}" style="font-size: 14px; line-height: 16px;">
+					<a ng-href="#/Projects/{{proj.link}}" style="font-size: 14px; line-height: 16px;">
 						<img ng-src="img/projects/{{proj.id}}/icon.jpg" 
 							style="width: 150px; height: 150px;" /><br/>
 						{{proj.name}}
