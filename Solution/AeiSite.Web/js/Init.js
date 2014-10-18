@@ -22,6 +22,6 @@ Aei.SiteMap = [
 	{
 		name: 'Contact',
 		url: '/Contact',
-		icon: 'envelope'
+		icon: 'chevron-circle-right'
 	}
 ];

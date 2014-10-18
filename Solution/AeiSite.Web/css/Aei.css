@@ -147,7 +147,7 @@ header .logo a {
 
 header .logo a img {
 	width: 24px;
-	margin: 0 2px 0 0;
+	margin: -1px 2px 1px 0;
 }
 
 header .items {
@@ -157,8 +157,8 @@ header .items {
 header .items a {
 	float: left;
 	font-size: 14px;
-	color: #999;
-	margin-top: 1px;
+	color: #222;
+	margin-top: 2px;
 }
 
 header .items a + a {
@@ -166,30 +166,29 @@ header .items a + a {
 }
 
 header .items a:hover {
-	color: #bbb;
+	color: #000;
 }
 
 header .items a.active {
-	color: #fff;
+	color: #ddd;
 }
 
 header .items a.active:hover {
-	color: #fff;
+	color: #ddd;
 }
 
 @media only screen and (max-width: 40.0em) { /* < medium */
      
 	header {
 		padding: 7px 0;
-	}      
-	                                    
-	header .logo a .text {
-		display: none;
 	}
 	
 	header .items a {
-		font-size: 24px;
-		margin-top: 0;
+		font-size: 22px;
+	}  
+	                                    
+	header .logo a .text {
+		display: none;
 	}
 	
 	header .items a + a {
@@ -270,6 +269,10 @@ div.intro h1 {
 	padding: 0 0 20px 0;
 	margin: 0 0 12px 0;
 	border-bottom: 2px solid #282828;
+}
+
+div.intro h1 i {
+	color: #555;
 }
 
 div.intro p {

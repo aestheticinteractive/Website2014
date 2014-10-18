@@ -26,14 +26,13 @@
 </style>
 
 
-
 <div class="intro">
 	<section class="content">
 		<div class="row">
 	
 			<div class="large-8 large-push-2 columns">
 				<h1>
-					<i class="fa fa-tasks"></i> Tags | {{model.section}} | {{model.item.name}}
+					<i class="fa fa-tasks"></i> | {{model.item.name}} ({{model.section}})
 				</h1>
 				<p>
 					<em>Aesthetic Interactive</em> has a tag...
@@ -100,3 +99,5 @@
 
 	</div>
 </section>
+
+<div init-page-after-render page="model.page"></div>

@@ -15,7 +15,7 @@ Aei.Controllers.getPageTitle = function(list) {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Menu = function(/*$route, $routeParams,*/ $location) {
 	this.isActiveLink = function(url) {
-		return ($location.path().substring(0, url.length) == url);
+		return ($location.path() == url);
 	};
 
 	this.items = Aei.SiteMap;

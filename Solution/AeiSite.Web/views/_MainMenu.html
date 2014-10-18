@@ -14,7 +14,7 @@
 		</div>
 		<p class="items">
 			<a ng-href="#{{item.url}}" ng-repeat="item in menu.items"
-					ng-class="(menu.isActiveLink(item.url) ? 'active' : '')">
+			   ng-class="(menu.isActiveLink(item.url) ? 'active' : '')">
 				<i ng-class="'fa fa-'+item.icon"></i>
 				<span class="text">
 					{{item.name}}
