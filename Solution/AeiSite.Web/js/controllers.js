@@ -18,24 +18,12 @@ Aei.Controllers.Menu = function(/*$route, $routeParams,*/ $location) {
 		return ($location.path().substring(0, url.length) == url);
 	};
 
-	this.items = [
-		{
-			name: 'Services',
-			url: '/Services'
-		},
-		{
-			name: 'Projects',
-			url: '/Projects'
-		},
-		{
-			name: 'Tags',
-			url: '/Tags'
-		},
-		{
-			name: 'Contact',
-			url: '/Contact'
-		}
-	];
+	this.items = Aei.SiteMap;
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.Footer = function(/*$route, $routeParams,*/ $location) {
+	this.items = Aei.SiteMap;
 };
 
 

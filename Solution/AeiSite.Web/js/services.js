@@ -105,12 +105,21 @@ Aei.Angular.filter('formatDatetime', function() {
 Aei.Angular.directive('mainMenu', function() {
 	return {
 		scope: {
-			mc: '=mc',
 			tag: '=tag',
 			title: '=title',
 			menu: '=menu'
 		},
 		templateUrl: 'views/_MainMenu.html'
+	};
+});
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Angular.directive('mainFooter', function() {
+	return {
+		scope: {
+			footer: '=footer'
+		},
+		templateUrl: 'views/_MainFooter.html'
 	};
 });
 

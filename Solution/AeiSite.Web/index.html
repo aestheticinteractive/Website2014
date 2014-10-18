@@ -1,8 +1,9 @@
 <html ng-app="Aei">
 
 	<head>
-		<link rel="stylesheet" href="css/normalize.css" />
-		<link rel="stylesheet" href="css/foundation.css" />
+		<link rel="stylesheet" href="css/lib/normalize.css" />
+		<link rel="stylesheet" href="css/lib/foundation.min.css" />
+		<link rel="stylesheet" href="css/lib/font-awesome.min.css" />
 		<script src="js/lib/modernizr.js"></script>
 		<link rel="stylesheet" href="css/Aei.css" />
 		<title ng-bind-template="{{pageTitle}}">
@@ -25,6 +26,11 @@
 
 		<main ng-view>
 		</main>
+		
+		<footer ng-controller="Aei.Controllers.Footer as footer">
+			<div main-footer footer="footer">
+			</div>
+		</footer>
 	</body>
 	
 	<script src="js/lib/jquery.js"></script>

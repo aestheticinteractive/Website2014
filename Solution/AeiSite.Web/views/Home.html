@@ -11,6 +11,7 @@
 	
 	section.intro {
 		padding: 40px 0;
+		margin-bottom: 20px;
 	}
 	
 	section.intro p {
@@ -53,8 +54,39 @@
 		line-height: 0;
 	}
 	
+	section.content h2 {
+		z-index: 2;
+		margin: 10px 0 5px 0;
+	}
+	
+	section.content h2 a {
+		color: inherit;
+		font-size: inherit;
+	}
+	
+	section.content h2 i {
+		color: #683;
+	}
+	
 	section.content p {
 		line-height: 24px;
+		z-index: 2;
+	}
+	
+	section.content div.iconBg {
+		z-index: 0;
+		height: 0;
+		text-align: right;
+	}
+	
+	section.content div.iconBg i {
+		font-size: 120px;
+		color: #202020;
+		color: rgba(0, 0, 0, 0.2);
+	}
+	
+	section.content div.iconBg i.fa-tasks {
+		margin-top: 7px;
 	}
 	
 	@media only screen and (max-width: 64.0em) { /* < large */
@@ -172,10 +204,16 @@
 
 <section class="content service">
 	<div class="row">
+
+		<div class="medium-1 columns show-for-medium">
+		</div>
 	
-		<div class="large-3 medium-6 columns">
+		<div class="large-3 medium-5 columns">
+			<div class="iconBg">
+				<i class="fa fa-flask"></i>
+			</div>
 			<h2>
-				Services
+				<a href="#/Services"><i class="fa fa-flask"></i> Services</a>
 			</h2>
 			<p>
 				A range of <a href="#/Services">development and design services</a> fuse to create 
@@ -183,19 +221,31 @@
 			</p>
 		</div>
 		
-		<div class="large-3 medium-6 columns">
+		<div class="large-3 medium-5 columns">
+			<div class="iconBg">
+				<i class="fa fa-cube"></i>
+			</div>
 			<h2>
-				Projects
+				<a href="#/Projects"><i class="fa fa-cube"></i> Projects</a>
 			</h2>
 			<p>
 				A large <a href="#/Projects">portfolio of projects</a> demonstrate proficiency and 
 				experience across a spectrum of domains and technologies.
 			</p>
 		</div>
-		
-		<div class="large-3 medium-6 columns">
+
+		<div class="medium-1 columns show-for-medium">
+		</div>
+
+		<div class="medium-1 columns show-for-medium" style="clear: both;">
+		</div>
+
+		<div class="large-3 medium-5 columns">
+			<div class="iconBg">
+				<i class="fa fa-tasks"></i>
+			</div>
 			<h2>
-				Tags
+				<a href="#/Tags"><i class="fa fa-tasks"></i> Tags</a>
 			</h2>
 			<p>
 				Dive into specific <a href="#/Tags">service and skill tags</a> to find portfolio
@@ -203,14 +253,20 @@
 			</p>
 		</div>
 
-		<div class="large-3 medium-6 columns">
+		<div class="large-3 medium-5 columns">
+			<div class="iconBg">
+				<i class="fa fa-envelope"></i>
+			</div>
 			<h2>
-				Contact
+				<a href="#/Contact"><i class="fa fa-envelope"></i> Contact</a>
 			</h2>
 			<p>
 				<a href="#/Contact">Get in touch</a> with Aesthetic Interactive to discuss your next
 				project.
 			</p>
+		</div>
+
+		<div class="medium-1 columns show-for-medium">
 		</div>
 
 	</div>
