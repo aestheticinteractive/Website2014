@@ -1,8 +1,42 @@
 
 <style>
-	section.service p, section.service a {
+	section.service td p, section.service td a {
 		line-height: 24px;
 	}
+	
+	table tbody tr:nth-child(odd) {
+		background-color: transparent;
+	}
+	
+	table tbody tr td {
+		padding: 5px 0 5px 10px;
+	}
+	
+	td.fill {
+		width: 50px;
+		padding: 0 0 0 10px;
+		border-right: 3px solid #1c1c1c;
+		
+		color: #404040;
+		text-align: center;
+		font-size: 75px;
+		overflow: hidden;
+	}
+	
+	td.fill .fa-lightbulb-o {
+		margin-left: 10px;
+	}
+
+	@media only screen and (max-width: 40.0em) { /* < medium */
+
+		td.fill {
+			width: 45px;
+			padding-left: 5px;
+			font-size: 65px;
+		}
+	
+	}
+
 </style>
 
 
@@ -20,7 +54,7 @@
 			<div class="large-8 large-push-2 columns">
 				<p>
 					<em>Aesthetic Interactive</em> brings together a <em>complete range</em> of services
-					to build <em>exceptional software</em> and <em>beautiful experiences</em>. 
+					to create <em>stunning experiences</em> via <em>exceptional software</em>. 
 					<a href="" ng-click="model.scrollToAnchor('dev')">Development</a> and 
 					<a href="" ng-click="model.scrollToAnchor('des')">design</a> are <em>synchronized</em>, 
 					<a href="" ng-click="model.scrollToAnchor('cre')">creativity</a> <em>flows</em>,
@@ -37,78 +71,32 @@
 <section class="content service">
 	<div class="row">
 	
-		<div class="medium-4 columns" ng-init="serv0 = model.services[0]">
-			<a name="{{serv0.id}}" class="namedOffset"></a>
-			<h2>
-				{{serv0.name}}
-			</h2>
-			<p>
-				{{serv0.desc}}
-				<br/>
-				<a ng-href="#/Tags/Services/{{serv0.link}}">
-					Top '{{serv0.name}}' Projects
-				</a>
-			</p>
+		<div class="medium-6 columns">
+			<div service-item service="model.services[0]" page="model.page"></div>
 		</div>
-
-		<div class="medium-4 columns" ng-init="serv1 = model.services[1]">
-			<a name="{{serv1.id}}" class="namedOffset"></a>
-			<h2>
-				{{serv1.name}}
-			</h2>
-			<p>
-				{{serv1.desc}}
-				<br/>
-				<a ng-href="#/Tags/Services/{{serv1.link}}">
-					Top '{{serv1.name}}' Projects
-				</a>
-			</p>
+		
+		<div class="medium-6 columns">
+			<div service-item service="model.services[1]" page="model.page"></div>
 		</div>
-
-		<div class="medium-4 columns" ng-init="serv2 = model.services[2]">
-			<a name="{{serv2.id}}" class="namedOffset"></a>
-			<h2>
-				{{serv2.name}}
-			</h2>
-			<p>
-				{{serv2.desc}}
-				<br/>
-				<a ng-href="#/Tags/Services/{{serv2.link}}">
-					Top '{{serv2.name}}' Projects
-				</a>
-			</p>
-		</div>
-
+		
 	</div>
 
 	<div class="row">
-	
-		<div class="medium-4 columns" ng-init="serv3 = model.services[3]">
-			<a name="{{serv3.id}}" class="namedOffset"></a>
-			<h2>
-				{{serv3.name}}
-			</h2>
-			<p>
-				{{serv3.desc}}
-				<br/>
-				<a ng-href="#/Tags/services/{{serv3.link}}">
-					Top '{{serv3.name}}' Projects
-				</a>
-			</p>
+		
+		<div class="medium-6 columns">
+			<div service-item service="model.services[2]" page="model.page"></div>
 		</div>
+	
+		<div class="medium-6 columns">
+			<div service-item service="model.services[3]" page="model.page"></div>
+		</div>
+		
+	</div>
 
-		<div class="medium-4 columns" ng-init="serv4 = model.services[4]">
-			<a name="{{serv4.id}}" class="namedOffset"></a>
-			<h2>
-				{{serv4.name}}
-			</h2>
-			<p>
-				{{serv4.desc}}
-				<br/>
-				<a ng-href="#/Tags/services/{{serv4.link}}">
-					Top '{{serv4.name}}' Projects
-				</a>
-			</p>
+	<div class="row">
+		
+		<div class="medium-6 columns">
+			<div service-item service="model.services[4]" page="model.page"></div>
 		</div>
 	
 		<div class="medium-4 columns hide-for-small">
@@ -116,5 +104,6 @@
 
 	</div>
 </section>
+
 
 <div init-page-after-render page="model.page"></div>

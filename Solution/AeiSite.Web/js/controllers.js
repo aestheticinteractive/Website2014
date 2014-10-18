@@ -87,9 +87,11 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Services = function($rootScope, $scope, $location, $anchorScroll) {
+	var services = Aei.Database.selectList(Aei.Tables.Service);
+
 	$scope.model = {
-		services: Aei.Database.selectList(Aei.Tables.Service),
-		page: new Aei.Pages.Services(),
+		services: services,
+		page: new Aei.Pages.Services(services),
 		scrollToAnchor: function(anchor) {
 			$location.hash(anchor);
 			$anchorScroll();
