@@ -6,10 +6,17 @@
 </style>
 
 
-<section class="intro">
+<div class="intro">
 	<section class="content">
 		<div class="row">
-	
+			<div class="large-12 columns">
+				<h1>
+					<i class="fa fa-flask"></i> Services
+				</h1>
+			</div>
+		</div>
+				
+		<div class="row">
 			<div class="large-8 large-push-2 columns">
 				<p>
 					<em>Aesthetic Interactive</em> brings together a <em>complete range</em> of services
@@ -22,16 +29,16 @@
 					keeps everything <em>on track</em>.
 				</p>
 			</div>
-
 		</div>
 	</section>
-</section>
+</div>
 
 
 <section class="content service">
 	<div class="row">
 	
 		<div class="medium-4 columns" ng-init="serv0 = model.services[0]">
+			<a name="{{serv0.id}}" class="namedOffset"></a>
 			<h2>
 				{{serv0.name}}
 			</h2>
@@ -45,6 +52,7 @@
 		</div>
 
 		<div class="medium-4 columns" ng-init="serv1 = model.services[1]">
+			<a name="{{serv1.id}}" class="namedOffset"></a>
 			<h2>
 				{{serv1.name}}
 			</h2>
@@ -58,6 +66,7 @@
 		</div>
 
 		<div class="medium-4 columns" ng-init="serv2 = model.services[2]">
+			<a name="{{serv2.id}}" class="namedOffset"></a>
 			<h2>
 				{{serv2.name}}
 			</h2>
@@ -75,6 +84,7 @@
 	<div class="row">
 	
 		<div class="medium-4 columns" ng-init="serv3 = model.services[3]">
+			<a name="{{serv3.id}}" class="namedOffset"></a>
 			<h2>
 				{{serv3.name}}
 			</h2>
@@ -88,6 +98,7 @@
 		</div>
 
 		<div class="medium-4 columns" ng-init="serv4 = model.services[4]">
+			<a name="{{serv4.id}}" class="namedOffset"></a>
 			<h2>
 				{{serv4.name}}
 			</h2>
@@ -100,7 +111,7 @@
 			</p>
 		</div>
 	
-		<div class="medium-4 columns">
+		<div class="medium-4 columns hide-for-small">
 		</div>
 
 	</div>

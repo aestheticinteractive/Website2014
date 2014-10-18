@@ -1,29 +1,26 @@
 <div class="row">
 	
-	<div class="large-6 columns">
+	<div class="large-12 columns">
 		<div class="logo">
 			<a href="#/" title="Aesthetic Interactive">
-				<img src="img/Logo-Small-Dark.png" />
+				<span class="text">
+					aesthetic
+				</span>
+				<img src="img/Logo-Large-Dark.png" />
+				<span class="text">
+					interactive
+				</span>
 			</a>
 		</div>
-		<div class="page">
-			<div class="tag">
-				{{tag}}
-			</div>
-			<div class="title">
-				{{title}}
-			</div>
-		</div>
-	</div>
-
-	<div class="large-6 columns itemsCol">
-		<div class="items">
-			<div class="item" ng-repeat="item in menu.items">
-				<a ng-href="#{{item.url}}" ng-class="menu.isActiveLink(item.url) ? 'active' : ''">
+		<p class="items">
+			<a ng-href="#{{item.url}}" ng-repeat="item in menu.items"
+					ng-class="(menu.isActiveLink(item.url) ? 'active' : '')">
+				<i ng-class="'fa fa-'+item.icon"></i>
+				<span class="text">
 					{{item.name}}
-				</a>
-			</div>
-		</div>
+				</span>
+			</a>
+		</p>
 	</div>
 
 </div>

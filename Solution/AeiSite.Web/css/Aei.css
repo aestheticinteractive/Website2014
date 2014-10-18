@@ -64,15 +64,50 @@ div.tag {
 	padding-top: 24px;
 }
 
+@media only screen and (max-width: 40.0em) { /* < medium */
+	.columns {
+		padding-top: 16px;
+	}
+}
 
 /*----------------------------------------------------------------------------------------------------*/
 
 
 #background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	overflow: hidden;
+}
+
+#site {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: 51px;
+	z-index: 1;
+	overflow: auto;
+	overflow-y: scroll;
+}
+
+#site a.namedOffset {
+	display: block;
+	position: relative;
+	top: -61px;
+	visibility: hidden;
+}
+
+@media only screen and (max-width: 40.0em) { /* < medium */
+	
+	#site {
+		padding-top: 41px;
+	}
+	
+	#site a.namedOffset {
+		top: -51px;
+	}
+	
 }
 
 
@@ -80,92 +115,89 @@ div.tag {
 
 
 header {
-	position: relative;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 12px 0;
+	background-color: #555;
+	z-index: 2;
+}
+
+header div.hold {
 	margin: 0 auto;
 	max-width: 1200px;
-	
-	margin-top: 16px;
-	padding-top: 16px;
-	padding-bottom: 8px;
+}
+
+header .row, header .columns {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 0;
 }
 
 header .logo {
 	float: left;
 }
 
-header .page {
-	padding-left: 16px;
-	float: left;
+header .logo a {
+	color: #282828;
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 14px;
+	font-weight: bold;
 }
 
-header .page .tag {
-	margin-top:  1px;
-	background-color: #683; 
-	color: rgba(255, 255, 255, 0.75);
-}
-
-header .page .title {
-	margin: 4px 0 0 0;
-	color: #fff;
-	font-size: 24px;
-	line-height: 20px;
+header .logo a img {
+	width: 24px;
+	margin: 0 2px 0 0;
 }
 
 header .items {
 	float: right;
-	background-color: #3a3a3a;
-	padding: 16px;
-	margin: 10px -16px 0 0;
 }
 
-header .item {
+header .items a {
 	float: left;
-}
-
-header .item + .item {
-	margin-left: 16px;
-}
-
-header .item a {
 	font-size: 14px;
-	color: #777;
-	font-weight: bold;
-}
-
-header .item a:hover {
 	color: #999;
+	margin-top: 1px;
 }
 
-header .item a.active {
-	color: #ccc;
+header .items a + a {
+	margin-left: 24px;
 }
 
-header .item a.active:hover {
+header .items a:hover {
+	color: #bbb;
+}
+
+header .items a.active {
 	color: #fff;
 }
 
-
-@media only screen and (max-width: 40.0em) { /* < medium */
+header .items a.active:hover {
+	color: #fff;
 }
 
-@media only screen and (max-width: 64.0em) { /* < large */
-                                               
+@media only screen and (max-width: 40.0em) { /* < medium */
+     
 	header {
+		padding: 7px 0;
+	}      
+	                                    
+	header .logo a .text {
+		display: none;
+	}
+	
+	header .items a {
+		font-size: 24px;
 		margin-top: 0;
-		padding: 16px 0 8px 0;
 	}
 	
-	header .itemsCol {
-		margin-top: 16px;
-		background-color: #3a3a3a;
-		padding-top: 8px;
-		padding-bottom: 8px;
+	header .items a + a {
+		margin-left: 12px;
 	}
 	
-	header .items {
-		margin: 0;
-		padding: 0;
-		float: none;
+	header .items a .text {
+		display: none;
 	}
 	
 }
@@ -173,64 +205,13 @@ header .item a.active:hover {
 
 /*----------------------------------------------------------------------------------------------------*/
 
-section {
+section.content {
 	position: relative;
 	margin: 0 auto;
 	max-width: 1200px;
-}
-
-section.content {
 	padding-bottom: 24px;
+    z-index: 1;
 }
-
-/*section.content article + article {
-	margin-top: 20px;
-	padding-top: 15px;
-	border-top: 2px solid #444;
-}*/
-
-section.intro {
-	max-width: 100%;
-	background-color: #191919;
-	background-color: rgba(0, 0, 0, 0.333);
-	text-align: center;
-	padding: 32px;
-}
-
-section.intro section.content {
-	background-color: transparent;
-}
-	
-section.intro section.content p {
-	color: #aaa;
-	font-size: 18px;
-	line-height: 48px;
-}
-	
-section.intro section.content p em {
-	color: #ddd;
-	font-style: normal;
-}
-	
-section.intro section.content a {
-	font-size: 18px;
-}
-	
-section.intro section.content h2 {
-	font-size: 24px;
-	color: #777;
-	padding-bottom: 18px;
-	margin-bottom: 18px;
-	border-bottom: 1px solid #404040;
-}
-	
-/*section.content + section.content {
-	margin-top: 2px;
-}
-	
-section.intro + section.content {
-	margin-top: 16px;
-}*/
 
 section.content h2 {
 	color: #ddd;
@@ -246,28 +227,6 @@ section.content h3 {
 	margin: 0;
 }
 
-section.content p.intro {
-	font-size: 16px;
-	color: #aaa;
-}
-
-@media only screen and (max-width: 40.0em) { /* < medium */
-	
-	section.intro {
-		padding: 8px;
-	}
-	
-	section.intro p {
-		font-size: 16px;
-		line-height: 32px;
-	}
-	
-	section.intro a {
-		font-size: 16px;
-	}
-
-}
-
 section.content p + h3 {
 	margin-top: 10px;
 }
@@ -276,7 +235,7 @@ section.content div + h3 {
 	margin-top: 10px;
 }
 
-section.content  .barBg {
+section.content .barBg {
 	background-color: #363636;
 	background-color: rgba(0, 0, 0, 0.06);
 	height: 8px;
@@ -284,9 +243,79 @@ section.content  .barBg {
 	width: 100%;
 }
 
-section.content  .barBg .barFill {
+section.content .barBg .barFill {
 	background-color: #683;
 	height: 100%;
+}
+
+div.intro {
+	max-width: 100%;
+	background-color: #191919;
+	background-color: rgba(0, 0, 0, 0.333);
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-bottom: 20px;
+}
+
+div.intro section.content {
+	padding-bottom: 0;
+}
+
+div.intro h1 {
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: normal;
+	color: #aaa;
+	padding: 0 0 20px 0;
+	margin: 0 0 12px 0;
+	border-bottom: 2px solid #282828;
+}
+
+div.intro p {
+	color: #aaa;
+	font-size: 18px;
+	line-height: 48px;
+}
+	
+div.intro p em {
+	color: #ddd;
+	font-style: normal;
+}
+	
+div.intro a {
+	font-size: 18px;
+}
+
+div.intro .columns {
+	padding-top: 0;
+}
+
+@media only screen and (max-width: 40.0em) { /* < medium */
+	
+	div.intro {
+		padding: 16px 0;
+		margin: 0;
+		text-align: left;
+	}
+	
+	div.intro h1 {
+		font-size: 20px;
+		line-height: 20px;
+		padding: 0 0 12px 0;
+		margin: 0 0 8px 0;
+	}
+	
+	div.intro p {
+		font-size: 16px;
+		line-height: 28px;
+	}
+	
+	div.intro a {
+		font-size: 16px;
+		line-height: 28px;
+	}
+
 }
 	
 
@@ -364,8 +393,6 @@ footer {
 footer p {
 	text-align: center;
 	color: #4d4d4d;
-	font-size: 14px;
-	line-height: 16px;
 }
 
 footer p.links {
@@ -374,8 +401,6 @@ footer p.links {
 
 footer a {
 	color: #666;
-	font-size: 14px;
-	line-height: 16px;
 }
 
 footer a.bar {
@@ -390,14 +415,18 @@ footer a:hover {
 
 @media only screen and (max-width: 40.0em) { /* < medium */
 
+	footer {
+		margin-top: 16px;
+	}
+	
 	footer p {
 		font-size: 12px;
-		line-height: 14px;
+		line-height: 18px;
 	}
 
 	footer a {
 		font-size: 12px;
-		line-height: 14px;
+		line-height: 18px;
 	}
 	
 }

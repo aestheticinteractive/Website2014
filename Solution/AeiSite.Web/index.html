@@ -18,19 +18,21 @@
 		<!--div id="perform" style="position: fixed; top: 10px; left: 10px; color: red;">
 			test
 		</div-->
-
+			
 		<header ng-controller="Aei.Controllers.Menu as menu">
-			<div main-menu tag="tag" title="title" menu="menu">
+			<div class="hold" main-menu tag="tag" title="title" menu="menu">
 			</div>
 		</header>
 
-		<main ng-view>
-		</main>
+		<div id="site">
+			<main ng-view>
+			</main>
 		
-		<footer ng-controller="Aei.Controllers.Footer as footer">
-			<div main-footer footer="footer">
-			</div>
-		</footer>
+			<footer ng-controller="Aei.Controllers.Footer as footer">
+				<div main-footer footer="footer">
+				</div>
+			</footer>
+		</div>
 	</body>
 	
 	<script src="js/lib/jquery.js"></script>

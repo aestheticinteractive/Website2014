@@ -163,32 +163,32 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams) {
 	switch ( tagType ) {
 		case 'services':
 			table = Aei.Database.selectList(Aei.Tables.Service);
-			pageTag = 'Service Tag';
+			pageTag = 'Service';
 			break;
 			
 		case 'skills':
 			table = Aei.Database.selectList(Aei.Tables.Skill);
-			pageTag = 'Skill Tag';
+			pageTag = 'Skill';
 			break;
 			
 		case 'languages':
 			table = Aei.Database.selectList(Aei.Tables.Language);
-			pageTag = 'Language Tag';
+			pageTag = 'Language';
 			break;
 			
 		case 'products':
 			table = Aei.Database.selectList(Aei.Tables.Product);
-			pageTag = 'Product Tag';
+			pageTag = 'Product';
 			break;
 			
 		case 'systems':
 			table = Aei.Database.selectList(Aei.Tables.System);
-			pageTag = 'System Tag';
+			pageTag = 'System';
 			break;
 			
 		case 'teams':
 			table = Aei.Database.selectList(Aei.Tables.Team);
-			pageTag = 'Team Tag';
+			pageTag = 'Team';
 			break;
 	};
 
@@ -196,6 +196,7 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams) {
 
 	$scope.model = {
 		item: item,
+		section: pageTag,
 		tagUses: Aei.Queries.selectProjectTagUsesByItem(tagType, item)
 	};
 	

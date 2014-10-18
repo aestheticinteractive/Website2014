@@ -6,18 +6,22 @@ Aei.Draw = {};
 Aei.SiteMap = [
 	{
 		name: 'Services',
-		url: '/Services'
+		url: '/Services',
+		icon: 'flask'
 	},
 	{
 		name: 'Projects',
-		url: '/Projects'
+		url: '/Projects',
+		icon: 'cube'
 	},
 	{
 		name: 'Tags',
-		url: '/Tags'
+		url: '/Tags',
+		icon: 'tasks'
 	},
 	{
 		name: 'Contact',
-		url: '/Contact'
+		url: '/Contact',
+		icon: 'envelope'
 	}
 ];
