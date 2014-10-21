@@ -24,6 +24,8 @@ Aei.Background = function(containerId) {
 	this._redrawAnimFrame();
 };
 
+Aei.Background.IsPaused = false;
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
@@ -138,7 +140,9 @@ Aei.Background.prototype._handleResize = function() {
 	var sh = stage.height();
 	var w = window.innerWidth;
 	var h = window.innerHeight;
+
 	this._addLineData(w, h);
+	this._isResizing = true;
 
 	if ( sw < w || sh < h ) {
 		stage
@@ -164,6 +168,15 @@ Aei.Background.prototype._redrawAnimFrame = function() {
 		this._isScrolling = false;
 		return;
 	}
+	
+	if ( this._isResizing ) {
+		this._isResizing = false;
+		return;
+	}
+
+	if ( Aei.Background.IsPaused ) {
+		return;
+	}
 
 	////
 
@@ -182,7 +195,7 @@ Aei.Background.prototype._redrawAnimFrame = function() {
 			if ( --line.animStep < 0 ) {
 				line.startOpac = line.opacity();
 				line.endOpac = this._getRandomOpacity();
-				line.animSteps = Math.round(Math.random()*8)+8; //2s to 4s @ 250ms FPS
+				line.animSteps = Math.round(Math.random()*8)+8; //2s to 4s @ 250ms/frame
 				line.animStep = line.animSteps;
 			}
 
