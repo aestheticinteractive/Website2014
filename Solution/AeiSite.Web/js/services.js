@@ -166,24 +166,3 @@ Aei.Angular.directive('tagMarkdown', ['$sanitize', function($sanitize) {
 		templateUrl: 'views/_TagMarkdown.html'
 	};
 }]);
-
-/*----------------------------------------------------------------------------------------------------*/
-Aei.Angular.directive('serviceItem', function() {
-	return {
-		scope: {
-			service: '=service',
-			page: '=page'
-		},
-		templateUrl: 'views/_ServiceItem.html',
-		link: function(scope, element, attrs) {
-			var page = scope.page;
-			var serv = scope.service;
-
-			var onTimeout = function() {
-				page.onServiceRender(serv);
-			};
-
-			setTimeout(onTimeout, 1);
-		}
-	};
-});

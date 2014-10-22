@@ -2,35 +2,30 @@
 /*====================================================================================================*/
 Aei.Pages.Services = function(data) {
 	this._data = data;
-	this._services = [];
 };
+
+//TODO: use javascript scrollTo http://stackoverflow.com/questions/3163615/how-to-scroll-html-page-to-given-anchor-using-jquery-or-javascript instead of $anchorScroll
+//TODO: handle entry/hover animations in custom frame handler (for hovers during entry, fade non-hovered tables)
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Services.prototype.onRender = function() {
-};
-
-/*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Services.prototype.onServiceRender = function(service) {
 	Aei.Background.IsPaused = true;
-	this._services.push(service);
-	
-	this._getFillCell('table') //all built tables
-		.css('opacity', 0.2);
 
-	if ( this._services.length < this._data.length ) {
-		return;
-	}
-	
 	var me = this;
 	var fill = this._getFillCell($('table')[0]);
 
 	this._tableI = 0;
-	this._handleEntry();
-
 	this._origOpac = 0.2;
 	this._origPadLeft = fill.css('padding-left');
+	this._origW = fill.width();
+	
+	this._getFillCell('table') //all fills
+		.css('padding-left', this._origW+'px')
+		.css('opacity', 0);
+
+	this._handleEntry();
 	
 	$('table')
 		.mouseenter(function(evt) {
@@ -53,8 +48,6 @@ Aei.Pages.Services.prototype._getFillCell = function(table) {
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Services.prototype._handleEntry = function() {
-	console.log("i "+this._tableI);
-
 	if ( this._tableI >= this._data.length ) {
 		Aei.Background.IsPaused = false;
 		return;
@@ -64,8 +57,8 @@ Aei.Pages.Services.prototype._handleEntry = function() {
 	var table = $('table').eq(this._tableI);
 	
 	var animDest = {
-		'opacity': 1
-		//'height': table.height()
+		'opacity': this._origOpac,
+		'padding-left': this._origPadLeft
 	};
 
 	var animOpt = {
@@ -75,10 +68,7 @@ Aei.Pages.Services.prototype._handleEntry = function() {
 		}
 	};
 
-	table
-		.show()
-		//.height(0)
-		.css('opacity', 0)
+	this._getFillCell(table)
 		.animate(animDest, animOpt);
 
 	++this._tableI;
@@ -87,7 +77,7 @@ Aei.Pages.Services.prototype._handleEntry = function() {
 		me._handleEntry();
 	};
 
-	setTimeout(nextEntry, 100);
+	setTimeout(nextEntry, 50);
 };
 
 
