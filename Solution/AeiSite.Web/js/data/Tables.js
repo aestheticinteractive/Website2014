@@ -36,13 +36,13 @@ Aei.Tables.Service = [
 	{
 		id: 'com',
 		name: 'Communication',
-		desc: 'Clear, consistent communication reduces a project\'s complexity. Notes, summaries, diagrams, instructions, and documentation keep stakeholders informed and involved.',
+		desc: 'Clear, consistent communication reduces a project\'s complexity. Notes, diagrams, instructions, and documentation keep stakeholders informed and involved.',
 		icon: 'comment'
 	},
 	{
 		id: 'mgt',
 		name: 'Project Management',
-		desc: 'Effective project management is essential. This includes organizing specs, estimating impacts, planning tasks, prioritizing goals, making decisions, and coordinating efforts.',
+		desc: 'Effective project management is essential. This includes organizing specs, estimating impacts, planning tasks, prioritizing goals, and coordinating efforts.',
 		icon: 'calendar' //'calculator'
 	}
 ];
