@@ -130,7 +130,7 @@ Aei.Angular.directive('initPageAfterRender', function() {
 			page: '=page'
 		},
 		link: function(scope, element, attrs) {
-			$('#site').scrollTop(0);
+			$('body').scrollTop(0);
 			var page = scope.page;
 
 			var onTimeout = function() {

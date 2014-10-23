@@ -12,6 +12,8 @@ body {
 	padding: 0;
 	width: 100%;
 	height: 100%;
+	overflow: auto;
+	overflow-y: scroll;
 }
 
 p, a, ul, li, td, th {
@@ -61,53 +63,18 @@ div.tag {
 }
 
 .columns {
-	padding-top: 24px;
+	padding-top: 40px;
 }
 
-@media only screen and (max-width: 40.0em) { /* < medium */
-	.columns {
-		padding-top: 16px;
-	}
-}
 
 /*----------------------------------------------------------------------------------------------------*/
 
 
 #background {
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
-	z-index: 0;
 	overflow: hidden;
-}
-
-#site {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	padding-top: 51px;
-	z-index: 1;
-	overflow: auto;
-	overflow-y: scroll;
-}
-
-#site a.namedOffset {
-	display: block;
-	position: relative;
-	top: -61px;
-	visibility: hidden;
-}
-
-@media only screen and (max-width: 40.0em) { /* < medium */
-	
-	#site {
-		padding-top: 41px;
-	}
-	
-	#site a.namedOffset {
-		top: -51px;
-	}
-	
 }
 
 
@@ -115,12 +82,8 @@ div.tag {
 
 
 header {
-	position: absolute;
-	top: 0;
 	width: 100%;
-	padding: 12px 0;
-	background-color: #555;
-	z-index: 2;
+	padding: 32px 0;
 }
 
 header div.hold {
@@ -139,10 +102,13 @@ header .logo {
 }
 
 header .logo a {
-	color: #282828;
-	color: rgba(0, 0, 0, 0.5);
-	font-size: 14px;
+	color: #141414;
+	font-size: 16px;
 	font-weight: bold;
+}
+
+header .logo a:hover {
+	color: #111;
 }
 
 header .logo a img {
@@ -156,21 +122,35 @@ header .items {
 
 header .items a {
 	float: left;
-	font-size: 14px;
-	color: #222;
-	margin-top: 2px;
+	font-size: 16px;
+	color: #555;
+	margin-top: 1px;
 }
 
 header .items a + a {
-	margin-left: 24px;
+	margin-left: 32px;
 }
 
 header .items a:hover {
-	color: #000;
+	color: #777;
 }
-
+	
+header .items a i {
+	color: #683;
+	color: rgba(102, 136, 51, 0.333);
+}
+	
+header .items a:hover i {
+	color: #8fbc4c;
+	color: rgba(102, 136, 51, 0.666);
+}
+	
 header .items a.active {
 	color: #ddd;
+}
+	
+header .items a.active i {
+	color: #683;
 }
 
 header .items a.active:hover {
@@ -180,7 +160,7 @@ header .items a.active:hover {
 @media only screen and (max-width: 40.0em) { /* < medium */
      
 	header {
-		padding: 7px 0;
+		padding: 12px 0;
 	}
 	
 	header .items a {
@@ -192,11 +172,15 @@ header .items a.active:hover {
 	}
 	
 	header .items a + a {
-		margin-left: 12px;
+		margin-left: 14px;
 	}
 	
 	header .items a .text {
 		display: none;
+	}
+	
+	header .items a.active i {
+		color: #8fbc4c;
 	}
 	
 }
@@ -252,8 +236,7 @@ div.intro {
 	background-color: #191919;
 	background-color: rgba(0, 0, 0, 0.333);
 	text-align: center;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding: 48px 0;
 	margin-bottom: 20px;
 }
 
@@ -262,17 +245,15 @@ div.intro section.content {
 }
 
 div.intro h1 {
-	font-size: 24px;
-	line-height: 24px;
+	font-size: 28px;
+	line-height: 28px;
 	font-weight: normal;
 	color: #aaa;
-	padding: 0 0 20px 0;
-	margin: 0 0 12px 0;
-	border-bottom: 2px solid #282828;
+	margin: 0 0 24px 0;
 }
 
 div.intro h1 i {
-	color: #555;
+	color: #333;
 }
 
 div.intro p {
@@ -297,16 +278,15 @@ div.intro .columns {
 @media only screen and (max-width: 40.0em) { /* < medium */
 	
 	div.intro {
-		padding: 16px 0;
+		padding: 32px 0;
 		margin: 0;
 		text-align: left;
 	}
 	
 	div.intro h1 {
-		font-size: 20px;
-		line-height: 20px;
-		padding: 0 0 12px 0;
-		margin: 0 0 8px 0;
+		font-size: 24px;
+		line-height: 24px;
+		margin: 0 0 20px 0;
 	}
 	
 	div.intro p {
@@ -390,7 +370,7 @@ footer {
 	padding-top: 0;
 	padding-bottom: 40px;
 	
-	border-top: 2px solid #383838;
+	border-top: 1px solid #383838;
 }
 
 footer p {

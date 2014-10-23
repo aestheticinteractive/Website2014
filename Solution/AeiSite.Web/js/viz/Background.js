@@ -36,22 +36,22 @@ Aei.Background.prototype._buildLineData = function() {
 		groups: [
 			{
 				slope: -0.125,
-				color: '#bff'
+				color: '#9ff'
 			},
 			{
 				slope: -5,
-				color: '#ffb'
+				color: '#ff9'
 			},
 			{
 				slope: 15,
-				color: '#bfb'
+				color: '#9f9'
 			}
 		]
 	};
 	
 	var stage = this._stage;
 	var gapSize = 50;
-	var layerOpacity = 0.05;
+	var layerOpacity = 0.04;
 	var i, g;
 
 	for ( i = 0 ; i < data.groups.length ; ++i ) {
