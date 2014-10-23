@@ -2,11 +2,11 @@
 	
 	<div class="large-12 columns">
 		<div class="logo">
-			<a href="#/" title="Aesthetic Interactive">
+			<a href="#/" class="logoLink" title="Aesthetic Interactive">
 				<span class="text">
 					aesthetic
 				</span>
-				<img src="img/Logo-Large-Dark.png" />
+				<img src="img/Logo-Small-Light.png" />
 				<span class="text">
 					interactive
 				</span>
@@ -24,3 +24,62 @@
 	</div>
 
 </div>
+
+<script>
+	//TODO: handle this scenario better (via Angular?). For example, the menu doesn't know when the content pages load from via link from the homepage
+
+	var headerLinks = null;
+
+	var updateHeaderOpacity = function(hover) {
+		Aei.Background.IsPaused = true;
+
+		headerLinks.each(function() {
+			var targ = $(this);
+			var isHovered = (hover && targ[0] == hover[0]);
+			var opac = 1;
+			
+			if ( targ.hasClass('logoLink') ) {
+				opac = (isHovered ? 1 : 0.5);
+			}
+			else if ( !targ.hasClass('active') ) {
+				opac = (isHovered ? 0.5 : 0.25);
+			}
+			
+			var animDest = {
+				'opacity': opac
+			};
+
+			var animOpt = {
+				duration: 250,
+				queue: false,
+				complete: function() {
+					Aei.Background.IsPaused = false;
+				}
+			};
+
+			targ.animate(animDest, animOpt);
+		});
+	};
+
+	var onMenuTimeout = function() {
+		headerLinks = $('header a');
+
+		headerLinks
+			.show()
+			.css('opacity', 0)
+			.click(function(evt) {
+				setTimeout(updateHeaderOpacity, 1);
+			})
+			.mouseenter(function(evt) {
+				updateHeaderOpacity($(evt.currentTarget));
+			})
+			.mouseleave(function(evt) {
+				updateHeaderOpacity();
+			});
+
+		updateHeaderOpacity();
+	};
+	
+	$('header a').hide();
+	setTimeout(onMenuTimeout, 1);
+</script>

@@ -101,17 +101,14 @@ header .logo {
 	float: left;
 }
 
-header .logo a {
-	color: #141414;
+header .logo .logoLink {
+	color: #777;
+	color: rgba(255, 255, 255, 0.333);
 	font-size: 16px;
 	font-weight: bold;
 }
 
-header .logo a:hover {
-	color: #111;
-}
-
-header .logo a img {
+header .logo .logoLink img {
 	width: 24px;
 	margin: -1px 2px 1px 0;
 }
@@ -123,7 +120,7 @@ header .items {
 header .items a {
 	float: left;
 	font-size: 16px;
-	color: #555;
+	color: #eee;
 	margin-top: 1px;
 }
 
@@ -131,30 +128,8 @@ header .items a + a {
 	margin-left: 32px;
 }
 
-header .items a:hover {
-	color: #777;
-}
-	
 header .items a i {
-	color: #683;
-	color: rgba(102, 136, 51, 0.333);
-}
-	
-header .items a:hover i {
 	color: #8fbc4c;
-	color: rgba(102, 136, 51, 0.666);
-}
-	
-header .items a.active {
-	color: #ddd;
-}
-	
-header .items a.active i {
-	color: #683;
-}
-
-header .items a.active:hover {
-	color: #ddd;
 }
 
 @media only screen and (max-width: 40.0em) { /* < medium */
@@ -177,10 +152,6 @@ header .items a.active:hover {
 	
 	header .items a .text {
 		display: none;
-	}
-	
-	header .items a.active i {
-		color: #8fbc4c;
 	}
 	
 }
