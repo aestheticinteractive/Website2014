@@ -174,6 +174,8 @@ Aei.Background.prototype._redrawAnimFrame = function() {
 		return;
 	}
 
+	//TODO: use a key-based pause to avoid conflicts
+
 	if ( Aei.Background.IsPaused ) {
 		return;
 	}

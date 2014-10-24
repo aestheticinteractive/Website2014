@@ -1,21 +1,51 @@
 <html ng-app="Aei">
 
 	<head>
+		
 		<link rel="stylesheet" href="css/lib/normalize.css" />
 		<link rel="stylesheet" href="css/lib/foundation.min.css" />
 		<link rel="stylesheet" href="css/lib/font-awesome.min.css" />
-		<script src="js/lib/modernizr.js"></script>
 		<link rel="stylesheet" href="css/Aei.css" />
+
+		<script src="js/lib/modernizr.js"></script>
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/moment.min.js"></script>
+		<script src="js/lib/foundation.min.js"></script>
+		<script src="js/lib/kinetic-v5.1.0.min.js"></script>
+		<script src="js/lib/angular-1.3.0.js" ></script>
+		<script src="js/lib/angular-route-1.3.0.js" ></script>
+		<script src="js/lib/angular-sanitize-1.3.0.js" ></script>
+		<script src="js/lib/imagepack.js" ></script>
+		<script src="js/Init.js" ></script>
+		<script src="js/Admin.js" ></script>
+		<script src="js/data/Database.js" ></script>
+		<script src="js/data/Tables.js" ></script>
+		<script src="js/data/Queries.js" ></script>
+		<script src="js/pages/App.js"></script>
+		<script src="js/pages/Header.js"></script>
+		<script src="js/pages/Project.js"></script>
+		<script src="js/pages/Services.js"></script>
+		<script src="js/viz/Anim.js"></script>
+		<script src="js/viz/EventHandler.js"></script>
+		<script src="js/viz/Background.js" ></script>
+		<script src="js/viz/Repeater.js"></script>
+		<script src="js/viz/Timeline.js"></script>
+		<script src="js/services.js" ></script>
+		<script src="js/controllers.js" ></script>
+
 		<title ng-bind-template="{{pageTitle}}">
 			Aesthetic Interactive | Software Development and Design | Grand Rapids, MI
 		</title>
+
 	</head>
 
-	<body>
+	<body ng-controller="Aei.Controllers.App as app">
+		
 		<div id="background">
 		</div>
 	
 		<div ng-show="pageTitle">
+			
 			<header ng-controller="Aei.Controllers.Menu as menu">
 				<div class="hold" main-menu tag="tag" title="title" menu="menu">
 				</div>
@@ -28,37 +58,9 @@
 				<div main-footer footer="footer">
 				</div>
 			</footer>
-		</div>
-	</body>
-	
-	<script src="js/lib/jquery.js"></script>
-    <script src="js/lib/moment.min.js"></script>
-    <script src="js/lib/foundation.min.js"></script>
-    <script src="js/lib/kinetic-v5.1.0.min.js"></script>
-	<script src="js/lib/angular-1.3.0.js" ></script>
-	<script src="js/lib/angular-route-1.3.0.js" ></script>
-	<script src="js/lib/angular-sanitize-1.3.0.js" ></script>
-	<script src="js/lib/imagepack.js" ></script>
-	<script src="js/Init.js" ></script>
-	<script src="js/Admin.js" ></script>
-	<script src="js/data/Database.js" ></script>
-	<script src="js/data/Tables.js" ></script>
-	<script src="js/data/Queries.js" ></script>
-	<script src="js/pages/Project.js"></script>
-	<script src="js/pages/Services.js"></script>
-	<script src="js/viz/Anim.js"></script>
-	<script src="js/viz/EventHandler.js"></script>
-	<script src="js/viz/Background.js" ></script>
-	<script src="js/viz/Repeater.js"></script>
-	<script src="js/viz/Timeline.js"></script>
-	<script src="js/services.js" ></script>
-	<script src="js/controllers.js" ></script>
-	
-	<script>
-		console.log(Aei);
-		$(document).foundation();
 
-		var bg = new Aei.Background('background');
-	</script>
+		</div>
+
+	</body>
 
 </html>

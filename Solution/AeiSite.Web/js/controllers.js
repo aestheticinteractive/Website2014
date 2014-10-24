@@ -13,7 +13,12 @@ Aei.Controllers.getPageTitle = function(list) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Menu = function(/*$route, $routeParams,*/ $location) {
+Aei.Controllers.App = function($rootScope, $location) {
+	$rootScope.app = new Aei.Pages.App($rootScope, $location);
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.Menu = function($location) {
 	this.isActiveLink = function(url) {
 		return ($location.path() == url);
 	};
@@ -22,16 +27,14 @@ Aei.Controllers.Menu = function(/*$route, $routeParams,*/ $location) {
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Footer = function(/*$route, $routeParams,*/ $location) {
+Aei.Controllers.Footer = function() {
 	this.items = Aei.SiteMap;
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Home = function($rootScope, $scope) {
-	$rootScope.tag = 'Home';
-	$rootScope.title = 'Aesthetic Interactive';
+Aei.Controllers.Home = function($rootScope) {
 	$rootScope.pageTitle = 'Aesthetic Interactive | Software Development and Design | Grand Rapids, MI';
 };
 
@@ -43,9 +46,7 @@ Aei.Controllers.Projects = function($rootScope, $scope) {
 		projects: Aei.Database.selectList(Aei.Tables.Project)
 	};
 	
-	$rootScope.tag = 'Section';
-	$rootScope.title = 'Projects';
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Projects']);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -74,13 +75,11 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 	$scope.model = {
 		project: proj,
 		minDate: minDate,
-		maxDate: maxDate,
-		page: new Aei.Pages.Project(proj)
+		maxDate: maxDate
 	};
 	
-	$rootScope.tag = 'Project';
-	$rootScope.title = proj.name;
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Projects']);
+	$rootScope.page =  new Aei.Pages.Project(proj);
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([proj.name, 'Projects']);
 };
 
 
@@ -98,16 +97,14 @@ Aei.Controllers.Services = function($rootScope, $scope, $location, $anchorScroll
 	$scope.model = {
 		services: services,
 		splitServices: splitServices,
-		page: new Aei.Pages.Services(services),
 		scrollToAnchor: function(anchor) {
 			$location.hash(anchor);
 			$anchorScroll();
 		}
 	};
 	
-	$rootScope.tag = 'Section';
-	$rootScope.title = 'Services';
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
+	$rootScope.page = new Aei.Pages.Services(services);
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Services']);
 };
 
 
@@ -158,9 +155,7 @@ Aei.Controllers.Tags = function($rootScope, $scope) {
 		groups: groups
 	};
 	
-	$rootScope.tag = 'Section';
-	$rootScope.title = 'Tags';
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Tags']);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -209,9 +204,7 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams) {
 		tagUses: Aei.Queries.selectProjectTagUsesByItem(tagType, item)
 	};
 	
-	$rootScope.tag = pageTag;
-	$rootScope.title = item.name;
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Tags']);
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([item.name, 'Tags']);
 };
 
 
@@ -220,9 +213,7 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams) {
 Aei.Controllers.Contact = function($rootScope, $scope) {
 	$scope.model = {};
 	
-	$rootScope.tag = 'Section';
-	$rootScope.title = 'Contact';
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title]);
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Contact']);
 };
 
 
@@ -267,9 +258,7 @@ Aei.Controllers.AdminProjects = function($rootScope, $scope) {
 		edits: edits
 	};
 
-	$rootScope.tag = 'Admin';
-	$rootScope.title = 'Projects';
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Admin']);
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Projects', 'Admin']);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -278,9 +267,7 @@ Aei.Controllers.AdminProjectTags = function($rootScope, $scope) {
 		projects: Aei.Tables.Project
 	};
 
-	$rootScope.tag = 'Admin';
-	$rootScope.title = 'Project Tags';
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Admin']);
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Project Tags', 'Admin']);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -377,9 +364,7 @@ Aei.Controllers.AdminWeights = function($rootScope, $scope) {
 		groups: groups
 	};
 
-	$rootScope.tag = 'Admin';
-	$rootScope.title = 'Weights';
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Admin']);
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Weights', 'Admin']);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -437,11 +422,9 @@ Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
 	$scope.model = {
 		projects: projects,
 		events: events,
-		projTimes: projTimes,
-		page: new Aei.Pages.Timeline(projects, events)
+		projTimes: projTimes
 	};
 
-	$rootScope.tag = 'Admin';
-	$rootScope.title = 'Timeline';
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([$rootScope.title, 'Admin']);
+	$rootScope.page = new Aei.Pages.Timeline(projects, events);
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Timeline', 'Admin']);
 };
