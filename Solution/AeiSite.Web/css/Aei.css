@@ -181,6 +181,10 @@ section.content h3 {
 	margin: 0;
 }
 
+section.content p + h2 {
+	margin-top: 10px;
+}
+
 section.content p + h3 {
 	margin-top: 10px;
 }
