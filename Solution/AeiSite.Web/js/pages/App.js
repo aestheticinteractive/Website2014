@@ -22,6 +22,13 @@ Aei.Pages.App = function(rootScope, location) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
+Aei.Pages.App.prototype.onMenuDirectiveComplete = function() {
+	this._header.onDirectiveComplete();
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.App.prototype._handleSwitch = function() {
 	//console.log('Path: '+this._location.path());
 	Aei.Background.IsPaused = true;
@@ -40,7 +47,6 @@ Aei.Pages.App.prototype._handleSwitch = function() {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.App.prototype._handleRender = function() {
 	Aei.Background.IsPaused = false;
-	this._header.onRender();
 
 	var page = this._scope.page;
 

@@ -18,12 +18,16 @@ Aei.Controllers.App = function($rootScope, $location) {
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Menu = function($location) {
+Aei.Controllers.Menu = function($rootScope, $location) {
 	this.isActiveLink = function(url) {
 		return ($location.path() == url);
 	};
 
 	this.items = Aei.SiteMap;
+
+	this.onDirectiveComplete = function() {
+		$rootScope.app.onMenuDirectiveComplete();
+	};
 };
 
 /*----------------------------------------------------------------------------------------------------*/

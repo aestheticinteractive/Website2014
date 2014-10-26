@@ -13,22 +13,28 @@ Aei.Pages.Header = function() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Header.prototype.onSwitch = function() {
-	if ( this._isInit ) {
-		return;
-	}
+Aei.Pages.Header.prototype.onDirectiveComplete = function() {
+	var me = this;
+	
+	var onTimeout = function() {
+		me._setupLinks();
+		me.onSwitch();
+	};
 
-	this._isInit = true;
-	$('header a').hide();
+	setTimeout(onTimeout, 1);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Header.prototype.onRender = function() {
+Aei.Pages.Header.prototype.onSwitch = function() {
 	if ( this._links ) {
 		this._updateOpacity();
-		return;
 	}
+};
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Pages.Header.prototype._setupLinks = function() {
 	var me = this;
 
 	this._links = $('header a');
@@ -42,12 +48,8 @@ Aei.Pages.Header.prototype.onRender = function() {
 		.mouseleave(function(evt) {
 			me._updateOpacity();
 		});
-
-	this._updateOpacity();
 };
 
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Header.prototype._updateOpacity = function(hoverLink) {
 	var opt = this._animOpt;
