@@ -182,15 +182,15 @@ section.content h3 {
 }
 
 section.content p + h2 {
-	margin-top: 10px;
+	margin-top: 16px;
 }
 
 section.content p + h3 {
-	margin-top: 10px;
+	margin-top: 16px;
 }
 	
 section.content div + h3 {
-	margin-top: 10px;
+	margin-top: 16px;
 }
 
 section.content .barBg {
