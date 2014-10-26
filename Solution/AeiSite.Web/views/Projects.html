@@ -1,4 +1,20 @@
 
+<style>
+	img.projThumb {
+		width: 150px;
+		height: 150px;
+	}
+	
+	@media only screen and (max-width: 40.0em) { /* < medium */
+
+		img.projThumb {
+			width: 80px;
+			height: 80px;
+		}
+	
+	}
+</style>
+
 <div class="intro">
 	<section class="content">
 		<div class="row">
@@ -20,18 +36,14 @@
 <section class="content">
 	<div class="row">
 	
-		<div class="large-12 columns">
+		<div class="large-12 columns" style="text-align: center;">
 		
-			<div ng-repeat="proj in model.projects" style="float: left; width: 166px; height: 200px;">
-				<p style="text-align: center; width: 150px;">
-					<a ng-href="#/Projects/{{proj.link}}" style="font-size: 14px; line-height: 16px;">
-						<img ng-src="img/projects/{{proj.id}}/icon.jpg" 
-						     style="width: 150px; height: 150px;" /><br/>
-						{{proj.name}}
-					</a>
-				</p>
+			<div ng-repeat="proj in model.projects" style="display: inline-block; margin: 1px 1px 0 0;">
+				<a ng-href="#/Projects/{{proj.link}}">
+					<img class="projThumb" ng-src="img/projects/{{proj.id}}/icon.jpg" />
+				</a>
 			</div>
-
+		
 		</div>
 
 	</div>
