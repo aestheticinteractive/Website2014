@@ -31,7 +31,7 @@ Aei.Pages.App.prototype.onMenuDirectiveComplete = function() {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.App.prototype._handleSwitch = function() {
 	//console.log('Path: '+this._location.path());
-	Aei.Background.IsPaused = true;
+	Aei.Background.SetPaused('AppSwitch', true);
 	$('body').scrollTop(0);
 	this._header.onSwitch();
 
@@ -46,7 +46,7 @@ Aei.Pages.App.prototype._handleSwitch = function() {
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.App.prototype._handleRender = function() {
-	Aei.Background.IsPaused = false;
+	Aei.Background.SetPaused('AppSwitch', false);
 
 	var page = this._scope.page;
 

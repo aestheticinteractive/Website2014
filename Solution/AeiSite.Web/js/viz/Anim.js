@@ -115,7 +115,7 @@ Aei.Anim.prototype._handleFrame = function() {
 	}
 
 	if ( elapMs >= 0 ) { //not within delay time
-		this._progress = elapMs/duraMs;
+		this._progress = (duraMs == 0 ? 1 : elapMs/duraMs);
 		this._events.dispatchEvent(Aei.Anim.FrameEvent, this);
 	}
 

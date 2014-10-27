@@ -15,7 +15,6 @@ Aei.Background = function(containerId) {
 		me._handleResize();
 	});
 
-	
 	$(window).scroll(function() {
 		me._isScrolling = true;
 	});
@@ -24,7 +23,7 @@ Aei.Background = function(containerId) {
 	this._redrawAnimFrame();
 };
 
-Aei.Background.IsPaused = false;
+Aei.Background._PauseMap = {};
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -174,9 +173,7 @@ Aei.Background.prototype._redrawAnimFrame = function() {
 		return;
 	}
 
-	//TODO: use a key-based pause to avoid conflicts
-
-	if ( Aei.Background.IsPaused ) {
+	if ( Aei.Background.IsPaused() ) {
 		return;
 	}
 
@@ -208,4 +205,24 @@ Aei.Background.prototype._redrawAnimFrame = function() {
 	}
 
 	this._stage.draw();
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Background.SetPaused = function(key, pause) {
+	Aei.Background._PauseMap[key] = pause;
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Background.IsPaused = function() {
+	var map = Aei.Background._PauseMap;
+
+	for ( var key in map ) {
+		if ( map[key] == true ) {
+			return true;
+		}
+	}
+
+	return false;
 };

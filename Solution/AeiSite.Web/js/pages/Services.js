@@ -79,7 +79,7 @@ Aei.Pages.Services.prototype._beginEntryAnim = function() {
 		});
 	}
 
-	Aei.Background.IsPaused = true;
+	Aei.Background.SetPaused('ServicesAnim', true);
 	rep.start(30);
 };
 
@@ -121,7 +121,7 @@ Aei.Pages.Services.prototype._handleHover = function(table, isHover) {
 
 	////
 
-	Aei.Background.IsPaused = true;
+	Aei.Background.SetPaused('ServicesAnim', true);
 
 	if ( !rep.isActive() ) {
 		rep.start(30);
@@ -165,7 +165,7 @@ Aei.Pages.Services.prototype._handleRepeaterFrame = function() {
 		}
 	}
 
-	Aei.Background.IsPaused = active;
+	Aei.Background.SetPaused('ServicesAnim', active);
 
 	if ( !active ) {
 		this._repeat.stop();

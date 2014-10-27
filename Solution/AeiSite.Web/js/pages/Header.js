@@ -5,7 +5,7 @@ Aei.Pages.Header = function() {
 		duration: 250,
 		queue: false,
 		complete: function() {
-			Aei.Background.IsPaused = false;
+			Aei.Background.SetPaused('HeaderLink', false);
 		}
 	};
 };
@@ -73,5 +73,5 @@ Aei.Pages.Header.prototype._updateOpacity = function(hoverLink) {
 		link.animate(animDest, opt);
 	});
 
-	Aei.Background.IsPaused = true;
+	Aei.Background.SetPaused('HeaderLink', true);
 };
