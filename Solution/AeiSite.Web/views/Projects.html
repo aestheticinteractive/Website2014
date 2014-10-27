@@ -1,15 +1,56 @@
 
 <style>
-	img.projThumb {
+	.proj {
+		display: inline-block; 
+		margin: 0 8px 16px 8px;
+		width: 150px;
+		background-color: rgba(0, 0, 0, 0.25);
+		overflow: hidden;
+	}
+	
+	.proj:hover {
+		background-color: rgba(0, 0, 0, 0.333);
+	}
+	
+	.proj a {
+		color: #888;
+	}
+	
+	.proj a:hover {
+		color: #ddd;
+	}
+	
+	.proj .text {
+		display: table-cell;
+		font-size: 12px;
+		line-height: 15px;
+		padding: 0 16px;
+		height: 50px;
+		vertical-align: middle;
+	}
+	
+	.proj img.thumb {
 		width: 150px;
 		height: 150px;
 	}
 	
 	@media only screen and (max-width: 40.0em) { /* < medium */
-
-		img.projThumb {
-			width: 80px;
-			height: 80px;
+	
+		.proj {
+			margin: 0 1px 16px 0;
+			width: 94px;
+		}
+		
+		.proj .text {
+			font-size: 11px;
+			line-height: 13px;
+			padding: 0 4px;
+			height: 40px;
+		}
+	
+		.proj img.thumb {
+			width: 94px;
+			height: 94px;
 		}
 	
 	}
@@ -38,10 +79,15 @@
 	
 		<div class="large-12 columns" style="text-align: center;">
 		
-			<div ng-repeat="proj in model.projects" style="display: inline-block; margin: 1px 1px 0 0;">
-				<a ng-href="#/Projects/{{proj.link}}">
-					<img class="projThumb" ng-src="img/projects/{{proj.id}}/icon.jpg" />
-				</a>
+			<div class="proj" ng-repeat="proj in model.projects">
+				<p>
+					<a ng-href="#/Projects/{{proj.link}}">
+						<img class="thumb" ng-src="img/projects/{{proj.id}}/icon.jpg" />
+						<span class="text">
+							{{proj.name}}
+						</span>
+					</a>
+				</p>
 			</div>
 		
 		</div>
