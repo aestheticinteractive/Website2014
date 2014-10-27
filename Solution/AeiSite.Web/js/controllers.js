@@ -20,7 +20,7 @@ Aei.Controllers.App = function($rootScope, $location) {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Menu = function($rootScope, $location) {
 	this.isActiveLink = function(url) {
-		return ($location.path() == url);
+		return ($location.path().substr(0, url.length) == url);
 	};
 
 	this.items = Aei.SiteMap;
