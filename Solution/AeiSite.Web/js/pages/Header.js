@@ -18,14 +18,14 @@ Aei.Pages.Header.prototype.onDirectiveComplete = function() {
 	
 	var onTimeout = function() {
 		me._setupLinks();
-		me.onSwitch();
+		me.updateLinks();
 	};
 
 	setTimeout(onTimeout, 1);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Header.prototype.onSwitch = function() {
+Aei.Pages.Header.prototype.updateLinks = function() {
 	if ( this._links ) {
 		this._updateOpacity();
 	}
