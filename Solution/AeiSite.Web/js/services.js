@@ -73,7 +73,7 @@ Aei.RouteBuilder = function($routeProvider) {
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Angular = angular
-	.module('Aei', ['ngRoute', 'ngSanitize'])
+	.module('Aei', ['ngRoute'])
 	.config(['$routeProvider', Aei.RouteBuilder]);
 
 
