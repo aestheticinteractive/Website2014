@@ -17,13 +17,17 @@ Aei.Pages.App = function(rootScope, location) {
 
 	this._header = new Aei.Pages.Header();
 	this._bg = new Aei.Background('background');
+
+	$('#site').hide();
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.App.prototype.onMenuDirectiveComplete = function() {
+	this._headerReady = true;
 	this._header.onDirectiveComplete();
+	this._tryShowSite();
 };
 
 
@@ -53,4 +57,21 @@ Aei.Pages.App.prototype._handleRender = function() {
 	if ( page ) {
 		page.onRender();
 	}
+
+	this._viewReady = true;
+	this._tryShowSite();
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Pages.App.prototype._tryShowSite = function() {
+	if ( this._siteReady ) {
+		return;
+	}
+
+	if ( !this._headerReady || !this._viewReady ) {
+		return;
+	}
+
+	$('#site').show();
+	this._siteReady = true;
 };
