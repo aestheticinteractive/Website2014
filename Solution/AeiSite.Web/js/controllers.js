@@ -89,7 +89,7 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Services = function($rootScope, $scope, $location, $anchorScroll) {
+Aei.Controllers.Services = function($rootScope, $scope) {
 	var services = Aei.Database.selectList(Aei.Tables.Service);
 	
 	var splitServices = [
@@ -100,11 +100,7 @@ Aei.Controllers.Services = function($rootScope, $scope, $location, $anchorScroll
 
 	$scope.model = {
 		services: services,
-		splitServices: splitServices,
-		scrollToAnchor: function(anchor) {
-			$location.hash(anchor);
-			$anchorScroll();
-		}
+		splitServices: splitServices
 	};
 	
 	$rootScope.page = new Aei.Pages.Services(services);

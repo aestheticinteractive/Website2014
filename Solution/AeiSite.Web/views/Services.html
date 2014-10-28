@@ -58,12 +58,11 @@
 				<p>
 					<em>Aesthetic Interactive</em> brings together a <em>complete range</em> of services
 					to create <em>stunning experiences</em> via <em>exceptional software</em>. 
-					<a href="" ng-click="model.scrollToAnchor('dev')">Development</a> and 
-					<a href="" ng-click="model.scrollToAnchor('des')">design</a> are <em>synchronized</em>, 
-					<a href="" ng-click="model.scrollToAnchor('cre')">creativity</a> <em>flows</em>,
-					<a href="" ng-click="model.scrollToAnchor('com')">communication</a> is 
-					<em>constant</em>, and <a href="" ng-click="model.scrollToAnchor('mgt')">management</a> 
-					keeps everything <em>on track</em>.
+					<a href="" data-scroll="dev">Development</a> and 
+					<a href="" data-scroll="des">design</a> are <em>synchronized</em>, 
+					<a href="" data-scroll="cre">creativity</a> <em>flows</em>,
+					<a href="" data-scroll="com">communication</a> is <em>constant</em>, and 
+					<a href="" data-scroll="mgt">management</a> keeps everything <em>on track</em>.
 				</p>
 			</div>
 		</div>
@@ -75,9 +74,7 @@
 	<div class="row">
 		
 		<div ng-repeat="service in services" class="medium-6 columns">
-			<a name="{{service.id}}"></a>
-
-			<table>
+			<table id="{{service.id}}">
 				<tbody>
 					<tr>
 						<td class="fill">

@@ -4,8 +4,6 @@ Aei.Pages.Services = function(data) {
 	this._data = data;
 };
 
-//TODO: use javascript scrollTo http://stackoverflow.com/questions/3163615/how-to-scroll-html-page-to-given-anchor-using-jquery-or-javascript instead of $anchorScroll
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
@@ -29,6 +27,16 @@ Aei.Pages.Services.prototype.onRender = function() {
 		});
 
 	this._beginEntryAnim();
+
+	$('a[data-scroll]').click(function() {
+		var id = $(this).attr('data-scroll');
+
+		var animDest = {
+			'scrollTop': $('#'+id).offset().top
+		};
+
+		$('body').animate(animDest, 1000);
+	});
 };
 
 
