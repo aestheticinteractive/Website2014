@@ -425,6 +425,6 @@ Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
 		projTimes: projTimes
 	};
 
-	$rootScope.page = new Aei.Pages.Timeline(projects, events);
+	$rootScope.page = new Aei.Pages.AdminTimeline(projects, events);
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Timeline', 'Admin']);
 };

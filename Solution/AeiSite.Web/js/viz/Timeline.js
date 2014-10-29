@@ -1,33 +1,36 @@
 
 /*====================================================================================================*/
-Aei.Pages.Timeline = function(projects, events) {
+Aei.Timeline = function(projects, events, projId) {
 	this._projects = projects;
 	this._events = events;
+	this._projId = projId;
+	this._firstDate = new Date(3000, 0, 1);
 	this._linesData = this._buildLinesData();
 	
-	this._firstDate = new Date(1999, 11, 2);
+	this._firstDate.setDate(this._firstDate.getDate()-27);
 	this._firstDateTime = this._firstDate.getTime();
 	this._today = new Date();
-	this._height = 400;
 };
 
-Aei.Pages.Timeline.MsPerDay = 24*3600*1000;
+Aei.Timeline.MsPerDay = 24*3600*1000;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Timeline.prototype._buildLinesData = function() {
+Aei.Timeline.prototype._buildLinesData = function() {
 	var eventLine = this._buildLineData(null, this._events);
 	var lines = [ eventLine ];
 	var projects = this._projects;
-	var pi, proj;
+	var pi, proj, line;
 
 	for ( pi in projects ) {
 		proj = projects[pi];
+		line = this._buildLineData(proj, proj.timeline);
+		lines.push(line);
 
-		lines.push(
-			this._buildLineData(proj, proj.timeline)
-		);
+		if ( line.minDate < this._firstDate ) {
+			this._firstDate = new Date(line.minDate);
+		}
 	}
 	
 	var propFunc = function(x) { return x.minDate; };
@@ -36,9 +39,10 @@ Aei.Pages.Timeline.prototype._buildLinesData = function() {
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Timeline.prototype._buildLineData = function(project, rawItems) {
+Aei.Timeline.prototype._buildLineData = function(project, rawItems) {
 	var line = {
 		project: project,
+		highlight: 0,
 		items: [],
 		minDate: new Date(3000, 0, 1),
 		maxDate: new Date(1000, 0, 1)
@@ -46,7 +50,11 @@ Aei.Pages.Timeline.prototype._buildLineData = function(project, rawItems) {
 
 	var range = null;
 	var i, item, d, name;
-	
+
+	if ( this._projId ) {
+		line.highlight = (project && project.id == this._projId ? 1 : -1);
+	}
+
 	for ( i in rawItems ) {
 		item = rawItems[i];
 		name = item.type+' '+item.name;
@@ -101,11 +109,12 @@ Aei.Pages.Timeline.prototype._buildLineData = function(project, rawItems) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Timeline.prototype.onRender = function() {
-	this._contain = $('#timeline');
+Aei.Timeline.prototype.build = function(containerId, height) {
+	this._contain = $('#'+containerId);
+	this._height = height;
 
 	this._stage = new Kinetic.Stage({
-		container: 'timeline'
+		container: containerId
 	});
 
 	this._layerGrid = new Kinetic.Layer();
@@ -118,18 +127,28 @@ Aei.Pages.Timeline.prototype.onRender = function() {
 	this._stage.add(this._layerProj);
 
 	this._buildScene();
-	this._contain.scrollLeft(9999);
+
+	////
+
+	var me = this;
+	
+	var onTimeout = function() {
+		//TODO: scroll to highlighted position
+		me._contain.scrollLeft(99999);
+	};
+
+	setTimeout(onTimeout, 1);
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Timeline.prototype._getDatePos = function(date) {
-	return Math.round((date.getTime()-this._firstDateTime)/Aei.Pages.Timeline.MsPerDay*1);
+Aei.Timeline.prototype._getDatePos = function(date) {
+	return Math.round((date.getTime()-this._firstDateTime)/Aei.Timeline.MsPerDay*1);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Timeline.prototype._buildScene = function() {
+Aei.Timeline.prototype._buildScene = function() {
 	this._buildLabels();
 	this._buildEvents();
 	this._buildProjects();
@@ -142,7 +161,7 @@ Aei.Pages.Timeline.prototype._buildScene = function() {
 
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Timeline.prototype._buildLabels = function() {
+Aei.Timeline.prototype._buildLabels = function() {
 	var lblConfig = {
 		fill: 'rgba(255, 255, 255, 0.25)',
 		font: 'Tahoma',
@@ -153,6 +172,14 @@ Aei.Pages.Timeline.prototype._buildLabels = function() {
 	var maxY = this._today.getFullYear();
 	var height = this._height;
 	var yi, mi, d, px, gridLine, yearLbl;
+
+	var bg = new Kinetic.Rect({
+		width: this._getDatePos(this._today),
+		height: this._height,
+		fill: '#000',
+		opacity: 0.15
+	});
+	this._layerGrid.add(bg);
 
 	for ( yi = 2000 ; yi <= maxY ; ++yi ) {
 		for ( mi = 0 ; mi < 12 ; ++mi ) {
@@ -182,7 +209,7 @@ Aei.Pages.Timeline.prototype._buildLabels = function() {
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Timeline.prototype._buildEvents = function() {
+Aei.Timeline.prototype._buildEvents = function() {
 	var linesData = this._linesData;
 	var height = this._height;
 	var li, lineData, ii, item, eventDot;
@@ -200,8 +227,9 @@ Aei.Pages.Timeline.prototype._buildEvents = function() {
 			eventDot = new Kinetic.Circle({
 				x: this._getDatePos(item.occur),
 				y: height-40,
-				radius: 4,
-				fill: 'rgba(255, 255, 255, 0.5)'
+				radius: 3,
+				fill: '#ffffff',
+				opacity: 0.25
 			});
 			this._layerEvent.add(eventDot);
 		}
@@ -210,7 +238,7 @@ Aei.Pages.Timeline.prototype._buildEvents = function() {
 
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Timeline.prototype._buildProjects = function() {
+Aei.Timeline.prototype._buildProjects = function() {
 	var	lblConfig = {
 		fill: 'rgba(255, 255, 255, 0.666)',
 		font: 'Tahoma',
@@ -223,7 +251,7 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 	var laneH = 20;
 	var centerY = Math.round(this._height*0.35);
 	var li, lineData, ii, item, lineI, lineMinDatePlus, laneMaxDate, 
-		px, py, projLbl, rangeLine, rangeBox, eventDot;
+		px, py, fill, opac, projLbl, rangeLine, rangeBox, eventDot;
 
 	for ( li in linesData ) {
 		lineData = linesData[li];
@@ -250,22 +278,18 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 		lineI = Math.floor(lineI/2)*(lineI % 2 ? -1 : 1);
 		px = this._getDatePos(lineData.minDate);
 		py = centerY+lineI*(laneH+10);
+		fill = (lineData.highlight == 1 ? '#8fbc4c' : '#ffffff');
+		opac = (lineData.highlight == -1 ? 0.1 : 0.5);
 
 		rangeLine = new Kinetic.Rect({
 			x: px,
 			y: py,
 			width: this._getDatePos(lineData.maxDate)-px,
 			height: laneH,
-			fill: 'rgba(255, 255, 255, 0.075)'
+			fill: fill,
+			opacity: opac*0.15
 		});
 		this._layerProj.add(rangeLine);
-
-		projLbl = new Kinetic.Text(lblConfig);
-		projLbl
-			.text(lineData.project.id)
-			.x(px+3)
-			.y(py+(laneH-projLbl.height())/2+1);
-		this._layerProj.add(projLbl);
 
 		for ( ii in lineData.items ) {
 			item = lineData.items[ii];
@@ -281,7 +305,8 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 				y: py,
 				width: this._getDatePos(item.end)-px,
 				height: laneH,
-				fill: 'rgba(255, 255, 255, 0.3)'
+				fill: fill,
+				opacity: opac*0.666
 			});
 			this._layerProj.add(rangeBox);
 		}
@@ -296,10 +321,19 @@ Aei.Pages.Timeline.prototype._buildProjects = function() {
 			eventDot = new Kinetic.Circle({
 				x: this._getDatePos(item.occur),
 				y: py+laneH/2,
-				radius: 4,
-				fill: 'rgba(255, 255, 255, 0.5)'
+				radius: 3,
+				fill: '#ffffff',
+				opacity: opac
 			});
 			this._layerProj.add(eventDot);
 		}
+
+		projLbl = new Kinetic.Text(lblConfig);
+		projLbl
+			.text(lineData.project.id)
+			.x(rangeLine.x()+3)
+			.y(py+(laneH-projLbl.height())/2+1)
+			.opacity(opac*0.7+0.3);
+		this._layerProj.add(projLbl);
 	}
 };

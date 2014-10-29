@@ -3,6 +3,7 @@
 Aei.Pages.Project = function(data) {
 	this._data = data;
 	this._images = [];
+	this._timeline = new Aei.Timeline(Aei.Tables.Project, Aei.Tables.ZachTimeline, data.id);
 };
 
 
@@ -11,15 +12,17 @@ Aei.Pages.Project = function(data) {
 Aei.Pages.Project.prototype.onRender = function() {
 	var gallery = $('#gallery');
 	var images = gallery.children('img');
-	var thisScope = this;
+	var me = this;
 
 	images.load(function(a) {
-		thisScope._onImageLoad($(a.target));
+		me._onImageLoad($(a.target));
 	});
 
 	window.onresize = function() {
-		thisScope._updateLayout();
+		me._updateLayout();
 	};
+
+	this._timeline.build('timeline', 300);
 };
 
 

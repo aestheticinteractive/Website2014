@@ -2172,8 +2172,8 @@ Aei.Tables.Project = [
 				m: 3,
 				d: 20
 			}
-			//TODO: add updates and releases
 		],
+		summary: 'Leave Tetris in the two-dimensional dust! Players move and rotate falling pieces to create lines across the 3D playing grid. The game features several piece sets and gameplay modes.',
 		desc: 'Fragmental 3D is a puzzle game of skill, strategy, and timing for iPhone and iPod Touch devices. Various pieces fall from the top of the playing grid. As a Fragment falls, you can move and rotate it to fit on the grid. The goal: create as many winning lines as you can before you run out of space in your grid.\n\nThis iPhone app was designed and developed in-house by Aesthetic Interactive. Fragmental\'s 3D gameplay and effects are implemented using the OpenGL framework, with powerful polygon-drawing optimizations to allow the app to perform well on all the various Apple devices. The app leverages the Cocoa framework for the menu systems, and integrates with an online service for the leaderboards. Paid and free versions are both available in the App Store.',
 		url: 'Fragmental3D.com',
 		imageCount: 18,
