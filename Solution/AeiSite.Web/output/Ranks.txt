@@ -172,46 +172,6 @@
 
 
 ---
-### services: Project Management
-
-0.970 fragmentalleap
-0.960 journeyful
-0.951 fabricapi
-0.922 fabricweb
-0.921 kinstnerphoto
-0.912 fragmental
-0.837 weaver
-0.828 rexconnect
-0.786 trellovision
-0.776 hardlines
-0.766 aei2009
-0.735 alifesim
-0.679 gvsuamasite
-0.572 aei2007
-0.563 portfolio
-0.458 rotator
-0.396 idashhtml
-0.212 lessonvision
-0.182 idashapp
-0.172 dtmkiosk
-0.168 idashboards
-0.144 footvolley
-0.144 dormtshirts
-0.136 briankelly
-0.134 teneo
-0.132 1100rooms
-0.124 harrisicons
-0.120 actionoffice
-0.084 homelink
-0.076 harriscalc
-0.074 spechealth
-0.070 siennabakery
-0.060 oakwoodmaps
-0.050 elexiconblog
-0.030 sysmaintmap
-
-
----
 ### services: Communication
 
 0.960 fragmentalleap
@@ -251,6 +211,46 @@
 0.084 homelink
 0.075 elexiconblog
 0.045 sysmaintmap
+
+
+---
+### services: Project Management
+
+0.970 fragmentalleap
+0.960 journeyful
+0.951 fabricapi
+0.922 fabricweb
+0.921 kinstnerphoto
+0.912 fragmental
+0.837 weaver
+0.828 rexconnect
+0.786 trellovision
+0.776 hardlines
+0.766 aei2009
+0.735 alifesim
+0.679 gvsuamasite
+0.572 aei2007
+0.563 portfolio
+0.458 rotator
+0.396 idashhtml
+0.212 lessonvision
+0.182 idashapp
+0.172 dtmkiosk
+0.168 idashboards
+0.144 footvolley
+0.144 dormtshirts
+0.136 briankelly
+0.134 teneo
+0.132 1100rooms
+0.124 harrisicons
+0.120 actionoffice
+0.084 homelink
+0.076 harriscalc
+0.074 spechealth
+0.070 siennabakery
+0.060 oakwoodmaps
+0.050 elexiconblog
+0.030 sysmaintmap
 
 
 ---
