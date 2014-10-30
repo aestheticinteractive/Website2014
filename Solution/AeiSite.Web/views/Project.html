@@ -1,15 +1,35 @@
 <style>
+	section.galleryHold .columns {
+		padding-top: 0;
+	}
+	
+	div.intro {
+		margin-bottom: 16px;
+	}
+	
+	#gallery a {
+		font-size: 0;
+	}
+	
 	#gallery img {
 		margin: 0 1px 1px 0;
 	}
 	
-	section.content  .barBg {
+	section.content .barBg {
 		height: 4px;
 		margin-top: 0;
 	}
 	
 	span.year {
 		font-size: 28px;
+	}
+	
+	@media only screen and (max-width: 40.0em) { /* < medium */
+	
+		div.intro {
+			margin-bottom: 16px;
+		}
+	
 	}
 </style>
 
@@ -30,6 +50,23 @@
 		</div>
 	</section>
 </div>
+
+
+<section class="content galleryHold">
+	<div class="row">
+	
+		<div class="large-12 columns">
+			<div id="gallery" data-count="{{model.project.imageCount}}">
+				<a ng-repeat="index in model.project.imageIndexes" 
+						ng-href="img/projects/{{model.project.id}}/{{index}}.jpg">
+					<img ng-src="img/projects/{{model.project.id}}/{{index}}.jpg" 
+						data-index="{{index}}" style="display: none;" />
+				</a>
+			</div>
+		</div>
+
+	</div>
+</section>
 
 
 <section class="content">
@@ -257,20 +294,6 @@
 			</table>
 		</div>
 	
-	</div>
-</section>
-
-<section class="content">
-	<div class="row">
-	
-		<div class="large-12 columns">
-			<div id="gallery" data-count="{{model.project.imageCount}}">
-				<img ng-repeat="index in model.project.imageIndexes" 
-					ng-src="img/projects/{{model.project.id}}/{{index}}.jpg" 
-					data-index="{{index}}" style="display: none;" />
-			</div>
-		</div>
-
 	</div>
 </section>
 

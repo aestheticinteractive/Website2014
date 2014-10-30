@@ -11,8 +11,16 @@ Aei.Pages.Project = function(data) {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Project.prototype.onRender = function() {
 	var gallery = $('#gallery');
-	var images = gallery.children('img');
+	var images = gallery.children('a').children('img');
 	var me = this;
+
+	gallery.magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		gallery: { 
+			enabled:true
+		}
+	});
 
 	images.load(function(a) {
 		me._onImageLoad($(a.target));
@@ -41,7 +49,7 @@ Aei.Pages.Project.prototype._onImageLoad = function(image) {
 
 	var pack = new ImagePack();
 	pack.setPadding(1);
-	pack.setMinBounds(320, 2.5);
+	pack.setMinBounds(320, 3.5);
 	pack.setMaxBounds(1200, 7.5);
 	this._imagePack = pack;
 
