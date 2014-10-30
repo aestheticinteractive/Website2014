@@ -79,7 +79,33 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 	$scope.model = {
 		project: proj,
 		minDate: minDate,
-		maxDate: maxDate
+		maxDate: maxDate,
+		tags: [
+			{
+				name: 'Services',
+				tagList: proj.services
+			},
+			{
+				name: 'Skills',
+				tagList: proj.skills
+			},
+			{
+				name: 'Languages',
+				tagList: proj.languages
+			},
+			{
+				name: 'Products',
+				tagList: proj.products
+			},
+			{
+				name: 'Systems',
+				tagList: proj.systems
+			},
+			{
+				name: 'Team Types',
+				tagList: proj.teams
+			}
+		]
 	};
 	
 	$rootScope.page =  new Aei.Pages.Project(proj);

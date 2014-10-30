@@ -15,13 +15,56 @@
 		margin: 0 1px 1px 0;
 	}
 	
-	section.content .barBg {
-		height: 4px;
-		margin-top: 0;
-	}
-	
 	span.year {
 		font-size: 28px;
+	}
+	
+	.tagRow .columns {
+		padding-top: 8px;
+		padding-bottom: 9px;
+	}
+	
+	.tagRow .columns {
+		padding-top: 8px;
+		padding-bottom: 9px;
+	}
+	
+	.tagRow:nth-child(even) {
+		background-color: #3d3d3d;
+		background-color: rgba(255, 255, 255, 0.02);
+	}
+
+	.tagRow:nth-child(odd) {
+		background-color: #383838;
+		background-color: rgba(0, 0, 0, 0.06);
+	}
+	
+	.tagRow .name {
+		font-weight: bold;
+	}
+	
+	.tagRow .name a {
+		color: #bbb;
+	}
+	
+	.tagRow .name a:hover {
+		color: #ddd;
+	}
+	
+	.tagRow .name a i {
+		color: #8fbc4c;
+	}
+	
+	.tagRow .name a:hover i {
+		color: #bbd693;
+	}
+		
+	h2 + .tagRow {
+		border-top: 2px solid #404040;
+	}
+	
+	section.content .tagRow .barBg {
+		float: right;
 	}
 	
 	@media only screen and (max-width: 40.0em) { /* < medium */
@@ -29,7 +72,37 @@
 		div.intro {
 			margin-bottom: 16px;
 		}
+		
+		.tagRow .columns {
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+		
+		.tagRow .nameCol {
+			padding-bottom: 5px;
+		}
 	
+		.tagRow .barCol {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	
+		.tagRow .descCol {
+			padding-top: 5px;
+		}
+	
+		.tagRow .desc {
+			color: #888;
+			font-size: 12px;
+			line-height: 15px;
+		}
+	
+		section.content .tagRow .barBg {
+			height: 2px;
+			margin: 0;
+			float: left;
+		}
+		
 	}
 </style>
 
@@ -70,84 +143,52 @@
 
 
 <section class="content">
-	<div class="row">
+	<div class="row" ng-repeat="tagObj in model.tags" ng-if="tagObj.tagList.length">
 	
-		<div class="large-6 columns">
-			<h3>
-				Description
-			</h3>
-			<p>
-				{{model.project.desc}}
-			</p>
-		</div>
-		
-		<!--
-			* Two-line "is a" description.
-			* Key features bullet list
-			* 1/2 sentences for each Service tag
-		-->
+		<div class="large-12 columns">
+			<h2>
+				{{tagObj.name}}
+			</h2>
 
-		<div class="large-3 columns">
-			
-			<h3 ng-if="model.project.services.length">
-				Services
-			</h3>
-			<div class="tag" ng-style="{'background-color': 'rgba(102, 136, 51, '+tag.weight+')', 
-					'color': 'rgba(255, 255, 255, '+(tag.weight*0.5+0.25)+')'}"
-					ng-repeat="tag in model.project.services" title="{{tag.desc}}">
-				{{tag.item.name}}
-			</div>
-		
-			<h3 ng-if="model.project.skills.length">
-				Skills
-			</h3>
-			<div class="tag" ng-style="{'background-color': 'rgba(102, 136, 51, '+tag.weight+')', 
-					'color': 'rgba(255, 255, 255, '+(tag.weight*0.5+0.25)+')'}"
-					ng-repeat="tag in model.project.skills" title="{{tag.desc}}">
-				{{tag.item.name}}
-			</div>
-		
-			<h3 ng-if="model.project.languages.length">
-				Languages
-			</h3>
-			<div class="tag" ng-style="{'background-color': 'rgba(102, 136, 51, '+tag.weight+')', 
-					'color': 'rgba(255, 255, 255, '+(tag.weight*0.5+0.25)+')'}"
-					ng-repeat="tag in model.project.languages" title="{{tag.desc}}">
-				{{tag.item.name}}
-			</div>
-		
-			<h3 ng-if="model.project.products.length">
-				Products
-			</h3>
-			<div class="tag" ng-style="{'background-color': 'rgba(102, 136, 51, '+tag.weight+')', 
-					'color': 'rgba(255, 255, 255, '+(tag.weight*0.5+0.25)+')'}"
-					ng-repeat="tag in model.project.products" title="{{tag.desc}}">
-				{{tag.item.name}}
-			</div>
-			
-			<h3 ng-if="model.project.systems.length">
-				Systems
-			</h3>
-			<div class="tag" ng-style="{'background-color': 'rgba(102, 136, 51, '+tag.weight+')', 
-					'color': 'rgba(255, 255, 255, '+(tag.weight*0.5+0.25)+')'}"
-					ng-repeat="tag in model.project.systems" title="{{tag.desc}}">
-				{{tag.item.name}}
-			</div>
-		
-			<h3 ng-if="model.project.teams.length">
-				Team Types
-			</h3>
-			<div class="tag" ng-style="{'background-color': 'rgba(102, 136, 51, '+tag.weight+')', 
-					'color': 'rgba(255, 255, 255, '+(tag.weight*0.5+0.25)+')'}"
-					ng-repeat="tag in model.project.teams" title="{{tag.desc}}">
-				{{tag.item.name}}
-			</div>
-		
-		</div>
+			<div class="row tagRow" ng-repeat="tag in tagObj.tagList">
+						
+				<div class="large-2 large-push-2 medium-3 medium-push-2 columns nameCol">
+					<p class="name">
+						<a ng-href="#/Tags/{{tagObj.name}}/{{tag.item.link}}">
+							{{tag.item.name}}
+							<i class="fa fa-angle-double-right"></i>
+						</a>
+					</p>
+				</div>
+				
+				<div class="large-2 large-pull-2 medium-2 medium-pull-3 columns barCol">
+					<div class="barBg" title="{{tag.weight.dev}}">
+						<div class="barFill" ng-style="{'width': tag.weight*100+'%',
+							'background-color': 'rgba(102, 136, 51, '+(tag.weight*0.5+0.5)+')'}">
+						</div>
+					</div>
+				</div>
 
-		<div class="large-3 columns">
+				<div class="large-8 medium-7 columns descCol">
+					<p class="desc">
+						{{tag.desc}}
+					</p>
+				</div>
+						
+			</div>
+
+		</div>
+	
+	</div>
+</section>
+
+
+<section class="content">
+	<div class="row">
+
+		<div class="medium-3 columns">
 			<img ng-src="img/projects/{{model.project.id}}/icon.jpg"
-			    style="width: 150px; height: 150px; margin-bottom: 10px;" />
+			     style="width: 150px; height: 150px; margin-bottom: 10px;" />
 			<p>
 				<span class="year" title="{{model.minDate.toDateString()}}">
 					{{model.minDate.getFullYear()}}
@@ -173,127 +214,13 @@
 				</a>
 			</p>
 		</div>
-	</div>
-</section>
+	
+		<div class="medium-9 columns">
+			<p>
+				{{model.project.desc}}
+			</p>
+		</div>
 
-
-<section class="content">
-	<div class="row">
-	
-		<div class="large-2 columns">
-			<table>
-				<thead>
-					<th>Services</th>
-				</thead>
-				<tbody>
-					<tr ng-repeat="tag in model.project.services">
-						<td style="font-size: 12px;">
-							{{tag.item.name}}
-							<div class="barBg" title="{{tag.weight.dev}}">
-								<div class="barFill" ng-style="{'width': tag.weight*100+'%'}">
-								</div>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		
-		<div class="large-2 columns">
-			<table>
-				<thead>
-					<th>Skills</th>
-				</thead>
-				<tbody>
-					<tr ng-repeat="tag in model.project.skills">
-						<td style="font-size: 12px;">
-							{{tag.item.name}}
-							<div class="barBg" title="{{tag.weight.dev}}">
-								<div class="barFill" ng-style="{'width': tag.weight*100+'%'}">
-								</div>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	
-		<div class="large-2 columns">
-			<table>
-				<thead>
-					<th>Languages</th>
-				</thead>
-				<tbody>
-					<tr ng-repeat="tag in model.project.languages">
-						<td style="font-size: 12px;">
-							{{tag.item.name}}
-							<div class="barBg" title="{{tag.weight.dev}}">
-								<div class="barFill" ng-style="{'width': tag.weight*100+'%'}">
-								</div>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	
-		<div class="large-2 columns">
-			<table>
-				<thead>
-					<th>Products</th>
-				</thead>
-				<tbody>
-					<tr ng-repeat="tag in model.project.products">
-						<td style="font-size: 12px;">
-							{{tag.item.name}}
-							<div class="barBg" title="{{tag.weight.dev}}">
-								<div class="barFill" ng-style="{'width': tag.weight*100+'%'}">
-								</div>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	
-		<div class="large-2 columns">
-			<table>
-				<thead>
-					<th>Systems</th>
-				</thead>
-				<tbody>
-					<tr ng-repeat="tag in model.project.systems">
-						<td style="font-size: 12px;">
-							{{tag.item.name}}
-							<div class="barBg" title="{{tag.weight.dev}}">
-								<div class="barFill" ng-style="{'width': tag.weight*100+'%'}">
-								</div>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	
-		<div class="large-2 columns">
-			<table>
-				<thead>
-					<th>Team Types</th>
-				</thead>
-				<tbody>
-					<tr ng-repeat="tag in model.project.teams">
-						<td style="font-size: 12px;">
-							{{tag.item.name}}
-							<div class="barBg" title="{{tag.weight.dev}}">
-								<div class="barFill" ng-style="{'width': tag.weight*100+'%'}">
-								</div>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	
 	</div>
 </section>
 
@@ -302,6 +229,9 @@
 	<div class="row">
 	
 		<div class="large-12 columns">
+			<h2>
+				Timeline
+			</h2>
 			<div id="timeline" style="width: 100%; overflow: auto;">
 			</div>
 		</div>

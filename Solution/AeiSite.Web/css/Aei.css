@@ -41,7 +41,7 @@ a:hover {
 	color: #bbd693; 
 }
 
-div.tag {
+.tag {
 	display: -moz-inline-stack;
 	display: inline-block;
 	zoom: 1;
@@ -198,10 +198,10 @@ section.content div + h3 {
 }
 
 section.content .barBg {
-	background-color: #363636;
-	background-color: rgba(0, 0, 0, 0.06);
-	height: 8px;
-	margin-top: 6px;
+	background-color: #404040;
+	background-color: rgba(255, 255, 255, 0.05);
+	height: 6px;
+	margin-top: 8px;
 	width: 100%;
 }
 
@@ -322,12 +322,12 @@ table tbody {
 
 table tbody tr:nth-child(even) {
 	background-color: #3d3d3d;
-	background-color: rgba(255, 255, 255, 0.015);
+	background-color: rgba(255, 255, 255, 0.02);
 }
 
 table tbody tr:nth-child(odd) {
 	background-color: #383838;
-	background-color: rgba(0, 0, 0, 0.04);
+	background-color: rgba(0, 0, 0, 0.06);
 }
 
 table tbody tr td {
