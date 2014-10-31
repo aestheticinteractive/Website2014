@@ -34,9 +34,13 @@ Aei.Pages.App.prototype.onMenuDirectiveComplete = function() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.App.prototype._handleSwitch = function() {
-	//console.log('Path: '+this._location.path());
-	Aei.Background.SetPaused('AppSwitch', true);
-	$('body').scrollTop(0);
+	if ( this._lastLoc && this._lastLoc != this._location.path() ) {
+		$('body').scrollTop(0);
+	}
+
+	this._lastLoc = this._location.path();
+
+	////
 
 	var me = this;
 	
@@ -44,6 +48,7 @@ Aei.Pages.App.prototype._handleSwitch = function() {
 		me._handleRender();
 	};
 
+	Aei.Background.SetPaused('AppSwitch', true);
 	setTimeout(onTimeout, 1);
 };
 
