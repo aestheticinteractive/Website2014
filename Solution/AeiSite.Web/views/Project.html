@@ -1,10 +1,62 @@
 <style>
-	section.galleryHold .columns {
-		padding-top: 0;
+	div.intro div.badge img {
+		width: 150px;
+		height: 150px;
+		margin-right: 16px;
+		float: left;
 	}
 	
-	div.intro {
-		margin-bottom: 16px;
+	div.intro div.details {
+		height: 150px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	div.intro div.details h1 {
+		text-align: left;
+		margin: 0 0 10px 0;
+		color: #ddd;
+	}
+	
+	div.intro div.details p {
+		text-align: left;
+		margin: 0;
+		padding: 0;
+		font-size: 14px;
+		line-height: 18px;
+	}
+	
+	div.intro div.details i.fa-external-link {
+		font-size: 9px;
+	}
+	
+	div.intro div.details p a {
+		font-size: 14px;
+		line-height: 18px;
+	}
+	
+	div.intro div.details p.year {
+		font-size: 18px;
+		line-height: 22px;
+		color: #666;
+	}
+	
+	div.intro p.summary {
+		text-align: right;
+		height: 150px;
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 16px;
+		border-left: 2px solid #303030;
+		border-left: 2px solid rgba(255, 255, 255, 0.1);
+	}
+	
+	section.galleryHold {
+		padding-bottom: 0;
+	}
+	
+	section.galleryHold .columns {
+		padding-top: 24px;
 	}
 	
 	#gallery a {
@@ -13,10 +65,6 @@
 	
 	#gallery img {
 		margin: 0 1px 1px 0;
-	}
-	
-	span.year {
-		font-size: 28px;
 	}
 	
 	.tagRow .columns {
@@ -67,10 +115,30 @@
 		float: right;
 	}
 	
+	@media only screen and (max-width: 64.0em) { /* < large */
+		
+		div.intro p.summary {
+			font-size: 16px;
+			line-height: 28px;
+		}
+		
+	}
+	
 	@media only screen and (max-width: 40.0em) { /* < medium */
 	
 		div.intro {
-			margin-bottom: 16px;
+			padding-top: 24px;
+		}
+		
+		div.intro div.badge img {
+			margin-bottom: 12px;
+		}
+	
+		div.intro p.summary {
+			text-align: left;
+			height: auto;
+			padding: 0;
+			border-left: none;
 		}
 		
 		.tagRow .columns {
@@ -104,6 +172,30 @@
 		}
 		
 	}
+	
+	@media only screen and (max-width: 479px) {
+	
+		div.intro {
+			padding-top: 20px;
+		}
+		
+		div.intro div.badge img {
+			float: none;
+		}
+	
+		div.intro div.details {
+			height: auto;
+			display: inherit;
+			margin-bottom: 16px;
+		}
+	
+		div.intro p.summary {
+			padding-top: 12px;
+			border-top: 0 solid #000;
+			border-top: 2px solid rgba(255, 255, 255, 0.1);
+		}
+		
+	}
 </style>
 
 
@@ -111,11 +203,49 @@
 	<section class="content">
 		<div class="row">
 	
-			<div class="large-8 large-push-2 columns">
-				<h1>
-					<i class="fa fa-cube"></i> | {{model.project.name}}
-				</h1>
-				<p>
+			<div class="medium-6 columns">
+				
+				<div class="badge">
+					<img ng-src="img/projects/{{model.project.id}}/icon.jpg" />
+				
+					<div class="details">
+						<h1>
+							{{model.project.name}}
+						</h1>
+						<p class="year">
+							<span title="{{model.minDate.toDateString()}}">
+								{{model.minDate.getFullYear()}}
+							</span>
+							<span ng-if="model.minDate.getFullYear() != model.maxDate.getFullYear()">
+								to
+								<span title="{{model.maxDate.toDateString()}}">
+									{{model.maxDate.getFullYear()}}
+								</span>
+							</span>
+						</p>
+						<p class="client" ng-if="model.project.client">
+							{{model.project.client}}
+						</p>
+						<p class="url" ng-if="model.project.url">
+							<a ng-href="http://{{model.project.url}}" target="_blank">
+								{{model.project.url}}
+								<i class="fa fa-external-link"></i>
+							</a>
+						</p>
+						<p class="github" ng-if="model.project.github" >
+							<a ng-href="http://github.com/{{model.project.github}}" target="_blank">
+								View at GitHub
+								<i class="fa fa-external-link"></i>
+							</a>
+						</p>
+					</div>
+					<div style="clear: both;">
+					</div>
+				</div>
+			</div>
+
+			<div class="medium-6 columns" ng-if="model.project.summary">
+				<p class="summary">
 					{{model.project.summary}}
 				</p>
 			</div>
@@ -179,48 +309,6 @@
 
 		</div>
 	
-	</div>
-</section>
-
-
-<section class="content">
-	<div class="row">
-
-		<div class="medium-3 columns">
-			<img ng-src="img/projects/{{model.project.id}}/icon.jpg"
-			     style="width: 150px; height: 150px; margin-bottom: 10px;" />
-			<p>
-				<span class="year" title="{{model.minDate.toDateString()}}">
-					{{model.minDate.getFullYear()}}
-				</span>
-				<span ng-if="model.minDate.getFullYear() != model.maxDate.getFullYear()" class="year">
-					to
-					<span title="{{model.maxDate.toDateString()}}">
-						{{model.maxDate.getFullYear()}}
-					</span>
-				</span>
-			</p>
-			<p style="margin-top: 10px;">
-				<span style="font-weight: bold;">
-					{{model.project.client}}
-				</span>
-				<br/>
-				<span ng-if="model.project.url">
-					<a ng-href="http://{{model.project.url}}">{{model.project.url}}</a>
-					<br/>
-				</span>
-				<a ng-if="model.project.github" bg-href="http://github.com/{{model.project.github}}">
-					View at GitHub
-				</a>
-			</p>
-		</div>
-	
-		<div class="medium-9 columns">
-			<p>
-				{{model.project.desc}}
-			</p>
-		</div>
-
 	</div>
 </section>
 
