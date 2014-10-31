@@ -39,6 +39,7 @@ Aei.Controllers.Footer = function() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Home = function($rootScope) {
+	$rootScope.page = null;
 	$rootScope.pageTitle = 'Aesthetic Interactive | Software Development and Design | Grand Rapids, MI';
 };
 
@@ -50,6 +51,7 @@ Aei.Controllers.Projects = function($rootScope, $scope) {
 		projects: Aei.Database.selectList(Aei.Tables.Project)
 	};
 	
+	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Projects']);
 };
 
@@ -181,6 +183,7 @@ Aei.Controllers.Tags = function($rootScope, $scope) {
 		groups: groups
 	};
 	
+	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Tags']);
 };
 
@@ -230,6 +233,7 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams) {
 		tagUses: Aei.Queries.selectProjectTagUsesByItem(tagType, item)
 	};
 	
+	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([item.name, 'Tags']);
 };
 
@@ -239,6 +243,7 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams) {
 Aei.Controllers.Contact = function($rootScope, $scope) {
 	$scope.model = {};
 	
+	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Contact']);
 };
 
@@ -284,6 +289,7 @@ Aei.Controllers.AdminProjects = function($rootScope, $scope) {
 		edits: edits
 	};
 
+	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Projects', 'Admin']);
 };
 
@@ -293,6 +299,7 @@ Aei.Controllers.AdminProjectTags = function($rootScope, $scope) {
 		projects: Aei.Tables.Project
 	};
 
+	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Project Tags', 'Admin']);
 };
 
@@ -390,6 +397,7 @@ Aei.Controllers.AdminWeights = function($rootScope, $scope) {
 		groups: groups
 	};
 
+	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Weights', 'Admin']);
 };
 
