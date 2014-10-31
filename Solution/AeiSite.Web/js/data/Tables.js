@@ -121,11 +121,7 @@ Aei.Tables.Language = [
 	},
 	{
 		id: 'html',
-		name: 'HTML'
-	},
-	{
-		id: 'css',
-		name: 'CSS'
+		name: 'HTML/CSS'
 	},
 	{
 		id: 'objc',
@@ -347,12 +343,15 @@ for ( var i in Aei.Tables.Skill ) {
 
 /*====================================================================================================*/
 Aei.Tables.Project = [
+	//TODO: Momentus
+	//TODO: DCS tools
 	//TODO: WordNet?
 	//TODO: inthemix?
 	//TODO: chandra anim?
 	//TODO: wixplorer?
 	//TODO: flash frameworks: volume, core?
 	//TODO: multiplayer flash (school project)?
+	//TODO: music/recording projects?
 	{
 		id: 'fabricapi',
 		name: 'Fabric',
@@ -838,11 +837,6 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: '',
 				weight: 0.98
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
-				desc: '',
-				weight: 0.97
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
@@ -1787,11 +1781,6 @@ Aei.Tables.Project = [
 				weight: 0.98
 			},
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
-				desc: 'Used to style the website.',
-				weight: 0.97
-			},
-			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
 				desc: 'Used to implement the website functionality.',
 				weight: 0.99
@@ -1953,11 +1942,6 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: 'Used to build the website.',
 				weight: 0.9
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
-				desc: 'Used to style the website.',
-				weight: 0.8
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
@@ -2227,11 +2211,6 @@ Aei.Tables.Project = [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: 'Built a simple marketing website.',
-				weight: 0.2
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
-				desc: 'Styled the app\'s marketing website.',
 				weight: 0.2
 			},
 			{
@@ -2514,11 +2493,6 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
-				desc: 'Used for building non-Flash webpages.',
-				weight: 0.55
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
 				desc: 'Used for building non-Flash webpages.',
 				weight: 0.55
 			},
@@ -3246,11 +3220,6 @@ Aei.Tables.Project = [
 				weight: 1
 			},
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
-				desc: '',
-				weight: 0.99
-			},
-			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
 				weight: 0.85
@@ -3689,11 +3658,6 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: '',
 				weight: 0.98
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
-				desc: '',
-				weight: 0.97
 			}
 		],
 		products: [
@@ -3985,11 +3949,6 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: '',
 				weight: 0.91
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
-				desc: '',
-				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
@@ -4834,11 +4793,6 @@ Aei.Tables.Project = [
 				weight: 1
 			},
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
-				desc: '',
-				weight: 0.99
-			},
-			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: '',
 				weight: 0.3
@@ -5506,11 +5460,6 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: '',
 				weight: 0.95
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'css'),
-				desc: '',
-				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'php'),
