@@ -2158,23 +2158,22 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'Leave Tetris in the two-dimensional dust! Players move and rotate falling pieces to create lines across the 3D playing grid. The game features several piece sets and gameplay modes.',
-		desc: 'Fragmental 3D is a puzzle game of skill, strategy, and timing for iPhone and iPod Touch devices. Various pieces fall from the top of the playing grid. As a Fragment falls, you can move and rotate it to fit on the grid. The goal: create as many winning lines as you can before you run out of space in your grid.\n\nThis iPhone app was designed and developed in-house by Aesthetic Interactive. Fragmental\'s 3D gameplay and effects are implemented using the OpenGL framework, with powerful polygon-drawing optimizations to allow the app to perform well on all the various Apple devices. The app leverages the Cocoa framework for the menu systems, and integrates with an online service for the leaderboards. Paid and free versions are both available in the App Store.',
 		url: 'Fragmental3D.com',
 		imageCount: 18,
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: 'Built the entire app; game logic, effects, controls, menus, optimizations, etc.',
+				desc: 'Built the entire game and corresponding marketing website.|Optimized the 3D graphics to perform on the entire range of iOS devices.|Implemented a precise control system, smooth effects, and complex game logic.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: 'Designed all game screens, controls, backgrounds, menus, etc.',
+				desc: 'Designed all game elements, screens, and artwork.',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: 'Invented the game concept, control systems, game variations, etc.',
+				desc: 'Created the overall game concept, gameplay modes, and piece sets.|Invented a touch-based control system for moving pieces and spinning the camera.|Coordinated the overall look, feel, and sounds of the game.',
 				weight: 0.99
 			},
 			{
@@ -2184,92 +2183,87 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
-				desc: 'Developed web and graphical content for marketing the game.',
+				desc: 'Described the game\'s rules, controls, and other instructions via text and visuals.|Created text, video, and graphical content for describing and marketing the game.',
 				weight: 0.9
 			}
 		],
 		systems: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.System, 'ios'),
-				desc: 'Native app for all iPhone/iPod/iPad devices.',
+				desc: 'Targeted all iPhone, iPod, and iPad devices.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
-				desc: 'Simple marketing website.',
+				desc: 'Presented marketing content via website',
 				weight: 0.25
 			}
 		],
 		teams: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
-				desc: 'Created entirely by Zach.',
+				desc: 'Designed, developed, and completed by Zach.',
 				weight: 1
 			}
 		],
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
-				desc: 'Built a simple marketing website.',
+				desc: 'Used for building the marketing website.',
 				weight: 0.2
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'objc'),
-				desc: 'Wrote app in this language.',
-				weight: 0.985
+				desc: 'Used for building the app.',
+				weight: 1 //0.985
 			}
 		],
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'cocoa'),
-				desc: 'Used in the app\'s menus.',
+				desc: 'Used for building the menu screens and navigation.',
 				weight: 0.5
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'ogl'),
-				desc: 'Used for the app\'s 3D graphics.',
+				desc: 'Used for rendering the 3D graphics.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'oal'),
-				desc: 'Used for the app\'s sound effects.',
+				desc: 'Used for playing the sound effects.',
 				weight: 0.75
 			}
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'gamecen'),
-				desc: 'Used for the leaderboards.',
-				weight: 0.8
-			}*/
 		],
 		skills: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'mob'),
-				desc: 'Built as a native iOS app.',
+				desc: 'Created an exciting 3D gameplay experience for all iOS devices.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
-				desc: 'Created all the screens, backgrounds, and menus.',
+				desc: 'Developed the touch-based game control stystem.|Created an attractive in-game overlay to display vital gameplay info.|Built menus and inputs for configuring and learning about the game.',
 				weight: 0.92
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
-				desc: 'Invented the control system for moving/rotating pieces and orbiting the camera.',
+				desc: 'Discovered an easy-to-understand system for controlling complex game mechanics.|Allowed the user complete camera control to avoid obscured grid areas and to promote immersion in the game.|Created a visual experience that is colorful, varied, fun, and cohesive.|Provided several game options to promote replay value and offer challenges for players of all skill levels.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
-				desc: 'Created interactive 3D graphics and textures.',
+				desc: 'Realized a vision for a three-dimensional puzzle using 3D graphics.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
-				desc: 'Created several movement and transition animations.',
+				desc: 'Created free-falling blocks, spinning text, and expanding shockwaves.|Applied smooth, inertia-based tails to the camera motions.',
 				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
-				desc: 'Implemented several algorithms for game logic and optimization of 3D graphics performance.',
+				desc: 'Implemented grid-based analysis to determine game states and achievements.|Built graceful degradation to maintain 3D graphics performance across various devices.',
 				weight: 0.95
 			},
 			{
@@ -2279,8 +2273,14 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
-				desc: 'Created application to run at various resolutions and aspect ratios.',
+				desc: 'Built game to support various device resolutions and aspect ratios.',
 				weight: 0.8
+			}
+		],
+		related: [
+			{
+				id: 'fragmentalleap',
+				desc: 'The same game concept, built with a hand-based control system.'
 			}
 		],
 		weight: 0.94

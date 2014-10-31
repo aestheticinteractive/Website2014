@@ -106,7 +106,24 @@
 	.tagRow .name a:hover i {
 		color: #bbd693;
 	}
+	
+	.tagRow .desc li {
+		list-style-type: disc;
+		margin-left: 16px;
+		padding-left: 0;
+		color: #444;
+		list-style-type: square;
+	}
+	
+	.tagRow .desc li + li {
+		margin-top: 4px;
+	}
 		
+	.tagRow .desc li p {
+		margin: 0;
+		padding: 0;
+	}
+	
 	h2 + .tagRow {
 		border-top: 2px solid #404040;
 	}
@@ -159,7 +176,7 @@
 			padding-top: 5px;
 		}
 	
-		.tagRow .desc {
+		.tagRow .desc li p {
 			color: #888;
 			font-size: 12px;
 			line-height: 15px;
@@ -300,9 +317,11 @@
 				</div>
 
 				<div class="large-8 medium-7 columns descCol">
-					<p class="desc">
-						{{tag.desc}}
-					</p>
+					<ul class="desc">
+						<li ng-repeat="descItem in (tag.desc.split('|'))">
+							<p>{{descItem}}</p>
+						</li>
+					</ul>
 				</div>
 						
 			</div>
