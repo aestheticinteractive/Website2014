@@ -1,28 +1,80 @@
 
 <style>
-	.barBg {
-		background-color: #303030;
-		height: 8px;
-		margin-top: 6px;
+	.thumbCol table {
+		table-layout: fixed;
+		background: transparent;
+		margin-bottom: 0;
+		border-spacing: 0;
 		width: 100%;
+		border: 0 solid #000;
 	}
 	
-	.barBg .barFill {
-		background-color: #683;
-		height: 100%;
+	.thumbCol .imgTd {
+		width: 80px;
+		height: 80px;
+		padding: 0;
 	}
 	
-	table {
-		margin: -6px 0 0 0;
+	.desc {
+		display: table-cell;
+		height: 80px;
+		vertical-align: middle;
 	}
 	
-	.imageCol {
-		padding: 8px;
+	.desc li {
+		list-style-type: disc;
+		margin-left: 16px;
+		padding-left: 0;
+		color: #444;
+		list-style-type: square;
 	}
 	
-	.projCol {
-		padding: 8px 8px 8px 0;
+	.desc li + li {
+		margin-top: 4px;
 	}
+		
+	.desc li p {
+		margin: 0;
+		padding: 0;
+	}
+	
+	section.content .barBg {
+	}
+	
+	@media only screen and (max-width: 40.0em) { /* < medium */
+		
+		.thumbCol img {
+			width: 100%;
+			height: auto;
+		}
+	
+		.row.alt .columns.thumbCol {
+			padding-bottom: 0;
+			padding-right: 0;
+		}
+	
+		.row.alt .columns.descCol {
+			padding-top: 5px;
+		}
+	
+		.desc li {
+			font-size: 12px;
+			line-height: 15px;
+		}
+	
+		.desc li p {
+			color: #888;
+			font-size: 12px;
+			line-height: 15px;
+		}
+	
+		section.content .barBg {
+			height: 2px;
+			margin: 0;
+		}
+		
+	}
+	
 </style>
 
 
@@ -32,10 +84,10 @@
 	
 			<div class="large-8 large-push-2 columns">
 				<h1>
-					<i class="fa fa-tasks"></i> | {{model.item.name}} ({{model.section}})
+					<i class="fa fa-tasks"></i> | {{model.section}}: {{model.item.name}}
 				</h1>
 				<p>
-					<em>Aesthetic Interactive</em> has a tag...
+					{{model.item.desc}}
 				</p>
 			</div>
 
@@ -45,56 +97,36 @@
 
 
 <section class="content">
-	<div class="row">
-	
-		<div class="large-12 columns">
+	<div class="row alt" ng-repeat="use in model.tagUses">
 		
-			<h3>
-				Description
-			</h3>
-			<p>
-				{{model.item.desc}}
-			</p>
-
+		<div class="medium-4 columns thumbCol">
+			<table>
+				<tr>
+					<td class="imgTd">
+						<a ng-href="#/Projects/{{use.project.link}}">
+							<img ng-src="img/projects/{{use.project.id}}/icon.jpg" />
+						</a>
+					</td>
+					<td>
+						<a ng-href="#/Projects/{{use.project.link}}">
+							{{use.project.name}}
+						</a>
+						<div class="barBg" title="{{use.serviceEntry.weight}} * {{use.project.weight}}">
+							<div class="barFill" ng-style="{'width': use.weight*100+'%'}">
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			
 		</div>
 
-	</div>
-</section>
-
-<section class="content">
-	<div class="row">
-		<div class="large-12 columns">
-			
-			<h3>
-				Top Projects
-			</h3>
-
-			<table>
-				<thead>
-					<th style="width: 86px;"></th>
-					<th></th>
-				</thead>
-				<tbody>
-					<tr ng-repeat="use in model.tagUses">
-						<td class="imageCol">
-							<a ng-href="#/Projects/{{use.project.link}}">
-								<img ng-src="img/projects/{{use.project.id}}/icon.jpg" 
-								     style="width: 70px;"/>
-							</a>
-						</td>
-						<td class="projCol">
-							<a ng-href="#/Projects/{{use.project.link}}">{{use.project.name}}</a>:
-							{{use.tag.desc}}
-							<br/>
-							<div class="barBg" title="{{use.serviceEntry.weight}} * {{use.project.weight}}">
-								<div class="barFill" ng-style="{'width': use.weight*100+'%'}">
-								</div>
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-
+		<div class="medium-8 columns descCol">
+			<ul class="desc" ng-if="use.tag.desc">
+				<li ng-repeat="descItem in (use.tag.desc.split('|'))">
+					<p>{{descItem}}</p>
+				</li>
+			</ul>
 		</div>
 
 	</div>

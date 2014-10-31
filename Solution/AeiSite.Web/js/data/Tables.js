@@ -2283,6 +2283,7 @@ Aei.Tables.Project = [
 				desc: 'The same game concept, built with a hand-based control system.'
 			}
 		],
+		ready: true,
 		weight: 0.94
 	},
 	{

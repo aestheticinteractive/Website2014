@@ -66,6 +66,29 @@ a:hover {
 	padding-top: 40px;
 }
 
+.row.alt .columns {
+	padding-top: 8px;
+	padding-bottom: 9px;
+}
+		
+.row.alt:nth-child(even) {
+	background-color: #3d3d3d;
+	background-color: rgba(255, 255, 255, 0.02);
+}
+
+.row.alt:nth-child(odd) {
+	background-color: #383838;
+	background-color: rgba(0, 0, 0, 0.06);
+}
+
+@media only screen and (max-width: 40.0em) { /* < medium */
+	
+	.row.alt .columns {
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+	
+}
 
 /*----------------------------------------------------------------------------------------------------*/
 
@@ -284,7 +307,7 @@ div.intro .columns {
 /*----------------------------------------------------------------------------------------------------*/
 
 
-table {
+table.fancy {
 	table-layout: fixed;
 	background: transparent;
 	-webkit-border-radius: 0px;
@@ -298,16 +321,16 @@ table {
 	border: 0 solid #000;
 }
 
-table thead {
+table.fancy thead {
 	font-weight: bold;
 	background-color: inherit;
 }
 
-table thead tr th, table tbody tr td {
+table.fancy thead tr th, table tbody tr td {
 	padding: 5px 8px 5px 8px;
 }
 
-table thead tr th {
+table.fancy thead tr th {
 	text-align: left;
 	vertical-align: middle;
 	color: #777;
@@ -316,21 +339,21 @@ table thead tr th {
 	font-weight: normal;
 }
 
-table tbody {
+table.fancy tbody {
 	border: 0 solid #000;
 }
 
-table tbody tr:nth-child(even) {
+table.fancy tbody tr:nth-child(even) {
 	background-color: #3d3d3d;
 	background-color: rgba(255, 255, 255, 0.02);
 }
 
-table tbody tr:nth-child(odd) {
+table.fancy tbody tr:nth-child(odd) {
 	background-color: #383838;
 	background-color: rgba(0, 0, 0, 0.06);
 }
 
-table tbody tr td {
+table.fancy tbody tr td {
 	vertical-align: top;
 	vertical-align: middle;
 	color: #bbb;

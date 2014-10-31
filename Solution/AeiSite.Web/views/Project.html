@@ -67,26 +67,6 @@
 		margin: 0 1px 1px 0;
 	}
 	
-	.tagRow .columns {
-		padding-top: 8px;
-		padding-bottom: 9px;
-	}
-	
-	.tagRow .columns {
-		padding-top: 8px;
-		padding-bottom: 9px;
-	}
-	
-	.tagRow:nth-child(even) {
-		background-color: #3d3d3d;
-		background-color: rgba(255, 255, 255, 0.02);
-	}
-
-	.tagRow:nth-child(odd) {
-		background-color: #383838;
-		background-color: rgba(0, 0, 0, 0.06);
-	}
-	
 	.tagRow .name {
 		font-weight: bold;
 	}
@@ -158,22 +138,22 @@
 			border-left: none;
 		}
 		
-		.tagRow .columns {
-			padding-top: 16px;
-			padding-bottom: 16px;
-		}
-		
-		.tagRow .nameCol {
+		.row.alt.tagRow .columns.nameCol {
 			padding-bottom: 5px;
 		}
 	
-		.tagRow .barCol {
+		.row.alt.tagRow .columns.barCol {
 			padding-top: 0;
 			padding-bottom: 0;
 		}
 	
-		.tagRow .descCol {
+		.row.alt.tagRow .columns.descCol {
 			padding-top: 5px;
+		}
+	
+		.tagRow .desc li {
+			font-size: 12px;
+			line-height: 15px;
 		}
 	
 		.tagRow .desc li p {
@@ -297,7 +277,7 @@
 				{{tagObj.name}}
 			</h2>
 
-			<div class="row tagRow" ng-repeat="tag in tagObj.tagList">
+			<div class="row alt tagRow" ng-repeat="tag in tagObj.tagList">
 						
 				<div class="large-2 large-push-2 medium-3 medium-push-2 columns nameCol">
 					<p class="name">
