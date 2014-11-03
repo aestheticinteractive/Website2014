@@ -549,17 +549,17 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
-				desc: '',
+				desc: 'Used for building the server-side web application.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'grem'),
-				desc: '',
+				desc: 'Used for interacting with the graph database.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
-				desc: '',
+				desc: 'Use for interacting with the relational database.',
 				weight: 0.4
 			}
 		],
@@ -835,22 +835,22 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
-				desc: '',
+				desc: 'Used for building the web pages.',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
-				desc: '',
+				desc: 'Used for building the web page interactivity and animations.',
 				weight: 0.8
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
-				desc: '',
+				desc: 'Used for building the web application.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'grem'),
-				desc: '',
+				desc: 'Used for interacting with the graph database.',
 				weight: 0.99
 			}
 		],
@@ -1075,12 +1075,12 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
-				desc: '',
+				desc: 'Used for building the library.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'grem'),
-				desc: '',
+				desc: 'Translated fluent C# function calls into Gremlin scripts.',
 				weight: 0.99
 			}
 		],
@@ -1267,12 +1267,12 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'java'),
-				desc: '',
+				desc: 'Used to build the application.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'grem'),
-				desc: '',
+				desc: 'Used to interact with the graph database.',
 				weight: 0.4
 			}
 		],
@@ -1375,9 +1375,10 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
-				desc: 'Used to build Flash components.',
+				desc: 'Used for building the graph components.|Used for analyzing and segmenting minified source code.|Used for building application-level features.',
 				weight: 1
 			}
+			//TODO: Groovy
 		],
 		products: [
 			{
@@ -1447,23 +1448,23 @@ Aei.Tables.Project = [
 				d: 24
 			}
 		],
-		desc: 'Based on the original iOS version of the game, this version of Fragmental 3D was built to use the Leap Motion controller. This new input hardware makes it possible to control the game using only the motion of your hands in the air.',
+		summary: 'A re-imagined version of the iOS game, built to use the Leap Motion controller. Players control the game pieces and camera by reaching, grabbing, turning, and moving their hands in mid-air.',
 		url: 'Fragmental3D.com',
 		imageCount: 8,
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: 'Built the entire app; game logic, effects, controls, menus, optimizations, etc.',
+				desc: 'Built the entire game, tutorial, and menu; all using hand-based controls.|Learned Unity 3D and the Leap Motion SDK rapidly to jump-start the development process.|Implemented several optimizations, usability enhancements, and visual effects.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: 'Designed all game screens, controls, backgrounds, menus, etc.',
+				desc: 'Designed all game elements, screens, and artwork (except the 3D hand model).',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: 'Invented the game concept, control systems, game variations, etc.',
+				desc: 'Adapted the original iOS game concepts for use with the hand-based controls.|Explored several gameplay and user experience variations.|Developed solutions for a wide variety of usability challenges related to the new hand-based control system.',
 				weight: 0.99
 			},
 			{
@@ -1473,88 +1474,94 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
-				desc: 'Developed web and graphical content for marketing the game.',
+				desc: 'Provided in-depth progress updates and build notes.|Discussed complex, three-dimensional topics with Leap Motion while working through various challenges.|Described the benefits, downsides, and alternative options for important development decisions.',
 				weight: 0.96
 			}
 		],
 		systems: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.System, 'win'),
-				desc: 'Native application using Unity 3D.',
+				desc: 'Targeted this system using Unity 3D.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.System, 'mac'),
-				desc: 'Native application using Unity 3D.',
+				desc: 'Targeted this system using Unity 3D.',
 				weight: 1
 			}
 		],
 		teams: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
-				desc: 'App designed and built in-house.',
+				desc: 'Designed and developed by Zach.',
 				weight: 1
 			}
 		],
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
-				desc: 'Used to build the application.',
+				desc: 'Used for building the game.',
 				weight: 1
 			}
 		],
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'unity'),
-				desc: 'Used to build the application.',
+				desc: 'Used as the game engine.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
-				desc: 'Used for building the application.',
+				desc: 'Used the framework throughout the game.',
 				weight: 0.9
 			}
 		],
 		skills: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
-				desc: 'Created all the screens, controls, indicators, menus, etc.',
+				desc: 'Developed the hand-based game control stystem.|Created an attractive in-game overlay to display vital gameplay info.|Built a 3D menu, configuration, and navigation system.',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
-				desc: 'Created brand-new experience for gameplay, interactions, and indicators.',
+				desc: 'Created brand-new user experience for a three-dimensional puzzle game.|Invented meters and indicators to provide constant feedback about the player\'s hand positions.|Developed and refined piece movements that are restricted to grid positions.|Offered a freely-orbiting camera to avoid obscured grid areas and to promote immersion in the game.|Created a visual experience that is colorful, varied, fun, and cohesive.|Provided several game options to promote replay value and offer challenges for players of all skill levels.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
-				desc: 'Created interactive 3D graphics and textures.',
+				desc: 'Realized a new vision for a three-dimensional puzzle using 3D graphics.|Created new control systems and menus that require interaction in three-dimensional space.|Applied spatial and mathematical knowledge to successfully achieve the hand-based control system.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
-				desc: 'Created several movement, transition, and indicator animations.',
+				desc: 'Created several movement, transition, and indicator animations.|Used a spring and inertia-based method for smoothly easing pieces into their grid-aligned positions.',
 				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
-				desc: 'Implemented several algorithms for game logic and optimization of 3D graphics.',
+				desc: 'Implemented grid-based analysis to determine game states and events.|Built graceful degradation to maintain 3D graphics performance across various machines.|Implemented a system to smoothly "snap" pieces into grid-aligned positions while the player moves and rotates them.',
 				weight: 0.95
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
-				desc: 'Created marketing content, instructions, videos, game sounds, and other assets.',
+				desc: 'Created all graphics, visual assets, game sounds, and other marketing-related assets.',
 				weight: 0.97
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
-				desc: 'Created application to run at various resolutions and aspect ratios.',
+				desc: 'Implemented support for various screen resolutions and aspect ratios.',
 				weight: 0.85
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
 				desc: 'Documented complex issues and concerns for the Leap Motion team.',
 				weight: 0.96
+			}
+		],
+		related: [
+			{
+				id: 'fragmental',
+				desc: 'The same game concept, built with a touch-based control system.'
 			}
 		],
 		weight: 1
@@ -1631,7 +1638,7 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
-				desc: '',
+				desc: 'Used for building the application.',
 				weight: 1
 			}
 		],
@@ -1777,22 +1784,22 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
-				desc: 'Used to build the website.',
+				desc: 'Used for building the web pages.',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
-				desc: 'Used to implement the website functionality.',
+				desc: 'Used for building the web page interactivity and animations.|Used for building a full-screen photo browser.|Used for providing a tagging tool with live-search functionality.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
-				desc: 'Used to implement the web application.',
+				desc: 'Used for building the web application.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
-				desc: 'Used to perform database queries.',
+				desc: 'Used for interacting with the database.',
 				weight: 0.9
 			}
 		],
@@ -1940,12 +1947,12 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
-				desc: 'Used to build the website.',
+				desc: 'Used for building the web pages.',
 				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
-				desc: 'Used to implement the website functionality.',
+				desc: 'Used for connecting to the Trello data services.|Used for converting the raw data into new formats.|Used for building web page interactivity..',
 				weight: 1
 			}
 		],
@@ -2202,7 +2209,7 @@ Aei.Tables.Project = [
 		teams: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
-				desc: 'Designed, developed, and completed by Zach.',
+				desc: 'Designed and developed by Zach.',
 				weight: 1
 			}
 		],
@@ -2248,7 +2255,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
-				desc: 'Discovered an easy-to-understand system for controlling complex game mechanics.|Allowed the user complete camera control to avoid obscured grid areas and to promote immersion in the game.|Created a visual experience that is colorful, varied, fun, and cohesive.|Provided several game options to promote replay value and offer challenges for players of all skill levels.',
+				desc: 'Invented an easy-to-understand system for controlling complex game mechanics.|Offered a freely-orbiting camera to avoid obscured grid areas and to promote immersion in the game.|Created a visual experience that is colorful, varied, fun, and cohesive.|Provided several game options to promote replay value and offer challenges for players of all skill levels.',
 				weight: 1
 			},
 			{
@@ -2273,7 +2280,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
-				desc: 'Built game to support various device resolutions and aspect ratios.',
+				desc: 'Implemented support for various device resolutions and aspect ratios.',
 				weight: 0.8
 			}
 		],
@@ -2484,27 +2491,27 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
-				desc: 'Used for building MVC websites and performing data analysis.',
+				desc: 'Used for building MVC web applications|Used for parsing and performing data analysis.',
 				weight: 0.35
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
-				desc: 'Used for building interactive pages.',
+				desc: 'Used for building web page interactivity and animations.',
 				weight: 0.6
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
-				desc: 'Used for building non-Flash webpages.',
+				desc: 'Used for building non-Flash web pages.',
 				weight: 0.55
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
-				desc: 'Used to build the main Flash website.',
+				desc: 'Used for building the Flash website.',
 				weight: 0.995
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
-				desc: 'Used to collect and analyze datasets.',
+				desc: 'Used for collecting and analyzing large datasets from existing databases.',
 				weight: 0.5
 			}
 		],
@@ -2686,12 +2693,12 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
-				desc: 'Used for building the Flash application.',
+				desc: 'Used for building the application.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'php'),
-				desc: 'Used to review and assist with server-side code.',
+				desc: 'Used while reviewing and assisting with server-side code.',
 				weight: 0.2
 			}
 		],
@@ -2832,7 +2839,7 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'objc'),
-				desc: 'Used to build the app.',
+				desc: 'Used for building the app.',
 				weight: 1
 			}
 		],
@@ -2963,7 +2970,7 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
-				desc: 'Used to build Flash components.',
+				desc: 'Used for building the graph components.|Used for working on application-level features.',
 				weight: 1
 			}
 		],
@@ -3100,7 +3107,7 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
-				desc: '',
+				desc: 'Used for building the application.',
 				weight: 1
 			}
 		],
@@ -3229,7 +3236,7 @@ Aei.Tables.Project = [
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
-				desc: 'Used for building main application.',
+				desc: '',
 				weight: 0.4
 			}
 		],
@@ -3437,7 +3444,7 @@ Aei.Tables.Project = [
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
-				desc: 'Used for building main application.',
+				desc: '',
 				weight: 1
 			}
 		],
@@ -3548,7 +3555,7 @@ Aei.Tables.Project = [
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
-				desc: 'Used for building main application.',
+				desc: '',
 				weight: 1
 			}
 		],

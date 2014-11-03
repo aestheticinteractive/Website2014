@@ -67,6 +67,15 @@
 		margin: 0 1px 1px 0;
 	}
 	
+	.tagRow {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+	
+	.tagRow .name {
+		font-weight: bold;
+	}
+	
 	.tagRow .name {
 		font-weight: bold;
 	}
@@ -137,7 +146,12 @@
 			padding: 0;
 			border-left: none;
 		}
-		
+	
+		.tagRow {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	
 		.row.alt.tagRow .columns.nameCol {
 			padding-bottom: 5px;
 		}
@@ -297,7 +311,7 @@
 				</div>
 
 				<div class="large-8 medium-7 columns descCol">
-					<ul class="desc">
+					<ul class="desc" ng-if="tag.desc">
 						<li ng-repeat="descItem in (tag.desc.split('|'))">
 							<p>{{descItem}}</p>
 						</li>
