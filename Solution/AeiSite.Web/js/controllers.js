@@ -462,3 +462,13 @@ Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
 	$rootScope.page = new Aei.Pages.AdminTimeline(projects, events);
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Timeline', 'Admin']);
 };
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.AdminJson = function($rootScope, $scope) {
+	$scope.model = {
+		json: Aei.Admin.buildProjectTable()
+	};
+
+	$rootScope.page = null;
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Json', 'Admin']);
+};

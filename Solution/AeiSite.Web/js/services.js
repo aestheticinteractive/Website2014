@@ -65,6 +65,11 @@ Aei.RouteBuilder = function($routeProvider) {
 			controller: Aei.Controllers.AdminTimeline,
 			caseInsensitiveMatch: true
 		})
+		.when('/Admin/Json', {
+			templateUrl: 'views/admin/Json.html',
+			controller: Aei.Controllers.AdminJson,
+			caseInsensitiveMatch: true
+		})
 		
 		.otherwise({
 			redirectTo: '/'
