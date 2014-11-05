@@ -113,8 +113,16 @@
 		padding: 0;
 	}
 	
-	h2 + .tagRow {
-		border-top: 2px solid #404040;
+	.relRow img {
+		width: 80px;
+		height: 80px;
+		margin-right: 8px;
+	}
+	
+	.relRow p {
+		height: 80px;
+		display: table-cell;
+		vertical-align: middle;
 	}
 	
 	section.content .tagRow .barBg {
@@ -162,7 +170,7 @@
 		}
 	
 		.row.alt.tagRow .columns.descCol {
-			padding-top: 5px;
+			padding-top: 8px;
 		}
 	
 		.tagRow .desc li {
@@ -174,6 +182,25 @@
 			color: #888;
 			font-size: 12px;
 			line-height: 15px;
+		}
+		
+		.relRow img {
+			width: 50px;
+			height: 50px;
+			margin-right: 4px;
+		}
+	
+		.relRow p {
+			height: auto;
+			display: inherit;
+		}
+	
+		.row.alt.relRow .columns.projCol {
+			padding-bottom: 8px;
+		}
+		
+		.row.alt.relRow .columns.descCol {
+			padding-top: 0;
 		}
 	
 		section.content .tagRow .barBg {
@@ -322,6 +349,35 @@
 
 		</div>
 	
+	</div>
+</section>
+
+
+<section class="content" ng-if="model.project.related && model.project.related.length">
+	<div class="row">
+	
+		<div class="large-12 columns">
+			<h2>
+				Related Projects
+			</h2>
+			<div class="row alt relRow" ng-repeat="rel in model.project.related">
+				
+				<div class="large-4 medium-5 columns projCol">
+					<p>
+						<a ng-href="#/Projects/{{rel.project.link}}">
+							<img class="thumb" ng-src="img/projects/{{rel.id}}/icon.jpg" />
+							{{rel.project.name}}
+						</a>
+					</p>
+				</div>
+
+				<div class="large-8 medium-7 columns descCol">
+					<p>{{rel.desc}}</p>
+				</div>
+						
+			</div>
+		</div>
+
 	</div>
 </section>
 

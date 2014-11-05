@@ -1323,7 +1323,7 @@ Aei.Tables.Project = [
 				d: 15
 			}
 		],
-		desc: 'TODO.',
+		summary: 'A broad collection of modules that visualize incoming data as graphs, gauges, meters, and tabular charts. Each module is built to match the functionality of its Flash-based predecessor.',
 		url: 'iDashboards.com',
 		imageCount: 9,
 		services: [
@@ -1404,6 +1404,11 @@ Aei.Tables.Project = [
 				weight: 0.94
 			},
 			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
+				desc: 'Built several three-dimensional graph types.',
+				weight: 0.7
+			},
+			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
 				desc: 'Wrote code to prepare data for display, improve performance, etc.',
 				weight: 0.4
@@ -1417,6 +1422,16 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
 				desc: 'Documented daily development progress, the functionality of each graph, issues and workaround details, etc.',
 				weight: 0.8
+			}
+		],
+		related: [
+			{
+				id: 'idashapp',
+				desc: 'An iOS app for loading and displaying dashboards and graphs.'
+			},
+			{
+				id: 'idashboards',
+				desc: 'A collection of graph modules built for Flash.'
 			}
 		],
 		weight: 0.99
@@ -2792,7 +2807,7 @@ Aei.Tables.Project = [
 				d: 11
 			}
 		],
-		desc: 'TODO.',
+		summary: 'Provides a mobile experience for viewing dashboards and graphs. All graphs are interactive, zoomable, and rendered with a custom-built engine that replicates Flash drawing functionality.',
 		url: 'iDashboards.com',
 		imageCount: 9,
 		services: [
@@ -2882,6 +2897,16 @@ Aei.Tables.Project = [
 				weight: 0.75
 			}
 		],
+		related: [
+			{
+				id: 'idashhtml',
+				desc: 'A collection of graph modules built for HTML5.'
+			},
+			{
+				id: 'idashboards',
+				desc: 'A collection of graph modules built for Flash.'
+			}
+		],
 		weight: 0.91
 	},
 	{
@@ -2918,7 +2943,7 @@ Aei.Tables.Project = [
 				d: 25
 			}
 		],
-		desc: 'This collection of interactive and highly-customizable graphs was built to operate within the latest version of iDashboards software. Each individual graph displays and animates any arbitrary set of data, offers the user a myriad of settings, and communicates with other graphs when a data point is selected.\n\nGraphs are constructed as custom Flex modules for Flash, using Actionscript 3. Functionality, accuracy, flexability, and performance were key during development. Aesthetic Interactive was also responsible for the design of each graph type, providing users with a dramatic improvement in appearance from previous versions.\n\nThe gallery displays a few of the many graph types available to an iDashboards user.',
+		summary: 'A broad collection of modules that visualize incoming data as graphs, gauges, meters, and tabular charts. Each module is interactive, animated, and allows complete visual customization.',
 		url: 'iDashboards.com',
 		imageCount: 9,
 		services: [
@@ -3026,6 +3051,16 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
 				desc: 'Documented daily development progress, the functionality of each graph, issues and workaround details, etc.',
 				weight: 0.8
+			}
+		],
+		related: [
+			{
+				id: 'idashhtml',
+				desc: 'A collection of graph modules built for HTML5.'
+			},
+			{
+				id: 'idashapp',
+				desc: 'An iOS app for loading and displaying dashboards and graphs.'
 			}
 		],
 		weight: 0.84
@@ -5950,13 +5985,19 @@ Aei.Tables.Project = [
 ];
 
 for ( var i in Aei.Tables.Project ) {
-	//continue; //skip this loop when rebuilding the project table
 	var proj = Aei.Tables.Project[i];
 	proj.link = Aei.Tables.createLink(proj.name);
 	proj.imageIndexes = [];
 
-	for ( var c = 0 ; c < proj.imageCount ; ++c ) {
+	var c, r, rel;
+
+	for ( c = 0 ; c < proj.imageCount ; ++c ) {
 		proj.imageIndexes[c] = c;
+	}
+	
+	for ( r in proj.related ) {
+		rel = proj.related[r];
+		rel.project = Aei.Database.selectById(Aei.Tables.Project, rel.id);
 	}
 	
 	var compareWeight = function(a, b) {

@@ -70,7 +70,11 @@ a:hover {
 	padding-top: 8px;
 	padding-bottom: 9px;
 }
-		
+
+h2 + .row.alt {
+	border-top: 2px solid #404040;
+}
+
 .row.alt:nth-child(even) {
 	background-color: #3d3d3d;
 	background-color: rgba(255, 255, 255, 0.02);
