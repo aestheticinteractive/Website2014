@@ -11,13 +11,23 @@ Aei.Background = function(containerId) {
 
 	var me = this;
 
-	$(window).resize(function() {
-		me._handleResize();
-	});
-
-	$(window).scroll(function() {
-		me._isScrolling = true;
-	});
+	$(window)
+		.resize(function() {
+			me._handleResize();
+		})
+		.scroll(function() {
+			me._isScrolling = true;
+		})
+		.focus(function() {
+			me._isFocused = true;
+		})
+		.blur(function() {
+			me._isFocused = false;
+		})
+		.mousemove(function() {
+			me._isMouseMove = true;
+			me._isFocused = true;
+		});
 
 	this._handleResize();
 	this._redrawAnimFrame();
@@ -163,6 +173,10 @@ Aei.Background.prototype._redrawAnimFrame = function() {
 
 	setTimeout(handleTimeout, 250);
 
+	if ( !this._isFocused ) {
+		return;
+	}
+
 	if ( this._isScrolling ) {
 		this._isScrolling = false;
 		return;
@@ -170,6 +184,11 @@ Aei.Background.prototype._redrawAnimFrame = function() {
 	
 	if ( this._isResizing ) {
 		this._isResizing = false;
+		return;
+	}
+	
+	if ( this._isMouseMove ) {
+		this._isMouseMove = false;
 		return;
 	}
 
