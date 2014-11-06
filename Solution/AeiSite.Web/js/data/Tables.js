@@ -501,7 +501,7 @@ Aei.Tables.Project = [
 				name: 'Future'
 			}
 		],
-		desc: 'TODO.',
+		summary: 'A platform that collects intelligence from users, organizes it into a relationship-based structure, provides tools to analyze the results, and empowers a new generation of user experiences.',
 		url: 'InTheFabric.com',
 		github: 'inthefabric/Fabric',
 		imageCount: 5,
@@ -631,6 +631,25 @@ Aei.Tables.Project = [
 				desc: '',
 				weight: 1
 			}
+		],
+		related: [
+			{
+				id: 'fabricweb',
+				desc: 'The website for the Fabric project.'
+			},
+			{
+				id: 'weaver',
+				desc: 'Fabric\'s tool for building Gremlin queries via C#.'
+			},
+			{
+				id: 'rexconnect',
+				desc: 'Fabric\'s tool for communicating with the graph database.'
+			},
+			{
+				id: 'kinstnerphoto',
+				desc: 'Fabric powers the photo gallery\'s photo data, tags, relationships.'
+			}
+
 		],
 		weight: 0.97
 	},
@@ -783,7 +802,7 @@ Aei.Tables.Project = [
 				name: 'Future'
 			}
 		],
-		desc: 'TODO.',
+		summary: 'The website for the Fabric project. It provides an overview of key Fabric concepts, examples, data-browsing tools, extensive API documentation, and account management.',
 		url: 'InTheFabric.com',
 		imageCount: 16,
 		services: [
@@ -953,6 +972,20 @@ Aei.Tables.Project = [
 				weight: 0.8
 			}
 		],
+		related: [
+			{
+				id: 'fabricapi',
+				desc: 'The core services and tools of the Fabric project.'
+			},
+			{
+				id: 'weaver',
+				desc: 'Fabric\'s tool for building Gremlin queries via C#.'
+			},
+			{
+				id: 'rexconnect',
+				desc: 'Fabric\'s tool for communicating with the graph database.'
+			}
+		],
 		weight: 0.96
 	},
 	{
@@ -1101,6 +1134,20 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
 				desc: '',
 				weight: 0.4
+			}
+		],
+		related: [
+			{
+				id: 'fabricapi',
+				desc: 'Weaver was built to support the Fabric project.'
+			},
+			{
+				id: 'fabricweb',
+				desc: 'Weaver was built to support the Fabric project.'
+			},
+			{
+				id: 'rexconnect',
+				desc: 'Another tool built to support the Fabric project.'
 			}
 		],
 		weight: 0.93
@@ -1299,6 +1346,20 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: '',
 				weight: 0.4
+			}
+		],
+		related: [
+			{
+				id: 'fabricapi',
+				desc: 'Weaver was built to support the Fabric project.'
+			},
+			{
+				id: 'fabricweb',
+				desc: 'Weaver was built to support the Fabric project.'
+			},
+			{
+				id: 'weaver',
+				desc: 'Another tool built to support the Fabric project.'
 			}
 		],
 		weight: 0.92
@@ -1746,7 +1807,7 @@ Aei.Tables.Project = [
 				name: 'Future'
 			}
 		],
-		desc: 'This web application is built to display photos and to visualize their metadata. It features a full-screen photo viewer, user-tagging functionality, and responsive layouts. This website uses Fabric to collect and organize information about every photo, and (in future versions) will use this information to highlight and visualize interesting relationships between them.',
+		summary: 'A website for organizing and browsing family photos. It is powered by Fabric, with a goal to create interesting user experiences via photo metadata, tags, ratings, and relationships.',
 		url: 'ZachKinstner.com',
 		github: 'aestheticinteractive/PhotoGallery',
 		imageCount: 10,
@@ -1890,6 +1951,12 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'mob'),
 				desc: 'Built all pages to have be mobile-friendly.',
 				weight: 0.65
+			}
+		],
+		related: [
+			{
+				id: 'fabricapi',
+				desc: 'Fabric powers the photo data, tags, relationships, and other features of this website.'
 			}
 		],
 		weight: 0.95
@@ -2444,7 +2511,8 @@ Aei.Tables.Project = [
 				d: 14
 			}
 		],
-		desc: 'Journeyful is a travel-based social networking site, with a robust (and ever-growing) list of powerful features. Users can book hotel rooms, ferry tickets, share photos and videos, find travelers whose trips intersect their own, and much more. Each user can have multiple \'identities\' (such as a person, a hotel admin, a ferry staff member, etc.) which each get a separate user experience based on permissions.\n\nAesthetic Interactive built the website\'s Flash-based UI, and is closely involved with design, specification, and planning of the project. The Flash UI features full hotel/ferry booking pipelines, log-ins, photo uploads, a large set of custom input and display components, complex user sessions, complex forms and wizards for hotel/ferry administration and management, and communicates with the API using a SOAP interface.',
+		summary: 'A website for reserving hotel rooms, booking ferry trips, and social networking. It also contains a suite of tools for managing hotels, ferries, rates, allotments, staff, bookings, and more.',
+		/*desc: 'Journeyful is a travel-based social networking site, with a robust (and ever-growing) list of powerful features. Users can book hotel rooms, ferry tickets, share photos and videos, find travelers whose trips intersect their own, and much more. Each user can have multiple \'identities\' (such as a person, a hotel admin, a ferry staff member, etc.) which each get a separate user experience based on permissions.\n\nAesthetic Interactive built the website\'s Flash-based UI, and is closely involved with design, specification, and planning of the project. The Flash UI features full hotel/ferry booking pipelines, log-ins, photo uploads, a large set of custom input and display components, complex user sessions, complex forms and wizards for hotel/ferry administration and management, and communicates with the API using a SOAP interface.',*/
 		url: 'Journeyful.com',
 		imageCount: 9,
 		services: [
