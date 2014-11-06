@@ -304,6 +304,16 @@ Aei.Controllers.AdminProjectTags = function($rootScope, $scope) {
 };
 
 /*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.AdminProjectTexts = function($rootScope, $scope) {
+	$scope.model = {
+		projects: Aei.Tables.Project
+	};
+
+	$rootScope.page = null;
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Project Texts', 'Admin']);
+};
+
+/*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.AdminWeights = function($rootScope, $scope) {
 	var groups = [
 		{

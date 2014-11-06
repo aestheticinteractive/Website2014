@@ -55,6 +55,11 @@ Aei.RouteBuilder = function($routeProvider) {
 			controller: Aei.Controllers.AdminProjectTags,
 			caseInsensitiveMatch: true
 		})
+		.when('/Admin/ProjectTexts', {
+			templateUrl: 'views/admin/ProjectTexts.html',
+			controller: Aei.Controllers.AdminProjectTexts,
+			caseInsensitiveMatch: true
+		})
 		.when('/Admin/Weights', {
 			templateUrl: 'views/admin/Weights.html',
 			controller: Aei.Controllers.AdminWeights,
