@@ -1986,7 +1986,7 @@ Aei.Tables.Project = [
 				d: 2
 			}
 		],
-		desc: 'An experimental app for organizing and visualizing Trello data in new ways. Built to be modular and easily-extendable by the open-source community.',
+		summary: 'An experimental tool for organizing and visualizing Trello data in new ways. It is built to be highly modular, allowing open-source developers to easily add new components.',
 		url: 'TrelloVision.com',
 		github: 'aestheticinteractive/TrelloVision',
 		imageCount: 4,
@@ -4148,7 +4148,7 @@ Aei.Tables.Project = [
 				d: 15
 			}
 		],
-		desc: 'A non-deterministic simulation of neural-net brained animals living and evolving in a 3D environment.',
+		summary: 'A simulation where virtual organisms interact in a 3D environment. Populations rise and fall, and neural-network brains (for carnivores and herbivores) evolve with each successful generation.',
 		url: null,
 		imageCount: 8,
 		services: [
@@ -4598,7 +4598,7 @@ Aei.Tables.Project = [
 				m: 11
 			}
 		],
-		desc: 'Reverse-engineered from Excel, this Flash app features dynamic inputs and smooth, realtime output graphing.',
+		summary: 'Reverse-engineered from an Excel spreadsheet, this interactive tool provides dynamic inputs and smooth, real-time graphical output.',
 		url: null,
 		imageCount: 3,
 		services: [
@@ -4693,7 +4693,7 @@ Aei.Tables.Project = [
 				m: 12
 			}
 		],
-		desc: 'This Flash video player loads a selected animation and features fully-customizable, swappable color schemes.',
+		summary: 'An application that loads medical animations, provides playback controls, and supports customizable color schemes.',
 		url: null,
 		imageCount: 4,
 		services: [
@@ -4783,7 +4783,7 @@ Aei.Tables.Project = [
 				m: 9
 			}
 		],
-		desc: 'A collection of custom-built 3D models which were rendered, retouched, then converted into ICO files.',
+		summary: 'A collection of icons for a software package. Each icon is created from a custom-designed 3D model and post-rendering effects.',
 		url: null,
 		imageCount: 5,
 		services: [
@@ -4853,7 +4853,7 @@ Aei.Tables.Project = [
 				m: 8
 			}
 		],
-		desc: 'An eye-catching site with clever 3D icons, interesting Flash utilities, and an ASP.NET admin section.',
+		summary: 'An website with clever 3D icons and visual effects, interactive calendar and photo album applications, a custom-designed logo, and a suite of administrative tools.',
 		url: null,
 		imageCount: 5,
 		services: [
@@ -4988,7 +4988,7 @@ Aei.Tables.Project = [
 				m: 3
 			}
 		],
-		desc: 'A Flash marketing brochure that displays dynamically loaded images in smoothly transitioning slideshows.',
+		summary: 'An interactive brochure for marketing food products, with static content, input forms, and animated image slideshows.',
 		url: null,
 		imageCount: 4,
 		services: [
@@ -5078,7 +5078,7 @@ Aei.Tables.Project = [
 				m: 6
 			}
 		],
-		desc: 'This stunning, sans-filter, real-time effect can provide depth and soft shadowing to nearly any Flash app.',
+		summary: 'A real-time lighting effect that provides a sense of depth to 2D content. The light source moves with the cursor, generating soft shadows based on the position of each content item.',
 		url: null,
 		imageCount: 3,
 		services: [
@@ -5163,7 +5163,7 @@ Aei.Tables.Project = [
 				m: 7
 			}
 		],
-		desc: 'A former portfolio, this Flash app features innovative \'project web\' navigation and static 3D overlay.',
+		summary: 'A portfolio that highlights software and artistic projects. It features an 3D overlay, animated effects, and a "network" diagram that arranges projects based on their characteristics.',
 		url: 'AestheticInteractive.com/portfolio',
 		imageCount: 6,
 		services: [
@@ -5273,7 +5273,7 @@ Aei.Tables.Project = [
 				m: 6
 			}
 		],
-		desc: 'This fun Flash drawing app records pen strokes, then animates them with a custom line width effect.',
+		summary: 'An experimental tool that records the stokes of a cursor-based drawing, then plays the drawing as an animation. The animation features variable line-thickness based on the stroke speed.',
 		url: null,
 		imageCount: 5,
 		services: [
@@ -5358,7 +5358,7 @@ Aei.Tables.Project = [
 				m: 6
 			}
 		],
-		desc: 'Featuring a massive 11\'x11\' mural, this assortment of styles and mediums reveals a solid artistic foundation.',
+		summary: 'A collection of artwork with a variety of styles, mediums, and subjects. The highlight is a very large "rocket" mural -- 11 feet in diameter, custom-designed, hand-painted, with oils on brick.',
 		url: null,
 		imageCount: 9,
 		services: [
@@ -5418,7 +5418,7 @@ Aei.Tables.Project = [
 				m: 7
 			}
 		],
-		desc: 'A dynamic Flash mapping tool with locations and labels placed and animated based on local XML content.',
+		summary: 'An XML-driven mapping tool that plots cities as animated dots, positions labels to avoid overlap, highlights relevant states, and displays text content for the selected city.',
 		url: null,
 		imageCount: 3,
 		services: [
@@ -5527,7 +5527,7 @@ Aei.Tables.Project = [
 				m: 5
 			}
 		],
-		desc: 'This table-free, dynamically loading set of webpages uses Lightboxed images and PHP for the WordPress back-end.',
+		summary: 'A set of custom web pages for a WordPress-powered blog. These dynamic pages use the WordPress API to apply data in specific places, and Lightbox for zooming and browsing images.',
 		url: null,
 		imageCount: 2,
 		services: [
@@ -5618,7 +5618,7 @@ Aei.Tables.Project = [
 				m: 2
 			}
 		],
-		desc: 'A Flash app used for locating hospital departments, featuring a custom zoom utility and XML-driven content.',
+		summary: 'An application for locating specific zones within a multi-floor hospital building. It features custom zooming functionality, smooth animations, and XML-driven content.',
 		url: null,
 		imageCount: 2,
 		services: [
@@ -5713,7 +5713,7 @@ Aei.Tables.Project = [
 				m: 6
 			}
 		],
-		desc: 'Initially a hobby, the quality and originality of these interfaces soon drew the attention of paying clients.',
+		summary: 'A collection of custom visual interfaces for applications, focused on originality and varied design styles. Initially created as a hobby, these "skins" soon drew the attention of paying clients.',
 		url: null,
 		imageCount: 8,
 		services: [
@@ -5788,7 +5788,7 @@ Aei.Tables.Project = [
 				m: 1
 			}
 		],
-		desc: 'A Flash app that creates the illusion of real-time 3D by fading between a series of pre-rendered 3D images.',
+		summary: 'A visual effect that creates the illusion of real-time 3D rendering. Using the cursor as the light source, the application fades to a pre-rendered image that has the expected lighting.',
 		url: null,
 		imageCount: 3,
 		services: [
@@ -5878,7 +5878,7 @@ Aei.Tables.Project = [
 				m: 8
 			}
 		],
-		desc: 'An XML-driven Flash app that displays organized project content and includes some interesting visual effects.',
+		summary: 'An interactive portfolio containing software projects, artwork, and music. The application loads its content dynamically via XML, and features interesting visual effects and transitions.',
 		url: null,
 		imageCount: 4,
 		services: [
@@ -5978,7 +5978,7 @@ Aei.Tables.Project = [
 				m: 5
 			}
 		],
-		desc: 'A basic Flash-based site providing listeners with music, lyrics, show dates, and other related content.',
+		summary: 'A website providing song and album details, music samples, lyrics, show dates, and a simple portfolio of non-music projects.',
 		url: null, //'freewebs.com/zachkinstner',
 		imageCount: 3,
 		services: [
