@@ -213,7 +213,7 @@ section.content h3 {
 }
 
 section.content p + h2 {
-	margin-top: 16px;
+	margin-top: 24px;
 }
 
 section.content p + h3 {
@@ -282,6 +282,10 @@ div.intro .columns {
 }
 
 @media only screen and (max-width: 40.0em) { /* < medium */
+	
+	section.content p + h2 {
+		margin-top: 40px;
+	}
 	
 	div.intro {
 		padding: 32px 0;
