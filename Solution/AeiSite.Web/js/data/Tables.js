@@ -1064,29 +1064,29 @@ Aei.Tables.Project = [
 				d: 13
 			}
 		],
-		desc: 'TODO.',
+		summary: 'A tool for generating Gremlin scripts using C#. It features a strongly-typed, fluent interface, and allows developers to compose valid queries based on a well-defined data schema.',
 		url: null,
 		github: 'inthefabric/Weaver',
 		imageCount: 6,
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
+				desc: 'Developed a complex, fluent interface for generating Gremlin scripts.|Defined a format for an application to define its graph data schema.|Used the data schema to ensure that all generated scripts are valid.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
+				desc: 'Invented to solve difficult problems encountered during other development work.|Determined several use cases that the application should support.',
 				weight: 0.95
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
+				desc: 'Planned, executed, released, and maintained the project.',
 				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
-				desc: '',
+				desc: 'Described and summarized complex application details.|Wrote extensive instructions and documentation.',
 				weight: 0.99
 			}
 		],
@@ -1101,7 +1101,7 @@ Aei.Tables.Project = [
 		teams: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
-				desc: '',
+				desc: 'Designed and developed by Zach.',
 				weight: 1
 			}
 		],
@@ -1113,27 +1113,32 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'grem'),
-				desc: 'Translated fluent C# function calls into Gremlin scripts.',
+				desc: 'Translated fluent method calls into Gremlin scripts.',
 				weight: 0.99
 			}
 		],
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
-				desc: '',
+				desc: 'Used the framework through the application.',
 				weight: 1
 			}
 		],
 		skills: [
 			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				desc: 'Created an efficient experience for developers.|Improved confidence that scripts are valid, even after refactoring.',
+				weight: 0.8
+			},
+			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
-				desc: '',
+				desc: 'Described full usage details and considerations.|Wrote technical documentation and examples.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
-				desc: '',
-				weight: 0.4
+				desc: 'Implemented logic that maps method calls, parameters, and data schemas into Gremlin scripts.',
+				weight: 0.6
 			}
 		],
 		related: [
@@ -1270,29 +1275,29 @@ Aei.Tables.Project = [
 				d: 3
 			}
 		],
-		desc: 'TODO.',
+		summary: 'Provides an efficient communication layer for Rexster-based graph databases. It supports distributed database scenarios, and avoids the need for language-specifc communication tools.',
 		url: null,
 		github: 'inthefabric/RexConnect',
 		imageCount: 6,
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
+				desc: 'Implemented an API and data structures for sending commands and responses.|Built "server" mode for handling TCP requests.|Built "console" mode for direct user interaction.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
+				desc: 'Invented to solve difficult problems encountered during other development work.|Determined several use cases that the application should support.',
 				weight: 0.95
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
+				desc: 'Planned, executed, released, and maintained the project.',
 				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
-				desc: '',
+				desc: 'Described and summarized complex application details.|Wrote extensive instructions and documentation.',
 				weight: 0.99
 			}
 		],
@@ -1307,7 +1312,7 @@ Aei.Tables.Project = [
 		teams: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
-				desc: '',
+				desc: 'Designed and developed by Zach.',
 				weight: 1
 			}
 		],
@@ -1326,7 +1331,7 @@ Aei.Tables.Project = [
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'rex'),
-				desc: '',
+				desc: 'Implemented the application for Rexster-based graph databases.|Researched in-depth technical details of Rexster\'s RexPro communication layer.',
 				weight: 1
 			}
 		],
@@ -1334,17 +1339,17 @@ Aei.Tables.Project = [
 			//TCP/networking
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
-				desc: '',
+				desc: 'Documented each API command and parameter.|Documented all request and response data structures.|Described full usage details and considerations.|Described detailed issues with the Rexster development team.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
-				desc: '',
+				desc: 'Built the application to run directly on each database server.|Supported scenarios where databases are distributed across multiple servers.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
-				desc: '',
+				desc: 'Created an intuitive "console" usage mode.|Used special formatting to support pretty-printing at GitHub.',
 				weight: 0.4
 			}
 		],
