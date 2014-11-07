@@ -1719,7 +1719,7 @@ Aei.Tables.Project = [
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
-				desc: 'Used for building the application.',
+				desc: '',
 				weight: 1
 			}
 		],
@@ -1750,6 +1750,20 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
 				desc: '',
 				weight: 0.98
+			}
+		],
+		related: [
+			{
+				id: 'aei2007',
+				desc: 'The previous Aesthetic Interactive website.'
+			},
+			{
+				id: 'portfolio',
+				desc: 'The second portfolio application.'
+			},
+			{
+				id: 'oldportfolio',
+				desc: 'The first portfolio application.'
 			}
 		],
 		weight: 0.79
@@ -3440,7 +3454,7 @@ Aei.Tables.Project = [
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
-				desc: 'Used for building main application.',
+				desc: '',
 				weight: 1
 			}
 		],
@@ -4578,6 +4592,20 @@ Aei.Tables.Project = [
 				weight: 0.98
 			}
 		],
+		related: [
+			{
+				id: 'aei2009',
+				desc: 'The next Aesthetic Interactive website.'
+			},
+			{
+				id: 'portfolio',
+				desc: 'The second portfolio application.'
+			},
+			{
+				id: 'oldportfolio',
+				desc: 'The first portfolio application.'
+			}
+		],
 		weight: 0.59
 	},
 	{
@@ -5143,6 +5171,16 @@ Aei.Tables.Project = [
 				weight: 0.4
 			}
 		],
+		related: [
+			{
+				id: 'illumballs',
+				desc: 'An lighting experiment from this time period.'
+			},
+			{
+				id: 'sketchtracer',
+				desc: 'An drawing experiment from this time period.'
+			}
+		],
 		weight: 0.3
 	},
 	{
@@ -5253,6 +5291,20 @@ Aei.Tables.Project = [
 				weight: 0.85
 			}
 		],
+		related: [
+			{
+				id: 'portfolio',
+				desc: 'The previous portfolio application.'
+			},
+			{
+				id: 'aei2007',
+				desc: 'The first Aesthetic Interactive website.'
+			},
+			{
+				id: 'aei2009',
+				desc: 'The second Aesthetic Interactive website.'
+			}
+		],
 		weight: 0.58
 	},
 	{
@@ -5338,6 +5390,16 @@ Aei.Tables.Project = [
 				weight: 1
 			}
 		],
+		related: [
+			{
+				id: 'illandlev',
+				desc: 'An lighting experiment from this time period.'
+			},
+			{
+				id: 'illumballs',
+				desc: 'An lighting experiment from this time period.'
+			}
+		],
 		weight: 0.3
 	},
 	{
@@ -5396,6 +5458,12 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
 				desc: '',
 				weight: 0.4
+			}
+		],
+		related: [
+			{
+				id: 'skins',
+				desc: 'A collection of digital artwork from this time period.'
 			}
 		],
 		weight: 0.5
@@ -5768,6 +5836,12 @@ Aei.Tables.Project = [
 				weight: 0.4
 			}
 		],
+		related: [
+			{
+				id: 'art',
+				desc: 'A collection of traditional artwork from this time period.'
+			}
+		],
 		weight: 0.55
 	},
 	{
@@ -5856,6 +5930,16 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
 				desc: '',
 				weight: 1
+			}
+		],
+		related: [
+			{
+				id: 'illandlev',
+				desc: 'An lighting experiment from this time period.'
+			},
+			{
+				id: 'sketchtracer',
+				desc: 'An drawing experiment from this time period.'
 			}
 		],
 		weight: 0.2
@@ -5956,6 +6040,20 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
 				desc: '',
 				weight: 0.5
+			}
+		],
+		related: [
+			{
+				id: 'portfolio',
+				desc: 'The next portfolio application.'
+			},
+			{
+				id: 'aei2007',
+				desc: 'The first Aesthetic Interactive website.'
+			},
+			{
+				id: 'aei2009',
+				desc: 'The second Aesthetic Interactive website.'
 			}
 		],
 		weight: 0.2
