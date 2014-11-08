@@ -36,3 +36,30 @@
 
 	</div>
 </section>
+
+
+<section class="content">
+	<div class="row alt" ng-repeat="proj in model.projects" ng-init="tagLists = [ proj.services, 
+			proj.skills,  proj.languages, proj.products, proj.systems, proj.teams ]">
+	
+		<div class="medium-12 columns">
+			<h2>
+				{{proj.name}}
+			</h2>
+			<p>
+				{{proj.summary}}
+			</p>
+			<hr/>
+			<p ng-repeat="rel in proj.related">
+				{{rel.desc}}
+			</p>			
+			<hr/>
+			<p ng-repeat="tagList in tagLists">
+				<span ng-repeat="tag in tagList" ng-if="tag.desc">
+					{{tag.desc}}<br/>
+				</span>
+			</p>
+		</div>
+
+	</div>
+</section>

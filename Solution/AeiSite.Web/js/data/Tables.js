@@ -24,7 +24,7 @@ Aei.Tables.Service = [
 	{
 		id: 'des',
 		name: 'Design',
-		desc: 'Design is synchronized with development from the start. A committment to style, usability, precision, and engagement generates beautiful software experiences.',
+		desc: 'Design is synchronized with development from the start. A commitment to style, usability, precision, and engagement generates beautiful software experiences.',
 		icon: 'image'
 	},
 	{
@@ -1275,7 +1275,7 @@ Aei.Tables.Project = [
 				d: 3
 			}
 		],
-		summary: 'Provides an efficient communication layer for Rexster-based graph databases. It supports distributed database scenarios, and avoids the need for language-specifc communication tools.',
+		summary: 'Provides an efficient communication layer for Rexster-based graph databases. It supports distributed database scenarios, and avoids the need for language-specific communication tools.',
 		url: null,
 		github: 'inthefabric/RexConnect',
 		imageCount: 6,
@@ -1600,7 +1600,7 @@ Aei.Tables.Project = [
 		skills: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
-				desc: 'Developed the hand-based game control stystem.|Created an attractive in-game overlay to display vital gameplay info.|Built a 3D menu, configuration, and navigation system.',
+				desc: 'Developed the hand-based game control system.|Created an attractive in-game overlay to display vital gameplay info.|Built a 3D menu, configuration, and navigation system.',
 				weight: 0.98
 			},
 			{
@@ -2351,7 +2351,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
-				desc: 'Developed the touch-based game control stystem.|Created an attractive in-game overlay to display vital gameplay info.|Built menus and inputs for configuring and learning about the game.',
+				desc: 'Developed the touch-based game control system.|Created an attractive in-game overlay to display vital gameplay info.|Built menus and inputs for configuring and learning about the game.',
 				weight: 0.92
 			},
 			{
@@ -2547,7 +2547,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: 'Played a key role in brainstorming prouduct/feature ideas, constructing wireframe/workflow documents, developing business concepts, and assessing user experiences.',
+				desc: 'Played a key role in brainstorming product/feature ideas, constructing wireframe/workflow documents, developing business concepts, and assessing user experiences.',
 				weight: 0.99
 			},
 			{
@@ -3063,7 +3063,7 @@ Aei.Tables.Project = [
 		systems: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
-				desc: 'Built for a Flash applicaiton',
+				desc: 'Built for a Flash application',
 				weight: 1
 			}
 		],
@@ -4173,7 +4173,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: 'Designed the entire simulation, with random terrain, 3D representations, and the "brain" visualizations..',
+				desc: 'Designed the entire simulation, with random terrain, 3D representations, and the "brain" visualizations.',
 				weight: 0.97
 			},
 			{
@@ -4188,7 +4188,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
-				desc: 'Documented the project goals, progress, and results..',
+				desc: 'Documented the project goals, progress, and results.',
 				weight: 0.5
 			}
 		],
