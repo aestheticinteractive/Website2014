@@ -1667,7 +1667,7 @@ Aei.Tables.Project = [
 				d: 31
 			}
 		],
-		desc: 'The second official Aesthetic Interactive website. This XML-powered Flash application features an open, flowing layout, interesting animated transitions, and a subtle ripple-effect background.',
+		summary: 'A website to describe services, experience, and projects to prospective clients. It features an open layout, seamless transition animations, custom icons, and a subtle ripple-effect background.',
 		url: null,
 		imageCount: 6,
 		services: [
@@ -2733,7 +2733,14 @@ Aei.Tables.Project = [
 				d: 25
 			}
 		],
-		desc: 'This LessonVision application allows sports instructors to send annotated videos directly to their students. Instructors record voice, drawings, and video controls into a lesson package, then assign each lesson to their students. Aesthetic Interactive was responsible for building the Flash UI and specifying the server\'s API requirements.\n\nUpon loading, the Flash UI is initialized for a particular sports club and is populated with database content related to the club and the current user. For the creation and playback of lesson packages, the UI generates complex XML structures to describe the lesson\'s events and to keep the various playback layers synchronized. The UI runs maximized within a browser window, can be resized dynamically, and has a draggable video tray which is always available.',
+		summary: 'A web application that allows sports instructors to manage and communicate with their students. Instructors create video-based lessons by recording audio and visual overlays.',
+		/*desc: 'This LessonVision application allows sports instructors to send annotated videos directly to their students. Instructors 
+		record voice, drawings, and video controls into a lesson package, then assign each lesson to their students. Aesthetic Interactive 
+		was responsible for building the Flash UI and specifying the server\'s API requirements.\n\nUpon loading, the Flash UI is initialized 
+		for a particular sports club and is populated with database content related to the club and the current user. For the creation and 
+		playback of lesson packages, the UI generates complex XML structures to describe the lesson\'s events and to keep the various 
+		playback layers synchronized. The UI runs maximized within a browser window, can be resized dynamically, and has a draggable video 
+		tray which is always available.',*/
 		url: null,
 		imageCount: 7,
 		services: [
@@ -3172,7 +3179,16 @@ Aei.Tables.Project = [
 				d: 18
 			}
 		],
-		desc: 'This huge Flash application (25,000+ lines of code) is built to operate on kiosk touch-screens in retail locations across the country. Users can listen to new music, create custom playlists, upload photos from their digital camera, edit them, and create photo albums. Once playlists and albums are added to their cart, our Flash software leads the user through the checkout process.\n\nFor this project, Aesthetic Interactive was primarily responsible for the Flash software. We replicated design specifications to exacting detail and contributed to visuals and animations. We also worked closely with the back-end development team to optimize the data-access functionality and to solidify an interface with the various hardware components necessary to take credit cards, burn CDs, and print photos.',
+		summary: 'A touch-based application that integrates with various kiosk hardware. Users can burn CDs of custom song playlists, edit and print photos, and complete the purchase in a single session.',
+		/*desc: 'This huge Flash application (25,000+ lines of code) is built to operate on kiosk 
+		touch-screens in retail locations across the country. Users can listen to new music, create 
+		custom playlists, upload photos from their digital camera, edit them, and create photo albums. 
+		Once playlists and albums are added to their cart, our Flash software leads the user through 
+		the checkout process.\n\nFor this project, Aesthetic Interactive was primarily responsible 
+		for the Flash software. We replicated design specifications to exacting detail and contributed 
+		to visuals and animations. We also worked closely with the back-end development team to 
+		optimize the data-access functionality and to solidify an interface with the various 
+		hardware components necessary to take credit cards, burn CDs, and print photos.',*/
 		url: null,
 		imageCount: 8,
 		services: [
@@ -3502,7 +3518,12 @@ Aei.Tables.Project = [
 				d: 31
 			}
 		],
-		desc: 'This fun, upbeat Flash website provides users with a ton of information, images, and video content about the sport of Footvolley. Working from a design spec, Aesthetic Interactive implemented a variety of interesting features, transitions, and effects.\n\nThe small site is packed with content and interactivity. From a page-turning rules book to a 3D video carousel to draggable moves animations, there is plenty to keep users fully engaged.\n\nAll of the site\'s content is loaded dynamically via XML, which allows the client to easily update the site with new images, videos, and information.',
+		summary: 'An upbeat experience for fans of the Pepsi-sponsored Footvolley sport. The application includes a 3D video carousel, a page-turning book, draggable player animations, and other animateddorm effects.',
+		/*desc: 'This fun, upbeat Flash website provides users with a ton of information, images, and video content about the sport of 
+		Footvolley. Working from a design spec, Aesthetic Interactive implemented a variety of interesting features, transitions, and 
+		effects.\n\nThe small site is packed with content and interactivity. From a page-turning rules book to a 3D video carousel to 
+		draggable moves animations, there is plenty to keep users fully engaged.\n\nAll of the site\'s content is loaded dynamically 
+		via XML, which allows the client to easily update the site with new images, videos, and information.',*/
 		url: 'Footvolley.ro',
 		imageCount: 7,
 		services: [
@@ -3725,7 +3746,12 @@ Aei.Tables.Project = [
 				d: 22
 			}
 		],
-		desc: 'HardLines is our first foray into the area of user-generated, educational gaming. The site is a collection of puzzles, each of which is an exercise in logic, strategy, and often patience.\n\nThe interesting aspect of HardLines is the ability for each user to become both a Player and a Builder. The HardLines Flash application offers a creation mode, which lets users drag, drop, and rotate pieces on the puzzle grid.\n\nBehind the scenes, the puzzle data and solving, building, and rating information is stored in a SQL Server database. The site itself is an ASP.NET web application that displays and updates this information as it changes.',
+		summary: 'A game where players must time the release of several "shots" to fulfill the puzzle\'s goals. Users can build custom puzzles via drag-and-drop interface, and rate puzzles with several metrics.',
+		/*desc: 'HardLines is our first foray into the area of user-generated, educational gaming. The site is a collection of puzzles, each 
+		of which is an exercise in logic, strategy, and often patience.\n\nThe interesting aspect of HardLines is the ability for each user 
+		to become both a Player and a Builder. The HardLines Flash application offers a creation mode, which lets users drag, drop, and rotate 
+		pieces on the puzzle grid.\n\nBehind the scenes, the puzzle data and solving, building, and rating information is stored in a SQL 
+		Server database. The site itself is an ASP.NET web application that displays and updates this information as it changes.',*/
 		imageCount: 9,
 		services: [
 			{
@@ -4016,7 +4042,13 @@ Aei.Tables.Project = [
 				d: 22
 			}
 		],
-		desc: 'The DormTShirts.com website is a complex system of shirt-designing, voting, shopping, and social networking. Members vote for their favorite user-designed shirts, and the winning shirts go on sale.\n\nThe powerful T-shirt designer tool is the focal point of the site, allowing the user to place layers of text, clipart, and user-uploaded images on a shirt. Users can move and rotate each element, change the shirt color, cycle front to back, zoom, print, and more.\n\nAesthetic Interactive implemented the site using Flash for the designer and voting tools, a client-provided visual design template, and a combination of PHP and HTML to access and display content from the database. Unfortunately, business-related issues prevented the client from launching the site.',
+		summary: 'A web application and various tools for designing shirts, voting for favorites, and purchasing them. The designer tool provides a suite of features for creating, arranging, and saving shirt graphics.',
+		/*desc: 'The DormTShirts.com website is a complex system of shirt-designing, voting, shopping, and social networking. Members vote for 
+		their favorite user-designed shirts, and the winning shirts go on sale.\n\nThe powerful T-shirt designer tool is the focal point of 
+		the site, allowing the user to place layers of text, clipart, and user-uploaded images on a shirt. Users can move and rotate each 
+		element, change the shirt color, cycle front to back, zoom, print, and more.\n\nAesthetic Interactive implemented the site using 
+		Flash for the designer and voting tools, a client-provided visual design template, and a combination of PHP and HTML to access and 
+		display content from the database. Unfortunately, business-related issues prevented the client from launching the site.',*/
 		imageCount: 7,
 		services: [
 			{
