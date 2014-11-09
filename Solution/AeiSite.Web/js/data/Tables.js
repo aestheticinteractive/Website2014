@@ -1667,7 +1667,7 @@ Aei.Tables.Project = [
 				d: 31
 			}
 		],
-		summary: 'A website to describe services, experience, and projects to prospective clients. It features an open layout, seamless transition animations, custom icons, and a subtle ripple-effect background.',
+		summary: 'The second business website, describing services, experience, and projects to prospective clients. It features an open layout, seamless page transitions, custom icons, and a ripple-effect background.',
 		url: null,
 		imageCount: 6,
 		services: [
@@ -3305,7 +3305,13 @@ Aei.Tables.Project = [
 				d: 18
 			}
 		],
-		desc: 'Aesthetic Interactive worked with a local design firm to create this site, which promotes Amway\'s collection of hotels located in downtown Grand Rapids, MI.\n\nThe site features some impressive visuals. The homepage presents a full-screen background image, chosen at random with each visit. In the \'Get To Know\' section, a Flash application displays hundreds of user-submitted images and quotes which demonstrate all that Grand Rapids has to offer. An interactive map of the downtown area shows users how to get around the hotel campus.\n\nFrom a technical perspective, the site uses ASP.NET to validate and submit various forms to the client, and to send email confirmations to the user.',
+		summary: 'A promotional website for Grand Rapids hotels and convention centers. It features interactive maps of the downtown area, and an application for displaying user-submitted images and quotes.',
+		/*desc: 'Aesthetic Interactive worked with a local design firm to create this site, which promotes Amway\'s collection of 
+		 hotels located in downtown Grand Rapids, MI.\n\nThe site features some impressive visuals. The homepage presents a full-screen 
+		 background image, chosen at random with each visit. In the \'Get To Know\' section, a Flash application displays hundreds of 
+		 user-submitted images and quotes which demonstrate all that Grand Rapids has to offer. An interactive map of the downtown area 
+		 shows users how to get around the hotel campus.\n\nFrom a technical perspective, the site uses ASP.NET to validate and submit 
+		 various forms to the client, and to send email confirmations to the user.',*/
 		url: '1100rooms.com',
 		imageCount: 9,
 		services: [
@@ -3412,7 +3418,13 @@ Aei.Tables.Project = [
 				d: 14
 			}
 		],
-		desc: 'This furniture-customization application provides users with a quick and easy way to configure perfect surface and color settings for their office. Aesthetic Interactive worked with a design firm and a 3D modeler to create this powerful Flash tool.\n\nThe simple swatch-selection interface masks a complex hierarchy of images, overlays, and rules that ensure each configuration looks just like the final product. To let the user get started right away, the images load dynamically as a background process. Despite the large quantity of images, users experience very little wait time.\n\nAdditional features include color themes, copying and resetting configurations across products, and printing.',
+		summary: 'A tool for customizing office furniture. Users select surfaces for several different furniture components, previewing and printing the results, and seeing restrictions related to each selection.',
+		/*desc: 'This furniture-customization application provides users with a quick and easy way to configure perfect surface and color 
+		settings for their office. Aesthetic Interactive worked with a design firm and a 3D modeler to create this powerful Flash tool.\n\n
+		The simple swatch-selection interface masks a complex hierarchy of images, overlays, and rules that ensure each configuration looks 
+		just like the final product. To let the user get started right away, the images load dynamically as a background process. Despite 
+		the large quantity of images, users experience very little wait time.\n\nAdditional features include color themes, copying and 
+		resetting configurations across products, and printing.',*/
 		imageCount: 6,
 		services: [
 			{
@@ -3635,7 +3647,11 @@ Aei.Tables.Project = [
 				d: 30
 			}
 		],
-		desc: 'This minimalist Flash website showcases a variety of beautiful, high-resolution photos. Selectable album titles listed across the top open a photo paging system in the main content area. Additional content pages are available from the menu across the bottom.\n\nBuilt from a design spec, this site features smooth, clean transitions and subtle effects. All of the content is loaded dynamically via XML, allowing the artist to add and rearrange albums, insert new photos, change contact information, and more.',
+		summary: 'A minimalist website showcasing several high-resolution photo galleries. It features smooth transitions, subtle visual effects, and dynamic content loaded via XML.',
+		/*desc: 'This minimalist Flash website showcases a variety of beautiful, high-resolution photos. Selectable album titles listed 
+		across the top open a photo paging system in the main content area. Additional content pages are available from the menu across 
+		the bottom.\n\nBuilt from a design spec, this site features smooth, clean transitions and subtle effects. All of the content is 
+		loaded dynamically via XML, allowing the artist to add and rearrange albums, insert new photos, change contact information, and more.',*/
 		imageCount: 5,
 		services: [
 			{
@@ -3902,7 +3918,7 @@ Aei.Tables.Project = [
 				d: 5
 			}
 		],
-		desc: 'TODO.',
+		summary: 'An application for displaying marketing content as an interactive presentation. It loads all content via XML, and features a tool for users to customize the visibility of pages and sections.',
 		url: null,
 		imageCount: 5,
 		services: [
@@ -4296,7 +4312,7 @@ Aei.Tables.Project = [
 				d: 12
 			}
 		],
-		desc: 'TODO.',
+		summary: 'A multi-stage, animated presentation for marketing office furniture products. It features code-controlled transitions, timings, zoom-in effects, and synchronized music tracking.',
 		url: null,
 		imageCount: 9,
 		services: [
@@ -4393,7 +4409,7 @@ Aei.Tables.Project = [
 				d: 21
 			}
 		],
-		desc: 'TODO.',
+		summary: 'A tool for viewing three-dimensional floorplan renderings and related information. It achieves a smooth, interactive rotation effect by fading between hundreds of pre-rendered images.',
 		url: null,
 		imageCount: 3,
 		services: [
@@ -4519,7 +4535,13 @@ Aei.Tables.Project = [
 				d: 25
 			}
 		],
-		desc: 'The first official Aesthetic Interactive site, this Actionscript 3 Flash application was built with both design and information in mind.\n\nVisually, the site presents a unique set of translucent menu buttons which move vertically in three-dimensional space when selected. Page transitions involve the smooth entry and exit of content boxes within the application space.\n\nThe site is also an interesting exercise in functionality. Every heading, article, news item, text format, and color is controlled by the database, allowing the site to be easily updated and customized without altering the Flash SWF file. This technique is beneficial to clients who wish to have extensive control over their websites and software.',
+		summary: 'The first business website, describing services and projects to prospective clients. It features sliding page transitions, translucent menu items with 3D movement, and database-driven content.',
+		/*desc: 'The first official Aesthetic Interactive site, this Actionscript 3 Flash application was built with both design and 
+		information in mind.\n\nVisually, the site presents a unique set of translucent menu buttons which move vertically in three-
+		dimensional space when selected. Page transitions involve the smooth entry and exit of content boxes within the application 
+		space.\n\nThe site is also an interesting exercise in functionality. Every heading, article, news item, text format, and color is 
+		controlled by the database, allowing the site to be easily updated and customized without altering the Flash SWF file. This 
+		technique is beneficial to clients who wish to have extensive control over their websites and software.',*/
 		url: null,
 		imageCount: 6,
 		services: [
