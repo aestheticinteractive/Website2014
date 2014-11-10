@@ -508,41 +508,41 @@ Aei.Tables.Project = [
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
+				desc: 'Built a web service layer that accepts and responds to various requests.|Implemented a traversal language for querying the database via web service calls.|Implemented distributed graph database communication and graph data schemas.|Generated code dynamically via templates, data schemas, and rule sets.|Implemented all aspects of the API to self-document into a JSON-formatted specification.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
+				desc: 'Invented the data structures for items and the complex relationships between them.|Brainstormed the various scenarios that the data structures must support.|Designed and organized the API and web services.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
+				desc: 'Planned and executed the project.|Coordinated development of new tools required by this project.|Coordinated development of new software that uses the Fabric API.',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
-				desc: '',
+				desc: 'Wrote extensive documentation and reference materials.|Described instructions, use cases, and example scenarios.',
 				weight: 0.97
 			}
 		],
 		systems: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
-				desc: '',
+				desc: 'Built the public API as a web service.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.System, 'linux'),
-				desc: '',
+				desc: 'Created various internal server-side web applications.',
 				weight: 0.99
 			}
 		],
 		teams: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
-				desc: '',
+				desc: 'Designed and developed by Zach',
 				weight: 1
 			}
 		],
@@ -559,76 +559,76 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
-				desc: 'Use for interacting with the relational database.',
+				desc: 'Used for interacting with the relational database.',
 				weight: 0.4
 			}
 		],
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
-				desc: '',
+				desc: 'Used the framework throughout the application.',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'mono'),
-				desc: '',
+				desc: 'Used to execute the web application on Linux servers.',
 				weight: 0.91
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'mysql'),
-				desc: '',
+				desc: 'Used for secondary, non-graph databases.',
 				weight: 0.4
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'nhib'),
-				desc: '',
+				desc: 'Used for connecting to non-graph databases.',
 				weight: 0.41
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'rex'),
-				desc: '',
+				desc: 'Used as an interface for main distributed graph database.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'titan'),
-				desc: '',
+				desc: 'Used to provide a graph layer upon the distributed Cassandra database.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'cass'),
-				desc: '',
+				desc: 'Used to provide a distributed database for the Titan graph layer.',
 				weight: 0.9
 			}
 		],
 		skills: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
-				desc: '',
+				desc: 'Created as a tool to enhance experiences through interesting connections and relationships.|Designed the API tools to be well-organized and developer-friendly.',
 				weight: 0.8
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
-				desc: '',
+				desc: 'Wrote extensive documentation for all API services, functions, data structures, and enumerations.|Created example scenarios to describe concepts and usage scenarios.',
 				weight: 0.97
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
-				desc: '',
+				desc: 'Developed a system for defining traversal pathways and rules.|Implemented conversion from traversal language into graph database queries.|Wrote a complex "Fabric Query Language" with conversion into SQL for an earlier version.',
 				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
-				desc: '',
+				desc: 'Built all applications to execute on the server.|Configured, deployed, and maintained a distributed server system.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
-				desc: '',
+				desc: 'Designed and implemented a complex graph database schema.|Deployed and maintained a distributed graph database.|Built relational databases and schemas for earlier versions.',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'webserv'),
-				desc: '',
+				desc: 'Developed various services and functions for requesting and receving data.',
 				weight: 1
 			}
 		],
@@ -808,46 +808,46 @@ Aei.Tables.Project = [
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
+				desc: 'Built the the homepage and several internal pages for describing Fabric.|Generated documentation structure and details dynamically via the API\'s JSON specification.|Implemented visual tools for exploring and traversing live Fabric data.|Built registration, login, and account sections for managing user and app details.|Built an animated homepage banner.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
+				desc: 'Designed layouts, graphics, visualizations, and animations entire site.|Designed the Fabric logo.',
 				weight: 0.97
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
+				desc: 'Brainstormed several ways for describing Fabric concepts in an understandable way.|Created a visual format for presenting relationship data.|Brainstormed ideas for an depth-providing, synapse-like banner animation.',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
+				desc: 'Planned, executed, released, and maintained the project.|Coordinated development to keep up-to-date with other projects.',
 				weight: 0.96
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
-				desc: '',
+				desc: 'Wrote all content for the site.|Summarized complex concepts into easy-to-understand phrases and short paragraphs.',
 				weight: 0.99
 			}
 		],
 		systems: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
-				desc: '',
+				desc: 'Created the entire website.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.System, 'linux'),
-				desc: '',
+				desc: 'Executed the web application on Linux servers.',
 				weight: 0.99
 			}
 		],
 		teams: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
-				desc: '',
+				desc: 'Designed and developed by Zach.',
 				weight: 1
 			}
 		],
@@ -876,99 +876,99 @@ Aei.Tables.Project = [
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
-				desc: '',
+				desc: 'Used the framework throughout the web application.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'mono'),
-				desc: '',
+				desc: 'Used to execute the web application on Linux servers.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'jquery'),
-				desc: '',
+				desc: 'Used across all website pages.',
 				weight: 0.97
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'foundjs'),
-				desc: '',
+				desc: 'Used to provide responsive layouts to the website pages.',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'nhib'),
-				desc: '',
+				desc: 'Used to communicate with relational databases.',
 				weight: 0.4
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'kinjs'),
-				desc: '',
+				desc: 'Used to draw and animate the custom homepage banner animation.',
 				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'titan'),
-				desc: '',
+				desc: 'Used as the primary graph database.',
 				weight: 0.7
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'rex'),
-				desc: '',
+				desc: 'Used for communication with the graph database.',
 				weight: 0.8
 			}
 		],
 		skills: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
-				desc: '',
+				desc: 'Created the site\'s pages, layouts, and navigation.|Developed an intuitive visual tool for traversing live Fabric data.|Created highly-interconnected documentation pages.',
 				weight: 0.95
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
-				desc: '',
+				desc: 'Presented summaries of complex concepts as discrete, sequential, easy-to-understand sections.|Developed a homepage animation to communicate deep, real-time, evolving connectivity.',
 				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
-				desc: '',
-				weight: 0.3
+				desc: 'Implemented a homepage animation with shooting line-segments and depth-of-field effects.',
+				weight: 0.4
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
-				desc: '',
+				desc: 'Built pages to resize between mobile and desktop browser sizes.',
 				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
-				desc: '',
+				desc: 'Developed various ways to visualize items, relationships between them, and the relationship details.',
 				weight: 0.4
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
-				desc: '',
-				weight: 0.98
+				desc: 'Wrote about concepts and usage scenarios.',
+				weight: 0.85
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
-				desc: '',
+				desc: 'Created all text and visual content throughout the website.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, '3d'),
-				desc: '',
+				desc: 'Approximated three-dimensional perspective to provide depth for the homepage animation.',
 				weight: 0.2
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'servside'),
-				desc: '',
+				desc: 'Executed the website and communicated with other applications on the server side.',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
-				desc: '',
+				desc: 'Communicated with the graph database to access and modify data.',
 				weight: 0.92
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'mob'),
-				desc: '',
+				desc: 'Built all pages to be mobile-friendly.',
 				weight: 0.8
 			}
 		],
@@ -1120,7 +1120,7 @@ Aei.Tables.Project = [
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
-				desc: 'Used the framework through the application.',
+				desc: 'Used the framework throughout the application.',
 				weight: 1
 			}
 		],
@@ -1968,7 +1968,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'mob'),
-				desc: 'Built all pages to have be mobile-friendly.',
+				desc: 'Built all pages to be mobile-friendly.',
 				weight: 0.65
 			}
 		],
@@ -2989,6 +2989,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
 				desc: 'Documented daily development progress, the functionality of each graph, issues and workaround details, etc.',
 				weight: 0.75
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'mob'),
+				desc: 'Created a powerful graph-drawing application for all iOS devices',
+				weight: 1
 			}
 		],
 		related: [
@@ -3221,24 +3226,24 @@ Aei.Tables.Project = [
 		systems: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.System, 'fplay'),
-				desc: 'Uses Flash Player to run on a kiosk computer.',
+				desc: 'Built to run on a kiosk computer via Flash Player.',
 				weight: 1
 			}
 		],
 		teams: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
-				desc: '',
+				desc: 'Built the application based on specifications from the design team.',
 				weight: 0.8
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
-				desc: '',
+				desc: 'Worked closely with a development team that handled database and hardware communication.',
 				weight: 0.85
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
-				desc: '',
+				desc: 'Built the core application.',
 				weight: 1
 			}
 		],
@@ -3252,34 +3257,34 @@ Aei.Tables.Project = [
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
-				desc: 'Used for building main application.',
+				desc: 'Used for powering the main application.',
 				weight: 1
 			}
 		],
 		skills: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
-				desc: '',
+				desc: 'Built the overall application structure and navigation.|Built all individual pages and components.',
 				weight: 0.95
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
-				desc: '',
+				desc: 'Created a full shopping experience, inclusing product selection, customization, purchase, and production.|Implemented transitions and animations to enhance the experience.|Focused on providing clear feedback related to hardware status and issues.',
 				weight: 0.7
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
-				desc: '',
+				desc: 'Developed subtle, interactive background animations.|Implemented movement, fade, and transition animations throughout the application.',
 				weight: 0.75
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
-				desc: '',
+				desc: 'Implemented the design specification with complete precision.',
 				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
-				desc: 'Created highly-detailed issues for the back-end development team.',
+				desc: 'Created highly-detailed issues and reports for the back-end development team.|Wrote complete instructions for installation and usage of the application.',
 				weight: 0.75
 			}
 		],
@@ -3924,22 +3929,22 @@ Aei.Tables.Project = [
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
+				desc: 'Implemented the main application and the administrative tool.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
+				desc: 'Provided ideas for user-customization of presentations.',
 				weight: 0.4
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
+				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
-				desc: '',
+				desc: 'Provided clear, detailed communication to the client.',
 				weight: 0.2
 			}
 		],
@@ -4318,22 +4323,22 @@ Aei.Tables.Project = [
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '',
-				weight: 0.5
+				desc: 'Implemented the design specification.',
+				weight: 0.4
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
+				desc: 'Provided ideas for transitions and animations.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
+				desc: 'Managed internal development process, worked with client to complete the project.',
 				weight: 0.2
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
-				desc: '',
+				desc: 'Provided clear, detailed communication to the client.',
 				weight: 0.2
 			}
 		],
@@ -4415,27 +4420,27 @@ Aei.Tables.Project = [
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: '',
+				desc: 'Built the user application, using content provided via web service.|Built a web service to access and provide the data.|Created a smooth, interactive rotation tool by smoothing between pre-rendered images.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: '', //designed the entire UI
+				desc: 'Designed the user interface.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: '',
+				desc: 'Provided ideas for designs and layouts.|Brainstormed interfaces for the rotation tool.',
 				weight: 0.85
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: '',
+				desc: 'Managed internal development process, worked with client to complete the project.|Coordinated user interface, web service, and database development.',
 				weight: 0.75
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
-				desc: '',
+				desc: 'Provided clear, detailed communication to the client.',
 				weight: 0.2
 			}
 		],
@@ -4512,6 +4517,11 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
 				desc: '',
 				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'webserv'),
+				desc: '',
+				weight: 0.9
 			}
 		],
 		weight: 0.61
