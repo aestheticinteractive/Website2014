@@ -139,51 +139,22 @@ Aei.Controllers.Services = function($rootScope, $scope) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Tags = function($rootScope, $scope) {
-	var groups = [
-		{
-			id: 'services',
-			link: 'Services',
-			list: Aei.Database.selectList(Aei.Tables.Service)
-		},
-		{
-			id: 'skills',
-			link: 'Skills',
-			list: Aei.Database.selectList(Aei.Tables.Skill)
-		},
-		{
-			id: 'languages',
-			link: 'Languages',
-			list: Aei.Database.selectList(Aei.Tables.Language)
-		},
-		{
-			id: 'products',
-			link: 'Products',
-			list: Aei.Database.selectList(Aei.Tables.Product)
-		},
-		{
-			id: 'systems',
-			link: 'Systems',
-			list: Aei.Database.selectList(Aei.Tables.System)
-		},
-		{
-			id: 'teams',
-			link: 'Teams',
-			list: Aei.Database.selectList(Aei.Tables.Team)
-		}
-	];
-
+	var groups = Aei.Database.selectList(Aei.Tables.TagGroup);
 	var i, group;
 
-	for ( i in groups ) {
-		group = groups[i];
-		group.tagWeights = Aei.Queries.calculateTagWeights(group.id, group.list);
+	if ( groups[0].tagWeights == null ) {
+		for ( i in groups ) {
+			group = groups[i];
+			group.tagWeights = []; //Aei.Queries.calculateTagWeights(group.id, group.list);
+			group.trends = Aei.Queries.calculateTagTrends(group);
+		}
 	}
 
 	$scope.model = {
 		groups: groups
 	};
 	
-	$rootScope.page = null;
+	$rootScope.page = new Aei.Pages.Tags(groups);
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Tags']);
 };
 

@@ -329,7 +329,6 @@ Aei.Tables.Skill = [
 		id: 'cont',
 		name: 'Content Creation'
 	}
-	//autonomy/drive?
 	//unit testing
 	//architecture
 	//fluent API
@@ -338,6 +337,58 @@ Aei.Tables.Skill = [
 for ( var i in Aei.Tables.Skill ) {
 	var skill = Aei.Tables.Skill[i];
 	skill.link = Aei.Tables.createLink(skill.name);
+}
+
+
+/*====================================================================================================*/
+Aei.Tables.TagGroup = [
+	{
+		id: 'services',
+		name: 'Services',
+		single: 'Service',
+		summary: 'hello',
+		list: Aei.Database.selectList(Aei.Tables.Service)
+	},
+	{
+		id: 'skills',
+		name: 'Skills',
+		single: 'Skill',
+		summary: 'hello',
+		list: Aei.Database.selectList(Aei.Tables.Skill)
+	},
+	{
+		id: 'languages',
+		name: 'Languages',
+		single: 'Language',
+		summary: 'hello',
+		list: Aei.Database.selectList(Aei.Tables.Language)
+	},
+	{
+		id: 'products',
+		name: 'Products',
+		single: 'Product',
+		summary: 'hello',
+		list: Aei.Database.selectList(Aei.Tables.Product)
+	},
+	{
+		id: 'systems',
+		name: 'Systems',
+		single: 'System',
+		summary: 'hello',
+		list: Aei.Database.selectList(Aei.Tables.System)
+	},
+	{
+		id: 'teams',
+		name: 'Teams',
+		single: 'Team',
+		summary: 'hello',
+		list: Aei.Database.selectList(Aei.Tables.Team)
+	}
+];
+
+for ( var i in Aei.Tables.TagGroup ) {
+	var grp = Aei.Tables.TagGroup[i];
+	grp.link = Aei.Tables.createLink(grp.name);
 }
 
 
