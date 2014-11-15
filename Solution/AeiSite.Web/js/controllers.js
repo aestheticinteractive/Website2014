@@ -140,15 +140,6 @@ Aei.Controllers.Services = function($rootScope, $scope) {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Tags = function($rootScope, $scope) {
 	var groups = Aei.Database.selectList(Aei.Tables.TagGroup);
-	var i, group;
-
-	if ( groups[0].tagWeights == null ) {
-		for ( i in groups ) {
-			group = groups[i];
-			group.tagWeights = []; //Aei.Queries.calculateTagWeights(group.id, group.list);
-			group.trends = Aei.Queries.calculateTagTrends(group);
-		}
-	}
 
 	$scope.model = {
 		groups: groups

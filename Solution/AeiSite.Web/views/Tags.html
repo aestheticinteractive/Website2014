@@ -49,7 +49,7 @@
 <section class="content" ng-repeat="group in model.groups">
 	<div class="row">
 	
-		<div class="large-4 columns">
+		<div class="large-2 medium-3 columns">
 			<h2>{{group.name}}</h2>
 			<p>
 				<a ng-repeat="tw in group.tagWeights" class="tagLink" id="{{tw.item.id}}" 
@@ -60,20 +60,18 @@
 			</p>
 		</div>
 		
-		<div class="large-8 columns">
+		<div class="large-10 medium-9 columns">
 			
 			<table class="fancy">
 				<tbody>
-					<tr ng-repeat="trend in group.trends">
+					<tr ng-repeat="item in group.items">
 						<td style="width: 33%;">
-							<a ng-href="#/Tags/{{group.link}}/{{tw.item.link}}">
-								{{trend.item.name}}
+							<a ng-href="#/Tags/{{group.link}}/{{item.link}}">
+								{{item.name}}
 							</a>
 						</td>
 						<td>
-							<div ng-repeat="val in trend.values track by $index" class="trendRow"
-							     ng-style="{'height': (val*0.2+1)+'px'}">
-							</div>
+							<div class="graph" id="graph-{{item.link}}"></div>
 						</td>
 					</tr>
 				</tbody>

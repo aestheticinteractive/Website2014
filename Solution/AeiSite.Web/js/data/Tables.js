@@ -9,6 +9,7 @@ Aei.Tables.createLink = function(name) {
 	return name
 		.replace(/#/g, ' Sharp')
 		.replace(/\+/g, ' Plus')
+		.replace(/\//g, '-')
 		.replace(/ /g, '-');
 };
 
@@ -347,42 +348,42 @@ Aei.Tables.TagGroup = [
 		name: 'Services',
 		single: 'Service',
 		summary: 'hello',
-		list: Aei.Database.selectList(Aei.Tables.Service)
+		items: Aei.Database.selectList(Aei.Tables.Service)
 	},
 	{
 		id: 'skills',
 		name: 'Skills',
 		single: 'Skill',
 		summary: 'hello',
-		list: Aei.Database.selectList(Aei.Tables.Skill)
+		items: Aei.Database.selectList(Aei.Tables.Skill)
 	},
 	{
 		id: 'languages',
 		name: 'Languages',
 		single: 'Language',
 		summary: 'hello',
-		list: Aei.Database.selectList(Aei.Tables.Language)
+		items: Aei.Database.selectList(Aei.Tables.Language)
 	},
 	{
 		id: 'products',
 		name: 'Products',
 		single: 'Product',
 		summary: 'hello',
-		list: Aei.Database.selectList(Aei.Tables.Product)
+		items: Aei.Database.selectList(Aei.Tables.Product)
 	},
 	{
 		id: 'systems',
 		name: 'Systems',
 		single: 'System',
 		summary: 'hello',
-		list: Aei.Database.selectList(Aei.Tables.System)
+		items: Aei.Database.selectList(Aei.Tables.System)
 	},
 	{
 		id: 'teams',
 		name: 'Teams',
 		single: 'Team',
 		summary: 'hello',
-		list: Aei.Database.selectList(Aei.Tables.Team)
+		items: Aei.Database.selectList(Aei.Tables.Team)
 	}
 ];
 
@@ -1438,6 +1439,17 @@ Aei.Tables.Project = [
 				y: 2014,
 				m: 8,
 				d: 15
+			},
+			{
+				type: 'start',
+				name: 'HTML5 Graphs',
+				y: 2014,
+				m: 10,
+				d: 8
+			},
+			{
+				type: 'continue',
+				name: ''
 			}
 		],
 		summary: 'A broad collection of modules that visualize incoming data as graphs, gauges, meters, and tabular charts. Each module is built to match the functionality of its Flash-based predecessor.',
@@ -1578,6 +1590,34 @@ Aei.Tables.Project = [
 				y: 2014,
 				m: 9,
 				d: 24
+			},
+			{
+				type: 'start',
+				name: 'Begin VR Demo',
+				y: 2014,
+				m: 10,
+				d: 9
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2014,
+				m: 10,
+				d: 15
+			},
+			{
+				type: 'start',
+				name: 'Complete VR Demo',
+				y: 2014,
+				m: 11,
+				d: 10
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2014,
+				m: 11,
+				d: 15
 			}
 		],
 		summary: 'A re-imagined version of the iOS game, built to use the Leap Motion controller. Players control the game pieces and camera by reaching, grabbing, turning, and moving their hands in mid-air.',
