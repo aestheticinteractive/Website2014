@@ -1,9 +1,11 @@
 
 /*====================================================================================================*/
-Aei.TagsTrendData = function(startYear) {
-	this._dayBase = new Date(startYear, 0, 1);
+Aei.TagsTrendData = function(startYear, startMonth, bucketSize) {
+	this._dayBase = new Date(startYear, startMonth-1, 1);
 	this._dayBaseTime = this._dayBase.getTime();
+	this._bucketSize = bucketSize;
 	this._today = new Date();
+	this._projects = Aei.Database.selectList(Aei.Tables.Project);
 	this._tagGroups = Aei.Database.selectList(Aei.Tables.TagGroup);
 	this._dateCells = [];
 };
@@ -20,76 +22,83 @@ Aei.TagsTrendData.prototype.init = function() {
 		return;
 	}
 
-	var base = this._dayBase;
+	var t0 = performance.now();
+
+	var projects = this._projects;
 	var today = this._today;
-	var projects = Aei.Database.selectList(Aei.Tables.Project);
-	var d = new Date(this._dayBase);
-	var i = 0;
+	var maxI = this._getDateCellIndex(today);
+	var i;
 
-	while ( true ) {
-		dateCells[i++] = {
+	for ( i = 0 ; i <= maxI ; ++i ) {
+		dateCells[i] = {
 			projects: [],
-			tags: {}
+			hits: {}
 		};
-
-		if ( d > today ) {
-			break;
-		}
-
-		d = new Date(base);
-		d.setDate(d.getDate()+i);
 	}
+
+	var t1 = performance.now();
 	
 	for ( i in projects ) {
 		this._fillDateCells(projects[i]);
 	}
+
+	var t2 = performance.now();
+	console.log("init.t1: "+(t1-t0));
+	console.log("init.t2: "+(t2-t1));
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.TagsTrendData.prototype.getTrendValues = function(groupId, itemId, bucketSize, smoothing) {
+Aei.TagsTrendData.prototype.getTrendValues = function(groupId, itemId, smoothing) {
+	var t0 = performance.now();
+
 	var cellTagKey = groupId+'-'+itemId;
 	var dateCells = this._dateCells;
 	var dateCellsLen = dateCells.length;
 	var values = [];
+	var smoothedValues = [];
 	var i, cell, val;
 
-	for ( i in dateCells ) {
+	for ( i = 0 ; i < dateCellsLen ; ++i ) {
 		cell = dateCells[i];
-		val = (cell.tags[cellTagKey] || 0);
-		//val = (val ? val/cell.projects.length : 0);
-
-		/*if ( i > 0 ) {
-			val += values[i-1]*smoothing;
-		}*/
-
-		values.push(val);
+		val = (cell.hits[cellTagKey] || 0);
+		values[i] = (val ? val/cell.projects.length : 0);
 	}
 
-	//TODO: make the smoothing ease in/out like a bubble shape
+	var t1 = performance.now();
 
-	var buckets = [];
-	var bucketValue = 0;
-	var bucketCount = bucketSize-(dateCellsLen%bucketSize);
-	var bucketI;
+	////
 
-	for ( i = 0 ; i < dateCells.length ; ++i ) {
-		bucketValue += values[i];
-		bucketCount++;
+	val = values[0];
+	smoothing = 1-Math.pow(1-smoothing, 4);
+	
+	var valueTarg = val;
+	var valueMomentum = 0;
+	var easeUp = (1-smoothing)*0.9+0.1;
+	var easeDown = (1-smoothing)*0.1+0.000001;
 
-		if ( bucketCount >= bucketSize ) {
-			bucketI = buckets.length;
-			buckets.push(bucketValue/bucketCount);
-
-			if ( bucketI > 0 ) {
-				buckets[bucketI] += buckets[bucketI-1]*smoothing;
-			}
-
-			bucketValue = 0;
-			bucketCount = 0;
+	for ( i in values ) {
+		if ( valueTarg > val ) {
+			val += (valueTarg-val)*easeUp;
+			valueMomentum = 0;
 		}
+		else if ( valueTarg < val ) {
+			valueMomentum -= easeDown;
+			val = Math.max(val+valueMomentum, valueTarg);
+		}
+		else {
+			val = valueTarg;
+			valueMomentum = 0;
+		}
+
+		//console.log('%o: %o: %o (%o / %o)', i, values[i], val, valueTarg, valueMomentum);
+		smoothedValues[i] = val;
+		valueTarg = values[i];
 	}
 
-	return buckets;
+	var t2 = performance.now();
+	console.log("trend t1=%o, t2=%o, total=%o (%o)", t1-t0, t2-t1, t2-t0, cellTagKey);
+
+	return smoothedValues;
 };
 
 
@@ -97,8 +106,21 @@ Aei.TagsTrendData.prototype.getTrendValues = function(groupId, itemId, bucketSiz
 /*----------------------------------------------------------------------------------------------------*/
 Aei.TagsTrendData.prototype._fillDateCells = function(project) {
 	var timeline = project.timeline;
+	var groups = this._tagGroups;
 	var rangeStart = null;
-	var i, rangeEnd, event;
+	var weights = {};
+	var projWeight = (project.weight*0.75)+0.25;
+	var i, group, tags, tagI, tag, rangeEnd, event;
+
+	for ( i in groups ) {
+		group = groups[i];
+		tags = project[group.id];
+
+		for ( tagI in tags ) {
+			tag = tags[tagI];
+			weights[group.id+'-'+tag.item.id] = tag.weight*projWeight;
+		}
+	}
 
 	for ( i in timeline ) {
 		event = timeline[i];
@@ -109,53 +131,39 @@ Aei.TagsTrendData.prototype._fillDateCells = function(project) {
 			
 		if ( event.type == 'end' ) {
 			rangeEnd = new Date(event.y, event.m-1, (event.d || 1));
-			this._fillDateCellRange(project, rangeStart, rangeEnd);
+			this._fillDateCellRange(project, weights, rangeStart, rangeEnd);
 			rangeStart = null;
 		}
 	}
 
 	if ( rangeStart ) {
-		this._fillDateCellRange(project, rangeStart, this._today);
+		this._fillDateCellRange(project, weights, rangeStart, this._today);
 	}
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.TagsTrendData.prototype._fillDateCellRange = function(project, dateStart, dateEnd) {
+Aei.TagsTrendData.prototype._fillDateCellRange = function(project, weights, dateStart, dateEnd) {
 	var cells = this._dateCells;
-	var groups = this._tagGroups;
-	var cellI = this._getHitIndex(dateStart);
-	var cellEndI = this._getHitIndex(dateEnd);
-	var cell, groupI, group, tags, tagI, tag, cellTagKey;
+	var cellI = this._getDateCellIndex(dateStart);
+	var cellEndI = this._getDateCellIndex(dateEnd);
+	var cell, hits, key;
 
 	for ( cellI = Math.max(cellI, 0) ; cellI <= cellEndI ; ++cellI ) {
 		cell = cells[cellI];
-
-		if ( !cell ) {
-			console.log(cellI+' / '+cells.length);
-		}
-
 		cell.projects.push(project);
+		hits = cell.hits;
 			
-		for ( groupI in groups ) {
-			group = groups[groupI];
-
-			tags = project[group.id];
-
-			for ( tagI in tags ) {
-				tag = tags[tagI];
-				cellTagKey = group.id+'-'+tag.item.id;
-
-				if ( cell.tags[cellTagKey] == null ) {
-					cell.tags[cellTagKey] = 0;
-				}
-
-				cell.tags[cellTagKey] = tag.weight*project.weight;
+		for ( key in weights ) {
+			if ( hits[key] == null ) {
+				hits[key] = 0;
 			}
+
+			hits[key] += weights[key];
 		}
 	}
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.TagsTrendData.prototype._getHitIndex = function(date) {
-	return Math.round((date.getTime()-this._dayBaseTime)/Aei.TagsTrendData.MsPerDay);
+Aei.TagsTrendData.prototype._getDateCellIndex = function(date) {
+	return Math.round((date.getTime()-this._dayBaseTime)/Aei.TagsTrendData.MsPerDay/this._bucketSize);
 };

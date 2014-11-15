@@ -2,8 +2,7 @@
 /*====================================================================================================*/
 Aei.Pages.Tags = function(groups) {
 	this._groups = groups;
-	this._groupIndex = 0;
-	this._trendData = new Aei.TagsTrendData(2005);
+	this._trendData = new Aei.TagsTrendData(2005, 7, 60);
 };
 
 
@@ -18,39 +17,27 @@ Aei.Pages.Tags.prototype.onRender = function() {
 		weight = tagLink.attr('data-weight');
 		tagLink.css('opacity', weight*0.75+0.25);
 	});*/
+	
+	var me = this;
+	
+	var onTimeout = function() {
+		me._buildData();
+	};
 
-	this._trendData.init();
-	console.log(this._trendData);
-	this._buildGraph();
+	setTimeout(onTimeout, 50);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Tags.prototype._buildGraph = function() {
-	var groups = this._groups;
-	var group = groups[this._groupIndex];
+Aei.Pages.Tags.prototype._buildData = function() {
+	this._trendData.init();
 
-	for ( var itemI in group.items ) {
-		var item = group.items[itemI];
-		var values = this._trendData.getTrendValues(group.id, item.id, 28, 0.75);
+	this._groupIndex = -1;
+	this._setGraphTimeout();
+};
 
-		var graphDiv = $('#graph-'+item.link);
-
-		for ( var valI in values ) {
-			var val = values[valI];
-			var h = (val*10+1);
-
-			var bar = $('<div>')
-				.addClass('trendRow')
-				.css('height', h+'px')
-				.css('margin-top', (100-h)+'px');
-
-			graphDiv.append(bar);
-		}
-	}
-
-	////
-
-	if ( ++this._groupIndex >= groups.length ) {
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Pages.Tags.prototype._setGraphTimeout = function() {
+	if ( ++this._groupIndex >= this._groups.length ) {
 		return;
 	}
 
@@ -61,4 +48,35 @@ Aei.Pages.Tags.prototype._buildGraph = function() {
 	};
 
 	setTimeout(onTimeout, 50);
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Pages.Tags.prototype._buildGraph = function() {
+	var t0 = performance.now();
+	var groups = this._groups;
+	var group = groups[this._groupIndex];
+
+	for ( var itemI in group.items ) {
+		var item = group.items[itemI];
+		var values = this._trendData.getTrendValues(group.id, item.id, 0.5);
+		var graphDiv = $('#graph-'+item.link);
+
+		for ( var valI in values ) {
+			var val = values[valI];
+			var h = val*100;
+
+			var bar = $('<div>')
+				.addClass('trendRow')
+				.attr('title', 'i='+valI+' / '+val)
+				.css('height', h+'px')
+				.css('margin-top', (100-h)+'px');
+
+			graphDiv.append(bar);
+		}
+	}
+	
+	var t1 = performance.now();
+	console.log("buildGraph t1=%o (%o)", t1-t0, group.id);
+
+	this._setGraphTimeout();
 };
