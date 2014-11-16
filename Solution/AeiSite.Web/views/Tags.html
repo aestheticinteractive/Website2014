@@ -29,6 +29,31 @@
 </style>
 
 
+<style>
+
+	body {
+	  font: 10px sans-serif;
+	}
+	
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}
+	
+	.x.axis path {
+	  display: none;
+	}
+	
+	.line {
+	  fill: none;
+	  stroke: steelblue;
+	  stroke-width: 1.5px;
+	}
+
+</style>
+
 <div class="intro">
 	<section class="content">
 		<div class="row">
@@ -63,20 +88,8 @@
 		
 		<div class="large-10 medium-9 columns">
 			
-			<table class="fancy">
-				<tbody>
-					<tr ng-repeat="item in group.items">
-						<td style="width: 33%;">
-							<a ng-href="#/Tags/{{group.link}}/{{item.link}}">
-								{{item.name}}
-							</a>
-						</td>
-						<td>
-							<div class="graph" id="graph-{{item.link}}"></div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+			<div id='graph-{{group.link}}' style="background-color: #fff;">
+			</div>
 
 		</div>
 

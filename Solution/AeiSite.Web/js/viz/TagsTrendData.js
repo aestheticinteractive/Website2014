@@ -96,7 +96,7 @@ Aei.TagsTrendData.prototype.getTrendValues = function(groupId, itemId, smoothing
 	}
 
 	var t2 = performance.now();
-	console.log("trend t1=%o, t2=%o, total=%o (%o)", t1-t0, t2-t1, t2-t0, cellTagKey);
+	//console.log("trend t1=%o, t2=%o, total=%o (%o)", t1-t0, t2-t1, t2-t0, cellTagKey);
 
 	return smoothedValues;
 };

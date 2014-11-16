@@ -55,25 +55,19 @@ Aei.Pages.Tags.prototype._buildGraph = function() {
 	var t0 = performance.now();
 	var groups = this._groups;
 	var group = groups[this._groupIndex];
+	var graphData = [];
 
 	for ( var itemI in group.items ) {
 		var item = group.items[itemI];
-		var values = this._trendData.getTrendValues(group.id, item.id, 0.5);
-		var graphDiv = $('#graph-'+item.link);
-
-		for ( var valI in values ) {
-			var val = values[valI];
-			var h = val*100;
-
-			var bar = $('<div>')
-				.addClass('trendRow')
-				.attr('title', 'i='+valI+' / '+val)
-				.css('height', h+'px')
-				.css('margin-top', (100-h)+'px');
-
-			graphDiv.append(bar);
-		}
+		
+		graphData.push({
+			title: item.name,
+			values: this._trendData.getTrendValues(group.id, item.id, 0.667)
+		});
 	}
+	
+	var graph = new Aei.TagsTrend('#graph-'+group.link, graphData);
+	graph.build();
 	
 	var t1 = performance.now();
 	console.log("buildGraph t1=%o (%o)", t1-t0, group.id);
