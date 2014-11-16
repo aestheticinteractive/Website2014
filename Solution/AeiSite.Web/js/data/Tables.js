@@ -113,7 +113,7 @@ for ( var i in Aei.Tables.Team ) {
 /*====================================================================================================*/
 Aei.Tables.Language = [
 	{
-		id: 'c#',
+		id: 'cs',
 		name: 'C#'
 	},
 	{
@@ -149,7 +149,7 @@ Aei.Tables.Language = [
 		name: 'PHP'
 	},
 	{
-		id: 'c++',
+		id: 'cpp',
 		name: 'C++'
 	}
 ];
@@ -600,7 +600,7 @@ Aei.Tables.Project = [
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'cs'),
 				desc: 'Used for building the server-side web application.',
 				weight: 1
 			},
@@ -691,7 +691,7 @@ Aei.Tables.Project = [
 			},
 			{
 				id: 'weaver',
-				desc: 'Fabric\'s tool for building Gremlin queries via C#.'
+				desc: 'Fabric\'s tool for building Gremlin queries via cs.'
 			},
 			{
 				id: 'rexconnect',
@@ -915,7 +915,7 @@ Aei.Tables.Project = [
 				weight: 0.8
 			},
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'cs'),
 				desc: 'Used for building the web application.',
 				weight: 1
 			},
@@ -1031,7 +1031,7 @@ Aei.Tables.Project = [
 			},
 			{
 				id: 'weaver',
-				desc: 'Fabric\'s tool for building Gremlin queries via C#.'
+				desc: 'Fabric\'s tool for building Gremlin queries via cs.'
 			},
 			{
 				id: 'rexconnect',
@@ -1116,7 +1116,7 @@ Aei.Tables.Project = [
 				d: 13
 			}
 		],
-		summary: 'A tool for generating Gremlin scripts using C#. It features a strongly-typed, fluent interface, and allows developers to compose valid queries based on a well-defined data schema.',
+		summary: 'A tool for generating Gremlin scripts using cs. It features a strongly-typed, fluent interface, and allows developers to compose valid queries based on a well-defined data schema.',
 		url: null,
 		github: 'inthefabric/Weaver',
 		imageCount: 6,
@@ -1159,7 +1159,7 @@ Aei.Tables.Project = [
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'cs'),
 				desc: 'Used for building the library.',
 				weight: 1
 			},
@@ -1671,7 +1671,7 @@ Aei.Tables.Project = [
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'cs'),
 				desc: 'Used for building the game.',
 				weight: 1
 			}
@@ -1979,7 +1979,7 @@ Aei.Tables.Project = [
 				weight: 0.99
 			},
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'cs'),
 				desc: 'Used for building the web application.',
 				weight: 1
 			},
@@ -2683,7 +2683,7 @@ Aei.Tables.Project = [
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'c#'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'cs'),
 				desc: 'Used for building MVC web applications|Used for parsing and performing data analysis.',
 				weight: 0.35
 			},
@@ -4352,7 +4352,7 @@ Aei.Tables.Project = [
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'c++'),
+				item: Aei.Database.selectById(Aei.Tables.Language, 'cpp'),
 				desc: '',
 				weight: 1
 			}

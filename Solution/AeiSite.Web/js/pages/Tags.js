@@ -2,29 +2,20 @@
 /*====================================================================================================*/
 Aei.Pages.Tags = function(groups) {
 	this._groups = groups;
-	this._trendData = new Aei.TagsTrendData(2005, 7, 60);
+	this._trendData = new Aei.TagsTrendData(2005, 7, 90);
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Tags.prototype.onRender = function() {
-	/*var tagLinks = $('.tagLink');
-	var tagLink, weight;
-
-	tagLinks.each(function() {
-		tagLink = $(this);
-		weight = tagLink.attr('data-weight');
-		tagLink.css('opacity', weight*0.75+0.25);
-	});*/
-	
 	var me = this;
 	
 	var onTimeout = function() {
 		me._buildData();
 	};
 
-	setTimeout(onTimeout, 50);
+	setTimeout(onTimeout, 20);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -47,28 +38,60 @@ Aei.Pages.Tags.prototype._setGraphTimeout = function() {
 		me._buildGraph();
 	};
 
-	setTimeout(onTimeout, 50);
+	setTimeout(onTimeout, 20);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Tags.prototype._buildGraph = function() {
 	var t0 = performance.now();
+	var trendData = this._trendData;
 	var groups = this._groups;
 	var group = groups[this._groupIndex];
-	var graphData = [];
+	var calcs = [];
+	var powerMax = 0;
+	var i, itemId, calc, key, graph;
 
-	for ( var itemI in group.items ) {
-		var item = group.items[itemI];
-		
-		graphData.push({
-			title: item.name,
-			values: this._trendData.getTrendValues(group.id, item.id, 0.667)
-		});
+	for ( i in group.items ) {
+		itemId = group.items[i].id;
+
+		calc = {
+			itemId: itemId,
+			values: trendData.getTrendValues(group.id, itemId, 0.1),
+			power: trendData.getPowerValue(group.id, itemId)
+		};
+
+		calcs.push(calc);
+		powerMax = Math.max(powerMax, calc.power);
 	}
+
+	for ( i in calcs ) {
+		calc = calcs[i];
+		calc.power /= powerMax;
+
+		key = group.id+'-'+calc.itemId;
+
+		$('#row-'+key)
+			.attr('data-sort', calc.power);
+
+		$('#power-'+key)
+			.css('width', (calc.power*100)+'%');
+
+		graph = new Aei.TagsTrend('#graph-'+key, calc.values);
+		graph.build();
+	}
+
+	////
+
+	var rows = $('#tbody-'+group.id).children().detach();
 	
-	var graph = new Aei.TagsTrend('#graph-'+group.link, graphData);
-	graph.build();
-	
+	rows.sort(function(a, b) {
+		return $(b).attr('data-sort')-$(a).attr('data-sort');
+	});
+
+	$('#tbody-'+group.id).append(rows);
+
+	////
+
 	var t1 = performance.now();
 	console.log("buildGraph t1=%o (%o)", t1-t0, group.id);
 

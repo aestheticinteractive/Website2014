@@ -19,37 +19,18 @@
 		background-color: #000;
 		background-color: rgba(0, 0, 0, 0.333);
 	}
-	
-	.trendRow {
-		width: 6px;
-		background-color: #fe0;
-		display: inline-block;
-		border-bottom: 1px solid #111;
-	}
 </style>
 
 
 <style>
-
-	body {
-	  font: 10px sans-serif;
-	}
-	
-	.axis path,
-	.axis line {
-	  fill: none;
-	  stroke: #000;
-	  shape-rendering: crispEdges;
-	}
-	
-	.x.axis path {
-	  display: none;
-	}
-	
 	.line {
-	  fill: none;
-	  stroke: steelblue;
-	  stroke-width: 1.5px;
+		fill: none;
+		stroke: #8fbc4c;
+		stroke-width: 1px;
+	}
+	
+	.area {
+		fill: rgba(102, 136, 51, 0.25);
 	}
 
 </style>
@@ -76,20 +57,42 @@
 	<div class="row">
 	
 		<div class="large-2 medium-3 columns">
-			<h2>{{group.name}}</h2>
-			<p>
-				<a ng-repeat="tw in group.tagWeights" class="tagLink" id="{{tw.item.id}}" 
-						ng-href="#/Tags/{{group.link}}/{{tw.item.link}}"
-						data-weight="{{tw.weight}}">
-					{{tw.item.name}}
-				</a>
-			</p>
+			<h2>
+				{{group.name}}
+			</h2>
 		</div>
 		
 		<div class="large-10 medium-9 columns">
 			
-			<div id='graph-{{group.link}}' style="background-color: #fff;">
-			</div>
+			<table class="fancy">
+				<thead>
+					<tr>
+						<th style="width: 90px;">Since 2005</th>
+						<th style="width: 25%;">Tag</th>
+						<th>Power</th>
+					</tr>
+				</thead>
+				<tbody id="tbody-{{group.id}}">
+					<tr ng-repeat="item in group.items" id='row-{{group.id}}-{{item.id}}'>
+						<td>
+							<div id='graph-{{group.id}}-{{item.id}}'>
+							</div>
+						</td>
+						<td>
+							<a ng-href="#/Tags/{{group.link}}/{{item.link}}">
+								{{item.name}}
+							</a>
+						</td>
+						<td>
+							<div class="barBg">
+								<div id='power-{{group.id}}-{{item.id}}' class="barFill" 
+									style="width: 0%;">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 
 		</div>
 

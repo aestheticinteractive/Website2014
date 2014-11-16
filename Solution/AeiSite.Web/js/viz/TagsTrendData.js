@@ -4,13 +4,13 @@ Aei.TagsTrendData = function(startYear, startMonth, bucketSize) {
 	this._dayBase = new Date(startYear, startMonth-1, 1);
 	this._dayBaseTime = this._dayBase.getTime();
 	this._bucketSize = bucketSize;
+	this._dateCellMult = 1/(24*3600*1000)/this._bucketSize;
 	this._today = new Date();
 	this._projects = Aei.Database.selectList(Aei.Tables.Project);
 	this._tagGroups = Aei.Database.selectList(Aei.Tables.TagGroup);
 	this._dateCells = [];
+	this._projectWeights = {};
 };
-
-Aei.TagsTrendData.MsPerDay = 24*3600*1000;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -21,8 +21,6 @@ Aei.TagsTrendData.prototype.init = function() {
 	if ( dateCells.length ) {
 		return;
 	}
-
-	var t0 = performance.now();
 
 	var projects = this._projects;
 	var today = this._today;
@@ -36,21 +34,13 @@ Aei.TagsTrendData.prototype.init = function() {
 		};
 	}
 
-	var t1 = performance.now();
-	
 	for ( i in projects ) {
 		this._fillDateCells(projects[i]);
 	}
-
-	var t2 = performance.now();
-	console.log("init.t1: "+(t1-t0));
-	console.log("init.t2: "+(t2-t1));
 };
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.TagsTrendData.prototype.getTrendValues = function(groupId, itemId, smoothing) {
-	var t0 = performance.now();
-
 	var cellTagKey = groupId+'-'+itemId;
 	var dateCells = this._dateCells;
 	var dateCellsLen = dateCells.length;
@@ -63,8 +53,6 @@ Aei.TagsTrendData.prototype.getTrendValues = function(groupId, itemId, smoothing
 		val = (cell.hits[cellTagKey] || 0);
 		values[i] = (val ? val/cell.projects.length : 0);
 	}
-
-	var t1 = performance.now();
 
 	////
 
@@ -90,15 +78,27 @@ Aei.TagsTrendData.prototype.getTrendValues = function(groupId, itemId, smoothing
 			valueMomentum = 0;
 		}
 
-		//console.log('%o: %o: %o (%o / %o)', i, values[i], val, valueTarg, valueMomentum);
 		smoothedValues[i] = val;
 		valueTarg = values[i];
 	}
 
-	var t2 = performance.now();
-	//console.log("trend t1=%o, t2=%o, total=%o (%o)", t1-t0, t2-t1, t2-t0, cellTagKey);
-
 	return smoothedValues;
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.TagsTrendData.prototype.getPowerValue = function(groupId, itemId) {
+	var cellTagKey = groupId+'-'+itemId;
+	var projects = this._projects;
+	var projWeights = this._projectWeights;
+	var sum = 0;
+	var i, proj;
+
+	for ( i in projects ) {
+		proj = projects[i];
+		sum += (projWeights[proj.id][cellTagKey] || 0);
+	}
+
+	return sum;
 };
 
 
@@ -139,6 +139,8 @@ Aei.TagsTrendData.prototype._fillDateCells = function(project) {
 	if ( rangeStart ) {
 		this._fillDateCellRange(project, weights, rangeStart, this._today);
 	}
+
+	this._projectWeights[project.id] = weights;
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -165,5 +167,5 @@ Aei.TagsTrendData.prototype._fillDateCellRange = function(project, weights, date
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.TagsTrendData.prototype._getDateCellIndex = function(date) {
-	return Math.round((date.getTime()-this._dayBaseTime)/Aei.TagsTrendData.MsPerDay/this._bucketSize);
+	return Math.round((date.getTime()-this._dayBaseTime)*this._dateCellMult);
 };
