@@ -9,6 +9,17 @@ Aei.Pages.Tags = function(groups) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Tags.prototype.onRender = function() {
+	var group0Id = this._groups[0].id;
+	$('#section-'+group0Id).show();
+	$('#tab-'+group0Id).addClass('active');
+
+	/*$('.tabs').children('a')
+		.click(function() {
+			alert(this);
+		});*/
+
+	////
+
 	var me = this;
 	
 	var onTimeout = function() {

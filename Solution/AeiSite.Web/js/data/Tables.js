@@ -395,6 +395,7 @@ for ( var i in Aei.Tables.TagGroup ) {
 
 /*====================================================================================================*/
 Aei.Tables.Project = [
+	//TODO: split Journeyful project
 	//TODO: Momentus
 	//TODO: DCS tools
 	//TODO: WordNet?

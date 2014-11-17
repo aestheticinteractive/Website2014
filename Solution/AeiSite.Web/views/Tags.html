@@ -32,12 +32,43 @@
 		overflow: hidden;
 	}
 	
-	.topProj img {
-	}
-	
 	.topProj.empty {
 		border: 1px solid #404040;
 		border: 1px solid rgba(255, 255, 255, 0.05);
+	}
+	
+	.tabs a {
+		display: inline-block;
+		width: 16.666%;
+		height: 50px;
+		color: #fff;
+		font-size: 18px;
+		text-align: center;
+		padding: 14px 0 10px 0;
+		border-bottom: 2px solid #404040;
+		overflow: hidden;
+	}
+	
+	.tabs a:hover {
+		background-color: #303030;
+		background-color: rgba(255, 255, 255, 0.02);
+	}
+	
+	.tabs a.active {
+		background-color: #404040;
+		background-color: rgba(255, 255, 255, 0.04);
+		border-bottom: 2px solid #888;
+	}	
+	
+	.tabs a .count {
+		color: #683;
+		font-size: 11px;
+		font-weight: bold;
+		padding-left: 3px;
+	}
+	
+	section.group {
+		display: none;
 	}
 	
 	@media only screen and (max-width: 900px) {
@@ -82,14 +113,26 @@
 </div>
 
 
-<section class="content" ng-repeat="group in model.groups">
+<section class="content">
+	<div class="row">
+		<div class="columns tabs">
+			
+			<a ng-repeat="group in model.groups" id="tab-{{group.id}}" data-group="{{group.id}}">
+				{{group.name}}
+
+				<span class="count">
+					{{group.items.length}}
+				</span>
+			</a>
+
+		</div>
+	</div>
+</section>
+
+<section class="content group" ng-repeat="group in model.groups" id="section-{{group.id}}">
 	<div class="row">
 	
 		<div class="columns">
-			<h2>
-				{{group.name}}
-			</h2>
-
 			<table class="fancy">
 				<thead>
 					<tr>
