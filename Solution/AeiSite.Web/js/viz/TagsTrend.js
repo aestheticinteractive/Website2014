@@ -11,7 +11,7 @@ Aei.TagsTrend = function(containerId, data) {
 Aei.TagsTrend.prototype.build = function() {
 	var data = this._data;
 	var w = 80;
-	var h = 20;
+	var h = 30;
 	
 	var x = d3.scale.linear()
 		.range([0, w])

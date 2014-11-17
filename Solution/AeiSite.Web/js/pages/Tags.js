@@ -48,34 +48,58 @@ Aei.Pages.Tags.prototype._buildGraph = function() {
 	var groups = this._groups;
 	var group = groups[this._groupIndex];
 	var calcs = [];
-	var powerMax = 0;
-	var i, itemId, calc, key, graph;
+	var i, itemId, values, valuesLen, recentMax, recentCount, calc, vi, viPow, val, key, graph;
 
 	for ( i in group.items ) {
 		itemId = group.items[i].id;
-
+		values = trendData.getTrendValues(group.id, itemId, 0.1);
+		valuesLen = values.length;
+		recentSum = 0;
+		recentCount = 0;
+		
 		calc = {
 			itemId: itemId,
-			values: trendData.getTrendValues(group.id, itemId, 0.1),
-			power: trendData.getPowerValue(group.id, itemId)
+			values: values,
+			recentSum: 0,
+			recent: 0,
+			peak: 0
 		};
-
+		
 		calcs.push(calc);
-		powerMax = Math.max(powerMax, calc.power);
+	}
+	
+	for ( vi = 0 ; vi < valuesLen ; ++vi ) {
+		viPow = Math.pow(vi, 1.4);
+		recentCount += viPow;
+		recentMax = 0;
+		
+		for ( i in calcs ) {
+			calc = calcs[i];
+			val = calc.values[vi];
+			calc.recentSum += val*viPow;
+			recentMax = Math.max(recentMax, calc.recentSum);
+		}
+		
+		for ( i in calcs ) {
+			calc = calcs[i];
+			calc.recent = (recentMax ? calc.recentSum/recentMax : 0);
+			calc.peak = Math.max(calc.peak, calc.recent);
+		}
 	}
 
 	for ( i in calcs ) {
 		calc = calcs[i];
-		calc.power /= powerMax;
-
 		key = group.id+'-'+calc.itemId;
 
 		$('#row-'+key)
-			.attr('data-sort', calc.power);
+			.attr('data-sort', calc.recent);
 
-		$('#power-'+key)
-			.css('width', (calc.power*100)+'%');
-
+		$('#recent-'+key)
+			.css('width', (calc.recent*99)+'%');
+		
+		$('#peak-'+key)
+			.css('width', ((calc.peak-calc.recent)*99)+'%');
+		
 		graph = new Aei.TagsTrend('#graph-'+key, calc.values);
 		graph.build();
 	}

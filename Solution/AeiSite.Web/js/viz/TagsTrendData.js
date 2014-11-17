@@ -85,7 +85,7 @@ Aei.TagsTrendData.prototype.getTrendValues = function(groupId, itemId, smoothing
 	return smoothedValues;
 };
 
-/*----------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------* /
 Aei.TagsTrendData.prototype.getPowerValue = function(groupId, itemId) {
 	var cellTagKey = groupId+'-'+itemId;
 	var projects = this._projects;
