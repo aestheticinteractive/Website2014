@@ -149,56 +149,6 @@ Aei.Controllers.Tags = function($rootScope, $scope) {
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Tags']);
 };
 
-/*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Tag = function($rootScope, $scope, $routeParams) {
-	var table = null;
-	var tagType = $routeParams.tagType.toLowerCase();
-	var pageTag = '';
-
-	switch ( tagType ) {
-		case 'services':
-			table = Aei.Database.selectList(Aei.Tables.Service);
-			pageTag = 'Service';
-			break;
-			
-		case 'skills':
-			table = Aei.Database.selectList(Aei.Tables.Skill);
-			pageTag = 'Skill';
-			break;
-			
-		case 'languages':
-			table = Aei.Database.selectList(Aei.Tables.Language);
-			pageTag = 'Language';
-			break;
-			
-		case 'products':
-			table = Aei.Database.selectList(Aei.Tables.Product);
-			pageTag = 'Product';
-			break;
-			
-		case 'systems':
-			table = Aei.Database.selectList(Aei.Tables.System);
-			pageTag = 'System';
-			break;
-			
-		case 'teams':
-			table = Aei.Database.selectList(Aei.Tables.Team);
-			pageTag = 'Team';
-			break;
-	};
-
-	var item = Aei.Database.selectByUniqueProperty(table, 'link', $routeParams.link);
-
-	$scope.model = {
-		item: item,
-		section: pageTag,
-		tagUses: Aei.Queries.selectProjectTagUsesByItem(tagType, item)
-	};
-	
-	$rootScope.page = null;
-	$rootScope.pageTitle = Aei.Controllers.getPageTitle([item.name, 'Tags']);
-};
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/

@@ -48,11 +48,14 @@ Aei.Pages.Tags.prototype._buildGraph = function() {
 	var groups = this._groups;
 	var group = groups[this._groupIndex];
 	var calcs = [];
-	var i, itemId, values, valuesLen, recentMax, recentCount, calc, vi, viPow, val, key, graph;
+	var valuesLen = 0;
+	var recentCount = 0;
+	var maxTopProj = 8;
+	var i, j, itemId, values, recentMax, calc, vi, viPow, val, key, graph, projHold, topProj, projLink;
 
 	for ( i in group.items ) {
 		itemId = group.items[i].id;
-		values = trendData.getTrendValues(group.id, itemId, 0.1);
+		values = trendData.getTrendValues(group.id, itemId, 0.25);
 		valuesLen = values.length;
 		recentSum = 0;
 		recentCount = 0;
@@ -60,6 +63,7 @@ Aei.Pages.Tags.prototype._buildGraph = function() {
 		calc = {
 			itemId: itemId,
 			values: values,
+			topProj: trendData.getTopProjects(group.id, itemId, maxTopProj),
 			recentSum: 0,
 			recent: 0,
 			peak: 0
@@ -95,13 +99,39 @@ Aei.Pages.Tags.prototype._buildGraph = function() {
 			.attr('data-sort', calc.recent);
 
 		$('#recent-'+key)
-			.css('width', (calc.recent*99)+'%');
+			.css('width', (calc.recent*100)+'%');
 		
 		$('#peak-'+key)
-			.css('width', ((calc.peak-calc.recent)*99)+'%');
-		
+			.css('width', ((calc.peak-calc.recent)*100)+'%');
+			
 		graph = new Aei.TagsTrend('#graph-'+key, calc.values);
 		graph.build();
+
+		projHold = $('#proj-'+key);
+
+		for ( j = 0 ; j < maxTopProj ; ++j ) {
+			topProj = calc.topProj[j];
+
+			if ( !topProj ) {
+				projLink = $('<span>')
+					.addClass('topProj')
+					.addClass('empty');
+				projHold.append(projLink);
+				continue;
+			}
+
+			projLink = $('<a>')
+				.addClass('topProj')
+				.attr('href', '#/Projects/'+topProj.project.link)
+				.css('opacity', topProj.weight)
+				.append($('<img>')
+					.attr('src', 'img/projects/'+topProj.project.id+'/icon.jpg')
+					.attr('title', topProj.project.name+' (Strength: '+
+						Math.round(topProj.weight*100)+'%)')
+				);
+
+			projHold.append(projLink);
+		}
 	}
 
 	////

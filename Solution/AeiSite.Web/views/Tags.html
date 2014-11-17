@@ -4,17 +4,15 @@
 		margin-top: -6px;
 	}
 	
-	.imageCol {
-		padding: 8px;
-	}
-	
-	.barCol {
-		padding-top: 0;
+	.projCol {
+		width: 250px;
 	}
 	
 	section.content .barBg {
 		font-size: 0;
 		overflow: hidden;
+		margin: 0;
+		width: 95%;
 	}
 	
 	section.content .barBg .barFill {
@@ -25,6 +23,31 @@
 		background-color: rgba(102, 136, 51, 0.25);
 		border-right: 1px solid #683;
 	}
+	
+	.topProj {
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		margin: 2px;
+		overflow: hidden;
+	}
+	
+	.topProj img {
+	}
+	
+	.topProj.empty {
+		border: 1px solid #404040;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+	}
+	
+	@media only screen and (max-width: 900px) {
+		
+		.projCol {
+			width: 125px;
+		}
+		
+	}	
+	
 </style>
 
 
@@ -62,21 +85,18 @@
 <section class="content" ng-repeat="group in model.groups">
 	<div class="row">
 	
-		<div class="large-2 medium-3 columns">
+		<div class="columns">
 			<h2>
 				{{group.name}}
 			</h2>
-		</div>
-		
-		<div class="large-10 medium-9 columns">
-			
+
 			<table class="fancy">
 				<thead>
 					<tr>
 						<th style="width: 90px;">Since 2005</th>
 						<th style="width: 20%;">Tag</th>
-						<th style="width: 25%;">Strength (Recent, Peak)</th>
-						<th>Top Projects</th>
+						<th>Strength (Recent, Peak)</th>
+						<th class="projCol">Top Projects</th>
 					</tr>
 				</thead>
 				<tbody id="tbody-{{group.id}}">
@@ -101,7 +121,8 @@
 							</div>
 						</td>
 						<td>
-							
+							<div id="proj-{{group.id}}-{{item.id}}">
+							</div>
 						</td>
 					</tr>
 				</tbody>
