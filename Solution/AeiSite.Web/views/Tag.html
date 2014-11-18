@@ -1,28 +1,56 @@
 
 <style>
-	.thumbCol table {
-		table-layout: fixed;
-		background: transparent;
-		margin-bottom: 0;
-		border-spacing: 0;
-		width: 100%;
-		border: 0 solid #000;
+	.thumbCol a, .thumbCol p {
+		float: left;
 	}
 	
-	.thumbCol .imgTd {
-		width: 80px;
-		height: 80px;
-		padding: 0;
+	.thumbCol a img {
+		width: 50px;
+		height: 50px;
+		margin-right: 10px;
+	}
+	
+	.thumbCol a.name {
+		margin-top: 15px;
+		color: #bbb;
+	}
+	
+	.thumbCol a.name:hover {
+		color: #ddd;
+	}
+	
+	.thumbCol a.name i {
+		color: #8fbc4c;
+	}
+	
+	.thumbCol a.name:hover i {
+		color: #bbd693;
+	}
+	
+	.dateCol .dateRange {
+		margin-top: 15px;
+		color: #777;
+	}
+	
+	.barCol {
+		font-size: 0;
+	}
+	
+	.barCol a.more {
+		display: inline-block;
+		width: 20%;
+		font-size: 12px;
+		text-align: right;
+		padding: 3px 16px 3px 8px;
+		margin-top: 12px;
 	}
 	
 	.desc {
-		display: table-cell;
-		height: 80px;
-		vertical-align: middle;
+		margin: 12px 0 10px 0;
+		display: none;
 	}
 	
 	.desc li {
-		list-style-type: disc;
 		margin-left: 16px;
 		padding-left: 0;
 		color: #444;
@@ -32,13 +60,31 @@
 	.desc li + li {
 		margin-top: 4px;
 	}
-		
+	
 	.desc li p {
 		margin: 0;
 		padding: 0;
 	}
 	
 	section.content .barBg {
+		display: inline-block;
+		margin-top: 23px;
+		width: 80%;
+	}
+	
+	@media only screen and (max-width: 64.0em) { /* < large */
+	
+		.thumbCol a.name {
+			margin-top: 5px;
+			color: #bbb;
+		}
+	
+		.thumbCol .dateRange {
+			color: #777;
+			display: block;
+			font-size: 12px;
+		}
+	
 	}
 	
 	@media only screen and (max-width: 40.0em) { /* < medium */
@@ -49,12 +95,30 @@
 		}
 	
 		.row.alt .columns.thumbCol {
-			padding-bottom: 0;
-			padding-right: 0;
+			padding-bottom: 8px;
 		}
 	
-		.row.alt .columns.descCol {
-			padding-top: 5px;
+		.row.alt .columns.barCol {
+			font-size: inherit;
+			padding-top: 0;
+		}
+		
+		.barCol a.more {
+			width: 100%;
+			display: block;
+			text-align: left;
+			padding: 4px 4px 0 0;
+			margin: 0;
+		}
+		
+		section.content .barBg {
+			width: 100%;
+			height: 2px;
+			margin: 0;
+		}
+		
+		.desc {
+			margin: 8px 0 0 0;
 		}
 	
 		.desc li {
@@ -67,14 +131,8 @@
 			font-size: 12px;
 			line-height: 15px;
 		}
-	
-		section.content .barBg {
-			height: 2px;
-			margin: 0;
-		}
 		
 	}
-	
 </style>
 
 
@@ -84,10 +142,11 @@
 	
 			<div class="large-8 large-push-2 columns">
 				<h1>
-					<i class="fa fa-tasks"></i> | {{model.section}}: {{model.item.name}}
+					<i class="fa fa-tasks"></i> | {{model.item.name}}
 				</h1>
 				<p>
-					{{model.item.desc}}
+					Browse the <em>projects</em> that are <em>most relevant</em> to this
+					<em>{{model.section}} Tag</em>.
 				</p>
 			</div>
 
@@ -99,29 +158,36 @@
 <section class="content">
 	<div class="row alt" ng-repeat="use in model.tagUses">
 		
-		<div class="medium-4 columns thumbCol">
-			<table>
-				<tr>
-					<td class="imgTd">
-						<a ng-href="#/Projects/{{use.project.link}}">
-							<img ng-src="img/projects/{{use.project.id}}/icon.jpg" />
-						</a>
-					</td>
-					<td>
-						<a ng-href="#/Projects/{{use.project.link}}">
-							{{use.project.name}}
-						</a>
-						<div class="barBg" title="{{use.serviceEntry.weight}} * {{use.project.weight}}">
-							<div class="barFill" ng-style="{'width': use.weight*100+'%'}">
-							</div>
-						</div>
-					</td>
-				</tr>
-			</table>
+		<div class="large-3 medium-5 columns thumbCol">
+			<a ng-href="#/Projects/{{use.project.link}}">
+				<img ng-src="img/projects/{{use.project.id}}/icon.jpg" />
+			</a>
+			<p>
+				<a class="name" ng-href="#/Projects/{{use.project.link}}">
+					{{use.project.name}}
+					<i class="fa fa-angle-double-right"></i>
+				</a>
+				<span class="show-for-medium-down dateRange">
+					{{model.getDateRange(use.project)}}
+				</span>
+			</p>
+		</div>
 			
+		<div class="large-2 medium-2 columns hide-for-medium-down dateCol">
+			<p class="dateRange">
+				{{model.getDateRange(use.project)}}
+			</p>
 		</div>
 
-		<div class="medium-8 columns descCol">
+		<div class="large-7 medium-7 columns barCol">
+			<div class="barBg" title="{{use.serviceEntry.weight}} * {{use.project.weight}}">
+				<div class="barFill" ng-style="{'width': use.weight*100+'%'}">
+				</div>
+			</div>
+			<a class="more" href="" ng-if="use.tag.desc">
+				more
+				<i class="fa fa-caret-down"></i>
+			</a>
 			<ul class="desc" ng-if="use.tag.desc">
 				<li ng-repeat="descItem in (use.tag.desc.split('|'))">
 					<p>{{descItem}}</p>

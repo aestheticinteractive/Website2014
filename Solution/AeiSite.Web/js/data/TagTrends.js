@@ -99,7 +99,7 @@ Aei.TagTrends.prototype.getTopProjects = function(groupId, itemId, count) {
 		topProjects.push({
 			project: proj,
 			tag: weight.tag,
-			weight: weight.tag.weight * (proj.weight*0.1+0.9)
+			weight: weight.tag.weight * (proj.weight*0.25+0.75)
 		});
 	}
 

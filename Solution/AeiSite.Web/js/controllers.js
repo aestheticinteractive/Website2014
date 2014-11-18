@@ -60,28 +60,8 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 	var proj = Aei.Database.selectByUniqueProperty(Aei.Tables.Project, 'link', $routeParams.link);
 	//TODO: redirect if project not found (also do this for other detail pages)
 
-	var minDate = new Date(3000, 0, 1);
-	var maxDate = new Date(1000, 0, 1);
-
-	var i, item, d;
-	
-	for ( i in proj.timeline ) {
-		item = proj.timeline[i];
-		d = (item.type == 'continue' ? new Date() : new Date(item.y, item.m-1, (item.d || 1)));
-
-		if ( d < minDate ) {
-			minDate = d;
-		}
-		
-		if ( d > maxDate ) {
-			maxDate = d;
-		}
-	}
-
 	$scope.model = {
 		project: proj,
-		minDate: minDate,
-		maxDate: maxDate,
 		tags: [
 			{
 				name: 'Services',
@@ -159,10 +139,19 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams) {
 	$scope.model = {
 		item: item,
 		section: tagGroup.single,
-		tagUses: tagTrends.getTopProjects(tagGroup.id, item.id)
+		tagUses: tagTrends.getTopProjects(tagGroup.id, item.id),
+		getDateRange: function(proj) {
+			var str = proj.minDate.getFullYear()+'';
+			
+			if ( proj.minDate.getFullYear() != proj.maxDate.getFullYear() ) {
+				str += ' - '+proj.maxDate.getFullYear();
+			}
+
+			return str;
+		}
 	};
 	
-	$rootScope.page = null;
+	$rootScope.page = new Aei.Pages.Tag(item, $scope.model.tagUses);
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([item.name, 'Tags']);
 };
 

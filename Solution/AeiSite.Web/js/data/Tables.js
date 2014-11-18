@@ -6315,13 +6315,28 @@ for ( var i in Aei.Tables.Project ) {
 	var proj = Aei.Tables.Project[i];
 	proj.link = Aei.Tables.createLink(proj.name);
 	proj.imageIndexes = [];
+	proj.minDate = new Date(3000, 0, 1);
+	proj.maxDate = new Date(1000, 0, 1);
 
-	var c, r, rel;
+	var c, t, time, d, r, rel;
 
 	for ( c = 0 ; c < proj.imageCount ; ++c ) {
 		proj.imageIndexes[c] = c;
 	}
 	
+	for ( t in proj.timeline ) {
+		time = proj.timeline[t];
+		d = (time.type == 'continue' ? new Date() : new Date(time.y, time.m-1, (time.d || 1)));
+
+		if ( d < proj.minDate ) {
+			proj.minDate = d;
+		}
+		
+		if ( d > proj.maxDate ) {
+			proj.maxDate = d;
+		}
+	}
+
 	for ( r in proj.related ) {
 		rel = proj.related[r];
 		rel.project = Aei.Database.selectById(Aei.Tables.Project, rel.id);

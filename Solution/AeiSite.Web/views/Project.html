@@ -250,14 +250,14 @@
 						<h1>
 							{{model.project.name}}
 						</h1>
-						<p class="year">
-							<span title="{{model.minDate.toDateString()}}">
-								{{model.minDate.getFullYear()}}
+						<p class="year" ng-init="minD = model.project.minDate; maxD = model.project.maxDate;">
+							<span title="{{minD.toDateString()}}">
+								{{minD.getFullYear()}}
 							</span>
-							<span ng-if="model.minDate.getFullYear() != model.maxDate.getFullYear()">
-								to
-								<span title="{{model.maxDate.toDateString()}}">
-									{{model.maxDate.getFullYear()}}
+							<span ng-if="minD.getFullYear() != maxD.getFullYear()">
+								-
+								<span title="{{maxD.toDateString()}}">
+									{{maxD.getFullYear()}}
 								</span>
 							</span>
 						</p>
