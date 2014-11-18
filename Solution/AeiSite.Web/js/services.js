@@ -33,6 +33,11 @@ Aei.RouteBuilder = function($routeProvider) {
 			controller: Aei.Controllers.Tags,
 			caseInsensitiveMatch: true
 		})
+		.when('/Tags/:tagGroupName/:link', {
+			templateUrl: 'views/Tag.html',
+			controller: Aei.Controllers.Tag,
+			caseInsensitiveMatch: true
+		})
 		
 		.when('/Contact', {
 			templateUrl: 'views/Contact.html',

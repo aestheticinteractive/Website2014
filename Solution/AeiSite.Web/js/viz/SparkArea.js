@@ -1,6 +1,6 @@
 
 /*====================================================================================================*/
-Aei.TagsTrend = function(containerId, data) {
+Aei.SparkArea = function(containerId, data) {
 	this._containerId = containerId;
 	this._data = data;
 };
@@ -8,7 +8,7 @@ Aei.TagsTrend = function(containerId, data) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.TagsTrend.prototype.build = function() {
+Aei.SparkArea.prototype.build = function() {
 	var data = this._data;
 	var w = 80;
 	var h = 25;

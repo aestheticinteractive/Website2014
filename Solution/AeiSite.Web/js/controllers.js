@@ -145,8 +145,25 @@ Aei.Controllers.Tags = function($rootScope, $scope) {
 		groups: groups
 	};
 	
-	$rootScope.page = new Aei.Pages.Tags(groups);
+	$rootScope.page = new Aei.Pages.Tags(groups, Aei.Queries.getTagTrends());
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Tags']);
+};
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Controllers.Tag = function($rootScope, $scope, $routeParams) {
+	var tagGroup = Aei.Database.selectByUniqueProperty(
+		Aei.Tables.TagGroup, 'link', $routeParams.tagGroupName);
+	var item = Aei.Database.selectByUniqueProperty(tagGroup.items, 'link', $routeParams.link);
+	var tagTrends = Aei.Queries.getTagTrends();
+
+	$scope.model = {
+		item: item,
+		section: tagGroup.single,
+		tagUses: tagTrends.getTopProjects(tagGroup.id, item.id)
+	};
+	
+	$rootScope.page = null;
+	$rootScope.pageTitle = Aei.Controllers.getPageTitle([item.name, 'Tags']);
 };
 
 

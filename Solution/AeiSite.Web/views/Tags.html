@@ -24,8 +24,21 @@
 		margin-right: 8px;
 	}
 	
-	.trendCol p {
+	.trendCol a.name {
 		margin-top: 5px;
+		color: #bbb;
+	}
+	
+	.trendCol a.name:hover {
+		color: #ddd;
+	}
+	
+	.trendCol a.name i {
+		color: #8fbc4c;
+	}
+	
+	.trendCol a.name:hover i {
+		color: #bbd693;
 	}
 	
 	.projCol {
@@ -119,11 +132,11 @@
 			margin-right: 6px;
 		}
 		
-		.trendCol p {
+		.trendCol a.name {
 			margin-top: 0;
 		}
 		
-		.trendCol p a {
+		.trendCol a.more {
 			font-size: 12px;
 			float: right;
 			padding: 3px 8px;
@@ -243,12 +256,13 @@
 		<div class="large-3 medium-4 columns trendCol">
 			<div id='graph-{{group.id}}-{{item.id}}'>
 			</div>
-			<p>
+			<a class="show-for-small more" href="" >
+				more <i class="fa fa-caret-down"></i>
+			</a>
+			<a class="name" ng-href="#/Tags/{{group.link}}/{{item.link}}">
 				{{item.name}}
-				<a href="" class="show-for-small more">
-					more <i class="fa fa-caret-down"></i>
-				</a>
-			</p>
+				<i class="fa fa-angle-double-right"></i>
+			</a>
 		</div>
 		
 		<div class="large-6 medium-4 columns powerCol">

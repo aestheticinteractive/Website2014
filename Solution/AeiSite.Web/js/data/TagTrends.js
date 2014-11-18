@@ -1,6 +1,6 @@
 
 /*====================================================================================================*/
-Aei.TagsTrendData = function(startYear, startMonth, bucketSize) {
+Aei.TagTrends = function(startYear, startMonth, bucketSize) {
 	this._dayBase = new Date(startYear, startMonth-1, 1);
 	this._dayBaseTime = this._dayBase.getTime();
 	this._bucketSize = bucketSize;
@@ -15,7 +15,7 @@ Aei.TagsTrendData = function(startYear, startMonth, bucketSize) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.TagsTrendData.prototype.init = function() {
+Aei.TagTrends.prototype.init = function() {
 	var dateCells = this._dateCells;
 	var projects = this._projects;
 	var today = this._today;
@@ -35,7 +35,7 @@ Aei.TagsTrendData.prototype.init = function() {
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.TagsTrendData.prototype.getTrendValues = function(groupId, itemId, smoothing) {
+Aei.TagTrends.prototype.getTrendValues = function(groupId, itemId, smoothing) {
 	var cellTagKey = groupId+'-'+itemId;
 	var dateCells = this._dateCells;
 	var dateCellsLen = dateCells.length;
@@ -81,7 +81,7 @@ Aei.TagsTrendData.prototype.getTrendValues = function(groupId, itemId, smoothing
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.TagsTrendData.prototype.getTopProjects = function(groupId, itemId, count) {
+Aei.TagTrends.prototype.getTopProjects = function(groupId, itemId, count) {
 	var cellTagKey = groupId+'-'+itemId;
 	var projects = this._projects;
 	var projWeights = this._projectWeights;
@@ -98,7 +98,8 @@ Aei.TagsTrendData.prototype.getTopProjects = function(groupId, itemId, count) {
 		
 		topProjects.push({
 			project: proj,
-			weight: weight.tagWeight * (proj.weight*0.1+0.9)
+			tag: weight.tag,
+			weight: weight.tag.weight * (proj.weight*0.1+0.9)
 		});
 	}
 
@@ -106,13 +107,17 @@ Aei.TagsTrendData.prototype.getTopProjects = function(groupId, itemId, count) {
 		return b.weight-a.weight;
 	});
 
-	return topProjects.slice(0, count);
+	if ( count ) {
+		return topProjects.slice(0, count);
+	}
+
+	return topProjects;
 };
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.TagsTrendData.prototype._fillDateCells = function(project) {
+Aei.TagTrends.prototype._fillDateCells = function(project) {
 	var timeline = project.timeline;
 	var groups = this._tagGroups;
 	var rangeStart = null;
@@ -128,8 +133,8 @@ Aei.TagsTrendData.prototype._fillDateCells = function(project) {
 			tag = tags[tagI];
 
 			weights[group.id+'-'+tag.item.id] = {
-				tagWeight: tag.weight,
-				projWeight: project.weight,
+				tag: tag,
+				project: project,
 				trendWeight: tag.weight*projWeight
 			};
 		}
@@ -157,7 +162,7 @@ Aei.TagsTrendData.prototype._fillDateCells = function(project) {
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.TagsTrendData.prototype._fillDateCellRange = function(project, weights, dateStart, dateEnd) {
+Aei.TagTrends.prototype._fillDateCellRange = function(project, weights, dateStart, dateEnd) {
 	var cells = this._dateCells;
 	var cellI = this._getDateCellIndex(dateStart);
 	var cellEndI = this._getDateCellIndex(dateEnd);
@@ -179,6 +184,6 @@ Aei.TagsTrendData.prototype._fillDateCellRange = function(project, weights, date
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.TagsTrendData.prototype._getDateCellIndex = function(date) {
+Aei.TagTrends.prototype._getDateCellIndex = function(date) {
 	return Math.round((date.getTime()-this._dayBaseTime)*this._dateCellMult);
 };

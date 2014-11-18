@@ -1,10 +1,9 @@
 
 /*====================================================================================================*/
-Aei.Pages.Tags = function(groups) {
+Aei.Pages.Tags = function(groups, trendData) {
 	this._groups = groups;
+	this._trendData = trendData;
 };
-
-Aei.Pages.Tags._TrendData = null;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -13,25 +12,6 @@ Aei.Pages.Tags.prototype.onRender = function() {
 	this._groupIndex = 0;
 	this._initTabs();
 	this._initMoreLinks();
-
-	if ( Aei.Pages.Tags._TrendData ) {
-		this._buildGraph();
-		return;
-	}
-
-	var me = this;
-
-	var onTimeout = function() {
-		me._buildData();
-	};
-
-	setTimeout(onTimeout, 1);
-};
-
-/*----------------------------------------------------------------------------------------------------*/
-Aei.Pages.Tags.prototype._buildData = function() {
-	Aei.Pages.Tags._TrendData = new Aei.TagsTrendData(2005, 6, 90);
-	Aei.Pages.Tags._TrendData.init();
 	this._buildGraph();
 };
 
@@ -53,7 +33,7 @@ Aei.Pages.Tags.prototype._setGraphTimeout = function() {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Tags.prototype._buildGraph = function() {
 	var t0 = performance.now();
-	var trendData = Aei.Pages.Tags._TrendData;
+	var trendData = this._trendData;
 	var groups = this._groups;
 	var group = groups[this._groupIndex];
 	var calcs = [];
@@ -113,7 +93,7 @@ Aei.Pages.Tags.prototype._buildGraph = function() {
 		$('#peak-'+key)
 			.css('width', ((calc.peak-calc.recent)*100)+'%');
 			
-		graph = new Aei.TagsTrend('#graph-'+key, calc.values);
+		graph = new Aei.SparkArea('#graph-'+key, calc.values);
 		graph.build();
 
 		projHold = $('#proj-'+key);
