@@ -8,6 +8,7 @@ Aei.Pages.Tag = function(item, tagUses) {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Tag.prototype.onRender = function() {
 	this._initMoreLinks();
+	this._initExtraProjRows();
 };
 
 
@@ -29,5 +30,25 @@ Aei.Pages.Tag.prototype._initMoreLinks = function() {
 			}
 
 			desc.toggle();
+		});
+};
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Pages.Tag.prototype._initExtraProjRows = function() {
+	var extraProjRows = $('.projRow').show().slice(8);
+	extraProjRows.hide();
+
+	var link = $('#showAll');
+	var showLink = (extraProjRows.length > 0);
+	
+	if ( !showLink ) {
+		link.parent().hide();
+		return;
+	}
+
+	link
+		.html('Show all projects ('+extraProjRows.length+' more)')
+		.click(function() {
+			extraProjRows.show();
+			$(this).parent().hide();
 		});
 };

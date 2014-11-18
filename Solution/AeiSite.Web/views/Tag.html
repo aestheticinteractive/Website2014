@@ -1,5 +1,9 @@
 
 <style>
+	.projRow {
+		display: none;
+	}
+	
 	.thumbCol a, .thumbCol p {
 		float: left;
 	}
@@ -70,6 +74,18 @@
 		display: inline-block;
 		margin-top: 23px;
 		width: 80%;
+	}
+	
+	.showAllCol {
+		padding-top: 0;
+		border-top: 2px solid #181818;
+	}
+	
+	#showAll {
+		text-align: center;
+		padding: 16px 0 8px 0;
+		width: 100%;
+		display: block;
 	}
 	
 	@media only screen and (max-width: 64.0em) { /* < large */
@@ -156,7 +172,7 @@
 
 
 <section class="content">
-	<div class="row alt" ng-repeat="use in model.tagUses">
+	<div class="row alt projRow" ng-repeat="use in model.tagUses">
 		
 		<div class="large-3 medium-5 columns thumbCol">
 			<a ng-href="#/Projects/{{use.project.link}}">
@@ -195,5 +211,13 @@
 			</ul>
 		</div>
 
+	</div>
+		
+	<div class="row">
+		<div class="columns showAllCol">
+			<a id="showAll" href="">
+				Show all
+			</a>
+		</div>
 	</div>
 </section>
