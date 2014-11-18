@@ -28,9 +28,6 @@
 		margin-top: 5px;
 	}
 	
-	.powerCol {
-	}
-	
 	.projCol {
 		text-align: right;
 	}
@@ -97,8 +94,75 @@
 		display: none;
 	}
 	
-	@media only screen and (max-width: 64.0em) { /* < large */
+	@media only screen and (max-width: 900px) {
 		
+		.tabs a {
+			font-size: 14px;
+		}
+		
+		.topProj {
+			width: 20px;
+			height: 20px;
+		}
+		
+	}
+	
+	@media only screen and (max-width: 40.0em) { /* < medium */
+		
+		.tabs a {
+			width: 50%;
+			height: 40px;
+			padding: 9px 0 5px 0;
+		}
+		
+		.trendCol div {
+			margin-right: 6px;
+		}
+		
+		.trendCol p {
+			margin-top: 0;
+		}
+		
+		.trendCol p a {
+			font-size: 12px;
+			float: right;
+			padding: 3px 8px;
+			margin-top: -3px;
+		}
+		
+		.powerCol {
+			display: none;
+		}
+		
+		.projCol {
+			display: none;
+		}
+		
+		.row.alt .columns.trendCol.open {
+			padding-bottom: 0;
+		}
+		
+		.row.alt .columns.powerCol.open {
+			padding-top: 8px;
+			padding-bottom: 7px;
+			display: inherit;
+		}
+	
+		.row.alt .columns.projCol.open {
+			text-align: left;
+			padding-top: 0;
+			display: inherit;
+		}
+		
+		section.content .barBg {
+			margin-top: 0;
+			height: 4px;
+		}
+		
+		.topProj {
+			width: 34px;
+			height: 34px;
+		}
 		
 	}
 </style>
@@ -155,7 +219,7 @@
 
 
 <section class="content group" ng-repeat="group in model.groups" id="section-{{group.id}}">
-	<div class="row headings">
+	<div class="row headings hide-for-small">
 	
 		<div class="large-3 medium-4 columns trendCol">
 			<p>
@@ -181,6 +245,9 @@
 			</div>
 			<p>
 				{{item.name}}
+				<a href="" class="show-for-small more">
+					more <i class="fa fa-caret-down"></i>
+				</a>
 			</p>
 		</div>
 		

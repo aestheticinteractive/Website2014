@@ -12,6 +12,7 @@ Aei.Pages.Tags._TrendData = null;
 Aei.Pages.Tags.prototype.onRender = function() {
 	this._groupIndex = 0;
 	this._initTabs();
+	this._initMoreLinks();
 
 	if ( Aei.Pages.Tags._TrendData ) {
 		this._buildGraph();
@@ -134,8 +135,8 @@ Aei.Pages.Tags.prototype._buildGraph = function() {
 				.css('opacity', topProj.weight)
 				.append($('<img>')
 					.attr('src', 'img/projects/'+topProj.project.id+'/icon.jpg')
-					.attr('title', topProj.project.name+' (Strength: '+
-						Math.round(topProj.weight*100)+'%)')
+					.attr('title', topProj.project.name/*+' (Strength: '+
+						Math.round(topProj.weight*100)+'%)'*/)
 				);
 
 			projHold.append(projLink);
@@ -183,4 +184,31 @@ Aei.Pages.Tags.prototype._selectTab = function(groupId) {
 
 	$('#section-'+groupId).show();
 	$('#tab-'+groupId).addClass('active');
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Pages.Tags.prototype._initMoreLinks = function() {
+	var link, par, trend, pow, proj;
+
+	$('a.more')
+		.click(function() {
+			link = $(this);
+			par = link.parents('div.row');
+			trend = par.children('.trendCol');
+			pow = par.children('.powerCol');
+			proj = par.children('.projCol');
+
+			if ( trend.hasClass('open') ) {
+				link.html('more <i class="fa fa-caret-down"></i>');
+			}
+			else {
+				link.html('less <i class="fa fa-caret-up"></i>');
+			}
+
+			trend.toggleClass('open');
+			pow.toggleClass('open');
+			proj.toggleClass('open');
+		});
 };
