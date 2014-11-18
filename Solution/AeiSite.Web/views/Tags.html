@@ -1,18 +1,44 @@
 
 <style>
-	table {
-		margin-top: -6px;
+	.row.headings .columns {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	
+	.row.headings p {
+		color: #777;
+		font-size: 12px;
+	}
+	
+	.row.headings .trendCol span {
+		position: absolute;
+		left: 103px;
+	}
+	
+	.row.headings .trendCol p {
+		margin-top: 0;
+	}
+	
+	.trendCol div {
+		float: left;
+		margin-right: 8px;
+	}
+	
+	.trendCol p {
+		margin-top: 5px;
+	}
+	
+	.powerCol {
 	}
 	
 	.projCol {
-		width: 250px;
+		text-align: right;
 	}
 	
 	section.content .barBg {
 		font-size: 0;
 		overflow: hidden;
-		margin: 0;
-		width: 95%;
+		margin-top: 13px;
 	}
 	
 	section.content .barBg .barFill {
@@ -28,7 +54,7 @@
 		display: inline-block;
 		width: 25px;
 		height: 25px;
-		margin: 2px;
+		margin: 1px;
 		overflow: hidden;
 	}
 	
@@ -41,7 +67,7 @@
 		display: inline-block;
 		width: 16.666%;
 		height: 50px;
-		color: #fff;
+		color: #ddd;
 		font-size: 18px;
 		text-align: center;
 		padding: 14px 0 10px 0;
@@ -64,21 +90,17 @@
 		color: #683;
 		font-size: 11px;
 		font-weight: bold;
-		padding-left: 3px;
+		padding-left: 1px;
 	}
 	
 	section.group {
 		display: none;
 	}
 	
-	@media only screen and (max-width: 900px) {
+	@media only screen and (max-width: 64.0em) { /* < large */
 		
-		.projCol {
-			width: 125px;
-		}
 		
-	}	
-	
+	}
 </style>
 
 
@@ -104,7 +126,9 @@
 					<i class="fa fa-tasks"></i> Tags
 				</h1>
 				<p>
-					<em>Aesthetic Interactive</em> has some tags...
+					Browse the many <em>services</em>, <em>skills</em>, and <em>capabilities</em> 
+					that Aesthetic Interactive offers. The lists below show the <em>strength</em>, 
+					<em>trend</em> (since 2005), and <em>top projects</em> associated with each tag.
 				</p>
 			</div>
 
@@ -129,48 +153,51 @@
 	</div>
 </section>
 
-<section class="content group" ng-repeat="group in model.groups" id="section-{{group.id}}">
-	<div class="row">
-	
-		<div class="columns">
-			<table class="fancy">
-				<thead>
-					<tr>
-						<th style="width: 90px;">Since 2005</th>
-						<th style="width: 20%;">Tag</th>
-						<th>Strength (Recent, Peak)</th>
-						<th class="projCol">Top Projects</th>
-					</tr>
-				</thead>
-				<tbody id="tbody-{{group.id}}">
-					<tr ng-repeat="item in group.items" id='row-{{group.id}}-{{item.id}}'>
-						<td>
-							<div id='graph-{{group.id}}-{{item.id}}'>
-							</div>
-						</td>
-						<td>
-							<p ng-href="#/Tags/{{group.link}}/{{item.link}}">
-								{{item.name}}
-							</p>
-						</td>
-						<td>
-							<div class="barBg">
-								<div id='recent-{{group.id}}-{{item.id}}' class="barFill" 
-									style="width: 0%;">
-								</div>
-								<div id='peak-{{group.id}}-{{item.id}}' class="barFill second" 
-									style="width: 0%;">
-								</div>
-							</div>
-						</td>
-						<td>
-							<div id="proj-{{group.id}}-{{item.id}}">
-							</div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
 
+<section class="content group" ng-repeat="group in model.groups" id="section-{{group.id}}">
+	<div class="row headings">
+	
+		<div class="large-3 medium-4 columns trendCol">
+			<p>
+				Trend
+				<span>{{group.single}}</span>
+			</p>
+		</div>
+		
+		<div class="large-6 medium-4 columns powerCol">
+			<p>Strength (Recent, Peak)</p>
+		</div>
+		
+		<div class="large-3 medium-4 columns projCol">
+			<p>Top Projects</p>
+		</div>
+
+	</div>
+	
+	<div class="row alt" ng-repeat="item in group.items" id='row-{{group.id}}-{{item.id}}'>
+	
+		<div class="large-3 medium-4 columns trendCol">
+			<div id='graph-{{group.id}}-{{item.id}}'>
+			</div>
+			<p>
+				{{item.name}}
+			</p>
+		</div>
+		
+		<div class="large-6 medium-4 columns powerCol">
+			<div class="barBg">
+				<div id='recent-{{group.id}}-{{item.id}}' class="barFill" 
+					style="width: 0%;">
+				</div>
+				<div id='peak-{{group.id}}-{{item.id}}' class="barFill second" 
+					style="width: 0%;">
+				</div>
+			</div>
+		</div>
+		
+		<div class="large-3 medium-4 columns projCol">
+			<div id="proj-{{group.id}}-{{item.id}}">
+			</div>
 		</div>
 
 	</div>

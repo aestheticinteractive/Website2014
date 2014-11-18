@@ -11,14 +11,14 @@ Aei.TagsTrend = function(containerId, data) {
 Aei.TagsTrend.prototype.build = function() {
 	var data = this._data;
 	var w = 80;
-	var h = 30;
+	var h = 25;
 	
 	var x = d3.scale.linear()
 		.range([0, w])
 		.domain([0, data.length]);
 	
 	var y = d3.scale.linear()
-		.range([h, 0])
+		.range([h-1, 0])
 		.domain([0, 1]);
 	
 	var xAxis = d3.svg.axis()

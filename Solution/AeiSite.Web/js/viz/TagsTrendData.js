@@ -17,11 +17,6 @@ Aei.TagsTrendData = function(startYear, startMonth, bucketSize) {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.TagsTrendData.prototype.init = function() {
 	var dateCells = this._dateCells;
-
-	if ( dateCells.length ) {
-		return;
-	}
-
 	var projects = this._projects;
 	var today = this._today;
 	var maxI = this._getDateCellIndex(today);
