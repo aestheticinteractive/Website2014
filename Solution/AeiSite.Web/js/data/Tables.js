@@ -19,7 +19,7 @@ Aei.Tables.Service = [
 	{
 		id: 'dev',
 		name: 'Development',
-		desc: 'High-caliber software development is the core of every project. Solid architectures, elegant code, well-tested features, and refined details produce fantastic results.',
+		desc: 'High-caliber software development is the core of every project. Solid architectures, elegant code, and refined features lead to fantastic results.',
 		icon: 'cog'
 	},
 	{

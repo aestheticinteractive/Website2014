@@ -14,8 +14,6 @@ Aei.Pages.Services.prototype.onRender = function() {
 
 	this._tables = tables;
 	this._origOpac = 0.25;
-	this._origPadLeft = 10;
-	this._origW = fill.width();
 
 	tables
 		.show()
@@ -25,7 +23,14 @@ Aei.Pages.Services.prototype.onRender = function() {
 		.mouseleave(function(evt) {
 			me._handleHover(evt.currentTarget, false);
 		});
-
+	
+	var updateOrigVals = function() {
+		var isSmall = ($(window).width() <= 480);
+		me._origPadLeft = (isSmall ? 5 : 10);
+		me._origW = fill.width();
+	};
+	
+	updateOrigVals();
 	this._beginEntryAnim();
 
 	$('a[data-scroll]').click(function() {
@@ -37,6 +42,10 @@ Aei.Pages.Services.prototype.onRender = function() {
 
 		$('body').animate(animDest, 1000);
 	});
+	
+	window.onresize = function() {
+		updateOrigVals();
+	};
 };
 
 
@@ -158,7 +167,8 @@ Aei.Pages.Services.prototype._handleRepeaterFrame = function() {
 
 		this._getFillCell(tables.eq(i)[0])
 			.css('opacity', animOpac.getValue())
-			.css('padding-left', animPos.getValue()+'px');
+			.children('i')
+				.css('margin-left', animPos.getValue()+'px');
 
 		tables.eq(i)
 			.css('opacity', animFull.getValue());
