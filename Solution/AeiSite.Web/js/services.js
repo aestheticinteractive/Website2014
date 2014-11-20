@@ -45,37 +45,6 @@ Aei.RouteBuilder = function($routeProvider) {
 			caseInsensitiveMatch: true
 		})
 		
-		.when('/Admin/Projects', {
-			templateUrl: 'views/admin/Projects.html',
-			controller: Aei.Controllers.AdminProjects,
-			caseInsensitiveMatch: true
-		})
-		.when('/Admin/ProjectTags', {
-			templateUrl: 'views/admin/ProjectTags.html',
-			controller: Aei.Controllers.AdminProjectTags,
-			caseInsensitiveMatch: true
-		})
-		.when('/Admin/ProjectTexts', {
-			templateUrl: 'views/admin/ProjectTexts.html',
-			controller: Aei.Controllers.AdminProjectTexts,
-			caseInsensitiveMatch: true
-		})
-		.when('/Admin/Weights', {
-			templateUrl: 'views/admin/Weights.html',
-			controller: Aei.Controllers.AdminWeights,
-			caseInsensitiveMatch: true
-		})
-		.when('/Admin/Timeline', {
-			templateUrl: 'views/admin/Timeline.html',
-			controller: Aei.Controllers.AdminTimeline,
-			caseInsensitiveMatch: true
-		})
-		.when('/Admin/Json', {
-			templateUrl: 'views/admin/Json.html',
-			controller: Aei.Controllers.AdminJson,
-			caseInsensitiveMatch: true
-		})
-		
 		.otherwise({
 			redirectTo: '/'
 		});
@@ -88,29 +57,6 @@ Aei.Angular = angular
 	.controller('App', ['$rootScope', '$location', Aei.Controllers.App])
 	.controller('Menu', ['$rootScope', '$location', Aei.Controllers.Menu])
 	.controller('Footer', [Aei.Controllers.Footer]);
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*----------------------------------------------------------------------------------------------------*/
-Aei.Angular.filter('formatDateFromNow', function() {
-	return function(date) {
-		return moment(date).fromNow();
-	};
-});
-
-/*----------------------------------------------------------------------------------------------------*/
-Aei.Angular.filter('formatDate', function() {
-	return function(date) {
-		return moment(date).format('YYYY-MMM-DD');
-	};
-});
-
-/*----------------------------------------------------------------------------------------------------*/
-Aei.Angular.filter('formatDatetime', function() {
-	return function(date) {
-		return moment(date).format('YYYY-MMM-DD h:mma');
-	};
-});
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -29,7 +29,7 @@
 	
 		<div class="large-12 columns">
 		
-			<table ng-init="predicate = 'overall'; reverse = true;">
+			<table class="fancy" ng-init="predicate = 'overall'; reverse = true;">
 				<thead>
 					<th style="width: 40px;"></th>
 					<th style="width: 20%;">Project</th>
@@ -39,7 +39,7 @@
 					<tr ng-repeat="pt in model.projTimes">
 						<td class="imageCol">
 							<a ng-href="#/Projects/{{pt.project.link}}">
-								<img ng-src="img/projects/{{pt.project.id}}/icon.jpg" 
+								<img ng-src="../img/projects/{{pt.project.id}}/icon.jpg" 
 								     style="width: 24px;"/>
 							</a>
 						</td>
@@ -51,7 +51,7 @@
 						<td>
 							<div style="width: 100%;" ng-repeat="span in pt.spans" title="{{span.name}}">
 								<div class="bar" ng-style="{'left': span.startRel*100+'%', 
-									'background-image': 'url(img/projects/'+pt.project.id+'/icon.jpg)',
+									'background-image': 'url(../img/projects/'+pt.project.id+'/icon.jpg)',
 									'width': (span.endRel-span.startRel)*100+'%'}">
 								</div>
 							</div>

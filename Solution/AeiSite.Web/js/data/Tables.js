@@ -206,10 +206,6 @@ Aei.Tables.Product = [
 		id: 'oal',
 		name: 'OpenAL'
 	},
-	/*{
-		id: 'gamecen',
-		name: 'Game Center'
-	},*/
 	{
 		id: 'flash',
 		name: 'Flash'
@@ -242,26 +238,6 @@ Aei.Tables.Product = [
 		id: 'rex',
 		name: 'Rexster'
 	}
-	/*{ //omit "authoring tools" for now
-		id: 'fbuild',
-		name: 'Flash Builder'
-	},
-	{
-		id: 'vs',
-		name: 'Visual Studio'
-	},
-	{
-		id: 'resharper',
-		name: 'Resharper'
-	},
-	{
-		id: 'xcode',
-		name: 'XCode'
-	},
-	{
-		id: 'photo',
-		name: 'Photoshop'
-	},*/
 	//NancyFX
 	//NUnit / Moq
 ];
@@ -1145,11 +1121,6 @@ Aei.Tables.Project = [
 		],
 		systems: [
 			//TODO: none/library/.net?
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
-				desc: '',
-				weight: 0
-			}*/
 		],
 		teams: [
 			{
@@ -1356,11 +1327,6 @@ Aei.Tables.Project = [
 		],
 		systems: [
 			//TODO: none/library/.net?
-			/*{
-				item: Aei.Database.selectById(Aei.Tables.System, 'xxx'),
-				desc: '',
-				weight: 0
-			}*/
 		],
 		teams: [
 			{
@@ -2623,7 +2589,6 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A website for reserving hotel rooms, booking ferry trips, and social networking. It also contains a suite of tools for managing hotels, ferries, rates, allotments, staff, bookings, and more.',
-		/*desc: 'Journeyful is a travel-based social networking site, with a robust (and ever-growing) list of powerful features. Users can book hotel rooms, ferry tickets, share photos and videos, find travelers whose trips intersect their own, and much more. Each user can have multiple \'identities\' (such as a person, a hotel admin, a ferry staff member, etc.) which each get a separate user experience based on permissions.\n\nAesthetic Interactive built the website\'s Flash-based UI, and is closely involved with design, specification, and planning of the project. The Flash UI features full hotel/ferry booking pipelines, log-ins, photo uploads, a large set of custom input and display components, complex user sessions, complex forms and wizards for hotel/ferry administration and management, and communicates with the API using a SOAP interface.',*/
 		url: 'Journeyful.com',
 		imageCount: 9,
 		services: [
@@ -2826,13 +2791,6 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A web application that allows sports instructors to manage and communicate with their students. Instructors create video-based lessons by recording audio and visual overlays.',
-		/*desc: 'This LessonVision application allows sports instructors to send annotated videos directly to their students. Instructors 
-		record voice, drawings, and video controls into a lesson package, then assign each lesson to their students. Aesthetic Interactive 
-		was responsible for building the Flash UI and specifying the server\'s API requirements.\n\nUpon loading, the Flash UI is initialized 
-		for a particular sports club and is populated with database content related to the club and the current user. For the creation and 
-		playback of lesson packages, the UI generates complex XML structures to describe the lesson\'s events and to keep the various 
-		playback layers synchronized. The UI runs maximized within a browser window, can be resized dynamically, and has a draggable video 
-		tray which is always available.',*/
 		url: null,
 		imageCount: 7,
 		services: [
@@ -3277,15 +3235,6 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A touch-based application that integrates with various kiosk hardware. Users can burn CDs of custom song playlists, edit and print photos, and complete the purchase in a single session.',
-		/*desc: 'This huge Flash application (25,000+ lines of code) is built to operate on kiosk 
-		touch-screens in retail locations across the country. Users can listen to new music, create 
-		custom playlists, upload photos from their digital camera, edit them, and create photo albums. 
-		Once playlists and albums are added to their cart, our Flash software leads the user through 
-		the checkout process.\n\nFor this project, Aesthetic Interactive was primarily responsible 
-		for the Flash software. We replicated design specifications to exacting detail and contributed 
-		to visuals and animations. We also worked closely with the back-end development team to 
-		optimize the data-access functionality and to solidify an interface with the various 
-		hardware components necessary to take credit cards, burn CDs, and print photos.',*/
 		url: null,
 		imageCount: 8,
 		services: [
@@ -3403,12 +3352,6 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A promotional website for Grand Rapids hotels and convention centers. It features interactive maps of the downtown area, and an application for displaying user-submitted images and quotes.',
-		/*desc: 'Aesthetic Interactive worked with a local design firm to create this site, which promotes Amway\'s collection of 
-		 hotels located in downtown Grand Rapids, MI.\n\nThe site features some impressive visuals. The homepage presents a full-screen 
-		 background image, chosen at random with each visit. In the \'Get To Know\' section, a Flash application displays hundreds of 
-		 user-submitted images and quotes which demonstrate all that Grand Rapids has to offer. An interactive map of the downtown area 
-		 shows users how to get around the hotel campus.\n\nFrom a technical perspective, the site uses ASP.NET to validate and submit 
-		 various forms to the client, and to send email confirmations to the user.',*/
 		url: '1100rooms.com',
 		imageCount: 9,
 		services: [
@@ -3516,12 +3459,6 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A tool for customizing office furniture. Users select surfaces for several different furniture components, previewing and printing the results, and seeing restrictions related to each selection.',
-		/*desc: 'This furniture-customization application provides users with a quick and easy way to configure perfect surface and color 
-		settings for their office. Aesthetic Interactive worked with a design firm and a 3D modeler to create this powerful Flash tool.\n\n
-		The simple swatch-selection interface masks a complex hierarchy of images, overlays, and rules that ensure each configuration looks 
-		just like the final product. To let the user get started right away, the images load dynamically as a background process. Despite 
-		the large quantity of images, users experience very little wait time.\n\nAdditional features include color themes, copying and 
-		resetting configurations across products, and printing.',*/
 		imageCount: 6,
 		services: [
 			{
@@ -3628,11 +3565,6 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'An upbeat experience for fans of the Pepsi-sponsored Footvolley sport. The application includes a 3D video carousel, a page-turning book, draggable player animations, and other animateddorm effects.',
-		/*desc: 'This fun, upbeat Flash website provides users with a ton of information, images, and video content about the sport of 
-		Footvolley. Working from a design spec, Aesthetic Interactive implemented a variety of interesting features, transitions, and 
-		effects.\n\nThe small site is packed with content and interactivity. From a page-turning rules book to a 3D video carousel to 
-		draggable moves animations, there is plenty to keep users fully engaged.\n\nAll of the site\'s content is loaded dynamically 
-		via XML, which allows the client to easily update the site with new images, videos, and information.',*/
 		url: 'Footvolley.ro',
 		imageCount: 7,
 		services: [
@@ -3745,10 +3677,6 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A minimalist website showcasing several high-resolution photo galleries. It features smooth transitions, subtle visual effects, and dynamic content loaded via XML.',
-		/*desc: 'This minimalist Flash website showcases a variety of beautiful, high-resolution photos. Selectable album titles listed 
-		across the top open a photo paging system in the main content area. Additional content pages are available from the menu across 
-		the bottom.\n\nBuilt from a design spec, this site features smooth, clean transitions and subtle effects. All of the content is 
-		loaded dynamically via XML, allowing the artist to add and rearrange albums, insert new photos, change contact information, and more.',*/
 		imageCount: 5,
 		services: [
 			{
@@ -3860,11 +3788,6 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A game where players must time the release of several "shots" to fulfill the puzzle\'s goals. Users can build custom puzzles via drag-and-drop interface, and rate puzzles with several metrics.',
-		/*desc: 'HardLines is our first foray into the area of user-generated, educational gaming. The site is a collection of puzzles, each 
-		of which is an exercise in logic, strategy, and often patience.\n\nThe interesting aspect of HardLines is the ability for each user 
-		to become both a Player and a Builder. The HardLines Flash application offers a creation mode, which lets users drag, drop, and rotate 
-		pieces on the puzzle grid.\n\nBehind the scenes, the puzzle data and solving, building, and rating information is stored in a SQL 
-		Server database. The site itself is an ASP.NET web application that displays and updates this information as it changes.',*/
 		imageCount: 9,
 		services: [
 			{
@@ -4156,12 +4079,6 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A web application and various tools for designing shirts, voting for favorites, and purchasing them. The designer tool provides a suite of features for creating, arranging, and saving shirt graphics.',
-		/*desc: 'The DormTShirts.com website is a complex system of shirt-designing, voting, shopping, and social networking. Members vote for 
-		their favorite user-designed shirts, and the winning shirts go on sale.\n\nThe powerful T-shirt designer tool is the focal point of 
-		the site, allowing the user to place layers of text, clipart, and user-uploaded images on a shirt. Users can move and rotate each 
-		element, change the shirt color, cycle front to back, zoom, print, and more.\n\nAesthetic Interactive implemented the site using 
-		Flash for the designer and voting tools, a client-provided visual design template, and a combination of PHP and HTML to access and 
-		display content from the database. Unfortunately, business-related issues prevented the client from launching the site.',*/
 		imageCount: 7,
 		services: [
 			{
@@ -4638,12 +4555,6 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'The first business website, describing services and projects to prospective clients. It features sliding page transitions, translucent menu items with 3D movement, and database-driven content.',
-		/*desc: 'The first official Aesthetic Interactive site, this Actionscript 3 Flash application was built with both design and 
-		information in mind.\n\nVisually, the site presents a unique set of translucent menu buttons which move vertically in three-
-		dimensional space when selected. Page transitions involve the smooth entry and exit of content boxes within the application 
-		space.\n\nThe site is also an interesting exercise in functionality. Every heading, article, news item, text format, and color is 
-		controlled by the database, allowing the site to be easily updated and customized without altering the Flash SWF file. This 
-		technique is beneficial to clients who wish to have extensive control over their websites and software.',*/
 		url: null,
 		imageCount: 6,
 		services: [
@@ -5737,20 +5648,6 @@ Aei.Tables.Project = [
 				m: 5
 			}
 		],
-		timeline: [
-			{
-				type: 'start',
-				name: '',
-				y: 2006,
-				m: 4
-			},
-			{
-				type: 'end',
-				name: '',
-				y: 2006,
-				m: 5
-			}
-		],
 		summary: 'A set of custom web pages for a WordPress-powered blog. These dynamic pages use the WordPress API to apply data in specific places, and Lightbox for zooming and browsing images.',
 		url: null,
 		imageCount: 2,
@@ -6233,7 +6130,7 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A website providing song and album details, music samples, lyrics, show dates, and a simple portfolio of non-music projects.',
-		url: null, //'freewebs.com/zachkinstner',
+		url: null,
 		imageCount: 3,
 		services: [
 			{

@@ -29,7 +29,7 @@
 					<tr ng-repeat="edit in model.edits | orderBy:predicate:reverse">
 						<td class="imageCol">
 							<a ng-href="#/Projects/{{edit.project.link}}">
-								<img ng-src="img/projects/{{edit.project.id}}/icon.jpg" 
+								<img ng-src="../img/projects/{{edit.project.id}}/icon.jpg" 
 								     style="width: 24px;"/>
 							</a>
 						</td>
@@ -40,8 +40,8 @@
 						</td>
 						<td>
 							<div class="barBg" title="{{edit.overall}}">
-								<div class="barFill" ng-style="{'width': edit.overall*100+'%'}
-									background-color: #39c;">
+								<div class="barFill" ng-style="{'width': (edit.overall*100)+'%',
+									'background-color': '#39c'}">
 								</div>
 							</div>
 						</td>

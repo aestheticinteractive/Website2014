@@ -25,7 +25,7 @@ p, a, ul, li, td, th {
 }
 
 p, a, h1, h2, h3, h4, h5, ul, li, div, td, th {
-	font-family: Lato, Tahoma, Helvetica, Arial, Verdana, sans-serif;
+	font-family: Lato, Tahoma, Arial, Helvetica, sans-serif;
 }
 
 p + p {

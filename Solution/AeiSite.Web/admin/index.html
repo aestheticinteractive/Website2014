@@ -1,0 +1,61 @@
+<html ng-app="Aei">
+
+	<head>
+		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no;" />
+		
+		<link rel="stylesheet" href="../css/lib/normalize.css" />
+		<link rel="stylesheet" href="../css/lib/foundation.min.css" />
+		<link rel="stylesheet" href="../css/Aei.css" />
+
+		<script src="../js/lib/modernizr.js"></script>
+		<script src="../js/lib/jquery.js"></script>
+		<script src="../js/lib/foundation.min.js"></script>
+		<script src="../js/lib/kinetic-v5.1.0.min.js"></script>
+		<script src="../js/lib/angular.min.js" ></script>
+		<script src="../js/lib/angular-route.min.js" ></script>
+		<script src="../js/lib/d3.min.js" ></script>
+		<script src="js/Init.js" ></script>
+		<script src="js/Admin.js" ></script>
+		<script src="../js/data/Database.js" ></script>
+		<script src="../js/data/Queries.js" ></script>
+		<script src="../js/data/Tables.js" ></script>
+		<script src="../js/data/TagTrends.js"></script>
+		<script src="js/pages/App.js"></script>
+		<script src="js/pages/AdminTimeline.js"></script>
+		<script src="../js/viz/Timeline.js"></script>
+		<script src="js/controllers.js" ></script>
+		<script src="js/services.js" ></script>
+
+		<title ng-bind-template="{{pageTitle}}">
+			Site Admin
+		</title>
+
+	</head>
+
+	<body ng-controller="App as app">
+		
+		<div id="site" ng-show="pageTitle">
+		
+			<header ng-controller="Menu as menu">
+				<div class="hold">
+					<p class="items">
+						<a ng-href="#{{item.url}}" ng-repeat="item in menu.items" 
+						   style="display: block;">
+							<span class="text">
+								{{item.name}}
+							</span>
+						</a>
+					</p>
+				</div>
+			</header>
+
+			<main ng-view>
+			</main>
+
+		</div>
+
+	</body>
+
+</html>
