@@ -12,7 +12,7 @@ Aei.Pages.App = function(rootScope, location) {
 
 	rootScope.$on('$viewContentLoaded', onLoad);
 	
-	console.log(Aei);
+	//console.log(Aei);
 	$(document).foundation();
 
 	this._header = new Aei.Pages.Header();
@@ -34,17 +34,10 @@ Aei.Pages.App.prototype.onMenuDirectiveComplete = function() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.App.prototype._handleSwitch = function() {
-	if ( this._lastLoc && this._lastLoc != this._location.path() ) {
-		$('body').scrollTop(0);
-	}
-
-	this._lastLoc = this._location.path();
-
-	////
-
 	var me = this;
 	
 	var onTimeout = function() {
+		$('main').hide();
 		me._handleRender();
 	};
 
@@ -65,6 +58,15 @@ Aei.Pages.App.prototype._handleRender = function() {
 
 	this._viewReady = true;
 	this._tryShowSite();
+
+	////
+
+	if ( this._lastLoc && this._lastLoc != this._location.path() ) {
+		$('body').scrollTop(0);
+	}
+
+	this._lastLoc = this._location.path();
+	$('main').show();
 };
 
 /*----------------------------------------------------------------------------------------------------*/
