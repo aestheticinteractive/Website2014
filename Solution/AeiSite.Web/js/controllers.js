@@ -130,28 +130,61 @@ Aei.Controllers.Tags = function($rootScope, $scope) {
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Tag = function($rootScope, $scope, $routeParams) {
+Aei.Controllers.Tag = function($rootScope, $scope, $routeParams, $timeout) {
 	var tagGroup = Aei.Database.selectByUniqueProperty(
 		Aei.Tables.TagGroup, 'link', $routeParams.tagGroupName);
 	var item = Aei.Database.selectByUniqueProperty(tagGroup.items, 'link', $routeParams.link);
-	var tagTrends = Aei.Queries.getTagTrends();
+	var useI = 0;
+	var results, useMax;
+
+	////
+
+	var getNextResults = function() {
+		if ( !results ) {
+			results = Aei.Queries.getTagTrends().getTopProjects(tagGroup.id, item.id);
+			useMax = Math.min(8, results.length);
+		}
+
+		var slice = results.slice(useI, useMax);
+		useI = useMax;
+		return slice;
+	};
+
+	var handleResults = function(resultSlice) {
+		$scope.model.tagUses = $scope.model.tagUses.concat(resultSlice);
+		$scope.model.tagUsesRemaining = results.length-$scope.model.tagUses.length;
+	};
+
+	var loadNext = function() {
+		$timeout(getNextResults, 20).then(handleResults);
+	};
+
+	////
 
 	$scope.model = {
 		item: item,
 		section: tagGroup.single,
-		tagUses: tagTrends.getTopProjects(tagGroup.id, item.id),
-		getDateRange: function(proj) {
-			var str = proj.minDate.getFullYear()+'';
-			
-			if ( proj.minDate.getFullYear() != proj.maxDate.getFullYear() ) {
-				str += ' - '+proj.maxDate.getFullYear();
-			}
-
-			return str;
-		}
+		tagUses: []
 	};
+
+	$scope.showMore = function() {
+		useMax = Math.min(useMax+8, results.length);
+		loadNext();
+	};
+
+	$scope.getDateRange = function(proj) {
+		var str = proj.minDate.getFullYear()+'';
+			
+		if ( proj.minDate.getFullYear() != proj.maxDate.getFullYear() ) {
+			str += ' - '+proj.maxDate.getFullYear();
+		}
+
+		return str;
+	};
+
+	loadNext();
 	
-	$rootScope.page = new Aei.Pages.Tag(item, $scope.model.tagUses);
+	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([item.name, 'Tags']);
 };
 

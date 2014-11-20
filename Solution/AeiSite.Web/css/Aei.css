@@ -85,11 +85,19 @@ h2 + .row.alt {
 	background-color: rgba(0, 0, 0, 0.06);
 }
 
+section.altHold {
+	padding-top: 32px;
+}
+
 @media only screen and (max-width: 40.0em) { /* < medium */
 	
 	.row.alt .columns {
 		padding-top: 16px;
 		padding-bottom: 16px;
+	}
+
+	section.altHold {
+		padding-top: 24px;
 	}
 	
 }

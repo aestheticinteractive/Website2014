@@ -1,9 +1,5 @@
 
 <style>
-	.projRow {
-		display: none;
-	}
-	
 	.thumbCol a, .thumbCol p {
 		float: left;
 	}
@@ -51,7 +47,6 @@
 	
 	.desc {
 		margin: 12px 0 10px 0;
-		display: none;
 	}
 	
 	.desc li {
@@ -81,7 +76,7 @@
 		border-top: 2px solid #181818;
 	}
 	
-	#showAll {
+	.showAllCol a {
 		text-align: center;
 		padding: 16px 0 8px 0;
 		width: 100%;
@@ -171,8 +166,9 @@
 </div>
 
 
-<section class="content">
-	<div class="row alt projRow" ng-repeat="use in model.tagUses">
+<section class="content altHold">
+	
+	<div class="row alt" ng-repeat="use in model.tagUses">
 		
 		<div class="large-3 medium-5 columns thumbCol">
 			<a ng-href="#/Projects/{{use.project.link}}">
@@ -184,14 +180,14 @@
 					<i class="fa fa-angle-double-right"></i>
 				</a>
 				<span class="show-for-medium-down dateRange">
-					{{model.getDateRange(use.project)}}
+					{{getDateRange(use.project)}}
 				</span>
 			</p>
 		</div>
 			
 		<div class="large-2 medium-2 columns hide-for-medium-down dateCol">
 			<p class="dateRange">
-				{{model.getDateRange(use.project)}}
+				{{getDateRange(use.project)}}
 			</p>
 		</div>
 
@@ -200,23 +196,29 @@
 				<div class="barFill" ng-style="{'width': use.weight*100+'%'}">
 				</div>
 			</div>
-			<a class="more" href="" ng-if="use.tag.desc">
-				more
-				<i class="fa fa-caret-down"></i>
-			</a>
-			<ul class="desc" ng-if="use.tag.desc">
-				<li ng-repeat="descItem in (use.tag.desc.split('|'))">
-					<p>{{descItem}}</p>
-				</li>
-			</ul>
+			<span ng-if="use.tag.desc">
+				<a class="more" href="" ng-show="!use.open" ng-click="use.open = true">
+					more
+					<i class="fa fa-caret-down"></i>
+				</a>
+				<a class="more" href="" ng-show="use.open" ng-click="use.open = false">
+					less
+					<i class="fa fa-caret-up"></i>
+				</a>
+				<ul class="desc" ng-show="use.open">
+					<li ng-repeat="descItem in (use.tag.desc.split('|'))">
+						<p>{{descItem}}</p>
+					</li>
+				</ul>
+			</span>
 		</div>
 
 	</div>
-		
-	<div class="row">
+	
+	<div class="row" ng-if="model.tagUsesRemaining">
 		<div class="columns showAllCol">
-			<a id="showAll" href="">
-				Show all
+			<a href="" ng-click="showMore();">
+				Show more projects ({{model.tagUsesRemaining}})
 			</a>
 		</div>
 	</div>
