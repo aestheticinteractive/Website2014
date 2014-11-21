@@ -17,12 +17,12 @@
 		</div>
 		<div class="medium-6 columns">
 			<p>{{proj.summary}}</p>
-			<p style="color: #555; font-size: 1.2rem; line-height: 14px;">{{proj.desc}}</p>
+			<p style="color: #555; font-size: 1.2rem; line-height: 1.4rem;">{{proj.desc}}</p>
 			<p ng-if="proj.related" style="color: #069;">Related: {{proj.related.length}}</p>
 		</div>
 
 		<div class="medium-3 columns" style="text-align: right;">
-			<p style="font-size: 1.0rem; line-height: 11px;">
+			<p style="font-size: 1.0rem; line-height: 1.1rem;">
 				<span ng-repeat="tagList in tagLists">
 					[ <span ng-repeat="tag in tagList" 
 							style="color: {{tag.desc ? 

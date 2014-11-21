@@ -156,7 +156,7 @@ button::-moz-focus-inner {
   top: 0;
   right: 0;
   color: #cccccc;
-  font-size: 1.2rem;
+  font-size: 12px;
   line-height: 18px; }
 
 .mfp-arrow {
@@ -269,7 +269,7 @@ img.mfp-img {
   .mfp-figure small {
     color: #bdbdbd;
     display: block;
-    font-size: 1.2rem;
+    font-size: 12px;
     line-height: 14px; }
   .mfp-figure figure {
     margin: 0; }

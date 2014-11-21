@@ -3440,7 +3440,7 @@ Aei.Tables.Project = [
 	},
 	{
 		id: 'teneo',
-		name: 'Teneo Configuration Tool',
+		name: 'Teneo Configuration',
 		client: 'Herman Miller',
 		timeline: [
 			{
