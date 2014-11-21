@@ -2,7 +2,7 @@
 	
 	<div class="large-12 columns">
 		<div class="logo">
-			<a href="#/" class="logoLink" title="Aesthetic Interactive">
+			<a href="#/" title="Aesthetic Interactive">
 				<span class="text">
 					aesthetic
 				</span>
@@ -13,8 +13,8 @@
 			</a>
 		</div>
 		<p class="items">
-			<a ng-href="#{{item.url}}" ng-repeat="item in menu.items"
-			   ng-class="(menu.isActiveLink(item.url) ? 'active' : '')">
+			<a ng-href="#{{item.url}}" ng-repeat="item in menu.items" title="{{item.name}}"
+					ng-class="(menu.isActiveLink(item.url) ? 'active' : '')">
 				<i ng-class="'fa fa-'+item.icon"></i>
 				<span class="text">
 					{{item.name}}

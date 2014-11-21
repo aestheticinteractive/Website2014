@@ -15,7 +15,6 @@ Aei.Pages.App = function(rootScope, location) {
 	//console.log(Aei);
 	$(document).foundation();
 
-	this._header = new Aei.Pages.Header();
 	this._bg = new Aei.Background('background');
 
 	$('#site').hide();
@@ -25,8 +24,6 @@ Aei.Pages.App = function(rootScope, location) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.App.prototype.onMenuDirectiveComplete = function() {
-	this._headerReady = true;
-	this._header.onDirectiveComplete();
 	this._tryShowSite();
 };
 
@@ -48,7 +45,6 @@ Aei.Pages.App.prototype._handleSwitch = function() {
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.App.prototype._handleRender = function() {
 	Aei.Background.SetPaused('AppSwitch', false);
-	this._header.updateLinks();
 
 	var page = this._scope.page;
 
@@ -71,11 +67,7 @@ Aei.Pages.App.prototype._handleRender = function() {
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.App.prototype._tryShowSite = function() {
-	if ( this._siteReady ) {
-		return;
-	}
-
-	if ( !this._headerReady || !this._viewReady ) {
+	if ( this._siteReady || !this._viewReady ) {
 		return;
 	}
 

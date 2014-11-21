@@ -35,6 +35,7 @@ p + p {
 
 a {
 	color: #8fbc4c;
+	transition: color 400ms;
 	text-decoration: none;
 }
 
@@ -127,7 +128,8 @@ header div.hold {
 	max-width: 1200px;
 }
 
-header .row, header .columns {
+header .row, 
+header .columns {
 	padding-top: 0;
 	padding-bottom: 0;
 	margin: 0;
@@ -135,22 +137,25 @@ header .row, header .columns {
 
 header .logo {
 	float: left;
+	margin-top: 1px;
 }
 
-header .logo .logoLink {
-	color: #777;
-	color: rgba(255, 255, 255, 0.333);
+header .logo img {
+	width: 28px;
+	margin: -5px 2px 0 1px;
+}
+
+header .logo a .text {
+	color: #888;
+	color: rgba(255, 255, 255, 0.666);
 	font-size: 1.6rem;
 	font-weight: bold;
+	transition: opacity 400ms;
+	opacity: 0.5;
 }
 
-header .logo .logoLink img {
-	width: 24px;
-	margin: -1px 2px 1px 0;
-}
-
-header a {
-	display: none; /* animated in on load */
+header .logo a:hover .text {
+	opacity: 1.0;
 }
 
 header .items {
@@ -158,10 +163,20 @@ header .items {
 }
 
 header .items a {
+	opacity: 0.333;
+	transition: opacity 400ms;
 	float: left;
 	font-size: 1.6rem;
 	color: #eee;
 	margin-top: 1px;
+}
+
+header .items a:hover {
+	opacity: 0.666;
+}
+
+header .items a.active {
+	opacity: 1;
 }
 
 header .items a + a {
@@ -173,18 +188,22 @@ header .items a i {
 }
 
 @media only screen and (max-width: 40.0em) { /* < medium */
-     
+
 	header {
 		padding: 16px 0;
 	}
-	                                    
-	header .logo a .text {
+	
+	header a .text {
 		display: none;
+	}
+	
+	header .logo {
+		margin-top: 0;
 	}
 	
 	header .logo .logoLink img {
 		width: 32px;
-		margin: -5px 2px -10px 0;
+		margin: -5px 0 -10px 0;
 	}
 	
 	header .items {
@@ -198,10 +217,6 @@ header .items a i {
 	
 	header .items a + a {
 		margin-left: 0;
-	}
-	
-	header .items a .text {
-		display: none;
 	}
 	
 }
