@@ -290,8 +290,8 @@
 
 		<div class="large-3 medium-4 columns projCol" ng-class="(use.open ? 'open' : '')">
 			<div class="hold">
-				<a ng-repeat="use in calc.topUses" class="topProj" 
-						ng-href="#/Projects/{{use.project.link}}" title="{{use.project.name}}"
+				<a ng-repeat="use in calc.topUses" class="topProj" title="{{use.project.name}}"
+						ng-href="{{use.project ? '#/Projects/'+use.project.link : ''}}" 
 						ng-style="{'opacity': use.weight}" ng-class="(use.project ? '' : 'empty')">
 					<img ng-src="{{use.project ? 'img/projects/'+use.project.id+'/icon.jpg' : ''}}" />
 				</a>
