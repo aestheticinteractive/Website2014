@@ -3,7 +3,6 @@
 Aei.Pages.Project = function(data) {
 	this._data = data;
 	this._images = [];
-	this._timeline = new Aei.Timeline(Aei.Tables.Project, Aei.Tables.ZachTimeline, data.id);
 };
 
 
@@ -29,8 +28,6 @@ Aei.Pages.Project.prototype.onRender = function() {
 	window.onresize = function() {
 		me._updateLayout();
 	};
-
-	this._timeline.build('timeline', 300);
 };
 
 
@@ -63,36 +60,3 @@ Aei.Pages.Project.prototype._updateLayout = function() {
 	this._imagePack.setWidth(w);
 	this._imagePack.updateLayout(this._images);
 };
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*----------------------------------------------------------------------------------------------------* /
-Aei.Pages.Project.prototype._setActiveThumb = function(index) {
-	if ( this._thumbActiveId != index ) {
-		var thumb = $('#thumb'+this._thumbActiveId);
-		thumb.animate({ height: '40px' }, 400);
-		thumb.children('.overlay').fadeTo(400, 0.8);
-	}
-
-	if ( this._thumbActiveId == index ) {
-		return;
-	}
-		
-	this._thumbActiveId = index;
-	this._updateActiveThumb(true);
-};
-	
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*----------------------------------------------------------------------------------------------------* /
-Aei.Pages.Project.prototype._updateActiveThumb = function(animate) {
-	var duration = (animate ? 400 : 0);
-
-	var thumb = $('#thumb'+this._thumbActiveId);
-	var w = thumb.attr('data-w');
-	var h = thumb.attr('data-h');
-	h = thumb.width()/w*h;
-
-	thumb.animate({ height: h+'px' }, duration);
-	thumb.children('.overlay').fadeTo(duration, 0.0);
-};*/
