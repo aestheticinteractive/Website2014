@@ -5,6 +5,7 @@ html, body {
 	background-color: #262626;
 	width: 100%;
 	height: 100%;
+	font-size: 11px;
 }
 
 body {
@@ -20,7 +21,7 @@ p, a, ul, li, td, th {
 	margin: 0;
 	padding: 0;
 	color: #bbb;
-	font-size: 14px;
+	font-size: 1.4rem;
 	line-height: 20px;
 }
 
@@ -47,7 +48,7 @@ a:hover {
 	zoom: 1;
 	*display: inline;
 	padding: 2px 3px;
-	font-size: 12px;
+	font-size: 1.2rem;
 	line-height: 12px;
 	margin: 0 2px 2px 0;
 	text-transform: uppercase;
@@ -139,7 +140,7 @@ header .logo {
 header .logo .logoLink {
 	color: #777;
 	color: rgba(255, 255, 255, 0.333);
-	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: bold;
 }
 
@@ -158,7 +159,7 @@ header .items {
 
 header .items a {
 	float: left;
-	font-size: 16px;
+	font-size: 1.6rem;
 	color: #eee;
 	margin-top: 1px;
 }
@@ -178,7 +179,7 @@ header .items a i {
 	}
 	
 	header .items a {
-		font-size: 22px;
+		font-size: 2.2rem;
 	}  
 	                                    
 	header .logo a .text {
@@ -208,14 +209,14 @@ section.content {
 
 section.content h2 {
 	color: #ddd;
-	font-size: 18px;
+	font-size: 1.8rem;
 	font-weight: normal;
 	margin: 0 0 5px 0;
 }
 
 section.content h3 {
 	color: #777;
-	font-size: 12px;
+	font-size: 1.2rem;
 	text-transform: uppercase;
 	margin: 0;
 }
@@ -259,7 +260,7 @@ div.intro section.content {
 }
 
 div.intro h1 {
-	font-size: 28px;
+	font-size: 2.8rem;
 	line-height: 28px;
 	font-weight: normal;
 	color: #aaa;
@@ -272,7 +273,7 @@ div.intro h1 i {
 
 div.intro p {
 	color: #aaa;
-	font-size: 18px;
+	font-size: 1.8rem;
 	line-height: 36px;
 }
 	
@@ -282,7 +283,7 @@ div.intro p em {
 }
 	
 div.intro a {
-	font-size: 18px;
+	font-size: 1.8rem;
 }
 
 div.intro .columns {
@@ -302,18 +303,18 @@ div.intro .columns {
 	}
 	
 	div.intro h1 {
-		font-size: 24px;
+		font-size: 2.4rem;
 		line-height: 24px;
 		margin: 0 0 20px 0;
 	}
 	
 	div.intro p {
-		font-size: 16px;
+		font-size: 1.6rem;
 		line-height: 28px;
 	}
 	
 	div.intro a {
-		font-size: 16px;
+		font-size: 1.6rem;
 		line-height: 28px;
 	}
 
@@ -350,7 +351,7 @@ table.fancy thead tr th {
 	text-align: left;
 	vertical-align: middle;
 	color: #777;
-	font-size: 12px;
+	font-size: 1.2rem;
 	text-transform: uppercase;
 	font-weight: normal;
 }
@@ -421,12 +422,12 @@ footer a:hover {
 	}
 	
 	footer p {
-		font-size: 12px;
+		font-size: 1.2rem;
 		line-height: 18px;
 	}
 
 	footer a {
-		font-size: 12px;
+		font-size: 1.2rem;
 		line-height: 18px;
 	}
 	

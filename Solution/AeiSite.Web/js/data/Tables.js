@@ -228,7 +228,7 @@ Aei.Tables.Product = [
 	},
 	{
 		id: 'titan',
-		name: 'Titan Graph Database'
+		name: 'Titan Graph DB'
 	},
 	{
 		id: 'cass',
@@ -1725,7 +1725,7 @@ Aei.Tables.Project = [
 				d: 31
 			}
 		],
-		summary: 'The second business website, describing services, experience, and projects to prospective clients. It features an open layout, seamless page transitions, custom icons, and a ripple-effect background.',
+		summary: 'The second business website, describing services, experience, and projects to prospective clients. It features seamless page transitions, custom icons, and a ripple-effect background.',
 		url: null,
 		imageCount: 6,
 		services: [
@@ -3564,7 +3564,7 @@ Aei.Tables.Project = [
 				d: 31
 			}
 		],
-		summary: 'An upbeat experience for fans of the Pepsi-sponsored Footvolley sport. The application includes a 3D video carousel, a page-turning book, draggable player animations, and other animateddorm effects.',
+		summary: 'An upbeat experience the Pepsi-sponsored Footvolley sport. The application features a video carousel, page-turning book, draggable player animations, and other animated effects.',
 		url: 'Footvolley.ro',
 		imageCount: 7,
 		services: [
@@ -4224,7 +4224,7 @@ Aei.Tables.Project = [
 				d: 15
 			}
 		],
-		summary: 'A simulation where virtual organisms interact in a 3D environment. Populations rise and fall, and neural-network brains (for carnivores and herbivores) evolve with each successful generation.',
+		summary: 'Simulated organisms interact in a 3D environment. Populations rise and fall, while neural-network brains (for carnivores and herbivores) evolve with each successful generation.',
 		url: null,
 		imageCount: 8,
 		services: [
@@ -4554,7 +4554,7 @@ Aei.Tables.Project = [
 				d: 25
 			}
 		],
-		summary: 'The first business website, describing services and projects to prospective clients. It features sliding page transitions, translucent menu items with 3D movement, and database-driven content.',
+		summary: 'The first business website, describing services and projects to prospective clients. It features sliding page transitions, menu items with 3D movement, and database-driven content.',
 		url: null,
 		imageCount: 6,
 		services: [
