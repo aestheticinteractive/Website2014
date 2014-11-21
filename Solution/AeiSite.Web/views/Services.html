@@ -1,45 +1,4 @@
 
-<style>
-	section.service td p, section.service td a {
-		line-height: 2.4rem;
-	}
-	
-	table {
-		display: none;
-		table-layout: fixed;
-		width: 100%;
-	}
-	
-	table tbody tr td {
-		padding: 5px 0 5px 10px;
-	}
-	
-	td.fill {
-		width: 50px;
-		padding: 0;
-		border-right: 3px solid #1c1c1c;
-		
-		color: #666;
-		text-align: center;
-		font-size: 75px; /*for icon*/
-		overflow: hidden;
-	}
-	
-	td.fill .fa-lightbulb-o {
-		margin-left: 10px;
-	}
-
-	@media only screen and (max-width: 40.0em) { /* < medium */
-
-		td.fill {
-			width: 30px;
-			font-size: 55px; /*for icon*/
-		}
-	
-	}
-</style>
-
-
 <div class="intro">
 	<section class="content">
 		<div class="row">
@@ -67,32 +26,34 @@
 </div>
 
 
-<section class="content service" ng-repeat="services in model.splitServices">
-	<div class="row">
+<section class="content">
+	<div ng-repeat="services in model.splitServices">
+		<div class="row">
 		
-		<div ng-repeat="service in services" class="medium-6 columns">
-			<table id="{{service.id}}">
-				<tbody>
-					<tr>
-						<td class="fill">
-							<i ng-class="'fa fa-'+service.icon"></i>
-						</td>
-						<td>
-							<h2>
-								{{service.name}}
-							</h2>
-							<p>
-								{{service.desc}}
-								<br/>
-								<a ng-href="#/Tags/Services/{{service.link}}">
-									Top '{{service.name}}' Projects
-								</a>
-							</p>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+			<div ng-repeat="service in services" class="medium-6 columns">
+				<table class="service" id="{{service.id}}">
+					<tbody>
+						<tr>
+							<td class="fill">
+								<i ng-class="'fa fa-'+service.icon"></i>
+							</td>
+							<td class="text">
+								<h2>
+									{{service.name}}
+								</h2>
+								<p>
+									{{service.desc}}
+									<br/>
+									<a ng-href="#/Tags/Services/{{service.link}}">
+										Top '{{service.name}}' Projects
+									</a>
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
 		</div>
-		
 	</div>
 </section>

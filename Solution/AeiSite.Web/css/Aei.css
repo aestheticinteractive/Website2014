@@ -457,3 +457,76 @@ footer a:hover {
 	}
 	
 }
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Services */
+
+
+table.service p, table.service a {
+	line-height: 2.4rem;
+}
+	
+table.service {
+	table-layout: fixed;
+	width: 100%;
+	transition: opacity 400ms;
+}
+	
+table.service td {
+	padding: 5px 0 5px 10px;
+}
+	
+table.service tr td.fill {
+	width: 50px;
+	padding: 0;
+	border-right: 3px solid #1c1c1c;
+		
+	color: #666;
+	text-align: center;
+	font-size: 75px; /*for icon*/
+	overflow: hidden;
+	
+	opacity: 0;
+	transition: opacity 400ms;
+}
+
+table.service tr td.fill i {
+	transition: margin-left 400ms;
+	margin-left: 100%;
+}
+
+table.service tr td.fill.entry {
+	opacity: 0.25;
+}
+
+table.service tr td.fill.entry i {
+	margin-left: 25%;
+}
+
+table.service tr:hover td.fill {
+	opacity: 1;
+}
+
+table.service tr:hover td.fill i {
+	margin-left: 0%;
+}
+
+section.content:hover table.service:hover {
+	opacity: 1;
+}
+
+/*section.content > div > div > div > table.service {*/
+/*TODO: this can cause all tables to become faded*/
+section.content:hover table.service {
+	opacity: 0.25;
+}
+
+@media only screen and (max-width: 40.0em) { /* < medium */
+
+	table.service tr td.fill {
+		width: 30px;
+		font-size: 55px; /*for icon*/
+	}
+	
+}

@@ -107,7 +107,7 @@ Aei.Controllers.Services = function($rootScope, $scope) {
 		splitServices: splitServices
 	};
 	
-	$rootScope.page = new Aei.Pages.Services(services);
+	$rootScope.page = new Aei.Pages.Services();
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Services']);
 };
 
