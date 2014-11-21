@@ -54,9 +54,18 @@ Aei.RouteBuilder = function($routeProvider) {
 Aei.Angular = angular
 	.module('Aei', ['ngRoute'])
 	.config(['$routeProvider', Aei.RouteBuilder])
-	.controller('App', ['$rootScope', '$location', Aei.Controllers.App])
+	.controller('App', ['$rootScope', Aei.Controllers.App])
 	.controller('Menu', ['$rootScope', '$location', Aei.Controllers.Menu])
-	.controller('Footer', [Aei.Controllers.Footer]);
+	.controller('Footer', [Aei.Controllers.Footer])
+	.run(["$rootScope", "$window", function($rootScope, $window) {
+		$rootScope.$on('$routeChangeSuccess', function(/*evt, absNewUrl, absOldUrl*/) {
+			var onTimeout = function() {
+				$window.scrollTo(0, 0);
+			};
+
+			setTimeout(onTimeout, 1);
+		});
+	}]);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

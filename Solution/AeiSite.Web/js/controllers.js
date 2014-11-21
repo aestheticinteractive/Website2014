@@ -13,8 +13,8 @@ Aei.Controllers.getPageTitle = function(list) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.App = function($rootScope, $location) {
-	$rootScope.app = new Aei.Pages.App($rootScope, $location);
+Aei.Controllers.App = function($rootScope) {
+	$rootScope.app = new Aei.Pages.App($rootScope);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -24,10 +24,6 @@ Aei.Controllers.Menu = function($rootScope, $location) {
 	};
 
 	this.items = Aei.SiteMap;
-
-	this.onDirectiveComplete = function() {
-		$rootScope.app.onMenuDirectiveComplete();
-	};
 };
 
 /*----------------------------------------------------------------------------------------------------*/

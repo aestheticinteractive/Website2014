@@ -201,9 +201,9 @@ header .items a i {
 		margin-top: 0;
 	}
 	
-	header .logo .logoLink img {
+	header .logo img {
 		width: 32px;
-		margin: -5px 0 -10px 0;
+		margin: -2px 0 0 2px;
 	}
 	
 	header .items {
