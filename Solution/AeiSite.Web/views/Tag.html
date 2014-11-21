@@ -197,13 +197,9 @@
 				</div>
 			</div>
 			<span ng-if="use.tag.desc">
-				<a class="more" href="" ng-show="!use.open" ng-click="use.open = true">
-					more
-					<i class="fa fa-caret-down"></i>
-				</a>
-				<a class="more" href="" ng-show="use.open" ng-click="use.open = false">
-					less
-					<i class="fa fa-caret-up"></i>
+				<a class="more" href="" ng-click="use.open = !use.open">
+					{{use.open ? 'less' : 'more'}}
+					<i ng-class="'fa fa-caret-'+(use.open ? 'up' : 'down')"></i>
 				</a>
 				<ul class="desc" ng-show="use.open">
 					<li ng-repeat="descItem in (use.tag.desc.split('|'))">

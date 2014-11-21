@@ -118,26 +118,62 @@ Aei.Controllers.Services = function($rootScope, $scope) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Tags = function($rootScope, $scope) {
+Aei.Controllers.Tags = function($rootScope, $scope, $timeout) {
 	var groups = Aei.Database.selectList(Aei.Tables.TagGroup);
+	var cache = {};
+
+	var getCalcs = function() {
+		var group = $scope.model.selected;
+
+		if ( !cache[group.id] ) {
+			var calcs = Aei.Pages.Tags.getItemCalculations(group, Aei.Queries.getTagTrends());
+			cache[group.id] = calcs;
+		}
+
+		return cache[group.id];
+	};
+
+	var handleCalcs = function(calcs) {
+		$scope.model.calcs = calcs;
+	};
+
+	////
 
 	$scope.model = {
-		groups: groups
+		groups: groups,
+		selected: groups[0],
+		calcs: []
+	};
+
+	$scope.selectGroup = function(group) {
+		if ( $scope.isGroupSelected(groups) ) {
+			return;
+		}
+
+		$scope.model.selected = group;
+		handleCalcs(getCalcs());
+
+		//$scope.model.calcs = [];
+		//$timeout(getCalcs, 20).then(handleCalcs);
+	};
+
+	$scope.isGroupSelected = function(group) {
+		return (group == $scope.model.selected);
 	};
 	
-	$rootScope.page = new Aei.Pages.Tags(groups, Aei.Queries.getTagTrends());
+	$timeout(getCalcs, 20).then(handleCalcs);
+
+	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Tags']);
 };
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Tag = function($rootScope, $scope, $routeParams, $timeout) {
 	var tagGroup = Aei.Database.selectByUniqueProperty(
-		Aei.Tables.TagGroup, 'link', $routeParams.tagGroupName);
-	var item = Aei.Database.selectByUniqueProperty(tagGroup.items, 'link', $routeParams.link);
+		Aei.Tables.TagGroup, 'link', $routeParams.groupLink);
+	var item = Aei.Database.selectByUniqueProperty(tagGroup.items, 'link', $routeParams.itemLink);
 	var useI = 0;
 	var results, useMax;
-
-	////
 
 	var getNextResults = function() {
 		if ( !results ) {
@@ -155,10 +191,6 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams, $timeout) {
 		$scope.model.tagUsesRemaining = results.length-$scope.model.tagUses.length;
 	};
 
-	var loadNext = function() {
-		$timeout(getNextResults, 20).then(handleResults);
-	};
-
 	////
 
 	$scope.model = {
@@ -169,7 +201,7 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams, $timeout) {
 
 	$scope.showMore = function() {
 		useMax = Math.min(useMax+8, results.length);
-		loadNext();
+		handleResults(getNextResults());
 	};
 
 	$scope.getDateRange = function(proj) {
@@ -182,7 +214,7 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams, $timeout) {
 		return str;
 	};
 
-	loadNext();
+	$timeout(getNextResults, 20).then(handleResults);
 	
 	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([item.name, 'Tags']);

@@ -19,9 +19,15 @@
 		margin-top: 0;
 	}
 	
-	.trendCol div {
+	.trendCol {
+		padding-bottom: 0;
+	}
+	
+	.trendCol .graph {
 		float: left;
 		margin-right: 8px;
+		width: 70px;
+		height: 26px;
 	}
 	
 	.trendCol a.name {
@@ -44,6 +50,11 @@
 	
 	.projCol {
 		text-align: right;
+		padding-bottom: 0;
+	}
+	
+	.projCol .hold {
+		font-size: 0;
 	}
 	
 	section.content .barBg {
@@ -61,6 +72,17 @@
 		border-right: 1px solid #683;
 	}
 	
+	.line {
+		fill: none;
+		stroke: #8fbc4c;
+		stroke-width: 1px;
+	}
+	
+	.area {
+		fill: rgba(102, 136, 51, 0.25);
+		stroke: none;
+	}
+	
 	.topProj {
 		display: inline-block;
 		width: 25px;
@@ -72,6 +94,16 @@
 	.topProj.empty {
 		border: 1px solid #404040;
 		border: 1px solid rgba(255, 255, 255, 0.05);
+		cursor: default;
+	}
+	
+	.topProj img {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.topProj.empty img {
+		visibility: hidden;
 	}
 	
 	.tabs a {
@@ -104,10 +136,6 @@
 		padding-left: 1px;
 	}
 	
-	section.group {
-		display: none;
-	}
-	
 	@media only screen and (max-width: 900px) {
 		
 		.tabs a {
@@ -127,10 +155,6 @@
 			width: 50%;
 			height: 40px;
 			padding: 9px 0 5px 0;
-		}
-		
-		.trendCol div {
-			margin-right: 6px;
 		}
 		
 		.trendCol a.name {
@@ -179,19 +203,6 @@
 		}
 		
 	}
-</style>
-
-
-<style>
-	.line {
-		fill: none;
-		stroke: #8fbc4c;
-		stroke-width: 1px;
-	}
-	
-	.area {
-		fill: rgba(102, 136, 51, 0.25);
-	}
 
 </style>
 
@@ -219,7 +230,8 @@
 	<div class="row">
 		<div class="columns tabs">
 			
-			<a ng-repeat="group in model.groups" id="tab-{{group.id}}" data-group="{{group.id}}">
+			<a ng-repeat="group in model.groups" ng-click="selectGroup(group)"
+					ng-class="(isGroupSelected(group) ? 'active' : '')">
 				{{group.name}}
 
 				<span class="count">
@@ -232,13 +244,13 @@
 </section>
 
 
-<section class="content group" ng-repeat="group in model.groups" id="section-{{group.id}}">
+<section class="content">
 	<div class="row headings hide-for-small">
 	
 		<div class="large-3 medium-4 columns trendCol">
 			<p>
 				Trend
-				<span>{{group.single}}</span>
+				<span>{{calc.group.single}}</span>
 			</p>
 		</div>
 		
@@ -252,33 +264,37 @@
 
 	</div>
 	
-	<div class="row alt" ng-repeat="item in group.items" id='row-{{group.id}}-{{item.id}}'>
+	<div class="row alt" ng-repeat="calc in model.calcs">
 	
-		<div class="large-3 medium-4 columns trendCol">
-			<div id='graph-{{group.id}}-{{item.id}}'>
+		<div class="large-3 medium-4 columns trendCol" ng-class="(use.open ? 'open' : '')">
+			<div tag-trend-graph values="calc.values" class="graph">
 			</div>
-			<a class="show-for-small more" href="" >
-				more <i class="fa fa-caret-down"></i>
+			<a class="show-for-small more" href="" ng-click="use.open = !use.open">
+				{{use.open ? 'less' : 'more'}}
+				<i ng-class="'fa fa-caret-'+(use.open ? 'up' : 'down')"></i>
 			</a>
-			<a class="name" ng-href="#/Tags/{{group.link}}/{{item.link}}">
-				{{item.name}}
+			<a class="name" ng-href="#/Tags/{{calc.group.link}}/{{calc.item.link}}">
+				{{calc.item.name}}
 				<i class="fa fa-angle-double-right"></i>
 			</a>
 		</div>
 		
-		<div class="large-6 medium-4 columns powerCol">
+		<div class="large-6 medium-4 columns powerCol" ng-class="(use.open ? 'open' : '')">
 			<div class="barBg">
-				<div id='recent-{{group.id}}-{{item.id}}' class="barFill" 
-					style="width: 0%;">
-				</div>
-				<div id='peak-{{group.id}}-{{item.id}}' class="barFill second" 
-					style="width: 0%;">
-				</div>
+				<div class="barFill" title="Recent Strength"
+					ng-style="{'width': calc.recent*100+'%' }"></div>
+				<div class="barFill second" title="Peak Strength"
+					ng-style="{'width': (calc.peak-calc.recent)*100+'%'}"></div>
 			</div>
 		</div>
-		
-		<div class="large-3 medium-4 columns projCol">
-			<div id="proj-{{group.id}}-{{item.id}}">
+
+		<div class="large-3 medium-4 columns projCol" ng-class="(use.open ? 'open' : '')">
+			<div class="hold">
+				<a ng-repeat="use in calc.topUses" class="topProj" 
+						ng-href="#/Projects/{{use.project.link}}" title="{{use.project.name}}"
+						ng-style="{'opacity': use.weight}" ng-class="(use.project ? '' : 'empty')">
+					<img ng-src="{{use.project ? 'img/projects/'+use.project.id+'/icon.jpg' : ''}}" />
+				</a>
 			</div>
 		</div>
 

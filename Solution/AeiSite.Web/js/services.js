@@ -33,7 +33,7 @@ Aei.RouteBuilder = function($routeProvider) {
 			controller: Aei.Controllers.Tags,
 			caseInsensitiveMatch: true
 		})
-		.when('/Tags/:tagGroupName/:link', {
+		.when('/Tags/:groupLink/:itemLink', {
 			templateUrl: 'views/Tag.html',
 			controller: Aei.Controllers.Tag,
 			caseInsensitiveMatch: true
@@ -79,5 +79,18 @@ Aei.Angular.directive('mainFooter', function() {
 			footer: '=footer'
 		},
 		templateUrl: 'views/_MainFooter.html'
+	};
+});
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Angular.directive('tagTrendGraph', function() {
+	return {
+		scope: {
+			values: '=values'
+		},
+		link: function(scope, element) {
+			var graph = new Aei.SparkArea(element[0], scope.values);
+			setTimeout(function() { graph.build(); }, 1);
+		}
 	};
 });

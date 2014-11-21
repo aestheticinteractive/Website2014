@@ -1,7 +1,7 @@
 
 /*====================================================================================================*/
-Aei.SparkArea = function(containerId, data) {
-	this._containerId = containerId;
+Aei.SparkArea = function(element, data) {
+	this._element = element;
 	this._data = data;
 };
 
@@ -9,13 +9,14 @@ Aei.SparkArea = function(containerId, data) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.SparkArea.prototype.build = function() {
+	var elem = this._element;
 	var data = this._data;
-	var w = 80;
-	var h = 25;
+	var w = elem.offsetWidth;
+	var h = elem.offsetHeight;
 	
 	var x = d3.scale.linear()
 		.range([0, w])
-		.domain([0, data.length]);
+		.domain([0, data.length-1]);
 	
 	var y = d3.scale.linear()
 		.range([h-1, 0])
@@ -36,7 +37,7 @@ Aei.SparkArea.prototype.build = function() {
 		.x(function(d, i) { return x(i); })
 		.y(function(d) { return y(d); });
 	
-	var svg = d3.select(this._containerId)
+	var svg = d3.select(this._element)
 		.append('svg')
 			.attr('width', w)
 			.attr('height', h);
