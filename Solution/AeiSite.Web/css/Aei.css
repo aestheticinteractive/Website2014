@@ -71,6 +71,16 @@ a.arrow:hover:after {
 	margin-left: 0.2em;
 }
 
+.high {
+	transition: opacity 400ms;
+	opacity: 1;
+}
+
+.fade {
+	transition: opacity 400ms;
+	opacity: 0.25;
+}
+
 .smallCount {
 	font-size: 1.0rem;
 	font-weight: bold;
@@ -507,11 +517,6 @@ table.service p {
 table.service {
 	table-layout: fixed;
 	width: 100%;
-	transition: opacity 400ms;
-}
-
-table.service.faded {
-	opacity: 0.333;
 }
 
 table.service td {
@@ -546,7 +551,7 @@ table.service.high td.fill i {
 	margin-left: 0%;
 }
 
-table.service.faded tr td.fill i {
+table.service.fade tr td.fill i {
 	margin-left: 40%;
 }
 
@@ -574,11 +579,6 @@ section.projects .proj {
 	padding: 4px;
 	width: 158px;
 	overflow: hidden;
-	transition: opacity 400ms;
-}
-
-section.projects .proj.faded {
-	opacity: 0.25;
 }
 
 section.projects .proj a {
@@ -631,7 +631,6 @@ section.projects .proj img.thumb {
 	}
 	
 }
-
 
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -703,7 +702,7 @@ section.project.galleryHold .columns {
 }
 	
 #projectGallery img {
-	margin: 0 1px 1px 0;
+	padding: 0 1px 1px 0;
 }
 	
 section.project .tagRow {

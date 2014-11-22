@@ -27,7 +27,7 @@
 		
 			<div class="proj" ng-repeat="proj in model.projects"
 					ng-mouseover="model.hover = proj.id" ng-mouseout="model.hover = null"
-					ng-class="(model.hover ? (proj.id == model.hover ? 'high' : 'faded') : '')">
+					ng-class="(model.hover ? (proj.id == model.hover ? 'high' : 'fade') : '')">
 				<p>
 					<a ng-href="#/Projects/{{proj.link}}">
 						<img class="thumb" ng-src="img/projects/{{proj.id}}/icon.jpg" />

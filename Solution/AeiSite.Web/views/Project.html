@@ -64,6 +64,8 @@
 		<div class="large-12 columns">
 			<div id="projectGallery" data-count="{{model.project.imageCount}}">
 				<a ng-repeat="index in model.project.imageIndexes" 
+						ng-mouseover="model.hover = index" ng-mouseout="model.hover = null"
+						ng-class="(model.hover != null ? (index == model.hover ? 'high' : 'fade') : '')"
 						ng-href="img/projects/{{model.project.id}}/{{index}}.jpg">
 					<img ng-src="img/projects/{{model.project.id}}/{{index}}.jpg" 
 						data-index="{{index}}" style="display: none;" />
