@@ -642,21 +642,14 @@ section.content.home-menu h2 {
 	margin: 10px 0 5px 0;
 }
 
-section.content.home-menu h2 a {
-	color: inherit;
-	font-size: inherit;
-}
-
 section.content.home-menu h2 a i {
 	color: #683;
-}
-
-section.content.home-menu h2 a:hover {
-	color: #fff;
+	opacity: 1;
+	transition: opacity 400ms;
 }
 
 section.content.home-menu h2 a:hover i {
-	color: #8fbc4c;
+	opacity: 0.333;
 }
 
 section.content.home-menu p {
