@@ -39,7 +39,7 @@
 	
 	<div class="row alt" ng-repeat="use in model.tagUses">
 		
-		<div class="large-3 medium-5 columns thumbCol">
+		<div class="large-4 medium-5 columns thumbCol">
 			<a ng-href="#/Projects/{{use.project.link}}">
 				<img ng-src="img/projects/{{use.project.id}}/icon.jpg" />
 			</a>
@@ -47,19 +47,13 @@
 				<a class="name arrow" ng-href="#/Projects/{{use.project.link}}">
 					{{use.project.name}}
 				</a>
-				<span class="show-for-medium-down dateRange">
+				<span class="dateRange">
 					{{getDateRange(use.project)}}
 				</span>
 			</p>
 		</div>
-			
-		<div class="large-2 medium-2 columns hide-for-medium-down dateCol">
-			<p class="dateRange">
-				{{getDateRange(use.project)}}
-			</p>
-		</div>
-
-		<div class="large-7 medium-7 columns barCol">
+		
+		<div class="large-8 medium-7 columns barCol">
 			<div class="barBg" title="{{use.serviceEntry.weight}} * {{use.project.weight}}">
 				<div class="barFill" ng-style="{'width': use.weight*100+'%'}">
 				</div>
