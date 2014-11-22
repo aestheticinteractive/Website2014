@@ -15,15 +15,15 @@
 					Aesthetic Interactive brings together a <em>complete range of services</em>
 					to create <em>stunning experiences</em> via <em>exceptional software</em>. 
 					<a ng-mouseover="model.hover = 'dev'" ng-mouseout="model.hover = null"
-						href="" data-scroll="dev" >Development</a> and 
+						href="" scroll-to target-id="'dev'">Development</a> and 
 					<a ng-mouseover="model.hover = 'des'" ng-mouseout="model.hover = null"
-						 href="" data-scroll="des">design</a> are <em>synchronized</em>, 
+						href="" scroll-to target-id="'des'">design</a> are <em>synchronized</em>, 
 					<a ng-mouseover="model.hover = 'cre'" ng-mouseout="model.hover = null"
-						 href="" data-scroll="cre">creativity</a> <em>flows</em>,
+						href="" scroll-to target-id="'cre'">creativity</a> <em>flows</em>,
 					<a ng-mouseover="model.hover = 'com'" ng-mouseout="model.hover = null"
-						 href="" data-scroll="com">communication</a> is <em>constant</em>, and 
+						href="" scroll-to target-id="'com'">communication</a> is <em>constant</em>, and 
 					<a ng-mouseover="model.hover = 'mgt'" ng-mouseout="model.hover = null"
-						 href="" data-scroll="mgt">management</a> keeps everything <em>on track</em>.
+						href="" scroll-to target-id="'mgt'">management</a> keeps everything <em>on track</em>.
 				</p>
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 						ng-class="(model.hover ? (service.id == model.hover ? 'high' : 'fade') : '')">
 					<tbody>
 						<tr>
-							<td class="fill">
+							<td class="fill" on-delay delay-class="'entry'">
 								<i ng-class="'fa fa-'+service.icon"></i>
 							</td>
 							<td class="text">
