@@ -71,13 +71,15 @@ a.arrow:hover:after {
 	margin-left: 0.2em;
 }
 
-.high {
+.fadeable {
 	transition: opacity 400ms;
+}
+
+.high {
 	opacity: 1;
 }
 
 .fade {
-	transition: opacity 400ms;
 	opacity: 0.25;
 }
 
@@ -507,6 +509,205 @@ footer a:hover {
 
 
 /*----------------------------------------------------------------------------------------------------*/
+/* Home */
+
+
+section.home-logo {
+	text-align: center;
+	padding: 80px 0 40px 0;
+}
+
+section.home-logo img {
+	width: 200px;
+	height: 222px;
+}
+
+div.intro.home {
+	padding: 48px 0;
+}
+
+div.intro.home p {
+	line-height: 0;
+}
+
+div.intro.home .side {
+	width: 50%;
+	color: #ddd;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 3.6rem;
+	line-height: 3.6rem;
+	padding-top: 8px;
+	padding-bottom: 10px;
+}
+
+div.intro.home .left {
+	text-align: right;
+	border-right: 1px solid #303030;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	padding-right: 15px;
+}
+
+div.intro.home .right {
+	text-align: left;
+	border-left: 1px solid #303030;
+	border-left: 1px solid rgba(255, 255, 255, 0.1);
+	padding-left: 15px;
+}
+
+div.intro.home .name {
+	color: #683;
+	font-size: 2.4rem;
+	font-weight: bold;
+	margin-top: 8px;
+}
+
+div.intro.home .name .nextLine {
+	font-size: 0;
+	line-height: 0;
+}
+
+section.content.home-menu h2 {
+	z-index: 2;
+	margin: 10px 0 5px 0;
+}
+
+section.content.home-menu h2 a {
+	color: inherit;
+	font-size: inherit;
+}
+
+section.content.home-menu h2 a i {
+	color: #683;
+}
+
+section.content.home-menu h2 a:hover {
+	color: #fff;
+}
+
+section.content.home-menu h2 a:hover i {
+	color: #8fbc4c;
+}
+
+section.content.home-menu p {
+	line-height: 2.4rem;
+	z-index: 2;
+}
+
+section.content.home-menu div.iconBg {
+	z-index: 0;
+	height: 0;
+	text-align: right;
+}
+
+section.content.home-menu div.iconBg i {
+	font-size: 120px; /* for icon */
+	color: #202020;
+	color: rgba(0, 0, 0, 0.2);
+}
+
+section.content.home-menu div.iconBg i.fa-tasks {
+	margin-top: 7px;
+}
+
+@media only screen and (max-width: 64.0em) { /* < large */
+	
+	section.home-logo {
+		padding: 40px 0 40px 0;
+	}
+	
+}
+
+@media only screen and (max-width: 900px) {
+	
+	section.home-logo img {
+		width: 150px;
+		height: 167px;
+	}
+	
+	div.intro.home .side {
+		font-size: 2.8rem;
+		line-height: 2.8rem;
+	}
+	
+	div.intro.home .left {
+		padding-right: 10px;
+	}
+	
+	div.intro.home .right {
+		padding-left: 10px;
+	}
+	
+	div.intro.home .name {
+		font-size: 2.0rem;
+		line-height: 2.0rem;
+	}
+	
+}
+
+@media only screen and (max-width: 40.0em) { /* < medium */
+	
+	section.home-logo {
+		padding: 24px 0;
+	}
+	
+	section.home-logo img {
+		width: 100px;
+		height: 111px;
+	}
+	
+	div.intro.home {
+		padding: 24px 0 30px 0;
+		margin-bottom: 48px;
+	}
+	
+	div.intro.home .side {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 10px;
+		font-size: 2.4rem;
+		line-height: 2.4rem;
+	}
+	
+	div.intro.home .left {
+		text-align: center;
+		border: 0px solid #000;
+		padding: 0;
+	}
+	
+	div.intro.home .right {
+		text-align: center;
+		border: 0px solid #000;
+		padding: 0;
+	}
+	
+	div.intro.home .name {
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+		margin-top: 4px;
+		text-align: center;
+	}
+	
+}
+
+@media only screen and (max-width: 470px) {
+	
+	section.home-logo {
+		padding: 40px 0;
+	}
+	
+	section.home-logo img {
+		width: 120px;
+		height: 133px;
+	}
+	
+	div.intro.home {
+		padding: 40px 0;
+	}
+	
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
 /* Services */
 
 
@@ -824,3 +1025,329 @@ section.content.project .tagRow .barBg {
 	}
 		
 }
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Tags */
+
+
+section.tags .tabs a {
+	display: inline-block;
+	width: 16.666%;
+	height: 50px;
+	color: #ddd;
+	font-size: 1.8rem;
+	text-align: center;
+	padding: 14px 0 10px 0;
+	border-bottom: 2px solid #404040;
+	overflow: hidden;
+	transition: background-color 400ms;
+}
+
+section.tags .tabs a:hover {
+	background-color: #303030;
+	background-color: rgba(255, 255, 255, 0.02);
+}
+
+section.tags .tabs a.active {
+	background-color: #404040;
+	background-color: rgba(255, 255, 255, 0.04);
+	border-bottom: 2px solid #888;
+}
+
+section.tags .row.headings .columns {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+section.tags .row.headings p {
+	color: #777;
+	font-size: 1.2rem;
+}
+
+section.tags .row.headings .trendCol span {
+	position: absolute;
+	left: 103px;
+}
+
+section.tags .row.headings .trendCol p {
+	margin-top: 0;
+}
+
+section.tags .trendCol {
+	padding-bottom: 0;
+}
+
+section.tags .trendCol .graph {
+	float: left;
+	margin-right: 8px;
+	width: 70px;
+	height: 26px;
+}
+
+section.tags .trendCol a.name {
+	display: inline-block;
+	margin: 2px 0 0 0;
+}
+
+section.tags .projCol {
+	text-align: right;
+	padding-bottom: 0;
+}
+
+section.tags .projCol .hold {
+	font-size: 0;
+}
+
+section.content.tags .barBg {
+	font-size: 0;
+	overflow: hidden;
+	margin-top: 13px;
+}
+
+section.content.tags .barBg .barFill {
+	display: inline-block;
+}
+
+section.content.tags .barBg .second {
+	background-color: rgba(102, 136, 51, 0.25);
+	border-right: 1px solid #683;
+}
+
+section.tags .line {
+	fill: none;
+	stroke: #8fbc4c;
+	stroke-width: 1px;
+}
+
+section.tags .area {
+	fill: rgba(102, 136, 51, 0.25);
+	stroke: none;
+}
+
+section.tags .topProj {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	margin: 1px;
+	overflow: hidden;
+}
+
+section.tags .topProj.empty {
+	border: 1px solid #404040;
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	cursor: default;
+}
+
+section.tags .topProj img {
+	width: 100%;
+	height: 100%;
+}
+
+section.tags .topProj.empty img {
+	visibility: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+	
+	section.tags .tabs a {
+		font-size: 1.4rem;
+	}
+	
+	section.tags .topProj {
+		width: 20px;
+		height: 20px;
+	}
+	
+}
+
+@media only screen and (max-width: 40.0em) { /* < medium */
+	
+	section.tags .tabs a {
+		width: 33.33%;
+		height: 40px;
+		padding: 9px 0 5px 0;
+	}
+	
+	section.tags .trendCol a.name {
+		margin-top: 0;
+	}
+	
+	section.tags .trendCol a.more {
+		font-size: 1.2rem;
+		float: right;
+		padding: 3px 8px;
+		margin-top: -3px;
+	}
+	
+	section.tags .powerCol {
+		display: none;
+	}
+	
+	section.tags .projCol {
+		display: none;
+	}
+	
+	section.tags .row.alt .columns.trendCol.open {
+		padding-bottom: 0;
+	}
+	
+	section.tags .row.alt .columns.powerCol.open {
+		padding-top: 8px;
+		padding-bottom: 7px;
+		display: inherit;
+	}
+
+	section.tags .row.alt .columns.projCol.open {
+		text-align: left;
+		padding-top: 0;
+		display: inherit;
+	}
+	
+	section.content.tags .barBg {
+		margin-top: 0;
+		height: 4px;
+	}
+	
+	section.tags .topProj {
+		width: 34px;
+		height: 34px;
+	}
+	
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Tag */
+
+
+section.tag .thumbCol a, .thumbCol p {
+	float: left;
+}
+
+section.tag .thumbCol a img {
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+}
+
+section.tag .thumbCol a.name {
+	margin-top: 15px;
+}
+
+section.tag .dateCol .dateRange {
+	margin-top: 15px;
+	color: #777;
+}
+
+section.tag .barCol {
+	font-size: 0;
+}
+
+section.tag .barCol a.more {
+	display: inline-block;
+	width: 20%;
+	font-size: 1.2rem;
+	text-align: right;
+	padding: 3px 16px 3px 8px;
+	margin-top: 12px;
+}
+
+section.content.tag .barBg {
+	display: inline-block;
+	margin-top: 23px;
+	width: 80%;
+}
+
+section.tag .tagUseDesc {
+	margin: 6px 0 8px 0;
+}
+
+section.tag .showAllCol {
+	padding-top: 0;
+	border-top: 2px solid #181818;
+}
+
+section.tag .showAllCol a {
+	text-align: center;
+	padding: 16px 0 8px 0;
+	width: 100%;
+	display: block;
+}
+
+@media only screen and (max-width: 64.0em) { /* < large */
+
+	section.tag .thumbCol a.name {
+		margin-top: 5px;
+	}
+
+	section.tag .thumbCol .dateRange {
+		color: #777;
+		display: block;
+		font-size: 1.2rem;
+	}
+
+}
+
+@media only screen and (max-width: 40.0em) { /* < medium */
+	
+	section.tag .thumbCol img {
+		width: 100%;
+		height: auto;
+	}
+
+	section.tag .row.alt .columns.thumbCol {
+		padding-bottom: 8px;
+	}
+
+	section.tag .row.alt .columns.barCol {
+		font-size: inherit;
+		padding-top: 0;
+	}
+	
+	section.tag .barCol a.more {
+		width: 100%;
+		display: block;
+		text-align: left;
+		padding: 4px 4px 0 0;
+		margin: 0;
+	}
+	
+	section.content.tag .barBg {
+		width: 100%;
+		height: 2px;
+		margin: 0;
+	}
+
+	section.tag .tagUseDesc {
+		margin: 5px 0;
+	}
+	
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Contact */
+
+
+section.contact .box {
+	margin-top: 16px;
+	padding: 16px 16px;
+}
+
+section.contact .box.details {
+	background-color: #333;
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+section.contact .box.details strong {
+	color: #ddd;
+}
+
+@media only screen and (max-width: 40.0em) { /* < medium */
+                                             
+	section.contact .box {
+		margin: 16px -16px 0 -16px;
+	}
+	
+}	
