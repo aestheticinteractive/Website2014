@@ -75,7 +75,7 @@
 <section class="content project galleryHold" ng-if="model">
 	<div class="row">
 	
-		<div class="large-12 columns">
+		<div class="columns">
 			<div project-gallery id="projectGallery" data-count="{{model.project.imageCount}}">
 				<a ng-repeat="index in model.project.imageIndexes" class="fadeable"
 						ng-mouseover="model.hover = index" ng-mouseout="model.hover = null"
@@ -94,7 +94,7 @@
 <section class="content project" ng-if="model">
 	<div class="row" ng-repeat="tagObj in model.tags" ng-if="tagObj.tagList.length">
 	
-		<div class="large-12 columns">
+		<div class="columns">
 			<h2>
 				{{tagObj.name}}
 				<span class="smallCount">
@@ -139,7 +139,7 @@
 <section class="content project" ng-if="model && model.project.related && model.project.related.length">
 	<div class="row">
 	
-		<div class="large-12 columns">
+		<div class="columns">
 			<h2>
 				Related Projects
 				<span class="smallCount">
