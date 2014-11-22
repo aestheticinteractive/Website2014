@@ -823,6 +823,9 @@ table.service.fade tr td.fill i {
 
 	table.service tr td.fill {
 		width: 30px;
+	}
+	
+	table.service tr td.fill i {
 		font-size: 55px; /*for icon*/
 	}
 	
