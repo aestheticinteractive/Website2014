@@ -151,7 +151,7 @@ section.altHold {
 	}
 
 	section.altHold {
-		padding-top: 24px;
+		padding-top: 0; /*24px;*/
 	}
 	
 }
@@ -904,7 +904,7 @@ section.projects .proj img.thumb {
 /* Project */
 
 
-div.intro.project.project .badge img {
+div.intro.project .badge img {
 	width: 150px;
 	height: 150px;
 	margin-right: 16px;
@@ -1241,10 +1241,14 @@ section.tags .topProj.empty img {
 
 @media only screen and (max-width: 40.0em) { /* < medium */
 	
+	section.tags .tabs {
+		padding-top: 13px;
+	}
+	
 	section.tags .tabs a {
 		width: 33.33%;
-		height: 40px;
-		padding: 9px 0 5px 0;
+		padding: 14px 0 0 0;
+		margin-top: 2px;
 	}
 	
 	section.tags .trendCol a.arrow {
