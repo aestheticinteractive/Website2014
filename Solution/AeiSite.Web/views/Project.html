@@ -1,5 +1,22 @@
 
-<div class="intro project">
+<div class="intro" ng-if="!model">
+	<section class="content">
+		<div class="row">
+	
+			<div class="large-8 large-push-2 columns">
+				<h1>
+					<i class="fa fa-cube"></i> | Project Not Found
+				</h1>
+				<p>
+					Please return to the <a href="#/Projects">Projects page</a>.
+				</p>
+			</div>
+
+		</div>
+	</section>
+</div>
+
+<div class="intro project" ng-if="model">
 	<section class="content">
 		<div class="row">
 	
@@ -55,7 +72,7 @@
 </div>
 
 
-<section class="content project galleryHold">
+<section class="content project galleryHold" ng-if="model">
 	<div class="row">
 	
 		<div class="large-12 columns">
@@ -74,7 +91,7 @@
 </section>
 
 
-<section class="content project">
+<section class="content project" ng-if="model">
 	<div class="row" ng-repeat="tagObj in model.tags" ng-if="tagObj.tagList.length">
 	
 		<div class="large-12 columns">
@@ -119,7 +136,7 @@
 </section>
 
 
-<section class="content project" ng-if="model.project.related && model.project.related.length">
+<section class="content project" ng-if="model && model.project.related && model.project.related.length">
 	<div class="row">
 	
 		<div class="large-12 columns">

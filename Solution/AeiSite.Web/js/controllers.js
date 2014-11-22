@@ -50,9 +50,13 @@ Aei.Controllers.Projects = function($rootScope, $scope) {
 };
 
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
+Aei.Controllers.Project = function($rootScope, $scope, $routeParams, $location) {
 	var proj = Aei.Database.selectByUniqueProperty(Aei.Tables.Project, 'link', $routeParams.link);
-	//TODO: redirect if project not found (also do this for other detail pages)
+
+	if ( !proj ) {
+		$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Not Found', 'Projects']);
+		return;
+	}
 
 	$scope.model = {
 		project: proj,
@@ -162,7 +166,17 @@ Aei.Controllers.Tags = function($rootScope, $scope, $timeout) {
 Aei.Controllers.Tag = function($rootScope, $scope, $routeParams, $timeout) {
 	var tagGroup = Aei.Database.selectByUniqueProperty(
 		Aei.Tables.TagGroup, 'link', $routeParams.groupLink);
-	var item = Aei.Database.selectByUniqueProperty(tagGroup.items, 'link', $routeParams.itemLink);
+	var item = null;
+	
+	if ( tagGroup ) {
+		item = Aei.Database.selectByUniqueProperty(tagGroup.items, 'link', $routeParams.itemLink);
+	}
+	
+	if ( !item ) {
+		$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Not Found', 'Tags']);
+		return;
+	}
+	
 	var useI = 0;
 	var results, useMax;
 

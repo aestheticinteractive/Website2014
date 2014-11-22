@@ -1,5 +1,22 @@
 
-<div class="intro">
+<div class="intro" ng-if="!model">
+	<section class="content">
+		<div class="row">
+	
+			<div class="large-8 large-push-2 columns">
+				<h1>
+					<i class="fa fa-tasks"></i> | Tag Not Found
+				</h1>
+				<p>
+					Please return to the <a href="#/Tags">Tags page</a>.
+				</p>
+			</div>
+
+		</div>
+	</section>
+</div>
+
+<div class="intro" ng-if="model">
 	<section class="content">
 		<div class="row">
 	
@@ -18,7 +35,7 @@
 </div>
 
 
-<section class="content tag altHold">
+<section class="content tag altHold" ng-if="model">
 	
 	<div class="row alt" ng-repeat="use in model.tagUses">
 		
