@@ -43,16 +43,28 @@ a:hover {
 	color: #bbd693; 
 }
 
-.tag {
-	display: -moz-inline-stack;
-	display: inline-block;
-	zoom: 1;
-	*display: inline;
-	padding: 2px 3px;
-	font-size: 1.2rem;
-	line-height: 1.2rem;
-	margin: 0 2px 2px 0;
-	text-transform: uppercase;
+a.arrow {
+	color: #ddd;
+	font-size: inherit;
+}
+
+a.arrow:hover {
+	color: #8fbc4c;
+	font-size: inherit;
+}
+
+a.arrow:after {
+	font-family: FontAwesome;
+	content: "\f101"; /* fa-angle-double-right */
+	color: #8fbc4c;
+	transition: 
+		opacity 400ms,
+		margin-left 400ms;
+}
+
+a.arrow:hover:after {
+	opacity: 0.333;
+	margin-left: 0.2em;
 }
 
 
@@ -236,7 +248,7 @@ section.content h2 {
 	color: #ddd;
 	font-size: 1.8rem;
 	font-weight: normal;
-	margin: 0 0 5px 0;
+	margin: 0 0 0.4rem 0;
 }
 
 section.content h3 {
@@ -250,10 +262,7 @@ section.content p + h2 {
 	margin-top: 24px;
 }
 
-section.content p + h3 {
-	margin-top: 16px;
-}
-	
+section.content p + h3,
 section.content div + h3 {
 	margin-top: 16px;
 }
@@ -274,7 +283,7 @@ section.content .barBg .barFill {
 div.intro {
 	max-width: 100%;
 	background-color: #191919;
-	background-color: rgba(0, 0, 0, 0.333);
+	background-color: rgba(0, 0, 0, 0.4);
 	text-align: center;
 	padding: 48px 0;
 	margin-bottom: 20px;
@@ -463,8 +472,8 @@ footer a:hover {
 /* Services */
 
 
-table.service p, table.service a {
-	line-height: 2.4rem;
+table.service p {
+	line-height: 2.2rem;
 }
 
 table.service {
@@ -481,18 +490,17 @@ table.service td {
 	padding: 5px 0 5px 10px;
 }
 
-table.service tr td.fill {
+table.service td.fill {
 	width: 50px;
 	padding: 0;
-	border-right: 3px solid #1c1c1c;
-		
-	color: #666;
+	border-right: 3px solid #222;
 	text-align: center;
-	font-size: 75px; /*for icon*/
 	overflow: hidden;
 }
 
-table.service tr td.fill i {
+table.service td.fill i {
+	color: #666;
+	font-size: 75px; /*for icon*/
 	opacity: 0;
 	margin-left: 100%;
 	transition: 
@@ -500,12 +508,12 @@ table.service tr td.fill i {
 		margin-left 400ms;
 }
 
-table.service tr td.fill.entry i {
+table.service td.fill.entry i {
 	opacity: 0.25;
 	margin-left: 25%;
 }
 
-table.service tr:hover td.fill i {
+table.service.high td.fill i {
 	opacity: 1;
 	margin-left: 0%;
 }

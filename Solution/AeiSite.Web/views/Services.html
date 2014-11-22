@@ -14,11 +14,16 @@
 				<p>
 					Aesthetic Interactive brings together a <em>complete range of services</em>
 					to create <em>stunning experiences</em> via <em>exceptional software</em>. 
-					<a href="" data-scroll="dev">Development</a> and 
-					<a href="" data-scroll="des">design</a> are <em>synchronized</em>, 
-					<a href="" data-scroll="cre">creativity</a> <em>flows</em>,
-					<a href="" data-scroll="com">communication</a> is <em>constant</em>, and 
-					<a href="" data-scroll="mgt">management</a> keeps everything <em>on track</em>.
+					<a ng-mouseover="model.hover = 'dev'" ng-mouseout="model.hover = null"
+						href="" data-scroll="dev" >Development</a> and 
+					<a ng-mouseover="model.hover = 'des'" ng-mouseout="model.hover = null"
+						 href="" data-scroll="des">design</a> are <em>synchronized</em>, 
+					<a ng-mouseover="model.hover = 'cre'" ng-mouseout="model.hover = null"
+						 href="" data-scroll="cre">creativity</a> <em>flows</em>,
+					<a ng-mouseover="model.hover = 'com'" ng-mouseout="model.hover = null"
+						 href="" data-scroll="com">communication</a> is <em>constant</em>, and 
+					<a ng-mouseover="model.hover = 'mgt'" ng-mouseout="model.hover = null"
+						 href="" data-scroll="mgt">management</a> keeps everything <em>on track</em>.
 				</p>
 			</div>
 		</div>
@@ -33,7 +38,7 @@
 			<div ng-repeat="service in services" class="medium-6 columns">
 				<table class="service" id="{{service.id}}" 
 						ng-mouseover="model.hover = service.id" ng-mouseout="model.hover = null"
-						ng-class="model.hover && service.id != model.hover ? 'faded' : ''">
+						ng-class="(model.hover ? (service.id == model.hover ? 'high' : 'faded') : '')">
 					<tbody>
 						<tr>
 							<td class="fill">
@@ -41,14 +46,12 @@
 							</td>
 							<td class="text">
 								<h2>
-									{{service.name}}
+									<a class="arrow" ng-href="#/Tags/Services/{{service.link}}">
+										{{service.name}}
+									</a>
 								</h2>
 								<p>
 									{{service.desc}}
-									<br/>
-									<a ng-href="#/Tags/Services/{{service.link}}">
-										Top '{{service.name}}' Projects
-									</a>
 								</p>
 							</td>
 						</tr>

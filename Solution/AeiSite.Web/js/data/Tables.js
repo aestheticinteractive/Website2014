@@ -19,7 +19,7 @@ Aei.Tables.Service = [
 	{
 		id: 'dev',
 		name: 'Development',
-		desc: 'High-caliber software development is the core of every project. Solid architectures, elegant code, and refined features lead to fantastic results.',
+		desc: 'High-caliber software development is the core of every project. Fantastic results begin with solid architectures, elegant code, refined features, and attention to detail.',
 		icon: 'cog'
 	},
 	{
@@ -43,7 +43,7 @@ Aei.Tables.Service = [
 	{
 		id: 'mgt',
 		name: 'Project Management',
-		desc: 'Effective project management is essential. This includes organizing specs, estimating impacts, planning tasks, prioritizing goals, and coordinating efforts.',
+		desc: 'Effective project management is essential for success. This includes organizing specs, estimating impacts, planning tasks, prioritizing goals, and coordinating team efforts.',
 		icon: 'calendar' //'calculator'
 	}
 ];
