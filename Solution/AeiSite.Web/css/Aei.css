@@ -461,9 +461,9 @@ footer {
 	
 	margin-top: 40px;
 	padding-top: 0;
-	padding-bottom: 40px;
+	padding-bottom: 60px;
 	
-	border-top: 1px solid #383838;
+	border-top: 2px solid #383838;
 }
 
 footer p {
@@ -473,16 +473,16 @@ footer p {
 
 footer p.links {
 	font-size: 0;
+	margin-bottom: 24px;
 }
 
 footer a {
 	color: #666;
+	padding: 2px 5px 2px 8px;
 }
 
 footer a.bar {
 	border-left: 1px solid #444;
-	padding-left: 8px;
-	margin-left: 5px;
 }
 
 footer a:hover {
