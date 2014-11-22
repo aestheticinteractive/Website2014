@@ -691,6 +691,7 @@ div.intro.project p.summary {
 	
 section.project.galleryHold {
 	padding-bottom: 0;
+	transition: opacity 1000ms;
 }
 	
 section.project.galleryHold .columns {
@@ -703,6 +704,8 @@ section.project.galleryHold .columns {
 	
 #projectGallery img {
 	padding: 0 1px 1px 0;
+	opacity: 0;
+	transition: opacity 1000ms;
 }
 	
 section.project .tagRow {

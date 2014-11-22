@@ -54,7 +54,7 @@ Aei.RouteBuilder = function($routeProvider) {
 Aei.Angular = angular
 	.module('Aei', ['ngRoute'])
 	.config(['$routeProvider', Aei.RouteBuilder])
-	.controller('App', ['$rootScope', Aei.Controllers.App])
+	.controller('App', [Aei.Controllers.App])
 	.controller('Menu', ['$rootScope', '$location', Aei.Controllers.Menu])
 	.controller('Footer', [Aei.Controllers.Footer])
 	.run(["$rootScope", "$window", function($rootScope, $window) {
@@ -123,6 +123,75 @@ Aei.Angular.directive('servicesPageEntry', function() {
 
 					$('body').animate(animDest, 1000);
 				});
+			};
+
+			setTimeout(onTimeout, 1);
+		}
+	};
+});
+
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Angular.directive('projectGallery', function() {
+	return {
+		link: function(scope, element) {
+			var gallery = $(element);
+			gallery.css('opacity', 0);
+
+			var images = [];
+			var imageCount = 0;
+			var loadCount = 0;
+			var galleryVisible = false;
+
+			var imagePack = new ImagePack();
+			imagePack.setPadding(1);
+			imagePack.setMinBounds(320, 3.5);
+			imagePack.setMaxBounds(1200, 7.5);
+
+			var onTimeout = function() {
+				var imgList = gallery.children('a').children('img');
+				imageCount = imgList.length;
+
+				gallery.magnificPopup({
+					delegate: 'a',
+					type: 'image',
+					gallery: {
+						enabled:true
+					}
+				});
+
+				imgList.load(function(a) {
+					onImageLoad($(a.target));
+				});
+
+				window.onresize = function() {
+					updateLayout();
+				};
+			};
+			
+			var onImageLoad = function(image) {
+				var index = image.attr('data-index');
+				images[index] = image;
+
+				image
+					.show()
+					.css('opacity', 1)
+					.attr('data-w', image.width())
+					.attr('data-h', image.height());
+
+				if ( !galleryVisible && ++loadCount > Math.min(2, imageCount) ) {
+					gallery.css('opacity', 1);
+					galleryVisible = true;
+				}
+
+				if ( galleryVisible ) {
+					updateLayout();
+				}
+			};
+			
+			var updateLayout = function() {
+				var w = gallery.width()-1;
+				imagePack.setWidth(w);
+				imagePack.updateLayout(images);
 			};
 
 			setTimeout(onTimeout, 1);

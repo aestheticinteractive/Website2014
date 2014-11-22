@@ -13,8 +13,8 @@ Aei.Controllers.getPageTitle = function(list) {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
-Aei.Controllers.App = function($rootScope) {
-	$rootScope.app = new Aei.Pages.App($rootScope);
+Aei.Controllers.App = function() {
+	var app = new Aei.Pages.App();
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -86,7 +86,7 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 		]
 	};
 	
-	$rootScope.page =  new Aei.Pages.Project(proj);
+	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([proj.name, 'Projects']);
 };
 

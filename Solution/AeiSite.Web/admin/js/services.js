@@ -46,5 +46,5 @@ Aei.RouteBuilder = function($routeProvider) {
 Aei.Angular = angular
 	.module('Aei', ['ngRoute'])
 	.config(['$routeProvider', Aei.RouteBuilder])
-	.controller('App', ['$rootScope', Aei.Controllers.App])
+	.controller('App', [Aei.Controllers.App])
 	.controller('Menu', [Aei.Controllers.Menu]);
