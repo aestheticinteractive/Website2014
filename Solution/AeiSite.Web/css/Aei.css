@@ -342,7 +342,7 @@ div.intro h1 {
 }
 
 div.intro h1 i {
-	color: #333;
+	color: #444;
 }
 
 div.intro p {
@@ -1039,20 +1039,24 @@ section.tags .tabs a {
 	font-size: 1.8rem;
 	text-align: center;
 	padding: 14px 0 10px 0;
-	border-bottom: 2px solid #404040;
+	border-bottom: 2px solid #555;
 	overflow: hidden;
-	transition: background-color 400ms;
+	opacity: 0.333;
+	transition:
+		opacity 400ms,
+		background-color 400ms,
+		border-bottom-color 400ms;
 }
 
 section.tags .tabs a:hover {
-	background-color: #303030;
 	background-color: rgba(255, 255, 255, 0.02);
+	opacity: 0.666;
 }
 
 section.tags .tabs a.active {
-	background-color: #404040;
 	background-color: rgba(255, 255, 255, 0.04);
 	border-bottom: 2px solid #888;
+	opacity: 1;
 }
 
 section.tags .row.headings .columns {
@@ -1085,9 +1089,10 @@ section.tags .trendCol .graph {
 	height: 26px;
 }
 
-section.tags .trendCol a.name {
+section.tags .trendCol a.arrow {
 	display: inline-block;
 	margin: 2px 0 0 0;
+	position: absolute; /* prevents wrapping */
 }
 
 section.tags .projCol {
@@ -1102,7 +1107,7 @@ section.tags .projCol .hold {
 section.content.tags .barBg {
 	font-size: 0;
 	overflow: hidden;
-	margin-top: 13px;
+	margin-top: 11px;
 }
 
 section.content.tags .barBg .barFill {
@@ -1154,9 +1159,16 @@ section.tags .topProj.empty img {
 		font-size: 1.4rem;
 	}
 	
+	section.tags .trendCol a.arrow {
+		margin-top: 6px;
+		font-size: 1.2rem;
+		line-height: 1.2rem;
+	}
+
 	section.tags .topProj {
 		width: 20px;
 		height: 20px;
+		margin-top: 3px;
 	}
 	
 }
@@ -1169,8 +1181,10 @@ section.tags .topProj.empty img {
 		padding: 9px 0 5px 0;
 	}
 	
-	section.tags .trendCol a.name {
+	section.tags .trendCol a.arrow {
 		margin-top: 0;
+		font-size: inherit;
+		line-height: inherit;
 	}
 	
 	section.tags .trendCol a.more {
@@ -1212,6 +1226,7 @@ section.tags .topProj.empty img {
 	section.tags .topProj {
 		width: 34px;
 		height: 34px;
+		margin: 1px;
 	}
 	
 }

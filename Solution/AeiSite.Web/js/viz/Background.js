@@ -60,7 +60,7 @@ Aei.Background.prototype._buildLineData = function() {
 	
 	var stage = this._stage;
 	var gapSize = 50;
-	var layerOpacity = 0.05;
+	var layerOpacity = 0.04;
 	var i, g;
 
 	for ( i = 0 ; i < data.groups.length ; ++i ) {
