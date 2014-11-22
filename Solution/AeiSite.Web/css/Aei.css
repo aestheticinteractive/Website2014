@@ -530,3 +530,76 @@ table.service.faded tr td.fill i {
 	}
 	
 }
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Projects */
+
+
+section.projects .columns {
+	text-align: center;
+	margin-top: -4px;
+}
+
+section.projects .proj {
+	display: inline-block; 
+	padding: 4px;
+	width: 158px;
+	overflow: hidden;
+	transition: opacity 400ms;
+}
+
+section.projects .proj.faded {
+	opacity: 0.25;
+}
+
+section.projects .proj a {
+	color: #888;
+}
+
+section.projects .proj.high a {
+	color: #ddd;
+}
+
+section.projects .proj .textBox {
+	display: table-cell;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+	padding: 0 16px;
+	width: 150px;
+	height: 5.0rem;
+	vertical-align: middle;
+	background-color: rgba(0, 0, 0, 0.25);
+	transition: background-color 400ms;
+}
+
+section.projects .proj.high .textBox {
+	background-color: rgba(0, 0, 0, 0.333);
+}
+
+section.projects .proj img.thumb {
+	width: 150px;
+	height: 150px;
+}
+
+@media only screen and (max-width: 40.0em) { /* < medium */
+                                             
+	section.projects .proj {
+		padding: 4px 1px 4px 0;
+		width: 94px;
+	}
+	
+	section.projects .proj .textBox {
+		font-size: 1.0rem;
+		line-height: 1.2rem;
+		padding: 0 4px;
+		width: 94px;
+		height: 4.0rem;
+	}
+	
+	section.projects .proj img.thumb {
+		width: 94px;
+		height: 94px;
+	}
+	
+}

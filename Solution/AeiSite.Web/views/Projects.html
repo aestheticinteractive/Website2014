@@ -1,63 +1,4 @@
 
-<style>
-	.proj {
-		display: inline-block; 
-		margin: 0 8px 16px 8px;
-		width: 150px;
-		background-color: rgba(0, 0, 0, 0.25);
-		overflow: hidden;
-	}
-	
-	.proj:hover {
-		background-color: rgba(0, 0, 0, 0.333);
-	}
-	
-	.proj a {
-		color: #888;
-	}
-	
-	.proj a:hover {
-		color: #ddd;
-	}
-	
-	.proj .text {
-		display: table-cell;
-		font-size: 1.2rem;
-		line-height: 1.5rem;
-		padding: 0 16px;
-		width: 150px;
-		height: 5.0rem;
-		vertical-align: middle;
-	}
-	
-	.proj img.thumb {
-		width: 150px;
-		height: 150px;
-	}
-	
-	@media only screen and (max-width: 40.0em) { /* < medium */
-	
-		.proj {
-			margin: 0 1px 16px 0;
-			width: 94px;
-		}
-		
-		.proj .text {
-			font-size: 1.0rem;
-			line-height: 1.2rem;
-			padding: 0 4px;
-			width: 94px;
-			height: 4.0rem;
-		}
-	
-		.proj img.thumb {
-			width: 94px;
-			height: 94px;
-		}
-	
-	}
-</style>
-
 <div class="intro">
 	<section class="content">
 		<div class="row">
@@ -79,16 +20,18 @@
 </div>
 
 
-<section class="content">
+<section class="content projects">
 	<div class="row">
 	
-		<div class="large-12 columns" style="text-align: center;">
+		<div class="large-12 columns">
 		
-			<div class="proj" ng-repeat="proj in model.projects">
+			<div class="proj" ng-repeat="proj in model.projects"
+					ng-mouseover="model.hover = proj.id" ng-mouseout="model.hover = null"
+					ng-class="(model.hover ? (proj.id == model.hover ? 'high' : 'faded') : '')">
 				<p>
 					<a ng-href="#/Projects/{{proj.link}}">
 						<img class="thumb" ng-src="img/projects/{{proj.id}}/icon.jpg" />
-						<span class="text">
+						<span class="textBox">
 							{{proj.name}}
 						</span>
 					</a>
