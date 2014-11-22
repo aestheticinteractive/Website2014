@@ -14,7 +14,7 @@ Aei.Controllers.getPageTitle = function(list) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.App = function() {
-	var app = new Aei.Pages.App();
+	Aei.App.init();
 };
 
 /*----------------------------------------------------------------------------------------------------*/
@@ -35,7 +35,6 @@ Aei.Controllers.Footer = function() {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Home = function($rootScope) {
-	$rootScope.page = null;
 	$rootScope.pageTitle = 'Aesthetic Interactive | Software Development and Design | Grand Rapids, MI';
 };
 
@@ -47,7 +46,6 @@ Aei.Controllers.Projects = function($rootScope, $scope) {
 		projects: Aei.Database.selectList(Aei.Tables.Project)
 	};
 	
-	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Projects']);
 };
 
@@ -86,7 +84,6 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams) {
 		]
 	};
 	
-	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([proj.name, 'Projects']);
 };
 
@@ -107,7 +104,6 @@ Aei.Controllers.Services = function($rootScope, $scope) {
 		splitServices: splitServices
 	};
 	
-	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Services']);
 };
 
@@ -122,7 +118,7 @@ Aei.Controllers.Tags = function($rootScope, $scope, $timeout) {
 		var group = $scope.model.selected;
 
 		if ( !cache[group.id] ) {
-			var calcs = Aei.Pages.Tags.getItemCalculations(group, Aei.Queries.getTagTrends());
+			var calcs = Aei.App.getTagItemCalculations(group, Aei.App.getTagTrends());
 			cache[group.id] = calcs;
 		}
 
@@ -159,7 +155,6 @@ Aei.Controllers.Tags = function($rootScope, $scope, $timeout) {
 	
 	$timeout(getCalcs, 20).then(handleCalcs);
 
-	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Tags']);
 };
 
@@ -173,7 +168,7 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams, $timeout) {
 
 	var getNextResults = function() {
 		if ( !results ) {
-			results = Aei.Queries.getTagTrends().getTopProjects(tagGroup.id, item.id);
+			results = Aei.App.getTagTrends().getTopProjects(tagGroup.id, item.id);
 			useMax = Math.min(8, results.length);
 		}
 
@@ -212,7 +207,6 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams, $timeout) {
 
 	$timeout(getNextResults, 20).then(handleResults);
 	
-	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([item.name, 'Tags']);
 };
 
@@ -222,6 +216,5 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams, $timeout) {
 Aei.Controllers.Contact = function($rootScope, $scope) {
 	$scope.model = {};
 	
-	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Contact']);
 };

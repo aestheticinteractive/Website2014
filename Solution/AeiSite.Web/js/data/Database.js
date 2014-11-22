@@ -64,8 +64,3 @@ Aei.Database.selectListByProperty = function(table, propertyName, value) {
 
 	return Aei.Database.selectList(table, filter);
 };
-
-/*----------------------------------------------------------------------------------------------------*/
-Aei.Database.selectCountByProperty = function(table, propertyName, value) {
-	return Aei.Queries.getListByProperty(table, propertyName, value).length;
-};

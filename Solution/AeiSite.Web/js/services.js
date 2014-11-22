@@ -143,64 +143,8 @@ Aei.Angular.directive('scrollTo', function() {
 Aei.Angular.directive('projectGallery', function() {
 	return {
 		link: function(scope, element) {
-			var gallery = $(element);
-			gallery.css('opacity', 0);
-
-			var images = [];
-			var imageCount = 0;
-			var loadCount = 0;
-			var galleryVisible = false;
-
-			var imagePack = new ImagePack();
-			imagePack.setPadding(1);
-			imagePack.setMinBounds(320, 3.5);
-			imagePack.setMaxBounds(1200, 7.5);
-
 			var onTimeout = function() {
-				var imgList = gallery.children('a').children('img');
-				imageCount = imgList.length;
-
-				gallery.magnificPopup({
-					delegate: 'a',
-					type: 'image',
-					gallery: {
-						enabled:true
-					}
-				});
-
-				imgList.load(function(a) {
-					onImageLoad($(a.target));
-				});
-
-				window.onresize = function() {
-					updateLayout();
-				};
-			};
-			
-			var onImageLoad = function(image) {
-				var index = image.attr('data-index');
-				images[index] = image;
-
-				image
-					.show()
-					.css('opacity', 1)
-					.attr('data-w', image.width())
-					.attr('data-h', image.height());
-
-				if ( !galleryVisible && ++loadCount > Math.min(2, imageCount) ) {
-					gallery.css('opacity', 1);
-					galleryVisible = true;
-				}
-
-				if ( galleryVisible ) {
-					updateLayout();
-				}
-			};
-			
-			var updateLayout = function() {
-				var w = gallery.width()-1;
-				imagePack.setWidth(w);
-				imagePack.updateLayout(images);
+				Aei.App.initProjectGallery($(element));
 			};
 
 			setTimeout(onTimeout, 1);

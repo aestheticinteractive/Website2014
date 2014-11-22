@@ -28,3 +28,18 @@ Aei.SiteMap = [
 		url: '/Timeline'
 	}
 ];
+
+
+//TEMP
+Aei.Queries = {};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Queries.getPropertyCompareFunc = function(propertyFunc, dir) {
+	return function(a, b) {
+		var valA = propertyFunc(a);
+		var valB = propertyFunc(b);
+		return (valA == valB ? 0 : (valA < valB ? 1 : -1))*dir;
+	};
+};
