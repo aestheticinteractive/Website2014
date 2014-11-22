@@ -43,6 +43,10 @@ a:hover {
 	color: #bbd693; 
 }
 
+
+/*----------------------------------------------------------------------------------------------------*/
+
+
 a.arrow {
 	color: #ddd;
 	font-size: inherit;
@@ -65,6 +69,30 @@ a.arrow:after {
 a.arrow:hover:after {
 	opacity: 0.333;
 	margin-left: 0.2em;
+}
+
+.smallCount {
+	font-size: 1.0rem;
+	font-weight: bold;
+	color: #683;
+	padding-left: 1px;
+}
+
+ul.tagUseDesc li {
+	list-style-type: square;
+	margin-left: 16px;
+	padding-left: 0;
+	color: #666;
+}
+
+ul.tagUseDesc li + li {
+	margin-top: 5px;
+}
+
+ul.tagUseDesc li p {
+	margin: 0;
+	padding: 0;
+	color: #999;
 }
 
 
@@ -602,4 +630,195 @@ section.projects .proj img.thumb {
 		height: 94px;
 	}
 	
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/* Project */
+
+
+div.intro.project.project .badge img {
+	width: 150px;
+	height: 150px;
+	margin-right: 16px;
+	float: left;
+}
+	
+div.intro.project .details {
+	height: 150px;
+	display: table-cell;
+	vertical-align: middle;
+}
+	
+div.intro.project .details h1 {
+	text-align: left;
+	margin: 0 0 12px 0;
+	color: #ddd;
+}
+	
+div.intro.project .details p {
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+}
+	
+div.intro.project .details i.fa-external-link {
+	font-size: 1.0rem;
+}
+	
+div.intro.project .details p a {
+	font-size: 1.4rem;
+	line-height: 2.0rem;
+}
+	
+div.intro.project .details p.year {
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+	color: #666;
+}
+	
+div.intro.project p.summary {
+	text-align: right;
+	height: 150px;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 16px;
+	border-left: 2px solid #303030;
+	border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+	
+section.project.galleryHold {
+	padding-bottom: 0;
+}
+	
+section.project.galleryHold .columns {
+	padding-top: 24px;
+}
+	
+#projectGallery a {
+	font-size: 0;
+}
+	
+#projectGallery img {
+	margin: 0 1px 1px 0;
+}
+	
+section.project .tagRow {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+section.project .relRow img {
+	width: 80px;
+	height: 80px;
+	margin-right: 8px;
+}
+	
+section.project .relRow p {
+	height: 80px;
+	color: #999;
+	display: table-cell;
+	vertical-align: middle;
+}
+	
+section.content.project .tagRow .barBg {
+	float: right;
+}
+	
+@media only screen and (max-width: 64.0em) { /* < large */
+		
+	div.intro.project p.summary {
+		font-size: 1.6rem;
+		line-height: 2.8rem;
+	}
+		
+}
+	
+@media only screen and (max-width: 40.0em) { /* < medium */
+	
+	div.intro.project {
+		padding-top: 24px;
+	}
+		
+	div.intro.project .badge img {
+		margin-bottom: 12px;
+	}
+	
+	div.intro.project p.summary {
+		text-align: left;
+		height: auto;
+		padding: 0;
+		border-left: none;
+	}
+	
+	section.project .tagRow {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	
+	section.content.project .row.alt.tagRow .columns.nameCol {
+		padding-bottom: 10px;
+	}
+	
+	section.content.project .row.alt.tagRow .columns.barCol {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	
+	section.content.project .row.alt.tagRow .columns.descCol {
+		padding-top: 10px;
+	}
+		
+	section.project .relRow img {
+		width: 50px;
+		height: 50px;
+		margin-right: 4px;
+	}
+	
+	section.project .relRow p {
+		height: auto;
+		display: inherit;
+	}
+	
+	section.project .row.alt.relRow .columns.projCol {
+		padding-bottom: 8px;
+	}
+		
+	section.project .row.alt.relRow .columns.descCol {
+		padding-top: 0;
+	}
+	
+	section.content.project .tagRow .barBg {
+		height: 2px;
+		margin: 0;
+		float: left;
+	}
+		
+}
+	
+@media only screen and (max-width: 479px) {
+	
+	div.intro.project {
+		padding-top: 20px;
+	}
+		
+	div.intro.project .badge img {
+		float: none;
+	}
+	
+	div.intro.project .details {
+		height: auto;
+		display: inherit;
+		margin-bottom: 16px;
+	}
+	
+	div.intro.project p.summary {
+		padding-top: 12px;
+		border-top: 0 solid #000;
+		border-top: 2px solid rgba(255, 255, 255, 0.1);
+	}
+		
 }

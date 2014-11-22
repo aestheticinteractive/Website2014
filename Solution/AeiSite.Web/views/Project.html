@@ -1,243 +1,8 @@
 <style>
-	div.intro div.badge img {
-		width: 150px;
-		height: 150px;
-		margin-right: 16px;
-		float: left;
-	}
-	
-	div.intro div.details {
-		height: 150px;
-		display: table-cell;
-		vertical-align: middle;
-	}
-	
-	div.intro div.details h1 {
-		text-align: left;
-		margin: 0 0 10px 0;
-		color: #ddd;
-	}
-	
-	div.intro div.details p {
-		text-align: left;
-		margin: 0;
-		padding: 0;
-		font-size: 1.4rem;
-		line-height: 1.8rem;
-	}
-	
-	div.intro div.details i.fa-external-link {
-		font-size: 1.0rem;
-	}
-	
-	div.intro div.details p a {
-		font-size: 1.4rem;
-		line-height: 1.8rem;
-	}
-	
-	div.intro div.details p.year {
-		font-size: 1.8rem;
-		line-height: 2.2rem;
-		color: #666;
-	}
-	
-	div.intro p.summary {
-		text-align: right;
-		height: 150px;
-		display: table-cell;
-		vertical-align: middle;
-		padding-left: 16px;
-		border-left: 2px solid #303030;
-		border-left: 2px solid rgba(255, 255, 255, 0.1);
-	}
-	
-	section.galleryHold {
-		padding-bottom: 0;
-	}
-	
-	section.galleryHold .columns {
-		padding-top: 24px;
-	}
-	
-	#gallery a {
-		font-size: 0;
-	}
-	
-	#gallery img {
-		margin: 0 1px 1px 0;
-	}
-	
-	.tagRow {
-		padding-top: 8px;
-		padding-bottom: 8px;
-	}
-	
-	.tagRow .name {
-		font-weight: bold;
-	}
-	
-	.tagRow .name {
-		font-weight: bold;
-	}
-	
-	.tagRow .name a {
-		color: #bbb;
-	}
-	
-	.tagRow .name a:hover {
-		color: #ddd;
-	}
-	
-	.tagRow .name a i {
-		color: #8fbc4c;
-	}
-	
-	.tagRow .name a:hover i {
-		color: #bbd693;
-	}
-	
-	.tagRow .desc li {
-		list-style-type: disc;
-		margin-left: 16px;
-		padding-left: 0;
-		color: #444;
-		list-style-type: square;
-	}
-	
-	.tagRow .desc li + li {
-		margin-top: 4px;
-	}
-		
-	.tagRow .desc li p {
-		margin: 0;
-		padding: 0;
-	}
-	
-	.relRow img {
-		width: 80px;
-		height: 80px;
-		margin-right: 8px;
-	}
-	
-	.relRow p {
-		height: 80px;
-		display: table-cell;
-		vertical-align: middle;
-	}
-	
-	section.content .tagRow .barBg {
-		float: right;
-	}
-	
-	@media only screen and (max-width: 64.0em) { /* < large */
-		
-		div.intro p.summary {
-			font-size: 1.6rem;
-			line-height: 2.8rem;
-		}
-		
-	}
-	
-	@media only screen and (max-width: 40.0em) { /* < medium */
-	
-		div.intro {
-			padding-top: 24px;
-		}
-		
-		div.intro div.badge img {
-			margin-bottom: 12px;
-		}
-	
-		div.intro p.summary {
-			text-align: left;
-			height: auto;
-			padding: 0;
-			border-left: none;
-		}
-	
-		.tagRow {
-			padding-top: 0;
-			padding-bottom: 0;
-		}
-	
-		.row.alt.tagRow .columns.nameCol {
-			padding-bottom: 5px;
-		}
-	
-		.row.alt.tagRow .columns.barCol {
-			padding-top: 0;
-			padding-bottom: 0;
-		}
-	
-		.row.alt.tagRow .columns.descCol {
-			padding-top: 8px;
-		}
-	
-		.tagRow .desc li {
-			font-size: 1.2rem;
-			line-height: 1.6rem;
-		}
-	
-		.tagRow .desc li p {
-			color: #888;
-			font-size: 1.2rem;
-			line-height: 1.6rem;
-		}
-		
-		.relRow img {
-			width: 50px;
-			height: 50px;
-			margin-right: 4px;
-		}
-	
-		.relRow p {
-			height: auto;
-			display: inherit;
-		}
-	
-		.row.alt.relRow .columns.projCol {
-			padding-bottom: 8px;
-		}
-		
-		.row.alt.relRow .columns.descCol {
-			padding-top: 0;
-		}
-	
-		section.content .tagRow .barBg {
-			height: 2px;
-			margin: 0;
-			float: left;
-		}
-		
-	}
-	
-	@media only screen and (max-width: 479px) {
-	
-		div.intro {
-			padding-top: 20px;
-		}
-		
-		div.intro div.badge img {
-			float: none;
-		}
-	
-		div.intro div.details {
-			height: auto;
-			display: inherit;
-			margin-bottom: 16px;
-		}
-	
-		div.intro p.summary {
-			padding-top: 12px;
-			border-top: 0 solid #000;
-			border-top: 2px solid rgba(255, 255, 255, 0.1);
-		}
-		
-	}
 </style>
 
 
-<div class="intro">
+<div class="intro project">
 	<section class="content">
 		<div class="row">
 	
@@ -293,11 +58,11 @@
 </div>
 
 
-<section class="content galleryHold">
+<section class="content project galleryHold">
 	<div class="row">
 	
 		<div class="large-12 columns">
-			<div id="gallery" data-count="{{model.project.imageCount}}">
+			<div id="projectGallery" data-count="{{model.project.imageCount}}">
 				<a ng-repeat="index in model.project.imageIndexes" 
 						ng-href="img/projects/{{model.project.id}}/{{index}}.jpg">
 					<img ng-src="img/projects/{{model.project.id}}/{{index}}.jpg" 
@@ -310,21 +75,23 @@
 </section>
 
 
-<section class="content">
+<section class="content project">
 	<div class="row" ng-repeat="tagObj in model.tags" ng-if="tagObj.tagList.length">
 	
 		<div class="large-12 columns">
 			<h2>
 				{{tagObj.name}}
+				<span class="smallCount">
+					{{tagObj.tagList.length}}
+				</span>
 			</h2>
 
 			<div class="row alt tagRow" ng-repeat="tag in tagObj.tagList">
 						
 				<div class="large-2 large-push-2 medium-3 medium-push-2 columns nameCol">
-					<p class="name">
-						<a ng-href="#/Tags/{{tagObj.name}}/{{tag.item.link}}">
+					<p>
+						<a class="arrow" ng-href="#/Tags/{{tagObj.name}}/{{tag.item.link}}">
 							{{tag.item.name}}
-							<i class="fa fa-angle-double-right"></i>
 						</a>
 					</p>
 				</div>
@@ -338,7 +105,7 @@
 				</div>
 
 				<div class="large-8 medium-7 columns descCol">
-					<ul class="desc" ng-if="tag.desc">
+					<ul class="tagUseDesc" ng-if="tag.desc">
 						<li ng-repeat="descItem in (tag.desc.split('|'))">
 							<p>{{descItem}}</p>
 						</li>
@@ -353,18 +120,21 @@
 </section>
 
 
-<section class="content" ng-if="model.project.related && model.project.related.length">
+<section class="content project" ng-if="model.project.related && model.project.related.length">
 	<div class="row">
 	
 		<div class="large-12 columns">
 			<h2>
 				Related Projects
+				<span class="smallCount">
+					{{model.project.related.length}}
+				</span>
 			</h2>
 			<div class="row alt relRow" ng-repeat="rel in model.project.related">
 				
 				<div class="large-4 medium-5 columns projCol">
 					<p>
-						<a ng-href="#/Projects/{{rel.project.link}}">
+						<a class="arrow" ng-href="#/Projects/{{rel.project.link}}">
 							<img class="thumb" ng-src="img/projects/{{rel.id}}/icon.jpg" />
 							{{rel.project.name}}
 						</a>

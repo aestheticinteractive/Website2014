@@ -9,7 +9,7 @@ Aei.Pages.Project = function(data) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Project.prototype.onRender = function() {
-	var gallery = $('#gallery');
+	var gallery = $('#projectGallery');
 	var images = gallery.children('a').children('img');
 	var me = this;
 
@@ -55,7 +55,7 @@ Aei.Pages.Project.prototype._onImageLoad = function(image) {
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Pages.Project.prototype._updateLayout = function() {
-	var w = $('#gallery').width()-1;
+	var w = $('#projectGallery').width()-1;
 
 	this._imagePack.setWidth(w);
 	this._imagePack.updateLayout(this._images);
