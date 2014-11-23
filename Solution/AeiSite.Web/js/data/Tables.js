@@ -668,7 +668,7 @@ Aei.Tables.Project = [
 			},
 			{
 				id: 'weaver',
-				desc: 'Fabric\'s tool for building Gremlin queries via cs.'
+				desc: 'Fabric\'s tool for building Gremlin queries via C#.'
 			},
 			{
 				id: 'rexconnect',
@@ -1008,7 +1008,7 @@ Aei.Tables.Project = [
 			},
 			{
 				id: 'weaver',
-				desc: 'Fabric\'s tool for building Gremlin queries via cs.'
+				desc: 'Fabric\'s tool for building Gremlin queries via C#.'
 			},
 			{
 				id: 'rexconnect',
@@ -1093,7 +1093,7 @@ Aei.Tables.Project = [
 				d: 13
 			}
 		],
-		summary: 'A tool for generating Gremlin scripts using cs. It features a strongly-typed, fluent interface, and allows developers to compose valid queries based on a well-defined data schema.',
+		summary: 'A tool for generating Gremlin scripts using C#. It features a strongly-typed, fluent interface, and allows developers to compose valid queries based on a well-defined data schema.',
 		url: null,
 		github: 'inthefabric/Weaver',
 		imageCount: 6,
