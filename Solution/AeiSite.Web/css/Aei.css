@@ -239,6 +239,18 @@ header .items a i {
 	color: #8fbc4c;
 }
 
+@media only screen and (max-width: 700px) {
+	
+	header .items a {
+		font-size: 1.4rem;
+	}
+	
+	header .items a + a {
+		margin-left: 24px;
+	}
+	
+}
+
 @media only screen and (max-width: 40.0em) { /* < medium */
 
 	header {
@@ -1325,6 +1337,7 @@ section.tag .thumbCol .dateRange {
 	color: #777;
 	display: block;
 	font-size: 1.2rem;
+	position: absolute;
 }
 
 section.tag .barCol {
@@ -1342,7 +1355,7 @@ section.tag .barCol a.more {
 
 section.content.tag .barBg {
 	display: inline-block;
-	margin-top: 0;
+	margin-top: 23px;
 	width: 80%;
 }
 
