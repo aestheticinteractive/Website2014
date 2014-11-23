@@ -57,10 +57,11 @@ Aei.Angular = angular
 	.controller('App', [Aei.Controllers.App])
 	.controller('Menu', ['$rootScope', '$location', Aei.Controllers.Menu])
 	.controller('Footer', [Aei.Controllers.Footer])
-	.run(["$rootScope", "$window", function($rootScope, $window) {
+	.run(['$rootScope', '$window', '$location', function($rootScope, $window, $location) {
 		$rootScope.$on('$routeChangeSuccess', function(/*evt, absNewUrl, absOldUrl*/) {
 			var onTimeout = function() {
 				$window.scrollTo(0, 0);
+	    		ga('send', 'pageview', $location.path());
 			};
 
 			setTimeout(onTimeout, 1);
