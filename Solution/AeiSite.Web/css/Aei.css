@@ -1318,7 +1318,7 @@ section.tags .topProj.empty img {
 /* Tag */
 
 
-section.tag .thumbCol a, .thumbCol p {
+section.tag .thumbCol a.projImg {
 	float: left;
 }
 
@@ -1328,16 +1328,17 @@ section.tag .thumbCol a img {
 	margin-right: 10px;
 }
 
-section.tag .thumbCol a.arrow {
+section.tag .thumbCol p {
 	margin-top: 8px;
+}
+
+section.tag .thumbCol a.arrow {
 	line-height: 1.4rem;
 }
 
 section.tag .thumbCol .dateRange {
 	color: #777;
-	display: block;
 	font-size: 1.2rem;
-	position: absolute;
 }
 
 section.tag .barCol {
@@ -1377,8 +1378,11 @@ section.tag .showAllCol a {
 
 @media only screen and (max-width: 900px) {
 	
-	section.tag .thumbCol a.arrow {
+	section.tag .thumbCol p {
 		margin-top: 11px;
+	}
+	
+	section.tag .thumbCol a.arrow {
 		font-size: 1.2rem;
 		line-height: 1.0rem;
 	}
@@ -1401,8 +1405,11 @@ section.tag .showAllCol a {
 		padding-top: 0;
 	}
 	
-	section.tag .thumbCol a.arrow {
+	section.tag .thumbCol p {
 		margin-top: 8px;
+	}
+	
+	section.tag .thumbCol a.arrow {
 		font-size: 1.4rem;
 		line-height: 1.4rem;
 	}
