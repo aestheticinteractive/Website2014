@@ -1726,7 +1726,7 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'The second business website, describing services, experience, and projects to prospective clients. It features seamless page transitions, custom icons, and a ripple-effect background.',
-		url: null,
+		url: 'aestheticinteractive.com/archive/2009',
 		imageCount: 6,
 		services: [
 			{
@@ -3459,6 +3459,7 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A tool for customizing office furniture. Users select surfaces for several different furniture components, previewing and printing the results, and seeing restrictions related to each selection.',
+		url: 'aestheticinteractive.com/archive/hmc',
 		imageCount: 6,
 		services: [
 			{
@@ -4225,7 +4226,7 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'Simulated organisms interact in a 3D environment. Populations rise and fall, while neural-network brains (for carnivores and herbivores) evolve with each successful generation.',
-		url: null,
+		url: 'aestheticinteractive.com/archive/school/alifesim/anim.html',
 		imageCount: 8,
 		services: [
 			{
@@ -4424,7 +4425,7 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A tool for viewing three-dimensional floorplan renderings and related information. It achieves a smooth, interactive rotation effect by fading between hundreds of pre-rendered images.',
-		url: null,
+		url: 'aestheticinteractive.com/archive/rotator',
 		imageCount: 3,
 		services: [
 			{
@@ -5269,7 +5270,7 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A portfolio that highlights software and artistic projects. It features an 3D overlay, animated effects, and a "network" diagram that arranges projects based on their characteristics.',
-		url: 'AestheticInteractive.com/portfolio',
+		url: 'aestheticinteractive.com/archive/portfolio',
 		imageCount: 6,
 		services: [
 			{
