@@ -371,7 +371,6 @@ for ( var i in Aei.Tables.TagGroup ) {
 
 /*====================================================================================================*/
 Aei.Tables.Project = [
-	//TODO: split Journeyful project
 	//TODO: Momentus
 	//TODO: DCS tools
 	//TODO: WordNet?
@@ -381,6 +380,197 @@ Aei.Tables.Project = [
 	//TODO: flash frameworks: volume, core?
 	//TODO: multiplayer flash (school project)?
 	//TODO: music/recording projects?
+	{
+		id: 'aei2014',
+		name: 'Aesthetic Interactive 2014',
+		client: 'Aesthetic Interactive',
+		timeline: [
+			{
+				type: 'start',
+				name: '',
+				y: 2014,
+				m: 9,
+				d: 19
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2014,
+				m: 10,
+				d: 8
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2014,
+				m: 10,
+				d: 16
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2014,
+				m: 11,
+				d: 10
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2014,
+				m: 11,
+				d: 14
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2014,
+				m: 11,
+				d: 24
+			}
+		],
+		summary: 'TODO',
+		url: null,
+		imageCount: 0,
+		services: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				//desc: 'Built a complex Flash-based website; built several smaller projects/prototypes using different technologies.',
+				weight: 1.0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				//desc: 'Participated closely in the design process for the website, branding, and other areas.',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				//desc: 'Played a key role in brainstorming product/feature ideas, constructing wireframe/workflow documents, developing business concepts, and assessing user experiences.',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				//desc: 'Established processes for team and project organization, determining project priorities, and tracking complex sets of requirements.',
+				weight: 0.96
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				//desc: 'Communicated complex project plans, feature details, brainstorming topics, technical diagrams, etc.',
+				weight: 0.97
+			}
+		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				//desc: 'Various sub-projects are all built for the web.',
+				weight: 1.0
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				//desc: 'Worked alone on the main UI and on various other sub-projects.',
+				weight: 1.0
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
+				//desc: 'Used for building web page interactivity and animations.',
+				weight: 1.0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
+				//desc: 'Used for building non-Flash web pages.',
+				weight: 0.99
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'jquery'),
+				//desc: 'Used for building non-Flash webpages.',
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'angjs'),
+				//desc: 'Used for building non-Flash webpages.',
+				weight: 1.0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'foundjs'),
+				//desc: 'Used for building non-Flash webpages.',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'd3js'),
+				//desc: 'Used for creating data visualizations.',
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'kinjs'),
+				//desc: 'Used for creating data visualizations.',
+				weight: 0.9
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				//desc: 'Built the entire Flash UI, and others.',
+				weight: 0.97
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				//desc: 'Focused on delivering the best experiences for all user types.',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				//desc: 'Created and helped design mobile-friendly pages.',
+				weight: 1.0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
+				//desc: 'Created smooth transitions and visual effects.',
+				weight: 0.8
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				//desc: 'Wrote data analysis tools, asynchronous processes, etc.',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
+				//desc: 'mock JS database.',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'mob'),
+				//desc: 'mock JS database.',
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				//desc: 'Created graphs to visualize complex hotel-related data.',
+				weight: 0.75
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				//desc: 'Described and diagrammed complex requirements, project plans, feature details.',
+				weight: 0.7
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
+				//desc: 'Participated in content creation for user, business, and investor audiences.',
+				weight: 0.99
+			}
+		],
+		related: [
+			{
+				id: 'aei2009',
+				desc: 'The previous website.'
+			}
+		],
+		weight: 0.95
+	},
 	{
 		id: 'fabricapi',
 		name: 'Fabric',
@@ -2453,8 +2643,202 @@ Aei.Tables.Project = [
 		weight: 0.94
 	},
 	{
+		id: 'journeyful2',
+		name: 'Journeyful 2.0',
+		client: 'Journeyful',
+		timeline: [
+			{
+				type: 'start',
+				name: '',
+				y: 2013,
+				m: 10,
+				d: 1
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2014,
+				m: 2,
+				d: 4
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2014,
+				m: 2,
+				d: 14
+			},
+			{
+				type: 'continue',
+				name: ''
+			},
+		],
+		summary: 'TODO',
+		url: 'Journeyful.com',
+		imageCount: 0,
+		services: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
+				//desc: 'Built a complex Flash-based website; built several smaller projects/prototypes using different technologies.',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
+				//desc: 'Participated closely in the design process for the website, branding, and other areas.',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
+				//desc: 'Played a key role in brainstorming product/feature ideas, constructing wireframe/workflow documents, developing business concepts, and assessing user experiences.',
+				weight: 1.0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
+				//desc: 'Established processes for team and project organization, determining project priorities, and tracking complex sets of requirements.',
+				weight: 0.98
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
+				//desc: 'Communicated complex project plans, feature details, brainstorming topics, technical diagrams, etc.',
+				weight: 0.99
+			}
+		],
+		systems: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
+				//desc: 'Various sub-projects are all built for the web.',
+				weight: 1
+			}
+		],
+		teams: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
+				//desc: 'Worked with designers.',
+				weight: 1.0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
+				//desc: 'Worked with back-end developers.',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				//desc: 'Worked alone on the main UI and on various other sub-projects.',
+				weight: 0.6
+			}
+		],
+		languages: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'cs'),
+				//desc: 'Used for building MVC web applications|Used for parsing and performing data analysis.',
+				weight: 0.5
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
+				//desc: 'Used for building web page interactivity and animations.',
+				weight: 0.75
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
+				//desc: 'Used for building non-Flash web pages.',
+				weight: 0.85
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
+				//desc: 'Used for collecting and analyzing large datasets from existing databases.',
+				weight: 0.4
+			}
+		],
+		products: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'jquery'),
+				//desc: 'Used for building non-Flash webpages.',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'angjs'),
+				//desc: 'Used for building non-Flash webpages.',
+				weight: 0.85
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'foundjs'),
+				//desc: 'Used for building non-Flash webpages.',
+				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'd3js'),
+				//desc: 'Used for creating data visualizations.',
+				weight: 0.7
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
+				//desc: 'Used for building various sites and tools.',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'mysql'),
+				//desc: 'Used for collecting data for analysis.',
+				weight: 0.35
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Product, 'nhib'),
+				//desc: 'Used to access the database.',
+				weight: 0.3
+			}
+		],
+		skills: [
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
+				//desc: 'Built the entire Flash UI, and others.',
+				weight: 0.95
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
+				//desc: 'Focused on delivering the best experiences for all user types.',
+				weight: 1.0
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
+				//desc: 'Created and helped design mobile-friendly pages.',
+				weight: 0.4
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
+				//desc: 'Wrote data analysis tools, asynchronous processes, etc.',
+				weight: 0.2
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
+				//desc: 'Worked with various internal databases.',
+				weight: 0.25
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
+				//desc: 'Created graphs to visualize complex hotel-related data.',
+				weight: 0.6
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
+				//desc: 'Described and diagrammed complex requirements, project plans, feature details.',
+				weight: 0.99
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
+				//desc: 'Participated in content creation for user, business, and investor audiences.',
+				weight: 0.75
+			}
+		],
+		related: [
+			{
+				id: 'journeyful',
+				desc: 'The original website.'
+			}
+		],
+		weight: 0.98
+	},
+	{
 		id: 'journeyful',
-		name: 'Journeyful',
+		name: 'Journeyful 1.0',
 		client: 'Journeyful',
 		timeline: [
 			{
@@ -2465,8 +2849,25 @@ Aei.Tables.Project = [
 				d: 2
 			},
 			{
-				type: 'continue',
-				name: ''
+				type: 'end',
+				name: '',
+				y: 2013,
+				m: 10,
+				d: 1
+			},
+			{
+				type: 'start',
+				name: '',
+				y: 2014,
+				m: 2,
+				d: 4
+			},
+			{
+				type: 'end',
+				name: '',
+				y: 2014,
+				m: 2,
+				d: 14
 			},
 			{
 				type: 'event',
@@ -2594,7 +2995,7 @@ Aei.Tables.Project = [
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				desc: 'Built a complex Flash-based website; built several smaller projects/prototypes using different technologies.',
+				//TODO: desc: 'Built a complex Flash-based website; built several smaller projects/prototypes using different technologies.',
 				weight: 1
 			},
 			{
@@ -2610,12 +3011,12 @@ Aei.Tables.Project = [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
 				desc: 'Established processes for team and project organization, determining project priorities, and tracking complex sets of requirements.',
-				weight: 0.98
+				weight: 0.97
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
 				desc: 'Communicated complex project plans, feature details, brainstorming topics, technical diagrams, etc.',
-				weight: 0.97
+				weight: 0.98
 			}
 		],
 		systems: [
@@ -2649,29 +3050,19 @@ Aei.Tables.Project = [
 		],
 		languages: [
 			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'cs'),
-				desc: 'Used for building MVC web applications|Used for parsing and performing data analysis.',
-				weight: 0.35
-			},
-			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
-				desc: 'Used for building web page interactivity and animations.',
-				weight: 0.6
+				//TODO: desc: 'Used for building web page interactivity and animations.',
+				weight: 0.2
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: 'Used for building non-Flash web pages.',
-				weight: 0.55
+				weight: 0.25
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
 				desc: 'Used for building the Flash website.',
-				weight: 0.995
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Language, 'sql'),
-				desc: 'Used for collecting and analyzing large datasets from existing databases.',
-				weight: 0.5
+				weight: 1.0
 			}
 		],
 		products: [
@@ -2679,48 +3070,13 @@ Aei.Tables.Project = [
 				item: Aei.Database.selectById(Aei.Tables.Product, 'flash'),
 				desc: 'Used for building main application.',
 				weight: 1
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'jquery'),
-				desc: 'Used for building non-Flash webpages.',
-				weight: 0.6
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'angjs'),
-				desc: 'Used for building non-Flash webpages.',
-				weight: 0.6
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'foundjs'),
-				desc: 'Used for building non-Flash webpages.',
-				weight: 0.6
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'd3js'),
-				desc: 'Used for creating data visualizations.',
-				weight: 0.6
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'net'),
-				desc: 'Used for building various sites and tools.',
-				weight: 0.35
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'mysql'),
-				desc: 'Used for collecting data for analysis.',
-				weight: 0.25
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Product, 'nhib'),
-				desc: 'Used to access the database.',
-				weight: 0.24
 			}
 		],
 		skills: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
 				desc: 'Built the entire Flash UI, and others.',
-				weight: 0.991
+				weight: 1.0
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
@@ -2728,47 +3084,38 @@ Aei.Tables.Project = [
 				weight: 0.99
 			},
 			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
-				desc: 'Created and helped design mobile-friendly pages.',
-				weight: 0.6
-			},
-			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
 				desc: 'Created smooth transitions and visual effects.',
-				weight: 0.65
+				weight: 0.75
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
-				desc: 'Wrote data analysis tools, asynchronous processes, etc.',
-				weight: 0.75
+				//TODO: desc: 'Wrote data analysis tools, asynchronous processes, etc.',
+				weight: 0.4
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'pixperf'),
 				desc: 'Matched initial design specifications.',
-				weight: 0.8
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
-				desc: 'Worked with various internal databases.',
-				weight: 0.25
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
-				desc: 'Created graphs to visualize complex hotel-related data.',
-				weight: 0.6
+				weight: 0.85
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
 				desc: 'Described and diagrammed complex requirements, project plans, feature details.',
-				weight: 0.95
+				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
-				desc: 'Participated in content creation for user, business, and investor audiences.',
-				weight: 0.4
+				//TODO: desc: 'Participated in content creation for user, business, and investor audiences.',
+				weight: 0.35
 			}
 		],
-		weight: 0.98
+		related: [
+			{
+				id: 'journeyful2',
+				desc: 'The next phase of the Journeyful project.'
+			}
+		],
+		weight: 0.97
 	},
 	{
 		id: 'lessonvision',
