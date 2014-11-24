@@ -4,10 +4,12 @@
 
 1.000 fragmentalleap
 0.990 idashhtml
-0.980 journeyful
-0.970 fabricapi
+0.980 fabricapi
+0.970 journeyful2
 0.960 fabricweb
-0.950 kinstnerphoto
+0.955 kinstnerphoto
+0.950 aei2014
+0.945 journeyful
 0.940 fragmental
 0.930 weaver
 0.920 rexconnect
@@ -51,10 +53,11 @@
 
 1.000 fragmentalleap
 0.998 idashhtml
-0.995 journeyful
-0.992 fabricapi
+0.995 fabricapi
 0.990 fabricweb
-0.988 kinstnerphoto
+0.989 kinstnerphoto
+0.988 aei2014
+0.986 journeyful
 0.985 fragmental
 0.983 weaver
 0.980 rexconnect
@@ -86,6 +89,7 @@
 0.760 illumballs
 0.742 illandlev
 0.720 oldportfolio
+0.397 journeyful2
 0.388 zkmusic
 
 
@@ -93,7 +97,8 @@
 ### Services: Design
 
 0.980 fragmentalleap
-0.968 kinstnerphoto
+0.969 kinstnerphoto
+0.968 aei2014
 0.965 fragmental
 0.960 fabricweb
 0.948 idashhtml
@@ -103,9 +108,10 @@
 0.912 idashboards
 0.909 alifesim
 0.896 harrisicons
-0.895 journeyful
 0.893 rotator
+0.893 journeyful2
 0.889 aei2007
+0.888 journeyful
 0.886 portfolio
 0.880 idashapp
 0.879 skins
@@ -135,10 +141,12 @@
 ---
 ### Services: Creative
 
+0.992 journeyful2
 0.990 fragmentalleap
-0.985 journeyful
-0.983 fabricapi
-0.978 kinstnerphoto
+0.985 fabricapi
+0.979 kinstnerphoto
+0.978 aei2014
+0.976 journeyful
 0.975 fragmental
 0.970 fabricweb
 0.968 idashapp
@@ -174,13 +182,15 @@
 ---
 ### Services: Communication
 
+0.983 journeyful2
 0.980 fabricweb
 0.973 weaver
 0.970 rexconnect
-0.965 journeyful
-0.963 fabricapi
+0.967 journeyful
+0.965 fabricapi
 0.960 fragmentalleap
-0.948 kinstnerphoto
+0.958 aei2014
+0.949 kinstnerphoto
 0.912 hardlines
 0.910 aei2009
 0.886 fragmental
@@ -216,12 +226,14 @@
 ---
 ### Services: Project Management
 
-0.975 journeyful
-0.973 fabricapi
+0.975 fabricapi
+0.973 journeyful2
 0.970 fragmentalleap
-0.958 kinstnerphoto
+0.959 kinstnerphoto
+0.957 journeyful
 0.955 fragmental
 0.950 fabricweb
+0.948 aei2014
 0.924 trellovision
 0.921 hardlines
 0.919 aei2009
@@ -258,8 +270,9 @@
 
 0.978 idashapp
 0.975 fragmental
+0.938 aei2014
 0.792 fabricweb
-0.642 kinstnerphoto
+0.643 kinstnerphoto
 
 
 ---
@@ -267,10 +280,12 @@
 
 0.986 journeyful
 0.980 fragmentalleap
+0.958 aei2014
 0.950 hardlines
 0.948 aei2009
+0.943 journeyful2
 0.941 fabricweb
-0.938 kinstnerphoto
+0.939 kinstnerphoto
 0.930 dormtshirts
 0.925 gvsuamasite
 0.917 dtmkiosk
@@ -304,9 +319,11 @@
 ### Skills: User Experience
 
 1.000 fragmentalleap
-0.988 kinstnerphoto
-0.985 journeyful
+0.992 journeyful2
+0.989 kinstnerphoto
 0.985 fragmental
+0.976 journeyful
+0.968 aei2014
 0.948 idashhtml
 0.938 aei2009
 0.929 idashapp
@@ -317,7 +334,7 @@
 0.884 rotator
 0.883 footvolley
 0.810 trellovision
-0.794 fabricapi
+0.796 fabricapi
 0.786 weaver
 0.760 hardlines
 0.740 gvsuamasite
@@ -340,7 +357,8 @@
 ---
 ### Skills: Responsive Layout
 
-0.978 kinstnerphoto
+0.988 aei2014
+0.979 kinstnerphoto
 0.938 idashhtml
 0.919 idashapp
 0.902 idashboards
@@ -349,7 +367,7 @@
 0.788 fragmental
 0.770 lessonvision
 0.619 trellovision
-0.597 journeyful
+0.397 journeyful2
 0.355 skins
 
 
@@ -383,12 +401,13 @@
 0.837 footvolley
 0.825 sketchtracer
 0.816 idashboards
+0.790 aei2014
 0.758 aei2009
+0.740 journeyful
 0.724 dtmkiosk
 0.718 aei2007
 0.716 portfolio
 0.688 teneo
-0.647 journeyful
 0.630 sysmaintmap
 0.578 lessonvision
 0.560 illumballs
@@ -411,14 +430,15 @@
 
 0.953 trellovision
 0.928 alifesim
-0.889 kinstnerphoto
+0.890 kinstnerphoto
 0.858 idashhtml
 0.841 idashapp
 0.826 idashboards
 0.807 hardlines
 0.805 portfolio
 0.803 harriscalc
-0.597 journeyful
+0.741 aei2014
+0.595 journeyful2
 0.396 fabricweb
 
 
@@ -428,16 +448,18 @@
 0.950 fragmentalleap
 0.938 alifesim
 0.936 fragmental
-0.893 fabricapi
+0.895 fabricapi
+0.889 aei2014
 0.845 harriscalc
 0.782 idashapp
-0.746 journeyful
 0.665 hardlines
 0.624 idashboards
 0.590 weaver
 0.558 dormtshirts
 0.400 illumballs
 0.399 idashhtml
+0.395 journeyful
+0.199 journeyful2
 
 
 ---
@@ -448,13 +470,13 @@
 0.869 1100rooms
 0.868 dtmkiosk
 0.855 homelink
+0.838 journeyful
 0.838 siennabakery
 0.837 footvolley
 0.828 briankelly
 0.825 oakwoodmaps
 0.818 lessonvision
 0.813 elexiconblog
-0.796 journeyful
 0.787 sysmaintmap
 0.758 spechealth
 0.465 dormtshirts
@@ -463,23 +485,24 @@
 ---
 ### Skills: Database
 
-0.973 fabricapi
-0.948 kinstnerphoto
+0.975 fabricapi
+0.949 kinstnerphoto
 0.911 fabricweb
 0.902 hardlines
 0.857 rotator
 0.833 gvsuamasite
 0.494 aei2007
-0.249 journeyful
+0.395 aei2014
+0.248 journeyful2
 
 
 ---
 ### Skills: Server-Side
 
-0.983 fabricapi
+0.985 fabricapi
 0.980 rexconnect
 0.970 fabricweb
-0.958 kinstnerphoto
+0.959 kinstnerphoto
 0.921 dormtshirts
 0.879 gvsuamasite
 0.875 rotator
@@ -490,24 +513,26 @@
 ---
 ### Skills: Web Service
 
-0.992 fabricapi
+0.995 fabricapi
 0.812 rotator
 
 
 ---
 ### Skills: Technical Writing
 
+0.983 journeyful2
 0.983 weaver
 0.970 rexconnect
-0.963 fabricapi
+0.967 journeyful
+0.965 fabricapi
 0.960 fragmentalleap
-0.945 journeyful
 0.842 fabricweb
 0.798 idashhtml
 0.768 idashboards
 0.733 idashapp
 0.724 dtmkiosk
 0.703 alifesim
+0.691 aei2014
 0.674 lessonvision
 0.617 hardlines
 
@@ -516,53 +541,59 @@
 ### Skills: Content Creation
 
 0.990 fabricweb
+0.978 aei2014
 0.970 fragmentalleap
-0.968 kinstnerphoto
+0.969 kinstnerphoto
 0.965 fragmental
 0.929 aei2009
 0.880 aei2007
 0.761 portfolio
+0.744 journeyful2
 0.712 hardlines
 0.620 zkmusic
 0.400 oldportfolio
-0.398 journeyful
+0.345 journeyful
 
 
 ---
 ### Languages: C#
 
 1.000 fragmentalleap
-0.992 fabricapi
+0.995 fabricapi
 0.990 fabricweb
-0.988 kinstnerphoto
+0.989 kinstnerphoto
 0.983 weaver
-0.348 journeyful
+0.496 journeyful2
 
 
 ---
 ### Languages: Javascript
 
 0.998 idashhtml
-0.978 kinstnerphoto
+0.988 aei2014
+0.979 kinstnerphoto
 0.953 trellovision
 0.792 fabricweb
-0.597 journeyful
+0.744 journeyful2
 0.366 1100rooms
 0.232 dormtshirts
+0.197 journeyful
 
 
 ---
 ### Languages: HTML/CSS
 
+0.978 aei2014
 0.970 fabricweb
-0.968 kinstnerphoto
+0.969 kinstnerphoto
 0.931 hardlines
 0.925 gvsuamasite
 0.915 1100rooms
 0.857 trellovision
 0.846 dormtshirts
+0.844 journeyful2
 0.772 elexiconblog
-0.547 journeyful
+0.247 journeyful
 0.197 fragmental
 
 
@@ -576,7 +607,7 @@
 ---
 ### Languages: ActionScript
 
-0.990 journeyful
+0.986 journeyful
 0.965 dtmkiosk
 0.963 lessonvision
 0.960 idashboards
@@ -610,18 +641,18 @@
 
 0.941 hardlines
 0.911 dormtshirts
-0.889 kinstnerphoto
+0.890 kinstnerphoto
 0.884 rotator
-0.497 journeyful
 0.449 aei2007
-0.397 fabricapi
+0.398 fabricapi
+0.397 journeyful2
 0.370 gvsuamasite
 
 
 ---
 ### Languages: Gremlin
 
-0.983 fabricapi
+0.985 fabricapi
 0.980 fabricweb
 0.973 weaver
 0.392 rexconnect
@@ -651,26 +682,29 @@
 ---
 ### Products: jQuery
 
-0.978 kinstnerphoto
+0.979 kinstnerphoto
 0.960 fabricweb
 0.943 trellovision
-0.597 journeyful
+0.790 aei2014
+0.397 journeyful2
 
 
 ---
 ### Products: AngularJS
 
+0.988 aei2014
 0.953 trellovision
-0.597 journeyful
+0.844 journeyful2
 
 
 ---
 ### Products: Foundation
 
-0.988 kinstnerphoto
+0.989 kinstnerphoto
+0.978 aei2014
 0.970 fabricweb
+0.893 journeyful2
 0.762 trellovision
-0.597 journeyful
 
 
 ---
@@ -678,12 +712,14 @@
 
 0.998 idashhtml
 0.891 fabricweb
+0.889 aei2014
 
 
 ---
 ### Products: d3.js
 
-0.597 journeyful
+0.938 aei2014
+0.695 journeyful2
 
 
 ---
@@ -697,12 +733,12 @@
 
 0.990 fabricweb
 0.983 weaver
-0.973 fabricapi
-0.938 kinstnerphoto
+0.975 fabricapi
+0.939 kinstnerphoto
 0.900 fragmentalleap
 0.475 hardlines
 0.463 gvsuamasite
-0.348 journeyful
+0.397 journeyful2
 
 
 ---
@@ -714,10 +750,10 @@
 ---
 ### Products: NHibernate
 
-0.968 kinstnerphoto
-0.407 fabricapi
+0.969 kinstnerphoto
+0.408 fabricapi
 0.396 fabricweb
-0.239 journeyful
+0.298 journeyful2
 
 
 ---
@@ -736,7 +772,7 @@
 ---
 ### Products: Flash
 
-0.995 journeyful
+0.986 journeyful
 0.965 dtmkiosk
 0.963 lessonvision
 0.960 idashboards
@@ -769,8 +805,8 @@
 ### Products: Mono
 
 0.980 fabricweb
-0.948 kinstnerphoto
-0.903 fabricapi
+0.949 kinstnerphoto
+0.905 fabricapi
 
 
 ---
@@ -790,30 +826,30 @@
 ---
 ### Products: MySQL
 
-0.958 kinstnerphoto
+0.959 kinstnerphoto
 0.921 dormtshirts
 0.893 rotator
-0.397 fabricapi
-0.249 journeyful
+0.398 fabricapi
+0.347 journeyful2
 
 
 ---
 ### Products: Titan Graph DB
 
-0.992 fabricapi
+0.995 fabricapi
 0.693 fabricweb
 
 
 ---
 ### Products: Cassandra
 
-0.893 fabricapi
+0.895 fabricapi
 
 
 ---
 ### Products: Rexster
 
-0.983 fabricapi
+0.985 fabricapi
 0.980 rexconnect
 0.792 fabricweb
 
@@ -842,19 +878,21 @@
 ---
 ### Systems: Linux
 
-0.983 fabricapi
+0.985 fabricapi
 0.980 fabricweb
-0.978 kinstnerphoto
+0.979 kinstnerphoto
 
 
 ---
 ### Systems: Web
 
 0.998 idashhtml
-0.995 journeyful
-0.992 fabricapi
+0.995 fabricapi
+0.992 journeyful2
 0.990 fabricweb
-0.988 kinstnerphoto
+0.989 kinstnerphoto
+0.988 aei2014
+0.986 journeyful
 0.963 lessonvision
 0.953 trellovision
 0.950 hardlines
@@ -873,7 +911,7 @@
 ---
 ### Systems: Flash Player
 
-0.985 journeyful
+0.976 journeyful
 0.965 dtmkiosk
 0.960 idashboards
 0.953 lessonvision
@@ -906,9 +944,10 @@
 ### Teams: One-Man Team
 
 1.000 fragmentalleap
-0.992 fabricapi
+0.995 fabricapi
 0.990 fabricweb
-0.988 kinstnerphoto
+0.989 kinstnerphoto
+0.988 aei2014
 0.985 fragmental
 0.983 weaver
 0.980 rexconnect
@@ -929,8 +968,8 @@
 0.905 harrisicons
 0.902 rotator
 0.897 aei2007
-0.895 journeyful
 0.895 portfolio
+0.888 journeyful
 0.887 skins
 0.875 art
 0.866 lessonvision
@@ -940,6 +979,7 @@
 0.800 illumballs
 0.800 oldportfolio
 0.775 zkmusic
+0.595 journeyful2
 0.590 spechealth
 0.513 homelink
 0.335 siennabakery
@@ -952,6 +992,7 @@
 ---
 ### Teams: Design Team
 
+0.992 journeyful2
 0.900 actionoffice
 0.855 homelink
 0.837 footvolley
@@ -959,7 +1000,7 @@
 0.826 teneo
 0.824 1100rooms
 0.772 dtmkiosk
-0.697 journeyful
+0.690 journeyful
 0.578 lessonvision
 0.502 siennabakery
 0.495 oakwoodmaps
@@ -976,5 +1017,6 @@
 0.898 idashhtml
 0.864 idashboards
 0.820 dtmkiosk
-0.796 journeyful
+0.789 journeyful
 0.674 lessonvision
+0.397 journeyful2

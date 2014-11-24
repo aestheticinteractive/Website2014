@@ -870,7 +870,7 @@ Aei.Tables.Project = [
 			}
 
 		],
-		weight: 0.97
+		weight: 0.98
 	},
 	{
 		id: 'fabricweb',
@@ -2226,7 +2226,7 @@ Aei.Tables.Project = [
 				desc: 'Fabric powers the photo data, tags, relationships, and other features of this website.'
 			}
 		],
-		weight: 0.95
+		weight: 0.955
 	},
 	{
 		id: 'trellovision',
@@ -2834,7 +2834,7 @@ Aei.Tables.Project = [
 				desc: 'The original website.'
 			}
 		],
-		weight: 0.98
+		weight: 0.97
 	},
 	{
 		id: 'journeyful',
@@ -3115,7 +3115,7 @@ Aei.Tables.Project = [
 				desc: 'The next phase of the Journeyful project.'
 			}
 		],
-		weight: 0.97
+		weight: 0.945
 	},
 	{
 		id: 'lessonvision',
