@@ -29,16 +29,8 @@
 						<h1>
 							{{model.project.name}}
 						</h1>
-						<p class="year" ng-init="minD = model.project.minDate; maxD = model.project.maxDate;">
-							<span title="{{minD.toDateString()}}">
-								{{minD.getFullYear()}}
-							</span>
-							<span ng-if="minD.getFullYear() != maxD.getFullYear()">
-								-
-								<span title="{{maxD.toDateString()}}">
-									{{maxD.getFullYear()}}
-								</span>
-							</span>
+						<p class="year">
+							{{model.project.dateRange}}
 						</p>
 						<p class="client" ng-if="model.project.client">
 							{{model.project.client}}

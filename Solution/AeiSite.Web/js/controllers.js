@@ -209,16 +209,6 @@ Aei.Controllers.Tag = function($rootScope, $scope, $routeParams, $timeout) {
 		handleResults(getNextResults());
 	};
 
-	$scope.getDateRange = function(proj) {
-		var str = proj.minDate.getFullYear()+'';
-			
-		if ( proj.minDate.getFullYear() != proj.maxDate.getFullYear() ) {
-			str += ' - '+proj.maxDate.getFullYear();
-		}
-
-		return str;
-	};
-
 	$timeout(getNextResults, 20).then(handleResults);
 	
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([item.name, 'Tags']);

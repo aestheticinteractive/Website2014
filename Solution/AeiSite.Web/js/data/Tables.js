@@ -2990,7 +2990,7 @@ Aei.Tables.Project = [
 			}
 		],
 		summary: 'A website for reserving hotel rooms, booking ferry trips, and social networking. It also contains a suite of tools for managing hotels, ferries, rates, allotments, staff, bookings, and more.',
-		url: 'Journeyful.com',
+		url: 'flash.journeyful.com',
 		imageCount: 9,
 		services: [
 			{
@@ -6580,6 +6580,12 @@ for ( var i in Aei.Tables.Project ) {
 		if ( d > proj.maxDate ) {
 			proj.maxDate = d;
 		}
+	}
+
+	proj.dateRange = proj.minDate.getFullYear()+'';
+			
+	if ( proj.minDate.getFullYear() != proj.maxDate.getFullYear() ) {
+		proj.dateRange += ' - '+proj.maxDate.getFullYear();
 	}
 
 	for ( r in proj.related ) {
