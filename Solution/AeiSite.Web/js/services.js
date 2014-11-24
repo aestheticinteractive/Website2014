@@ -116,8 +116,8 @@ Aei.Angular.directive('onDelay', function() {
 			var onTimeout = function() {
 				$(element).addClass(scope.delayClass);
 			};
-			
-			setTimeout(onTimeout, (scope.delayMs || 1))
+
+			setTimeout(onTimeout, (scope.delayMs || 1));
 		}
 	};
 });
