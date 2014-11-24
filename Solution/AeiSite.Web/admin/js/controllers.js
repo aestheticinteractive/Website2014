@@ -24,7 +24,6 @@ Aei.Controllers.Menu = function() {
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.Home = function($rootScope) {
-	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Home']);
 };
 
@@ -70,7 +69,6 @@ Aei.Controllers.AdminProjects = function($rootScope, $scope) {
 		edits: edits
 	};
 
-	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Projects', 'Admin']);
 };
 
@@ -80,7 +78,6 @@ Aei.Controllers.AdminProjectTags = function($rootScope, $scope) {
 		projects: Aei.Tables.Project
 	};
 
-	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Project Tags', 'Admin']);
 };
 
@@ -90,7 +87,6 @@ Aei.Controllers.AdminProjectTexts = function($rootScope, $scope) {
 		projects: Aei.Tables.Project
 	};
 
-	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Project Texts', 'Admin']);
 };
 
@@ -134,7 +130,6 @@ Aei.Controllers.AdminWeights = function($rootScope, $scope) {
 		lists: lists
 	};
 
-	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Weights', 'Admin']);
 };
 
@@ -196,7 +191,6 @@ Aei.Controllers.AdminTimeline = function($rootScope, $scope) {
 		projTimes: projTimes
 	};
 
-	$rootScope.page = new Aei.Pages.AdminTimeline(projects, events);
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Timeline', 'Admin']);
 };
 
@@ -206,6 +200,5 @@ Aei.Controllers.AdminJson = function($rootScope, $scope) {
 		json: Aei.Admin.buildProjectTable()
 	};
 
-	$rootScope.page = null;
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Json', 'Admin']);
 };

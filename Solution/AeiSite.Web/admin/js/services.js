@@ -48,3 +48,17 @@ Aei.Angular = angular
 	.config(['$routeProvider', Aei.RouteBuilder])
 	.controller('App', [Aei.Controllers.App])
 	.controller('Menu', [Aei.Controllers.Menu]);
+	
+	
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*----------------------------------------------------------------------------------------------------*/
+Aei.Angular.directive('timeline', function() {
+	return {
+		link: function(scope, element) {
+			var projects = Aei.Database.selectList(Aei.Tables.Project);
+			var events = Aei.Database.selectList(Aei.Tables.ZachTimeline);
+			var t = new Aei.Timeline(projects, events);
+			t.build('timeline', 300);
+		}
+	};
+});
