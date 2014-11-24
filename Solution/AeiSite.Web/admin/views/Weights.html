@@ -1,13 +1,9 @@
-<p ng-repeat="group in model.groups">
-	<span ng-repeat="itemWeight in group.itemWeights">
-		<br/>
-		---<br/>
-		### {{group.id}}{{itemWeight.item ? ': '+itemWeight.item.name : ''}}<br/>
-		<br/>
-		<span ng-repeat="rank in itemWeight.ranks">
-			{{rank.weight.toFixed(3)}} {{rank.project.id}}<br/>
-		</span>
-		<br/>
+<p ng-repeat="list in model.lists" style="font-size: 0.8rem; line-height: 1.2rem;">
+	<br/>
+	---<br/>
+	### {{list.name}}<br/>
+	<br/>
+	<span ng-repeat="use in list.uses">
+		{{use.weight.toFixed(3)}} {{use.project.id}}<br/>
 	</span>
-
 </p>
