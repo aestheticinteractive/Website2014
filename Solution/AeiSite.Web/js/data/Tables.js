@@ -428,145 +428,157 @@ Aei.Tables.Project = [
 				d: 24
 			}
 		],
-		summary: 'TODO',
+		summary: 'The website you\'re using right now... how meta! It features weighted tags for each project, with rankings and visualizations showing each tag\'s progression over time.',
 		url: null,
 		imageCount: 0,
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				//desc: 'Built a complex Flash-based website; built several smaller projects/prototypes using different technologies.',
+				desc: 'Built the site to run completely on the client-side.|Implemented weighted tags, complex timelines, and data analysis.',
 				weight: 1.0
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				//desc: 'Participated closely in the design process for the website, branding, and other areas.',
+				desc: 'Designed all aspects of the website.',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				//desc: 'Played a key role in brainstorming product/feature ideas, constructing wireframe/workflow documents, developing business concepts, and assessing user experiences.',
+				desc: 'Combined the weighted tag and timeline concepts to create a time-based progression.|Created data visualization, analysis, and ranking ideas.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				//desc: 'Established processes for team and project organization, determining project priorities, and tracking complex sets of requirements.',
+				desc: 'Planned, executed, released, and maintained the project.',
 				weight: 0.96
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
-				//desc: 'Communicated complex project plans, feature details, brainstorming topics, technical diagrams, etc.',
+				desc: 'Wrote all content for the website.|Condensed business offerings and complex project details into concise summaries.',
 				weight: 0.97
 			}
 		],
 		systems: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.System, 'web'),
-				//desc: 'Various sub-projects are all built for the web.',
+				desc: '',
 				weight: 1.0
 			}
 		],
 		teams: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
-				//desc: 'Worked alone on the main UI and on various other sub-projects.',
+				desc: '',
 				weight: 1.0
 			}
 		],
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
-				//desc: 'Used for building web page interactivity and animations.',
+				desc: '',
 				weight: 1.0
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
-				//desc: 'Used for building non-Flash web pages.',
+				desc: '',
 				weight: 0.99
 			}
 		],
 		products: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'jquery'),
-				//desc: 'Used for building non-Flash webpages.',
+				desc: '',
 				weight: 0.8
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'angjs'),
-				//desc: 'Used for building non-Flash webpages.',
+				desc: '',
 				weight: 1.0
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'foundjs'),
-				//desc: 'Used for building non-Flash webpages.',
+				desc: '',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'd3js'),
-				//desc: 'Used for creating data visualizations.',
-				weight: 0.95
+				desc: '',
+				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Product, 'kinjs'),
-				//desc: 'Used for creating data visualizations.',
-				weight: 0.9
+				desc: '',
+				weight: 0.75
 			}
 		],
 		skills: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ui'),
-				//desc: 'Built the entire Flash UI, and others.',
+				desc: '',
 				weight: 0.97
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
-				//desc: 'Focused on delivering the best experiences for all user types.',
+				desc: '',
 				weight: 0.98
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'resp'),
-				//desc: 'Created and helped design mobile-friendly pages.',
+				desc: '',
 				weight: 1.0
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
-				//desc: 'Created smooth transitions and visual effects.',
+				desc: '',
 				weight: 0.8
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
-				//desc: 'Wrote data analysis tools, asynchronous processes, etc.',
+				desc: '',
 				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'db'),
-				//desc: 'mock JS database.',
+				desc: '', //mock JS database
 				weight: 0.4
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'mob'),
-				//desc: 'mock JS database.',
+				desc: '',
 				weight: 0.95
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'dataviz'),
-				//desc: 'Created graphs to visualize complex hotel-related data.',
+				desc: '',
 				weight: 0.75
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'techw'),
-				//desc: 'Described and diagrammed complex requirements, project plans, feature details.',
+				desc: '',
 				weight: 0.7
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
-				//desc: 'Participated in content creation for user, business, and investor audiences.',
+				desc: '',
 				weight: 0.99
 			}
 		],
 		related: [
 			{
 				id: 'aei2009',
-				desc: 'The previous website.'
+				desc: 'The second Aesthetic Interactive website.'
+			},
+			{
+				id: 'aei2007',
+				desc: 'The first Aesthetic Interactive website.'
+			},
+			{
+				id: 'portfolio',
+				desc: 'The second portfolio application.'
+			},
+			{
+				id: 'oldportfolio',
+				desc: 'The first portfolio application.'
 			}
 		],
 		weight: 0.95
@@ -2002,8 +2014,12 @@ Aei.Tables.Project = [
 		],
 		related: [
 			{
+				id: 'aei2014',
+				desc: 'The third Aesthetic Interactive website.'
+			},
+			{
 				id: 'aei2007',
-				desc: 'The previous Aesthetic Interactive website.'
+				desc: 'The first Aesthetic Interactive website.'
 			},
 			{
 				id: 'portfolio',
@@ -2831,7 +2847,7 @@ Aei.Tables.Project = [
 		related: [
 			{
 				id: 'journeyful',
-				desc: 'The original website.'
+				desc: 'The original Flash version of the Journeyful website.'
 			}
 		],
 		weight: 0.97
@@ -3112,7 +3128,7 @@ Aei.Tables.Project = [
 		related: [
 			{
 				id: 'journeyful2',
-				desc: 'The next phase of the Journeyful project.'
+				desc: 'The second phase of the Journeyful project.'
 			}
 		],
 		weight: 0.945
@@ -5007,10 +5023,14 @@ Aei.Tables.Project = [
 				weight: 0.98
 			}
 		],
-		related: [
+		related: [,
+			{
+				id: 'aei2014',
+				desc: 'The third Aesthetic Interactive website.'
+			},
 			{
 				id: 'aei2009',
-				desc: 'The next Aesthetic Interactive website.'
+				desc: 'The second Aesthetic Interactive website.'
 			},
 			{
 				id: 'portfolio',
@@ -5708,8 +5728,8 @@ Aei.Tables.Project = [
 		],
 		related: [
 			{
-				id: 'portfolio',
-				desc: 'The previous portfolio application.'
+				id: 'oldportfolio',
+				desc: 'The first portfolio application.'
 			},
 			{
 				id: 'aei2007',
@@ -5718,6 +5738,10 @@ Aei.Tables.Project = [
 			{
 				id: 'aei2009',
 				desc: 'The second Aesthetic Interactive website.'
+			},
+			{
+				id: 'aei2014',
+				desc: 'The third Aesthetic Interactive website.'
 			}
 		],
 		weight: 0.58
@@ -6446,7 +6470,7 @@ Aei.Tables.Project = [
 		related: [
 			{
 				id: 'portfolio',
-				desc: 'The next portfolio application.'
+				desc: 'The second portfolio application.'
 			},
 			{
 				id: 'aei2007',
@@ -6455,6 +6479,10 @@ Aei.Tables.Project = [
 			{
 				id: 'aei2009',
 				desc: 'The second Aesthetic Interactive website.'
+			},
+			{
+				id: 'aei2014',
+				desc: 'The third Aesthetic Interactive website.'
 			}
 		],
 		weight: 0.2
