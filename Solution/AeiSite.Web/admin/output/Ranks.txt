@@ -2,82 +2,82 @@
 ---
 @@@ Services
 1.000 1.000 Development
-0.933 0.950 Creative
-0.867 0.867 Communication
-0.749 0.749 Project Management
-0.698 1.000 Design
+0.992 0.992 Creative
+0.946 0.946 Communication
+0.854 0.854 Project Management
+0.686 1.000 Design
 
 
 ---
 @@@ Skills
 1.000 1.000 User Experience
-0.840 1.000 User Interface
-0.830 0.830 Technical Writing
-0.543 0.586 Algorithms
-0.485 0.800 Animation
-0.462 0.471 Responsive Layout
-0.432 0.432 Server-Side
-0.430 0.500 Content Creation
-0.319 0.368 Mobile
-0.309 0.309 Database
-0.305 0.356 Data Visualization
-0.264 0.598 Pixel-Perfect
-0.215 0.459 3D Graphics
-0.139 0.141 Web Service
+0.907 0.907 Technical Writing
+0.781 1.000 User Interface
+0.541 0.635 Algorithms
+0.512 0.518 Server-Side
+0.483 0.500 Content Creation
+0.477 0.520 Responsive Layout
+0.384 0.851 Animation
+0.377 0.379 Database
+0.323 0.436 Mobile
+0.295 0.465 Data Visualization
+0.193 0.560 3D Graphics
+0.190 0.640 Pixel-Perfect
+0.171 0.179 Web Service
 
 
 ---
 @@@ Languages
-1.000 1.000 ActionScript
-0.949 0.949 C#
-0.810 0.810 Gremlin
-0.715 0.715 HTML/CSS
-0.514 0.514 Javascript
-0.454 0.477 Objective-C
-0.339 0.339 SQL
-0.130 0.132 Java
-0.088 0.257 PHP
-0.008 0.170 C++
+1.000 1.000 C#
+0.837 0.934 Gremlin
+0.612 0.720 HTML/CSS
+0.532 0.532 Javascript
+0.506 1.000 ActionScript
+0.307 0.785 Objective-C
+0.257 0.341 SQL
+0.149 0.182 Java
+0.018 0.303 PHP
+0.000 0.234 C++
 
 
 ---
 @@@ Products
-1.000 1.000 Flash
-0.978 0.978 .NET
-0.761 0.761 Rexster
-0.678 0.678 Mono
-0.545 0.545 Titan Graph DB
-0.502 0.502 Foundation
-0.429 0.429 jQuery
-0.359 0.359 KineticJS
-0.346 0.346 NHibernate
-0.312 0.312 MySQL
-0.299 0.299 Cassandra
-0.237 0.246 OpenGL
-0.159 0.164 OpenAL
-0.113 0.113 AngularJS
-0.094 0.100 Cocoa
-0.091 0.091 d3.js
-0.086 0.140 Flex
-0.043 0.043 Unity 3D
-0.032 0.097 SQL Server
+1.000 1.000 .NET
+0.775 0.842 Rexster
+0.668 0.836 Mono
+0.536 0.685 Titan Graph DB
+0.525 0.525 Foundation
+0.494 1.000 Flash
+0.435 0.480 jQuery
+0.370 0.394 KineticJS
+0.346 0.410 NHibernate
+0.294 0.369 Cassandra
+0.252 0.301 MySQL
+0.153 0.386 OpenGL
+0.140 0.140 AngularJS
+0.115 0.115 d3.js
+0.104 0.273 OpenAL
+0.060 0.165 Cocoa
+0.057 0.057 Unity 3D
+0.027 0.168 Flex
+0.009 0.132 SQL Server
 
 
 ---
 @@@ Systems
 1.000 1.000 Web
-0.547 1.000 Flash Player
-0.399 0.404 Linux
-0.263 0.512 iOS
-0.029 0.170 Windows
-0.024 0.024 Mac
+0.463 0.493 Linux
+0.319 1.000 Flash Player
+0.205 0.751 iOS
+0.038 0.234 Windows
+0.037 0.037 Mac
 
 
 ---
 @@@ Teams
 1.000 1.000 One-Man Team
-0.272 0.390 Dev Team
-0.255 0.436 Design Team
+0.243 0.414 Dev Team
+0.232 0.460 Design Team
 
 
 ---

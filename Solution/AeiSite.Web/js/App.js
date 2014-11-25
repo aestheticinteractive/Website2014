@@ -28,6 +28,7 @@ Aei.App.getTagItemCalculations = function(group, trendData) {
 	var valuesLen = 0;
 	var recentCount = 0;
 	var maxTopProj = 8;
+	var recentPower = 3.333;
 	var i, j, item, values, recentMax, calc, viPow, val;
 
 	for ( i in group.items ) {
@@ -54,7 +55,7 @@ Aei.App.getTagItemCalculations = function(group, trendData) {
 	}
 	
 	for ( i = 0 ; i < valuesLen ; ++i ) {
-		viPow = Math.pow(i, 1.4);
+		viPow = Math.pow(i, recentPower);
 		recentCount += viPow;
 		recentMax = 0;
 		
