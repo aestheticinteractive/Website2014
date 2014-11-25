@@ -2995,27 +2995,27 @@ Aei.Tables.Project = [
 		services: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'dev'),
-				//TODO: desc: 'Built a complex Flash-based website; built several smaller projects/prototypes using different technologies.',
+				desc: 'Built a complex, Flash-based user interface.|Implemented a series of reusable components for use across the site.|Implemented extensive client for communicating with the website API.',
 				weight: 1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'des'),
-				desc: 'Participated closely in the design process for the website, branding, and other areas.',
-				weight: 0.9
+				desc: 'Participated closely in the design process for the website.|Created and improved layouts for pages and tools.',
+				weight: 0.85
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'cre'),
-				desc: 'Played a key role in brainstorming product/feature ideas, constructing wireframe/workflow documents, developing business concepts, and assessing user experiences.',
+				desc: 'Played a central role in brainstorming product and feature ideas.|Constructed wireframe and workflow documents.',
 				weight: 0.99
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'mgt'),
-				desc: 'Established processes for team and project organization, determining project priorities, and tracking complex sets of requirements.',
+				desc: 'Established processes for team and project organization.|Organized and helped determine project priorities.|Arranged and tracked complex sets of requirements.',
 				weight: 0.97
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Service, 'com'),
-				desc: 'Communicated complex project plans, feature details, brainstorming topics, technical diagrams, etc.',
+				desc: 'Communicated complex project plans, feature details, discussion topics, technical diagrams, etc.',
 				weight: 0.98
 			}
 		],
@@ -3034,30 +3034,30 @@ Aei.Tables.Project = [
 		teams: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Team, 'des'),
-				desc: 'Worked with designers.',
-				weight: 0.7
-			},
-			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
-				desc: 'Worked with back-end developers.',
+				desc: 'Worked closely with the design team.',
 				weight: 0.8
 			},
 			{
-				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
-				desc: 'Worked alone on the main UI and on various other sub-projects.',
+				item: Aei.Database.selectById(Aei.Tables.Team, 'dev'),
+				desc: 'Worked closely with the back-end development team.',
 				weight: 0.9
+			},
+			{
+				item: Aei.Database.selectById(Aei.Tables.Team, 'one'),
+				desc: 'Worked alone on the main user interface.',
+				weight: 1.0
 			}
 		],
 		languages: [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'js'),
-				//TODO: desc: 'Used for building web page interactivity and animations.',
-				weight: 0.2
+				desc: 'Used to support some non-Flash features.',
+				weight: 0.1
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'html'),
 				desc: 'Used for building non-Flash web pages.',
-				weight: 0.25
+				weight: 0.15
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Language, 'as'),
@@ -3081,7 +3081,7 @@ Aei.Tables.Project = [
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'ux'),
 				desc: 'Focused on delivering the best experiences for all user types.',
-				weight: 0.99
+				weight: 0.9
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'anim'),
@@ -3090,7 +3090,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'algo'),
-				//TODO: desc: 'Wrote data analysis tools, asynchronous processes, etc.',
+				desc: 'Built logic for handling complex reservation scenarios.',
 				weight: 0.4
 			},
 			{
@@ -3105,7 +3105,7 @@ Aei.Tables.Project = [
 			},
 			{
 				item: Aei.Database.selectById(Aei.Tables.Skill, 'cont'),
-				//TODO: desc: 'Participated in content creation for user, business, and investor audiences.',
+				desc: 'Wrote user-facing text and instructions.',
 				weight: 0.35
 			}
 		],
