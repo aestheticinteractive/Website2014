@@ -323,42 +323,36 @@ Aei.Tables.TagGroup = [
 		id: 'services',
 		name: 'Services',
 		single: 'Service',
-		summary: 'hello',
 		items: Aei.Database.selectList(Aei.Tables.Service)
 	},
 	{
 		id: 'skills',
 		name: 'Skills',
 		single: 'Skill',
-		summary: 'hello',
 		items: Aei.Database.selectList(Aei.Tables.Skill)
 	},
 	{
 		id: 'languages',
 		name: 'Languages',
 		single: 'Language',
-		summary: 'hello',
 		items: Aei.Database.selectList(Aei.Tables.Language)
 	},
 	{
 		id: 'products',
 		name: 'Products',
 		single: 'Product',
-		summary: 'hello',
 		items: Aei.Database.selectList(Aei.Tables.Product)
 	},
 	{
 		id: 'systems',
 		name: 'Systems',
 		single: 'System',
-		summary: 'hello',
 		items: Aei.Database.selectList(Aei.Tables.System)
 	},
 	{
 		id: 'teams',
 		name: 'Teams',
 		single: 'Team',
-		summary: 'hello',
 		items: Aei.Database.selectList(Aei.Tables.Team)
 	}
 ];

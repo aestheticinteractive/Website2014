@@ -57,35 +57,23 @@ Aei.Controllers.Project = function($rootScope, $scope, $routeParams, $location) 
 		$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Not Found', 'Projects']);
 		return;
 	}
+	
+	var tagGroups = Aei.Database.selectList(Aei.Tables.TagGroup);
+	var tags = [];
+	var gi, grp;
+	
+	for ( gi in tagGroups ) {
+		grp = tagGroups[gi];
+		
+		tags.push({
+			group: grp,
+			tagList: proj[grp.id]
+		});
+	} 
 
 	$scope.model = {
 		project: proj,
-		tags: [
-			{
-				name: 'Services',
-				tagList: proj.services
-			},
-			{
-				name: 'Skills',
-				tagList: proj.skills
-			},
-			{
-				name: 'Languages',
-				tagList: proj.languages
-			},
-			{
-				name: 'Products',
-				tagList: proj.products
-			},
-			{
-				name: 'Systems',
-				tagList: proj.systems
-			},
-			{
-				name: 'Team Types',
-				tagList: proj.teams
-			}
-		]
+		tags: tags
 	};
 	
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle([proj.name, 'Projects']);
