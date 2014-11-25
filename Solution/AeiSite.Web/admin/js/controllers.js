@@ -92,7 +92,8 @@ Aei.Controllers.AdminProjectTexts = function($rootScope, $scope) {
 
 /*----------------------------------------------------------------------------------------------------*/
 Aei.Controllers.AdminWeights = function($rootScope, $scope) {
-	var lists = [];
+	var projLists = [];
+	var tagLists = [];
 	var tagTrends = Aei.App.getTagTrends();
 	var projects = Aei.Database.selectList(Aei.Tables.Project);
 	var tagGroups = Aei.Database.selectList(Aei.Tables.TagGroup);
@@ -108,18 +109,19 @@ Aei.Controllers.AdminWeights = function($rootScope, $scope) {
 		});
 	}
 	
-	lists.push({
+	projLists.push({
 		name: 'Overall',
 		uses: projUses
 	});
 	
 	for ( gi in tagGroups ) {
 		tagGroup = tagGroups[gi];
+		tagLists.push(Aei.App.getTagItemCalculations(tagGroup, tagTrends));
 		
 		for ( ii in tagGroup.items ) {
 			item = tagGroup.items[ii];
 			
-			lists.push({
+			projLists.push({
 				name: tagGroup.name+': '+item.name,
 				uses: tagTrends.getTopProjects(tagGroup.id, item.id)	
 			});
@@ -127,7 +129,8 @@ Aei.Controllers.AdminWeights = function($rootScope, $scope) {
 	}
 	
 	$scope.model = {
-		lists: lists
+		projLists: projLists,
+		tagLists: tagLists
 	};
 
 	$rootScope.pageTitle = Aei.Controllers.getPageTitle(['Weights', 'Admin']);

@@ -1,9 +1,21 @@
-<p ng-repeat="list in model.lists" style="font-size: 0.8rem; line-height: 1.2rem;">
+<p ng-repeat="tagList in model.tagLists" style="font-size: 0.8rem; line-height: 1.2rem;">
 	<br/>
 	---<br/>
-	### {{list.name}}<br/>
+	@@@ {{tagList[0].group.name}}
 	<br/>
-	<span ng-repeat="use in list.uses">
-		{{use.weight.toFixed(3)}} {{use.project.id}}<br/>
+	<span ng-repeat="tagEntry in tagList">
+		{{tagEntry.recent.toFixed(3)}} {{tagEntry.peak.toFixed(3)}} {{tagEntry.item.name}}
+		<br/>
+	</span>
+</p>
+
+<p ng-repeat="projList in model.projLists" style="font-size: 0.8rem; line-height: 1.2rem;">
+	<br/>
+	---<br/>
+	### {{projList.name}}<br/>
+	<br/>
+	<span ng-repeat="use in projList.uses">
+		{{use.weight.toFixed(3)}} {{use.project.id}}
+		<br/>
 	</span>
 </p>
